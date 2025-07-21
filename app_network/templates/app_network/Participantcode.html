@@ -1,0 +1,35 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+{% include "global/title_Global.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+        <input id="time" type="hidden" name="time_participantcode"/>
+        <br>
+    <!-- <h3 class="german"> Umfragecode </h3><h3 class="english">  Survey Code </h3> -->
+        <hr>
+
+    <div  class="mb-3 border pt-2 pb-2 px-2 ">
+        <p class="german">Bitte tragen Sie nun Ihren eigenen Umfragecode in das Textfeld ein. Ihr Umfragecode besteht aus drei Buchstaben und Zahlen. Auf der folgenden Seite können Sie die Umfrage Codes von Ihrem sozialen Netzwerk angeben.</p>
+        <p class="english">Please enter your own survey code (composed of three letters and numbers). On the following page, you can enter the survey codes of your social network.</p>
+
+        <div class="alert alert-primary" role="alert" style="display: none"> {{ form.participantcode.errors }}  </div>
+        <div style="display:flex; flex-direction: row; justify-content: left; align-items: center"> {% formfield player.participantcode %}  </div>
+    </div>
+
+
+    <br>
+
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        <span class="german"> Weiter </span>
+        <span class="english"> Next </span>
+    </button>
+</div>
+{% endblock %}

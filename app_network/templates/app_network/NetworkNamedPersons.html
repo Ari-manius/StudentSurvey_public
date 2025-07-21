@@ -1,0 +1,81 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+    {% include "global/title_Global.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <input id="time" type="hidden" name="time_networknamedstudents" />
+    <br>
+    <!-- <h3 class="german">Bekanntschafts Netzwerk</h3>
+    <h3 class="english">Network of Aquaintances</h3> -->
+    <hr>
+
+    <div class="mb-1 border pt-2 pb-2 ps-2 px-2">
+        <p class="german">Bitte teilen Sie nun die Umfragecodes, welche Sie zuvor gesammelt und ausgetauscht haben mit uns.</p>
+        <p class="german">Tragen Sie in jedes Feld genau eine Person ein und merken Sie sich, wer diese Person ist.</p>
+        <p class="german">Bitte lassen Sie unbenutzte Feldern frei.</p>
+
+        <p class="english">Now we ask you to share the survey codes with us that you have collected.</p>
+        <p class="english">Enter the codes into the fields below and remember which Person has which code.</p>
+        <p class="english">Please leave the unused fields empty.</p>
+    
+        <div class="form-container">
+            <div class="form-column">
+                {% formfield player.person_1 %}  
+                {% formfield player.person_4 %} 
+                {% formfield player.person_7 %} 
+                {% formfield player.person_10 %} 
+                {% formfield player.person_13 %} 
+                {% formfield player.person_16 %} 
+                {% formfield player.person_19 %} 
+                {% formfield player.person_22 %} 
+                {% formfield player.person_25 %} 
+                {% formfield player.person_28 %} 
+            </div>
+            <div class="form-column">
+                {% formfield player.person_2 %}
+                {% formfield player.person_5 %}
+                {% formfield player.person_8 %}
+                {% formfield player.person_11 %}
+                {% formfield player.person_14 %}
+                {% formfield player.person_17 %}
+                {% formfield player.person_20 %}
+                {% formfield player.person_23 %}
+                {% formfield player.person_26 %}
+                {% formfield player.person_29 %}
+            </div>
+            <div class="form-column">
+                {% formfield player.person_3 %}
+                {% formfield player.person_6 %}
+                {% formfield player.person_9 %}
+                {% formfield player.person_12 %}
+                {% formfield player.person_15 %}
+                {% formfield player.person_18 %}
+                {% formfield player.person_21 %}
+                {% formfield player.person_24 %}
+                {% formfield player.person_27 %}
+                {% formfield player.person_30 %}
+            </div>
+        </div>
+    </div>
+    
+
+
+    <br>
+    <!--Next button-->
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        <span class="german"> Weiter </span>
+        <span class="english"> Next </span>
+    </button>
+</div>
+
+{% endblock %}

@@ -1,0 +1,300 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+
+{% endblock %}
+
+{% block title %}
+Student Survey - University Konstanz
+{% endblock %}
+
+{% block content %}
+<!--time stamp-->
+<div class="table">
+    <input id="time" type="hidden" name="time_scaloperson"/>
+
+        <div  class="mb-3 bg-light border pt-2 pb-2 px-2 ">
+            <!--instructions-->
+            <p class="german">Was halten Sie ganz allgemein von den folgenden Personen? Benutzen Sie dafür bitte die untenstehende Skala von -5 bis +5, 
+                mit einem Nullpunkt in der Mitte. +5 bedeutet, dass Sie sehr viel von der Person halten; -5 bedeutet, dass Sie sehr wenig von der 
+                Person halten. Mit den Werten dazwischen können Sie Ihre Meinung abstufen.</p>
+            <p class="english">How much do you like or dislike each of the following persons? Please use the scale below, ranging from -5 to +5, with 0 
+                indicating the middle. +5 means that you strongly like the person; -5 means that you strongly dislike the person. Choose the numbers in 
+                between to grade your statement.</p>
+            
+            <!--table-->
+            <div class="table">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td></td>
+                        <th><p class="german">-5: Starke Abneigung</p><p class="english">-5: Strong Dislike</p></th>
+                        <th><p>-4</p></th>
+                        <th><p>-3</p></th>
+                        <th><p>-2</p></th>
+                        <th><p>-1</p></th>
+                        <th><p>0</p></th>
+                        <th><p>1</p></th>
+                        <th><p>2</p></th>
+                        <th><p>3</p></th>
+                        <th><p>4</p></th>
+                        <th><p class="german">5: Starke Zuneigung</p><p class="english">5: Strong Like</p></th>
+                        <th style="vertical-align: top"><p class="german mb-0">Keine Angabe</p><p class="english mb-0">No answer</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Olaf Scholz</span></th>
+                            <th><input type="radio" name="scalo_pep1" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep1" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep1" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep1" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep1" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep1" value="0"></th>
+                            <th><input type="radio" name="scalo_pep1" value="1"></th>
+                            <th><input type="radio" name="scalo_pep1" value="2"></th>
+                            <th><input type="radio" name="scalo_pep1" value="3"></th>
+                            <th><input type="radio" name="scalo_pep1" value="4"></th>
+                            <th><input type="radio" name="scalo_pep1" value="5"></th>
+                            <th><input type="radio" name="scalo_pep1" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Kamala Harris</span></th>
+                            <th><input type="radio" name="scalo_pep2" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep2" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep2" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep2" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep2" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep2" value="0"></th>
+                            <th><input type="radio" name="scalo_pep2" value="1"></th>
+                            <th><input type="radio" name="scalo_pep2" value="2"></th>
+                            <th><input type="radio" name="scalo_pep2" value="3"></th>
+                            <th><input type="radio" name="scalo_pep2" value="4"></th>
+                            <th><input type="radio" name="scalo_pep2" value="5"></th>
+                            <th><input type="radio" name="scalo_pep2" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Karl Lauterbach</span></th>
+                            <th><input type="radio" name="scalo_pep3" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep3" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep3" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep3" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep3" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep3" value="0"></th>
+                            <th><input type="radio" name="scalo_pep3" value="1"></th>
+                            <th><input type="radio" name="scalo_pep3" value="2"></th>
+                            <th><input type="radio" name="scalo_pep3" value="3"></th>
+                            <th><input type="radio" name="scalo_pep3" value="4"></th>
+                            <th><input type="radio" name="scalo_pep3" value="5"></th>
+                            <th><input type="radio" name="scalo_pep3" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Christian Lindner</span></th>
+                            <th><input type="radio" name="scalo_pep4" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep4" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep4" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep4" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep4" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep4" value="0"></th>
+                            <th><input type="radio" name="scalo_pep4" value="1"></th>
+                            <th><input type="radio" name="scalo_pep4" value="2"></th>
+                            <th><input type="radio" name="scalo_pep4" value="3"></th>
+                            <th><input type="radio" name="scalo_pep4" value="4"></th>
+                            <th><input type="radio" name="scalo_pep4" value="5"></th>
+                            <th><input type="radio" name="scalo_pep4" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Friedrich Merz</span></th>
+                            <th><input type="radio" name="scalo_pep5" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep5" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep5" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep5" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep5" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep5" value="0"></th>
+                            <th><input type="radio" name="scalo_pep5" value="1"></th>
+                            <th><input type="radio" name="scalo_pep5" value="2"></th>
+                            <th><input type="radio" name="scalo_pep5" value="3"></th>
+                            <th><input type="radio" name="scalo_pep5" value="4"></th>
+                            <th><input type="radio" name="scalo_pep5" value="5"></th>
+                            <th><input type="radio" name="scalo_pep5" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Wolodymyr Selenskyj</span></th>
+                            <th><input type="radio" name="scalo_pep6" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep6" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep6" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep6" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep6" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep6" value="0"></th>
+                            <th><input type="radio" name="scalo_pep6" value="1"></th>
+                            <th><input type="radio" name="scalo_pep6" value="2"></th>
+                            <th><input type="radio" name="scalo_pep6" value="3"></th>
+                            <th><input type="radio" name="scalo_pep6" value="4"></th>
+                            <th><input type="radio" name="scalo_pep6" value="5"></th>
+                            <th><input type="radio" name="scalo_pep6" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Donald Trump</span></th>
+                            <th><input type="radio" name="scalo_pep7" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep7" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep7" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep7" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep7" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep7" value="0"></th>
+                            <th><input type="radio" name="scalo_pep7" value="1"></th>
+                            <th><input type="radio" name="scalo_pep7" value="2"></th>
+                            <th><input type="radio" name="scalo_pep7" value="3"></th>
+                            <th><input type="radio" name="scalo_pep7" value="4"></th>
+                            <th><input type="radio" name="scalo_pep7" value="5"></th>
+                            <th><input type="radio" name="scalo_pep7" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Robert Habeck</span></th>
+                            <th><input type="radio" name="scalo_pep8" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep8" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep8" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep8" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep8" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep8" value="0"></th>
+                            <th><input type="radio" name="scalo_pep8" value="1"></th>
+                            <th><input type="radio" name="scalo_pep8" value="2"></th>
+                            <th><input type="radio" name="scalo_pep8" value="3"></th>
+                            <th><input type="radio" name="scalo_pep8" value="4"></th>
+                            <th><input type="radio" name="scalo_pep8" value="5"></th>
+                            <th><input type="radio" name="scalo_pep8" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Greta Thunberg</span></th>
+                            <th><input type="radio" name="scalo_pep9" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep9" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep9" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep9" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep9" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep9" value="0"></th>
+                            <th><input type="radio" name="scalo_pep9" value="1"></th>
+                            <th><input type="radio" name="scalo_pep9" value="2"></th>
+                            <th><input type="radio" name="scalo_pep9" value="3"></th>
+                            <th><input type="radio" name="scalo_pep9" value="4"></th>
+                            <th><input type="radio" name="scalo_pep9" value="5"></th>
+                            <th><input type="radio" name="scalo_pep9" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Vladimir Putin</span></th>
+                            <th><input type="radio" name="scalo_pep10" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep10" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep10" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep10" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep10" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep10" value="0"></th>
+                            <th><input type="radio" name="scalo_pep10" value="1"></th>
+                            <th><input type="radio" name="scalo_pep10" value="2"></th>
+                            <th><input type="radio" name="scalo_pep10" value="3"></th>
+                            <th><input type="radio" name="scalo_pep10" value="4"></th>
+                            <th><input type="radio" name="scalo_pep10" value="5"></th>
+                            <th><input type="radio" name="scalo_pep10" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Björn Höcke</span></th>
+                            <th><input type="radio" name="scalo_pep11" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep11" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep11" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep11" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep11" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep11" value="0"></th>
+                            <th><input type="radio" name="scalo_pep11" value="1"></th>
+                            <th><input type="radio" name="scalo_pep11" value="2"></th>
+                            <th><input type="radio" name="scalo_pep11" value="3"></th>
+                            <th><input type="radio" name="scalo_pep11" value="4"></th>
+                            <th><input type="radio" name="scalo_pep11" value="5"></th>
+                            <th><input type="radio" name="scalo_pep11" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Markus Söder</span></th>
+                            <th><input type="radio" name="scalo_pep12" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep12" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep12" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep12" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep12" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep12" value="0"></th>
+                            <th><input type="radio" name="scalo_pep12" value="1"></th>
+                            <th><input type="radio" name="scalo_pep12" value="2"></th>
+                            <th><input type="radio" name="scalo_pep12" value="3"></th>
+                            <th><input type="radio" name="scalo_pep12" value="4"></th>
+                            <th><input type="radio" name="scalo_pep12" value="5"></th>
+                            <th><input type="radio" name="scalo_pep12" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Annalena Baerbock</span></th>
+                            <th><input type="radio" name="scalo_pep13" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep13" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep13" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep13" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep13" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep13" value="0"></th>
+                            <th><input type="radio" name="scalo_pep13" value="1"></th>
+                            <th><input type="radio" name="scalo_pep13" value="2"></th>
+                            <th><input type="radio" name="scalo_pep13" value="3"></th>
+                            <th><input type="radio" name="scalo_pep13" value="4"></th>
+                            <th><input type="radio" name="scalo_pep13" value="5"></th>
+                            <th><input type="radio" name="scalo_pep13" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Alice Weidel</span></th>
+                            <th><input type="radio" name="scalo_pep14" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep14" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep14" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep14" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep14" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep14" value="0"></th>
+                            <th><input type="radio" name="scalo_pep14" value="1"></th>
+                            <th><input type="radio" name="scalo_pep14" value="2"></th>
+                            <th><input type="radio" name="scalo_pep14" value="3"></th>
+                            <th><input type="radio" name="scalo_pep14" value="4"></th>
+                            <th><input type="radio" name="scalo_pep14" value="5"></th>
+                            <th><input type="radio" name="scalo_pep14" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Sahra Wagenknecht</span></th>
+                            <th><input type="radio" name="scalo_pep15" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep15" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep15" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep15" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep15" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep15" value="0"></th>
+                            <th><input type="radio" name="scalo_pep15" value="1"></th>
+                            <th><input type="radio" name="scalo_pep15" value="2"></th>
+                            <th><input type="radio" name="scalo_pep15" value="3"></th>
+                            <th><input type="radio" name="scalo_pep15" value="4"></th>
+                            <th><input type="radio" name="scalo_pep15" value="5"></th>
+                            <th><input type="radio" name="scalo_pep15" value="-999"></th>
+                        </tr>
+                        <tr>
+                            <th style="font-weight:normal"> <span>Benjamin Netanjahu</span></th>
+                            <th><input type="radio" name="scalo_pep16" value="-5"></th>
+                            <th><input type="radio" name="scalo_pep16" value="-4"></th>
+                            <th><input type="radio" name="scalo_pep16" value="-3"></th>
+                            <th><input type="radio" name="scalo_pep16" value="-2"></th>
+                            <th><input type="radio" name="scalo_pep16" value="-1"></th>
+                            <th><input type="radio" name="scalo_pep16" value="0"></th>
+                            <th><input type="radio" name="scalo_pep16" value="1"></th>
+                            <th><input type="radio" name="scalo_pep16" value="2"></th>
+                            <th><input type="radio" name="scalo_pep16" value="3"></th>
+                            <th><input type="radio" name="scalo_pep16" value="4"></th>
+                            <th><input type="radio" name="scalo_pep16" value="5"></th>
+                            <th><input type="radio" name="scalo_pep16" value="-999"></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </fieldset>
+    </div> 
+
+    <!--Next button-->
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        <span class="german"> Weiter </span>
+        <span class="english"> Next </span>
+    </button>
+</div>
+{% endblock %}

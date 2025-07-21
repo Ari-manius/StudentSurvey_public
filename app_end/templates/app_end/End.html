@@ -1,0 +1,24 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+{% include "global/title_Global.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div style="text-align: center;">
+        <img width="50%" height="50%" src="{% static 'images/ThankDog.webp' %}" />
+    </div>
+
+    <input id="time" type="hidden" name="time_endpage"/>
+    <br>
+    <hr>
+        <p class="german">Sie haben die Umfrage abgeschlossen und können das Browserfenster nun schließen.</p>
+        <p class="english">You have completed the survey and may now close the browser window.</p>
+</div>
+{% endblock %}

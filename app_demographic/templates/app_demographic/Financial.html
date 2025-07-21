@@ -1,0 +1,35 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+Student Survey - University Konstanz
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+
+    <div class="mb-3 border pt-2 pb-2 px-2">
+        <p class="german"> Bitte geben Sie Ihr verfügbares monatliches Einkommen in Euro(€) an.</p>
+        <p class="english"> Please enter your monthly disposable income in euros (€).</p>
+        <input type="number" name="income" placeholder="Enter">
+    </div>
+
+    <input id="time" type="hidden" name="time_age"/>
+    <div class="mb-3 border pt-2 pb-2 px-2">
+        <p class="german"> Bitte geben Sie Ihre Monatsmiete in Euro(€) an. Wenn Sie zu Hause leben und keine Miete zahlen, geben Sie "0" an.</p>
+        <p class="english"> Please enter your monthly rent, in euros (€). If you live at home and do not pay rent, enter "0".</p>
+        <input type="number" name="rent" placeholder="Enter">
+    </div>
+
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        <span class="german"> Weiter </span>
+        <span class="english"> Next </span>
+    </button>
+
+</div>
+{% endblock %}

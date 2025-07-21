@@ -1,0 +1,310 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+Student Survey - University Konstanz
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+//Get variables needed for our popout
+    var stu1 = document.getElementById('stu1');
+    var divstu1 = document.getElementById('divstu1');
+    var stu2 = document.getElementById('stu2');
+    var divstu2 = document.getElementById('divstu2');
+    var stu3 = document.getElementById('stu3');
+    var divstu3 = document.getElementById('divstu3');
+    var stu4 = document.getElementById('stu4');
+    var divstu4 = document.getElementById('divstu4');
+        
+    var stu11 = document.getElementById('stu11');
+    var divstu11 = document.getElementById('divstu11');
+    var stu22 = document.getElementById('stu22');
+    var divstu22 = document.getElementById('divstu22');
+    var stu33 = document.getElementById('stu33');
+    var divstu33 = document.getElementById('divstu33');
+    var stu44 = document.getElementById('stu44');
+    var divstu44 = document.getElementById('divstu44');
+
+    // POPOUT: we are going to create a popout function that displays text only if some value is given in another question
+function popout4() {
+    console.log('popout4() called');
+
+    // Reset all displays to none initially
+    divstu4.style.display = "none";
+    divstu3.style.display = "none";
+    divstu2.style.display = "none";
+    divstu1.style.display = "none";
+
+    // Reset the second set of elements as well
+    divstu44.style.display = "none";
+    divstu33.style.display = "none";
+    divstu22.style.display = "none";
+    divstu11.style.display = "none";
+
+    //the conditions and the implementation of showing the text
+    if (stu1.checked == true) {
+        console.log('yes');
+        divstu1.style.display = "block";
+    }
+    if (stu2.checked == true) {
+        console.log('no');
+        divstu2.style.display = "block";
+    }
+    if (stu11.checked == true) {
+        console.log('yes');
+        divstu11.style.display = "block";
+    }
+    if (stu22.checked == true) {
+        console.log('no');
+        divstu22.style.display = "block";
+    }
+    if (stu3.checked == true) {
+        console.log('yes');
+        divstu3.style.display = "block";
+    }
+    if (stu4.checked == true) {
+        console.log('no');
+        divstu4.style.display = "block";
+    }
+    if (stu33.checked == true) {
+        console.log('yes');
+        divstu33.style.display = "block";
+    }
+    if (stu44.checked == true) {
+        console.log('no');
+        divstu44.style.display = "block";
+    }
+}
+
+    
+    var stu5 = document.getElementById('stu5');
+    var divstu5 = document.getElementById('divstu5');
+    var stu6 = document.getElementById('stu6');
+    var divstu6 = document.getElementById('divstu6');
+    var stu7 = document.getElementById('stu7');
+    var divstu7 = document.getElementById('divstu7');
+
+    var stu55 = document.getElementById('stu55');
+    var divstu55 = document.getElementById('divstu55');
+    var stu66 = document.getElementById('stu66');
+    var divstu66 = document.getElementById('divstu66');
+    var stu77 = document.getElementById('stu77');
+    var divstu77 = document.getElementById('divstu77');
+
+    // POPOUT: we are going to create a popout function that displays text only if some value is given in another question
+function popout5() {
+    console.log('popout5() called');
+
+    //the conditions and the implementation of showing the text
+    if (stu5.checked == true) {
+        console.log('yes');
+        divstu5.style.display = "block";
+    }
+    if (stu6.checked == true) {
+        console.log('no');
+        divstu6.style.display = "block";
+    }
+    if (stu7.checked == true) {
+        console.log('no');
+        divstu7.style.display = "block";
+    }
+    if (stu55.checked == true) {
+        console.log('yes');
+        divstu55.style.display = "block";
+    }
+    if (stu66.checked == true) {
+        console.log('no');
+        divstu66.style.display = "block";
+    }
+    if (stu77.checked == true) {
+        console.log('no');
+        divstu77.style.display = "block";
+    }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- <h3 class="german"> Sonntagsfrage </h3>
+    <h3 class="english"> German Sunday Poll</h3> -->
+    <hr>
+
+    <input id="time" type="hidden" name="time_sundayquestion"/>
+    <div class="mb-3 border pt-2 pb-2 px-2 ">
+            <p class="german">Nun möchten wir Ihnen einige Fragen zu politikwissenschaftlich relevanten Themen stellen. Wenn am nächsten Sonntag Bundestagswahl wäre, würden Sie dann zur Wahl gehen?</p>
+            <p class="english">We would now like to ask you a few questions on topics relevant to political science. If there were a German general election on next Sunday, would you go to the polls?</p>
+
+            <div class="german"><input id = "stu1" type="radio" name="sunday_poll" value="1" onclick="popout4()"> Ja</div>
+            <div class="english"><input id = "stu11" type="radio" name="sunday_poll" value="1" onclick="popout4()"> Yes</div>
+            <div class="german"><input id = "stu2" type="radio" name="sunday_poll" value="2" onclick="popout4()" > Weiß nicht</div>
+            <div class="english"><input id = "stu22" type="radio" name="sunday_poll" value="2" onclick="popout4()"> Don't know</div>
+            <div class="german"><input id = "stu3" type="radio" name="sunday_poll" value="3" onclick="popout4()"> Nein</div>
+            <div class="english"><input id = "stu33" type="radio" name="sunday_poll" value="3" onclick="popout4()"> No </div>
+            <div class="german"><input id = "stu4" type="radio" name="sunday_poll" value="4" onclick="popout4()"> Nicht wahlberechtigt</div>
+            <div class="english"><input id = "stu44" type="radio" name="sunday_poll" value="4" onclick="popout4()"> Not eligible to vote </div>
+
+    <div id="divstu1" style="display: none">
+                <p class="german">Und welche Partei würden Sie wählen?</p>
+                <p class="english">And which party would you vote for?</p>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="1"> SPD</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="1"> SPD</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="2"> CDU/CSU</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="2"> CDU/CSU</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="3"> Bündnis 90/Die Grünen</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="3"> Bündnis 90/Die Grünen</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="4"> FDP</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="4"> FDP</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="5"> Die Linke</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="5"> Die Linke</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="6"> AfD</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="6"> AfD</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="7"> BSW (Bündnis Sahra Wagenknecht)</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="7"> BSW (Bündnis Sahra Wagenknecht)</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="8"> Andere Partei</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="8"> Another party</div>
+    </div>
+
+        
+    <div id="divstu2" style="display: none">
+        <br>
+    </div>
+
+    <div id="divstu3" style="display: none">
+        <br>
+        <p class="german">Warum nicht?</p>
+        <p class="english">Why not?</p>
+        {% formfield player.reason_no_vote %}
+    </div> 
+
+    <div id="divstu4" style="display: none">
+                <p class="german">Vorausgesetzt Sie dürften wählen, würden Sie dann zur Wahl gehen?</p>
+                <p class="english">If you were allowed to vote, would you go to the polls?</p>
+        
+                <div class="german"><input id = "stu5" type="radio" name="sunday_not_eligible" value="1" onclick="popout5()"> Ja</div>
+
+                <div class="german"><input id = "stu6" type="radio" name="sunday_not_eligible" value="2" onclick="popout5()"> Nein</div>
+
+                <div class="german"><input id = "stu7" type="radio" name="sunday_not_eligible" value="3" onclick="popout5()"> Weiß nicht</div>
+
+    </div>
+        
+    <div id="divstu11" style="display: none">
+                <p class="german">Und welche Partei würden Sie wählen?</p>
+                <p class="english">And which party would you vote for?</p>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="1"> SPD</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="1"> SPD</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="2"> CDU/CSU</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="2"> CDU/CSU</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="3"> Bündnis 90/Die Grünen</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="3"> the Greens</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="4"> FDP</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="4"> FDP</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="5"> Die Linke</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="5"> the Left</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="6"> AfD</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="6"> AfD</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="7"> BSW (Bündnis Sahra Wagenknecht)</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="7"> BSW (Bündnis Sahra Wagenknecht)</div>
+                <div class="german"><input type="radio" name="sunday_party_vote" value="8"> Andere Partei</div>
+                <div class="english"><input type="radio" name="sunday_party_vote" value="8"> Another party</div>
+    </div>
+        
+    <div id="divstu22" style="display: none">
+        <br>
+    </div>
+
+    <div id="divstu33" style="display: none">
+        <br>
+        <p class="german">Warum würden Sie nicht wählen gehen?</p>
+        <p class="english">Why would you go not voting?</p>
+        <br>
+        {% formfield player.reason_no_vote %}
+    </div>
+
+    <div id="divstu44" style="display: none">
+                <p class="german">Vorausgesetzt Sie dürften wählen, würden Sie dann zur Wahl gehen?</p>
+                <p class="english">If you were allowed to vote, would you go to the polls?</p>
+        
+                <div class="german"><input id = "stu5" type="radio" name="sunday_not_eligible" value="1" onclick="popout5()"> Ja</div>
+                <div class="english"><input id = "stu55" type="radio" name="sunday_not_eligible" value="1" onclick="popout5()"> Yes</div>
+                <div class="german"><input id = "stu6" type="radio" name="sunday_not_eligible" value="2" onclick="popout5()"> Nein</div>
+                <div class="english"><input id = "stu66" type="radio" name="sunday_not_eligible" value="2" onclick="popout5()"> No</div>
+                <div class="german"><input id = "stu7" type="radio" name="sunday_not_eligible" value="" onclick="popout5()"> Weiß nicht</div>
+                <div class="english"><input id = "stu77" type="radio" name="sunday_not_eligible" value="3" onclick="popout5()"> Don't know</div>
+    </div>
+        
+
+    <div id="divstu5" style="display: none">
+                <p class="german">Und welche Partei würden Sie wählen?</p>
+                <p class="english">And which party would you vote for?</p>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="1"> SPD</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="1"> SPD</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="2"> CDU/CSU</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="2"> CDU/CSU</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="3"> Bündnis 90/Die Grünen</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="3"> the Greens</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="4"> FDP</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="4"> FDP</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="5"> Die Linke</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="5"> the Left</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="6"> AfD</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="6"> AfD</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="7"> BSW (Bündnis Sahra Wagenknecht)</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="7"> BSW (Bündnis Sahra Wagenknecht)</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="8"> Andere Partei</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="8"> Another party</div>
+    </div>
+        
+    <div id="divstu6" style="display: none">
+        <br>
+    </div>
+
+    <div id="divstu7" style="display: none">
+        <br>
+    </div>
+
+    <div id="divstu55" style="display: none">
+                <p class="german">Und welche Partei würden Sie wählen?</p>
+                <p class="english">And which party would you vote for?</p>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="1"> SPD</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="1"> SPD</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="2"> CDU/CSU</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="2"> CDU/CSU</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="3"> Bündnis 90/Die Grünen</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="3"> the Greens</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="4"> FDP</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="4"> FDP</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="5"> Die Linke</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="5"> the Left</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="6"> AfD</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="6"> AfD</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="7"> BSW (Bündnis Sahra Wagenknecht)</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="7"> BSW (Bündnis Sahra Wagenknecht)</div>
+                <div class="german"><input type="radio" name="noteligible_sunday_party_vote" value="8"> Andere Partei</div>
+                <div class="english"><input type="radio" name="noteligible_sunday_party_vote" value="8"> Another party</div>
+    </div>
+
+    <div id="divstu66" style="display: none">
+        <br>
+    </div>
+
+    <div id="divstu77" style="display: none">
+        <br>
+    </div>
+
+    </div>
+
+    <br>
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        <span class="german"> Weiter </span>
+        <span class="english"> Next </span>
+    </button>
+</div>
+{% endblock %}

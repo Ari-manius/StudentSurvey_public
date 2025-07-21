@@ -1,0 +1,65 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+{% include "global/title_Global.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <input id="time" type="hidden" name="time_rnumber"/>
+    <br>
+    <h2 class="german"> Teilnahmecode</h2> <h2 class="english"> Participantion Code</h2>
+    <hr>
+
+    <div  class="mb-3 bg-light border pt-2 pb-2 px-2 ">
+        <p class="german">Sie werden diesen 6-stelligen Code am Ende des Semester brauchen. Bitte notieren Sie sich die folgende Nummer oder machen Sie einen Screenshot. Sie dient als Beleg dafür, dass Sie an der Befragung teilgenommen haben und wird es Ihnen erlauben Ihre Bonuspunkte zu erhalten.</p>
+        <p class="english">You will need this 6-number code at the end of the semester. Please write it down or take a screenshot. It serves as proof that you have particpiated in this survey and will allow you to claim your bonus points.</p>
+            <p>ID-Code: <b>{{ student_code }}</b></p>
+            <p class="english">Random-Code: <b>{{ player.rnumber }}</b></p>
+            <p class="german">Zufalls-Code: <b>{{ player.rnumber }}</b></p>
+    </div>
+
+    <div  class="mb-3 bg-light border pt-2 pb-2 px-2 ">
+
+        <p class="german">Bitte geben Sie zur Bestätigung folgendes in das Textfeld ein: "{ID-Code}_{Zufalls-Code}"</p>
+        <p class="english">In order to confirm, please enter the following into the field below: "{ID-Code}_{Random-Code}"</p>
+        
+        <input type="string" name="rnumbercheck" required="" id="id_rnumbercheck" class="form-control">
+        {{ formfield_errors 'rnumbercheck' }}
+
+        <p class="german"> <span style="color: red;">Hinweis:</span> Bitte halten Sie die Notiz bis zum Semesterende griffbereit. Sie werden immer wieder danach gefragt.
+        </p>
+        <p class="english"> <span style="color: red;">Note:</span> Please keep the note at hand until the end of the semester. You will be asked for it again.
+        </p>
+    </div>
+
+    <br>
+
+    <!-- <div class="mb-3 border pt-2 pb-2 px-2">
+        <p class="german"> Nun noch die wichtigste Frage. Wenn Sie sich entscheiden <b>müssten</b>, wen mögen Sie lieber, Hunde oder Katzen?</p>
+        <p class="english"> Now the most important question. If you <b>had</b> to decide, who do you prefer, dogs or cats?</p>
+        <div class="german"><input type="radio" name="catdog" value="1"> Natürlich Katzen, keine Frage!</div>
+        <div class="english"><input type="radio" name="catdog" value="1"> Cats of course!</div>
+        <div class="german"><input type="radio" name="catdog" value="2"> Natürlich Hunde, keine Frage!</div>
+        <div class="english"><input type="radio" name="catdog" value="2"> Dogs of course!</div>
+        <div class="german"><input type="radio" name="catdog" value="3"> Wer würde solch eine Entscheidung verlangen, ich liebe beide gleich viel!</div>
+        <div class="english"><input type="radio" name="catdog" value="3"> How can you make me chose, I love them both equally!</div>
+        <div class="german"><input type="radio" name="catdog" value="4"> Ich mag beide nicht!</div>
+        <div class="english"><input type="radio" name="catdog" value="4"> Neither!</div>
+        <div class="german"><input type="radio" name="catdog" value="-999"> Keine Angabe...</div>
+        <div class="english"><input type="radio" name="catdog" value="-999"> No Answer...</div>
+    </div> -->
+
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        <span class="german"> Weiter </span>
+        <span class="english"> Next </span>
+    </button>
+</div>
+
+{% endblock %}

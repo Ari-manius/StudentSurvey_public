@@ -1,0 +1,108 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block title %}
+Student Survey - University Konstanz
+{% endblock %}
+
+{% block content %}
+<input id="time" type="hidden" name="time_vignett_app" />
+<br>
+<p class="german">Bitte lesen Sie den folgenden Text sorgfältig und beantworten Sie die unten stehende Frage.</p>
+<p class="english">Please read the following text carefully and answer the question below.</p>
+
+<div class="english">
+    A {{ player.part1 }} reported to {{ player.part6 }} parents that the instructor of
+    a {{ player.part3 }} class in their {{ player.part4 }} {{ player.part10}}
+    {{ player.part11 }}.
+    The parents alerted a parent
+    representative to discuss with the {{ player.part4 }}’s director as well as the other
+    representatives to prevent such an incident in the future. The director refused to do anything since the {{ player.part3}} class was organized by an external {{ player.part3 }} school. Thereafter, all the
+    other parents remained uninformed about this incident.
+</div>
+<br>
+<div class="english">
+    After several months, a child in the same {{ player.part4 }} was exposed to the same {{
+        player.part8 }}. {{ player.part13 }} parents happened to hear about the incident during
+    the {{ player.part3 }} class in the past and approached a member of the {{ player.part4}} management,
+    who also met the instructor after the incident. Accordingly, the instructor admitted {{ player.part2}} behavior, but without any evil intention. Based on this, the {{ player.part4 }} evaluated
+    the problem being solved and did not take any further actions. The parents of the {{ player.part7}} child asked the director to approach the {{ player.part3 }} school to correct the
+    situation. However, {{ player.part9 }} refused to cooperate and asked them to talk with the {{player.part3 }} school themselves.
+</div>
+<br>
+<div class="english">
+    In a meeting with the parents, the {{ player.part3 }} school said that there was no such incident
+    and the instructor merely stopped the children from conducting {{ player.part8 }} during class. The
+    director further admitted that there is a testimony of the instructor, which they did not make available to the
+    parents. {{ player.part5 }} further accused the parents of causing reputation damage based only on
+    a statement of a {{ player.part1 }} several months ago.
+</div>
+
+<div class="german">
+{{ player.g_age_child }}  berichtete {{ player.g_gender_child }}  Eltern, dass 
+{{ player.g_gender_instructor_mapped_3 }} eines
+{{ player.g_music_sport }} {{ player.g_school_mapped }}
+{{ player.g_kind_of_abuse }}{{ player.g_kind_of_abuse_mapped }} an den Tag gelegt habe. 
+Die Eltern alarmierten einen Elternvertreter, um mit {{ player.g_director }}
+{{ player.g_school_mapped_2 }} und den anderen Vertretern zu diskutieren, damit solche
+ Vorfälle in Zukunft verhindert werden können.
+{{ player.g_director_mapped }}  weigerte sich, etwas zu unternehmen, da der {{ player.g_music_sport_mapped }} von
+einer externen {{ player.g_music_sport_mapped_2 }} organisiert wurde. Nach diesen Ereignissen
+ blieben alle anderen Eltern über diesen Vorfall
+uninformiert.
+</div>
+<br>
+<div class="german">
+Mehrere Monate später wurde ein Kind {{ player.g_school_mapped_3 }} 
+{{ player.g_kind_of_abuse_mapped_2 }} ausgesetzt. {{ player.g_gender_second_child }}
+ Eltern erfuhren zufälligerweise von dem vergangenen Vorfall des {{ player.g_music_sport }} und wandten sich an ein Mitglied der Schulleitung, das nach dem
+Vorfall auch {{ player.g_gender_instructor }} traf. Demnach gab {{ player.g_gender_instructor_mapped }} 
+Verhalten zu, allerdings ohne böse Absicht. Auf dieser Grundlage sah {{ player.g_school_mapped_4 }} das Problem als gelöst und ergriff 
+keine weiteren Maßnahmen. Die
+Eltern des {{ player.g_kind_of_abuse_mapped_3 }} Kindes forderten 
+{{ player.g_director_mapped_2 }} auf, sich an die {{ player.g_music_sport_mapped_2 }} zu 
+wenden, um die Situation aufzuklären. {{ player.g_director_mapped_3 }} lehnte dies jedoch ab und bat die Eltern, selbst mit der
+{{ player.g_music_sport_mapped_2 }} zu sprechen.
+</div>
+<br>
+<div class="german">
+Bei einem Treffen mit den Eltern erklärte die {{ player.g_music_sport_mapped_2 }},
+ dass es keinen solchen Vorfall gegeben habe und
+die Lehrkraft die Kinder nur daran gehindert habe, während des Unterrichts 
+{{ player.g_kind_of_abuse_mapped_4 }} Verhalten
+aufzuzeigen. {{ player.g_gender_external_director }} sagte auch, dass es eine Aussage
+ {{ player.g_gender_instructor_mapped_2 }} gebe, welche
+den Eltern jedoch nicht zugänglich gemacht wurde. {{ player.g_gender_external_director_mapped }} warf den Eltern außerdem vor, dass sie eine Rufschädigung
+verursacht hätten, einzig auf der Grundlage der Aussage eines {{ player.g_age_child_mapped }} Kindes vor 
+einigen
+Monaten.
+</div>
+
+<br>
+<div class="mb-3 border pt-2 pb-2 px-2">
+    <p class="german"> Was denken Sie, nachdem Sie diese Geschichte gelesen haben? Hat {{ player.g_gender_instructor_mapped_3 }} {{ player.g_kind_of_abuse_mapped_4 }} Verhalten gezeigt?</p>
+    <p class="english"> Having read this story, what do you think of it? Did the instructor commit the {{ player.part8 }}?</p>
+
+    <div class="german"><input type="radio" name="harassment" value="1"> {{ player.g_gender_instructor_mapped_4 }} hat {{ player.g_kind_of_abuse_mapped_4 }} Verhalten gezeigt.</div>
+    <div class="english"><input type="radio" name="harassment" value="1"> The instructor did the {{ player.part8 }}.</div>
+    <div class="german"><input type="radio" name="harassment" value="2"> Es ist sehr wahrscheinlich, dass {{ player.g_gender_instructor_mapped_3 }} {{ player.g_kind_of_abuse_mapped_4 }} Verhalten gezeigt hat.</div>
+    <div class="english"><input type="radio" name="harassment" value="2"> It is very likely that the instructor did the {{ player.part8 }}.</div>
+    <div class="german"><input type="radio" name="harassment" value="3"> Es ist eher wahrscheinlich, dass {{ player.g_gender_instructor_mapped_3 }} {{ player.g_kind_of_abuse_mapped_4 }}  Verhalten gezeigt hat. </div>
+    <div class="english"><input type="radio" name="harassment" value="3"> It is rather likely that the instructor did the {{ player.part8 }}.    </div>
+    <div class="german"><input type="radio" name="harassment" value="4"> Es ist eher unwahrscheinlich, dass {{ player.g_gender_instructor_mapped_3 }} {{ player.g_kind_of_abuse_mapped_4 }}  Verhalten gezeigt hat.</div>
+    <div class="english"><input type="radio" name="harassment" value="4"> It is rather unlikely that the instructor did the {{ player.part8 }}.    </div>
+    <div class="german"><input type="radio" name="harassment" value="5"> Es ist sehr unwahrscheinlich, dass {{ player.g_gender_instructor_mapped_3 }} {{ player.g_kind_of_abuse_mapped_4 }}  Verhalten gezeigt hat.</div>
+    <div class="english"><input type="radio" name="harassment" value="5"> It is very unlikely that the instructor did the {{ player.part8 }}.</div>
+    <div class="german"><input type="radio" name="harassment" value="6"> {{ player.g_gender_instructor_mapped_4 }} hat kein {{ player.g_kind_of_abuse_mapped_4 }}  Verhalten gezeigt.</div>
+    <div class="english"><input type="radio" name="harassment" value="6"> The instructor did not do the {{ player.part8 }}.    </div>
+    <div class="german"><input type="radio" name="harassment" value="-999"> Ich kann dazu nichts sagen.</div>
+    <div class="english"><input type="radio" name="harassment" value="-999"> I can't say anything.</div>
+</div>
+<br>
+<br>
+<br>
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">
+    <span class="german"> Weiter </span>
+    <span class="english"> Next </span>
+</button>
+{% endblock %}

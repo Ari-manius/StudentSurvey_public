@@ -1,0 +1,58 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+Student Survey - University Konstanz
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <input id="time" type="hidden" name="time_postcode"/>
+
+    <div class="mb-3 border pt-2 pb-2 px-2">
+        <p class="german"> In welchem der folgenden Studiengänge sind Sie eingeschrieben?</p>
+        <p class="english"> In which of the following study programs are you enrolled?</p>
+        <div class="german"><input type="radio" name="study_program" value="2"> B.Ed. Politikwissenschaften als Nebenfach</div>
+        <div class="english"><input type="radio" name="study_program" value="2"> B.Ed. Political Science as minor subject</div>
+        <div class="german"><input type="radio" name="study_program" value="1"> BA. Politik - Verwaltung - Management</div>
+        <div class="english"><input type="radio" name="study_program" value="1"> BA. Politics - Administration - Management</div>
+        <div class="german"><input type="radio" name="study_program" value="3"> MSc. Wirtschaftspädagogik</div>
+        <div class="english"><input type="radio" name="study_program" value="3"> MSc. Wirtschaftspädagogik</div>
+        <div class="german"><input type="radio" name="study_program" value="4"> MSc.Social and Economic Data Science (SEDS)</div>
+        <div class="english"><input type="radio" name="study_program" value="4"> MSc.Social and Economic Data Science (SEDS)</div>
+        <div class="german"><input type="radio" name="study_program" value="-999"> Keine Angabe</div>
+        <div class="english"><input type="radio" name="study_program" value="-999"> No Answer</div>
+        <div>{% formfield player.study_program_other %}</div>
+    </div>
+
+
+    <div class="mb-3 border pt-2 pb-2 px-2 ">
+        <p class="german">In welchem Fachsemester befinden Sie sich?</p>
+        <p class="english">What semester of study are you in?</p>
+        {% formfield player.semester_of_study%}
+    </div>
+
+    <div class="mb-3 border pt-2 pb-2 px-2 ">
+        <p class="german">Wollen Sie unmittelbar nach dem BA-Studium Ihre akademische Laufbahn fortsetzen und welchen Abschluss streben Sie an?</p>
+        <p class="english">Do you plan to continue your academic career after your BA studies and which degree do you aim for?</p>
+        <div class="german"><input type="radio" name="consecutive_study_program" value="1"> Master Abschluss</div>
+        <div class="english"><input type="radio" name="consecutive_study_program" value="1"> Master's Degree</div>
+        <div class="german"><input type="radio" name="consecutive_study_program" value="2"> Promotion</div>
+        <div class="english"><input type="radio" name="consecutive_study_program" value="2"> PhD. Doctor's Degree</div>
+        <div class="german"><input type="radio" name="consecutive_study_program" value="0"> Nein</div>
+        <div class="english"><input type="radio" name="consecutive_study_program" value="0"> No</div>
+        <div class="german"><input type="radio" name="consecutive_study_program" value="-999"> Weiß nicht</div>
+        <div class="english"><input type="radio" name="consecutive_study_program" value="-999"> Don't know</div>
+    </div>
+
+
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        <span class="german"> Weiter </span>
+        <span class="english"> Next </span>
+    </button>
+</div>
+{% endblock %}

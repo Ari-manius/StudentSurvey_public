@@ -1,0 +1,107 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/grid.css' }}">
+{% endblock %}
+
+{% block title %}
+Student Survey - University Konstanz
+{% endblock %}
+
+{% block content %}
+<div class="grid-container">
+    <!-- Time stamp -->
+    <input id="time" type="hidden" name="time_leftright" />
+    <br />
+
+    <!-- Heading -->
+    <hr />
+
+    <!-- Content: scale for parties -->
+    <div class="scale-container">
+        <fieldset>
+            <!-- Instructions -->
+            <p class="german">
+                In der Politik reden die Leute häufig von "links" und "rechts". Wenn Sie diese Skala von 1 bis 11 benutzen, wo würden Sie die folgenden Parteien einordnen, wenn 1 "links" und 11 "rechts" ist?
+            </p>
+            <p class="english">
+                In politics, people sometimes talk of "left" and "right". Where would you place the following parties on the scale if 1 is "left" and 11 is "right"?
+            </p>
+
+            <!-- Grid for scale -->
+            <div class="grid">
+                <!-- Header row -->
+                <div class="grid-header"></div>
+                <div class="grid-header"><p class="german">1: Links</p><p class="english">1: Left</p></div>
+                <div class="grid-header">2</div>
+                <div class="grid-header">3</div>
+                <div class="grid-header">4</div>
+                <div class="grid-header">5</div>
+                <div class="grid-header">6</div>
+                <div class="grid-header">7</div>
+                <div class="grid-header">8</div>
+                <div class="grid-header">9</div>
+                <div class="grid-header">10</div>
+                <div class="grid-header"><p class="german">11: Rechts</p><p class="english">11: Right</p></div>
+                <div class="grid-header"><p class="german">Keine Angabe</p><p class="english">No Answer</p></div>
+
+                <!-- Party 1 -->
+                <div class="grid-row">Party 1</div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="1"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="2"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="3"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="4"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="5"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="6"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="7"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="8"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="9"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="10"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="11"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party1" value="-999"></div>
+
+                <!-- Party 2 -->
+                <div class="grid-row">Party 2</div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="1"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="2"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="3"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="4"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="5"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="6"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="7"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="8"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="9"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="10"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="11"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party2" value="-999"></div>
+
+                <!-- Party 3 -->
+                <div class="grid-row">Party 3</div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="1"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="2"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="3"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="4"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="5"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="6"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="7"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="8"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="9"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="10"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="11"></div>
+                <div class="grid-cell"><input type="radio" name="lr_party3" value="-999"></div>
+
+                <!-- Add more parties as needed -->
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- Next button -->
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        <span class="german"> Weiter </span>
+        <span class="english"> Next </span>
+    </button>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,315 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+Student Survey - University Konstanz
+{% endblock %}
+
+{% block scripts %}
+<script>
+    //Get variables needed for our popout
+    var ans1 = document.getElementById('ans1');
+    var divans1 = document.getElementById('divans1');
+    var ans2 = document.getElementById('ans2');
+    var divans2 = document.getElementById('divans2');
+        
+    var ans11 = document.getElementById('ans11');
+    var divans11 = document.getElementById('divans11');
+    var ans22 = document.getElementById('ans22');
+    var divans22 = document.getElementById('divans22');
+
+    // POPOUT: we are going to create a popout function that displays text only if some value is given in another question
+    function popout() {
+        console.log('searching for the elements')
+        //the conditions and the implementation of showing the text
+        if (ans1.checked == true) {
+            console.log('yes');
+            divans2.style.display = "none";
+            divans1.style.display = "block";
+        }
+        if (ans2.checked == true) {
+            console.log('no');
+            divans1.style.display = "none";
+            divans2.style.display = "block";
+        }
+        if (ans11.checked == true) {
+            console.log('yes');
+            divans22.style.display = "none";
+            divans11.style.display = "block";
+        }
+        if (ans22.checked == true) {
+            console.log('no');
+            divans11.style.display = "none";
+            divans22.style.display = "block";
+        }
+    }
+
+
+    //Get variables needed for our popout
+    var ans3 = document.getElementById('ans3');
+    var divans3 = document.getElementById('divans3');
+    var ans4 = document.getElementById('ans4');
+    var divans4 = document.getElementById('divans4');
+        
+    var ans33 = document.getElementById('ans33');
+    var divans33 = document.getElementById('divans33');
+    var ans44 = document.getElementById('ans44');
+    var divans44 = document.getElementById('divans44');
+
+    // POPOUT: we are going to create a popout function that displays text only if some value is given in another question
+    function popout1() {
+        console.log('searching for the elements')
+        //the conditions and the implementation of showing the text
+        if (ans3.checked == true) {
+            console.log('yes');
+            divans4.style.display = "none";
+            divans3.style.display = "block";
+        }
+        if (ans4.checked == true) {
+            console.log('no');
+            divans3.style.display = "none";
+            divans4.style.display = "block";
+        }
+        if (ans33.checked == true) {
+            console.log('yes');
+            divans44.style.display = "none";
+            divans33.style.display = "block";
+        }
+        if (ans44.checked == true) {
+            console.log('no');
+            divans33.style.display = "none";
+            divans44.style.display = "block";
+        }
+    }
+
+    var ans5 = document.getElementById('ans5');
+    var divans5 = document.getElementById('divans5');
+    var ans6 = document.getElementById('ans6');
+    var divans6 = document.getElementById('divans6');
+        
+    var ans55 = document.getElementById('ans55');
+    var divans55 = document.getElementById('divans55');
+    var ans66 = document.getElementById('ans66');
+    var divans66 = document.getElementById('divans66');
+
+    function popout2() {
+        console.log('searching for the elements')
+        //the conditions and the implementation of showing the text
+        if (ans5.checked == true) {
+            console.log('yes');
+            divans6.style.display = "none";
+            divans5.style.display = "block";
+        }
+        if (ans6.checked == true) {
+            console.log('no');
+            divans5.style.display = "none";
+            divans6.style.display = "block";
+        }
+        if (ans55.checked == true) {
+            console.log('yes');
+            divans66.style.display = "none";
+            divans55.style.display = "block";
+        }
+        if (ans66.checked == true) {
+            console.log('no');
+            divans55.style.display = "none";
+            divans66.style.display = "block";
+        }
+    }
+
+    var ans7 = document.getElementById('ans7');
+    var divans7 = document.getElementById('divans7');
+    var ans8 = document.getElementById('ans8');
+    var divans8 = document.getElementById('divans8');
+    var ans9 = document.getElementById('ans9');
+    var divans9 = document.getElementById('divans9');
+    var ans10 = document.getElementById('ans10');
+    var divans10 = document.getElementById('divans10');
+        
+    var ans77 = document.getElementById('ans77');
+    var divans77 = document.getElementById('divans77');
+    var ans88 = document.getElementById('ans88');
+    var divans88 = document.getElementById('divans88');
+    var ans99 = document.getElementById('ans99');
+    var divans99 = document.getElementById('divans99');
+    var ans1010 = document.getElementById('ans1010');
+    var divans1010 = document.getElementById('divans1010');
+
+    function popout3() {
+        console.log('searching for the elements')
+        //the conditions and the implementation of showing the text
+        if (ans7.checked == true) {
+            console.log('yes');
+            divans9.style.display = "none";
+            divans10.style.display = "none";
+            divans8.style.display = "none";
+            divans7.style.display = "block";
+        }
+        if (ans8.checked == true) {
+            console.log('no');
+            divans9.style.display = "none";
+            divans10.style.display = "none";
+            divans7.style.display = "none";
+            divans8.style.display = "block";
+        }
+        if (ans77.checked == true) {
+            console.log('yes');
+            divans99.style.display = "none";
+            divans1010.style.display = "none";
+            divans8.style.display = "none";
+            divans88.style.display = "none";
+            divans77.style.display = "block";
+        }
+        if (ans88.checked == true) {
+            console.log('no');
+            divans99.style.display = "none";
+            divans1010.style.display = "none";
+            divans77.style.display = "none";
+            divans88.style.display = "block";
+        }
+        if (ans9.checked == true) {
+            console.log('yes');
+            divans7.style.display = "none";
+            divans8.style.display = "none";
+            divans10.style.display = "none";
+            divans9.style.display = "block";
+        }
+        if (ans10.checked == true) {
+            console.log('no');
+            divans7.style.display = "none";
+            divans8.style.display = "none";
+            divans9.style.display = "none";
+            divans10.style.display = "block";
+        }
+        if (ans99.checked == true) {
+            console.log('yes');
+            divans77.style.display = "none";
+            divans88.style.display = "none";
+            divans1010.style.display = "none";
+            divans99.style.display = "block";
+        }
+        if (ans1010.checked == true) {
+            console.log('no');
+            divans77.style.display = "none";
+            divans88.style.display = "none";
+            divans99.style.display = "none";
+            divans1010.style.display = "block";
+        }
+    }
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <input id="time" type="hidden" name="time_interest_uni"/>
+    <!-- <h3 class="german"> Demonstrationen </h3><h3 class="english"> Demonstrations</h3> -->
+    <hr>
+    <div class="mb-3 border pt-2 pb-2 px-2 ">
+        <p class="german">Haben Sie schon einmal an einer Demonstration teilgenommen?</p>
+        <p class="english">Have you ever participated in a demonstration?</p>
+            
+        <div class="german"><input id="ans1" type="radio" name="participation_demonstration" value="1" onclick="popout()">Ja</div>
+        <div class="english"><input id="ans11" type="radio" name="participation_demonstration" value="1" onclick="popout()"> Yes</div>
+        <div class="german"><input id="ans2" type="radio" name="participation_demonstration" value="2" onclick="popout()"> Nein</div>
+        <div class="english"><input id="ans22" type="radio" name="participation_demonstration" value="2" onclick="popout()"> No</div>
+
+    <div id="divans1" style="display: none">
+    <p class="german">Ihre Teilnahme an dieser  Demonstration erfolgte</p>
+    <p class="english">Your participation in this demonstration was</p>
+        <div class="german"><input type="radio" name="participation_demonstration_1" value="1"> aus Eigeninitiative</div>
+        <div class="english"><input type="radio" name="participation_demonstration_1" value="1"> on your own initiative</div>
+        <div class="german"><input type="radio" name="participation_demonstration_1" value="2"> weil Sie jemanden auf diese Demonstration begleitet haben</div>
+        <div class="english"><input type="radio" name="participation_demonstration_1" value="2"> because you accompanied someone to this demonstration</div>
+        <br>
+    </div>
+    <div id="divans2" style="display: none">
+        <br>
+    </div>      
+    <div id="divans11" style="display: none">
+    <p class="german">Ihre Teilnahme an dieser  Demonstration erfolgte</p>
+    <p class="english">Your participation in this demonstration was</p>
+        <div class="german"><input type="radio" name="participation_demonstration_1" value="1"> aus Eigeninitiative</div>
+        <div class="english"><input type="radio" name="participation_demonstration_1" value="1"> on your own initiative</div>
+        <div class="german"><input type="radio" name="participation_demonstration_1" value="2"> weil Sie jemanden auf diese Demonstration begleitet haben</div>
+        <div class="english"><input type="radio" name="participation_demonstration_1" value="2"> because you accompanied someone to this demonstration</div>
+        <br>
+    </div>
+    <div id="divans22" style="display: none">
+        <br>
+    </div>
+    </div>
+
+    <div class="mb-3 border pt-2 pb-2 px-2 ">
+        <p class="german">Haben Sie schon einmal eine Petition unterschrieben?</p>
+        <p class="english">Have you ever signed a petition?</p>
+        
+        <div class="german"><input id="ans3" type="radio" name="petition_signatory" value="1" onclick="popout1()"> Ja</div>
+        <div class="english"><input id="ans33" type="radio" name="petition_signatory" value="1" onclick="popout1()"> Yes</div>
+        <div class="german"><input id="ans4" type="radio" name="petition_signatory" value="2" onclick="popout1()"> Nein</div>
+        <div class="english"><input id="ans44" type="radio" name="petition_signatory" value="2" onclick="popout1()"> No</div>
+
+    <div id="divans3" style="display: none">
+                <p class="german">Sie sind auf diese Petition</p>
+                <p class="english">You have become aware of this petition</p>
+                <div class="german"><input type="radio" name="petition_signatory_1" value="1"> selbst aufmerksam geworden</div>
+                <div class="english"><input type="radio" name="petition_signatory_1" value="1"> yourself</div>
+                <div class="german"><input type="radio" name="petition_signatory_1" value="2"> aufmerksam gemacht worden</div>
+                <div class="english"><input type="radio" name="petition_signatory_1" value="2"> through others</div>
+        <br>
+    </div>
+    <div id="divans4" style="display: none">
+    </div>  
+    <div id="divans33" style="display: none">
+                <p class="german">Sie sind auf diese Petition</p>
+                <p class="english">You have become aware of this petition</p>
+                <div class="german"><input type="radio" name="petition_signatory_1" value="1"> selbst aufmerksam geworden</div>
+                <div class="english"><input type="radio" name="petition_signatory_1" value="1"> yourself</div>
+                <div class="german"><input type="radio" name="petition_signatory_1" value="2"> aufmerksam gemacht worden</div>
+                <div class="english"><input type="radio" name="petition_signatory_1" value="2"> through others</div>
+        <br>
+    </div>
+    <div id="divans44" style="display: none">
+        <br>
+    </div>
+    </div>
+
+
+
+    <div class="mb-3 border pt-2 pb-2 px-2 ">
+        <p class="german">Welche der sozialen Plattformen nutzen Sie? (Mehrfachnennung möglich, sonstige können in das Textfeld eingetragen werden)</p>
+        <p class="english">Which of the social platforms do you use? (Multiple choices possible, enter other platforms in the field.)</p>
+        <div class="german"><input type="checkbox" name="social_networks_1" value="1"> Facebook</div>
+        <div class="english"><input type="checkbox" name="social_networks_1" value="1"> Facebook</div>
+        <div class="german"><input type="checkbox" name="social_networks_2" value="1"> Twitter</div>
+        <div class="english"><input type="checkbox" name="social_networks_2" value="1"> Twitter</div>
+        <div class="german"><input type="checkbox" name="social_networks_3" value="1"> LinkedIn</div>
+        <div class="english"><input type="checkbox" name="social_networks_3" value="1"> LinkedIn</div>
+        <div class="german"><input type="checkbox" name="social_networks_4" value="1"> Instagram</div>
+        <div class="english"><input type="checkbox" name="social_networks_4" value="1"> Instagram</div>
+        <div class="german"><input type="checkbox" name="social_networks_5" value="1"> Signal</div>
+        <div class="english"><input type="checkbox" name="social_networks_5" value="1"> Signal</div>
+        <div class="german"><input type="checkbox" name="social_networks_6" value="1"> YouTube</div>
+        <div class="english"><input type="checkbox" name="social_networks_6" value="1"> YouTube</div>
+        <div class="german"><input type="checkbox" name="social_networks_7" value="1"> Snapchat</div>
+        <div class="english"><input type="checkbox" name="social_networks_7" value="1"> Snapchat</div>
+        <div class="german"><input type="checkbox" name="social_networks_8" value="1"> WhatsApp</div>
+        <div class="english"><input type="checkbox" name="social_networks_8" value="1"> WhatsApp</div>
+        <div class="german"><input type="checkbox" name="social_networks_9" value="1"> TikTok</div>
+        <div class="english"><input type="checkbox" name="social_networks_9" value="1"> TikTok</div>
+        <div class="german"><input type="checkbox" name="social_networks_10" value="1"> Telegram</div>
+        <div class="english"><input type="checkbox" name="social_networks_10" value="1"> Telegram</div>
+        <div>{% formfield player.social_networks_11 %}</div>
+    </div>
+
+    <br>
+
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        <span class="german"> Weiter </span>
+        <span class="english"> Next </span>
+    </button>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+Survey January 2024
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<!--time stamp-->
+<input id="time" type="hidden" name="time_fresherscamp" />
+
+<div class="mb-3 border pt-2 pb-2 px-2">
+    <p class="german">Waren Sie zu Beginn diesen Semesters auf dem Erstihof?</p>
+    <p class="english">Did you go to a freshers camp at the beginning of this semester?</p>            
+    <div class="german"><input type="radio" name="fresherscamp_student" value="1"> Hof 1: Oktober 6, 2024 - Oktober 8, 2024</div>
+    <div class="english"><input type="radio" name="fresherscamp_student" value="1"> Camp 1: October 6, 2024 - October 8, 2024</div>
+    <div class="german"><input type="radio" name="fresherscamp_student" value="2"> Hof 2: Oktober 7, 2024 - Oktober 9, 2024</div>
+    <div  class="english"><input type="radio" name="fresherscamp_student" value="2"> Camp 2: October 7, 2024 - October 9, 2024</div>
+    <div class="german"><input type="radio" name="fresherscamp_student" value="3"> Hof 3: Oktober 9, 2024 - Oktober 11, 2024</div>
+    <div class="english"><input type="radio" name="fresherscamp_student" value="3"> Camp 3: October 9, 2024 - October 11, 2024</div>
+    <div class="german"><input type="radio" name="fresherscamp_student" value="4"> Hof 4: Oktober 11, 2024 - Oktober 13, 2024</div>
+    <div  class="english"><input type="radio" name="fresherscamp_student" value="4"> Camp 4: October 11, 2024 - October 13, 2024</div>
+    <div class="german"><input type="radio" name="fresherscamp_student" value="0"> Nein</div>
+    <div class="english"><input type="radio" name="fresherscamp_student" value="0"> No</div>        
+</div>
+
+
+<div class="mb-3 border pt-2 pb-2 px-2">
+    <p class="german">Haben Sie an Veranstaltungen der Erstiwoche teilgenommen?</p>
+    <p class="english">Did you participate in any events of the "freshers" week?</p>            
+    <div class="german"><input type="radio" name="freshersweek_student" value="1"> Ja</div>
+    <div class="english"><input type="radio" name="freshersweek_student" value="1"> Yes</div>
+    <div class="german"><input type="radio" name="freshersweek_student" value="0"> Nein</div>
+    <div  class="english"><input type="radio" name="freshersweek_student" value="0"> No</div>
+</div>
+
+
+
+<!--Next button-->
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">
+    <span class="german"> Weiter </span>
+    <span class="english"> Next </span>
+</button>
+
+
+
+
+</div>
+{% endblock %}

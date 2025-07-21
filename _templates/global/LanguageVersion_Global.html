@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block app_scripts %}
+<script>
+    var time = new Date();
+    var time = time.toISOString();
+    document.getElementById("time").value = time;
+
+    // German & English
+    var language = {{lang}};
+    var german_text = document.getElementsByClassName("german");
+    var eng_text = document.getElementsByClassName("english");
+
+    if (language == 0) {
+        for(var i = 0; i < german_text.length; i++){
+            german_text[i].style.display = "block";}
+    } else {
+        for(var i = 0; i < german_text.length; i++){
+            german_text[i].style.display = "none";}}
+
+    if (language == 1) {
+        for(var i = 0; i < eng_text.length; i++){
+            eng_text[i].style.display = "block";}
+    } else {
+        for(var i = 0; i < eng_text.length; i++){
+            eng_text[i].style.display = "none";}}
+
+</script>
+
+{% endblock %}
