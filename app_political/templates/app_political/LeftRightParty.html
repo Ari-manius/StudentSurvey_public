@@ -10,173 +10,64 @@ Student Survey - University Konstanz
 {% endblock %}
 
 {% block content %}
-<div class="table">
-    <!--time stamp-->
+<div class="container">
     <input id="time" type="hidden" name="time_leftright"/>
-    <br>
-    
 
-    <!--content: scale for parties-->
-    <div  class="mb-3 bg-light border pt-2 pb-2 px-2 ">
-        <fieldset>
-            <!--instructions-->
-            <p class="german">In der Politik reden die Leute häufig von "links" und "rechts". Wenn Sie diese Skala von 1 bis 11 benutzen, wo würden Sie die 
-                folgenden Parteien einordnen, wenn 1 "links" und 11 "rechts" ist?</p>
-            <p class="english">In politics, people sometimes talk of "left" and "right". Where would you place the following parties on the scale if 1 is "left" and 
-                11 is "right"?</p>
-            <!--table-->
-            <div class="table">
-                <table class="table">
-                    <thead>
+    <div class="mb-3 bg-light border pt-2 pb-2 px-2">
+        <p class="german">In der Politik reden die Leute häufig von "links" und "rechts". Wenn Sie diese Skala von 1 bis 11 benutzen, wo würden Sie die 
+            folgenden Parteien einordnen, wenn 1 "links" und 11 "rechts" ist?</p>
+        <p class="english">In politics, people sometimes talk of "left" and "right". Where would you place the following parties on the scale if 1 is "left" and 
+            11 is "right"?</p>
+        
+        <div class="table">
+            <table class="table">
+                <thead>
+                <tr>
+                    <td></td>
+                    <th><p class="german">1: Links</p><p class="english">1: Left</p></th>
+                    <th><p>2</p></th>
+                    <th><p>3</p></th>
+                    <th><p>4</p></th>
+                    <th><p>5</p></th>
+                    <th><p>6</p></th>
+                    <th><p>7</p></th>
+                    <th><p>8</p></th>
+                    <th><p>9</p></th>
+                    <th><p>10</p></th>
+                    <th><p class="german">11: Rechts</p><p class="english">11: Right</p></th>
+                    <th style="vertical-align: top"><p class="german mb-0">Keine Angabe</p><p class="english mb-0">No Answer</p></th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for question in questions %}
                     <tr>
-                        <td></td>
-                        <th><p class="german">1: Links</p><p class="english">1: Left</p></th>
-                        <th><p>2</p></th>
-                        <th><p>3</p></th>
-                        <th><p>4</p></th>
-                        <th><p>5</p></th>
-                        <th><p>6</p></th>
-                        <th><p>7</p></th>
-                        <th><p>8</p></th>
-                        <th><p>9</p></th>
-                        <th><p>10</p></th>
-                        <th><p class="german">11: Rechts</p><p class="english">11: Right</p></th>
-                        <th style="vertical-align: top"><p class="german mb-0">Keine Angabe</p><p class="english mb-0">No Answer</p></th>
+                        <th style="font-weight:normal">
+                            <span class="german">{{ question.text.german }}</span>
+                            <span class="english">{{ question.text.english }}</span>
+                        </th>
+                        <th><input type="radio" name="{{ question.field }}" value="1"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="2"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="3"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="4"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="5"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="6"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="7"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="8"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="9"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="10"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="11"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="0"></th>
                     </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th style="font-weight:normal"> <span>CDU</span></th>
-                                <th><input type="radio" name="lr_CDU" value="1"></th>
-                                <th><input type="radio" name="lr_CDU" value="2"></th>
-                                <th><input type="radio" name="lr_CDU" value="3"></th>
-                                <th><input type="radio" name="lr_CDU" value="4"></th>
-                                <th><input type="radio" name="lr_CDU" value="5"></th>
-                                <th><input type="radio" name="lr_CDU" value="6"></th>
-                                <th><input type="radio" name="lr_CDU" value="7"></th>
-                                <th><input type="radio" name="lr_CDU" value="8"></th>
-                                <th><input type="radio" name="lr_CDU" value="9"></th>
-                                <th><input type="radio" name="lr_CDU" value="10"></th>
-                                <th><input type="radio" name="lr_CDU" value="11"></th>
-                                <th><input type="radio" name="lr_CDU" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"> <span>CSU</span></th>
-                                <th><input type="radio" name="lr_CSU" value="1"></th>
-                                <th><input type="radio" name="lr_CSU" value="2"></th>
-                                <th><input type="radio" name="lr_CSU" value="3"></th>
-                                <th><input type="radio" name="lr_CSU" value="4"></th>
-                                <th><input type="radio" name="lr_CSU" value="5"></th>
-                                <th><input type="radio" name="lr_CSU" value="6"></th>
-                                <th><input type="radio" name="lr_CSU" value="7"></th>
-                                <th><input type="radio" name="lr_CSU" value="8"></th>
-                                <th><input type="radio" name="lr_CSU" value="9"></th>
-                                <th><input type="radio" name="lr_CSU" value="10"></th>
-                                <th><input type="radio" name="lr_CSU" value="11"></th>
-                                <th><input type="radio" name="lr_CSU" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"> <span>SPD</span></th>
-                                <th><input type="radio" name="lr_SPD" value="1"></th>
-                                <th><input type="radio" name="lr_SPD" value="2"></th>
-                                <th><input type="radio" name="lr_SPD" value="3"></th>
-                                <th><input type="radio" name="lr_SPD" value="4"></th>
-                                <th><input type="radio" name="lr_SPD" value="5"></th>
-                                <th><input type="radio" name="lr_SPD" value="6"></th>
-                                <th><input type="radio" name="lr_SPD" value="7"></th>
-                                <th><input type="radio" name="lr_SPD" value="8"></th>
-                                <th><input type="radio" name="lr_SPD" value="9"></th>
-                                <th><input type="radio" name="lr_SPD" value="10"></th>
-                                <th><input type="radio" name="lr_SPD" value="11"></th>
-                                <th><input type="radio" name="lr_SPD" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"> <span>Grüne</span></th>
-                                <th><input type="radio" name="lr_Gruene" value="1"></th>
-                                <th><input type="radio" name="lr_Gruene" value="2"></th>
-                                <th><input type="radio" name="lr_Gruene" value="3"></th>
-                                <th><input type="radio" name="lr_Gruene" value="4"></th>
-                                <th><input type="radio" name="lr_Gruene" value="5"></th>
-                                <th><input type="radio" name="lr_Gruene" value="6"></th>
-                                <th><input type="radio" name="lr_Gruene" value="7"></th>
-                                <th><input type="radio" name="lr_Gruene" value="8"></th>
-                                <th><input type="radio" name="lr_Gruene" value="9"></th>
-                                <th><input type="radio" name="lr_Gruene" value="10"></th>
-                                <th><input type="radio" name="lr_Gruene" value="11"></th>
-                                <th><input type="radio" name="lr_Gruene" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"> <span>FDP</span></th>
-                                <th><input type="radio" name="lr_FDP" value="1"></th>
-                                <th><input type="radio" name="lr_FDP" value="2"></th>
-                                <th><input type="radio" name="lr_FDP" value="3"></th>
-                                <th><input type="radio" name="lr_FDP" value="4"></th>
-                                <th><input type="radio" name="lr_FDP" value="5"></th>
-                                <th><input type="radio" name="lr_FDP" value="6"></th>
-                                <th><input type="radio" name="lr_FDP" value="7"></th>
-                                <th><input type="radio" name="lr_FDP" value="8"></th>
-                                <th><input type="radio" name="lr_FDP" value="9"></th>
-                                <th><input type="radio" name="lr_FDP" value="10"></th>
-                                <th><input type="radio" name="lr_FDP" value="11"></th>
-                                <th><input type="radio" name="lr_FDP" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"> <span>Linke</span></th>
-                                <th><input type="radio" name="lr_Linke" value="1"></th>
-                                <th><input type="radio" name="lr_Linke" value="2"></th>
-                                <th><input type="radio" name="lr_Linke" value="3"></th>
-                                <th><input type="radio" name="lr_Linke" value="4"></th>
-                                <th><input type="radio" name="lr_Linke" value="5"></th>
-                                <th><input type="radio" name="lr_Linke" value="6"></th>
-                                <th><input type="radio" name="lr_Linke" value="7"></th>
-                                <th><input type="radio" name="lr_Linke" value="8"></th>
-                                <th><input type="radio" name="lr_Linke" value="9"></th>
-                                <th><input type="radio" name="lr_Linke" value="10"></th>
-                                <th><input type="radio" name="lr_Linke" value="11"></th>
-                                <th><input type="radio" name="lr_Linke" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"> <span>AfD</span></th>
-                                <th><input type="radio" name="lr_AfD" value="1"></th>
-                                <th><input type="radio" name="lr_AfD" value="2"></th>
-                                <th><input type="radio" name="lr_AfD" value="3"></th>
-                                <th><input type="radio" name="lr_AfD" value="4"></th>
-                                <th><input type="radio" name="lr_AfD" value="5"></th>
-                                <th><input type="radio" name="lr_AfD" value="6"></th>
-                                <th><input type="radio" name="lr_AfD" value="7"></th>
-                                <th><input type="radio" name="lr_AfD" value="8"></th>
-                                <th><input type="radio" name="lr_AfD" value="9"></th>
-                                <th><input type="radio" name="lr_AfD" value="10"></th>
-                                <th><input type="radio" name="lr_AfD" value="11"></th>
-                                <th><input type="radio" name="lr_AfD" value="-999"></th>
-                        </tr>
-                                        <tr>
-                            <th style="font-weight:normal"> <span>BSW</span></th>
-                                <th><input type="radio" name="lr_BSW" value="1"></th>
-                                <th><input type="radio" name="lr_BSW" value="2"></th>
-                                <th><input type="radio" name="lr_BSW" value="3"></th>
-                                <th><input type="radio" name="lr_BSW" value="4"></th>
-                                <th><input type="radio" name="lr_BSW" value="5"></th>
-                                <th><input type="radio" name="lr_BSW" value="6"></th>
-                                <th><input type="radio" name="lr_BSW" value="7"></th>
-                                <th><input type="radio" name="lr_BSW" value="8"></th>
-                                <th><input type="radio" name="lr_BSW" value="9"></th>
-                                <th><input type="radio" name="lr_BSW" value="10"></th>
-                                <th><input type="radio" name="lr_BSW" value="11"></th>
-                                <th><input type="radio" name="lr_BSW" value="-999"></th>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </fieldset>
-    </div>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div> 
 
-
-    <!--Next button-->
     <button class="otree-btn-next btn btn-primary next-button otree-next-button">
         <span class="german"> Weiter </span>
         <span class="english"> Next </span>
     </button>
-</div>
 
+</div>
 {% endblock %}

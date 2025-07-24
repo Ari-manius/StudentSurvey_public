@@ -1,0 +1,612 @@
+{
+  "Participation": {
+    "questions": [
+      {
+        "field": "participation_demonstration",
+        "type": "radio",
+        "text": {
+          "german": "Haben Sie schon einmal an einer Demonstration teilgenommen?",
+          "english": "Have you ever participated in a demonstration?"
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Ja", "english": "Yes"}},
+          {"value": "2", "text": {"german": "Nein", "english": "No"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}}
+        ]
+      },
+      {
+        "field": "petition_signatory",
+        "type": "radio",
+        "text": {
+          "german": "Haben Sie schon einmal eine Petition unterschrieben?",
+          "english": "Have you ever signed a petition?"
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Ja", "english": "Yes"}},
+          {"value": "2", "text": {"german": "Nein", "english": "No"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}}
+        ]
+      },
+      {
+        "field": "social_networks_1",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "section_header": {
+          "german": "Welche der sozialen Plattformen nutzen Sie? (Mehrfachnennung möglich, sonstige können in das Textfeld eingetragen werden)",
+          "english": "Which of the social platforms do you use? (Multiple choices possible, enter other platforms in the field.)"
+        },
+        "text": {
+          "german": "Facebook",
+          "english": "Facebook"
+        }
+      },
+      {
+        "field": "social_networks_2",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "Twitter",
+          "english": "Twitter"
+        }
+      },
+      {
+        "field": "social_networks_3",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "LinkedIn",
+          "english": "LinkedIn"
+        }
+      },
+      {
+        "field": "social_networks_4",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "Instagram",
+          "english": "Instagram"
+        }
+      },
+      {
+        "field": "social_networks_5",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "Signal",
+          "english": "Signal"
+        }
+      },
+      {
+        "field": "social_networks_6",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "YouTube",
+          "english": "YouTube"
+        }
+      },
+      {
+        "field": "social_networks_7",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "Snapchat",
+          "english": "Snapchat"
+        }
+      },
+      {
+        "field": "social_networks_8",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "WhatsApp",
+          "english": "WhatsApp"
+        }
+      },
+      {
+        "field": "social_networks_9",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "TikTok",
+          "english": "TikTok"
+        }
+      },
+      {
+        "field": "social_networks_10",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "Telegram",
+          "english": "Telegram"
+        }
+      },
+      {
+        "field": "social_networks_11",
+        "type": "formfield",
+        "section": "social_platforms",
+        "text": {
+          "german": "Andere/Other:",
+          "english": "Other:"
+        }
+      }
+    ]
+  },
+  "Sonntagsfrage": {
+    "questions": [
+      {
+        "field": "sunday_poll",
+        "type": "radio",
+        "text": {
+          "german": "Wenn nächsten Sonntag Bundestagswahl wäre, welche Partei würden Sie mit Ihrer Zweitstimme wählen?",
+          "english": "If there were a federal election next Sunday, which party would you vote for with your second vote?"
+        },
+        "options": [
+          {"value": "1", "text": {"german": "CDU", "english": "CDU"}},
+          {"value": "2", "text": {"german": "CSU", "english": "CSU"}},
+          {"value": "3", "text": {"german": "SPD", "english": "SPD"}},
+          {"value": "4", "text": {"german": "AfD", "english": "AfD"}},
+          {"value": "5", "text": {"german": "FDP", "english": "FDP"}},
+          {"value": "6", "text": {"german": "Die Linke", "english": "Die Linke"}},
+          {"value": "7", "text": {"german": "Bündnis 90/Die Grünen", "english": "Bündnis 90/Die Grünen"}},
+          {"value": "8", "text": {"german": "BSW", "english": "BSW"}},
+          {"value": "9", "text": {"german": "Andere Partei", "english": "Other party"}},
+          {"value": "10", "text": {"german": "Würde nicht wählen", "english": "Would not vote"}},
+          {"value": "11", "text": {"german": "Bin nicht wahlberechtigt", "english": "Not eligible to vote"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
+        ]
+      },
+      {
+        "field": "sunday_party_vote",
+        "type": "text",
+        "text": {
+          "german": "Falls 'Andere Partei': Welche?",
+          "english": "If 'Other party': Which one?"
+        }
+      },
+      {
+        "field": "sunday_not_eligible",
+        "type": "radio",
+        "text": {
+          "german": "Falls Sie nicht wahlberechtigt sind: Welche Partei würden Sie wählen, wenn Sie könnten?",
+          "english": "If you are not eligible to vote: Which party would you vote for if you could?"
+        },
+        "options": [
+          {"value": "1", "text": {"german": "CDU", "english": "CDU"}},
+          {"value": "2", "text": {"german": "CSU", "english": "CSU"}},
+          {"value": "3", "text": {"german": "SPD", "english": "SPD"}},
+          {"value": "4", "text": {"german": "AfD", "english": "AfD"}},
+          {"value": "5", "text": {"german": "FDP", "english": "FDP"}},
+          {"value": "6", "text": {"german": "Die Linke", "english": "Die Linke"}},
+          {"value": "7", "text": {"german": "Bündnis 90/Die Grünen", "english": "Bündnis 90/Die Grünen"}},
+          {"value": "8", "text": {"german": "BSW", "english": "BSW"}},
+          {"value": "9", "text": {"german": "Andere Partei", "english": "Other party"}},
+          {"value": "10", "text": {"german": "Würde nicht wählen", "english": "Would not vote"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
+        ]
+      },
+      {
+        "field": "noteligible_sunday_party_vote",
+        "type": "text",
+        "text": {
+          "german": "Falls 'Andere Partei': Welche?",
+          "english": "If 'Other party': Which one?"
+        }
+      },
+      {
+        "field": "reason_no_vote",
+        "type": "text",
+        "text": {
+          "german": "Falls Sie nicht wählen würden: Warum nicht?",
+          "english": "If you would not vote: Why not?"
+        }
+      }
+    ]
+  },
+  "ScaloParty": {
+    "questions": [
+      {
+        "field": "scalo_cdu",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "CDU",
+          "english": "CDU"
+        }
+      },
+      {
+        "field": "scalo_csu",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "CSU",
+          "english": "CSU"
+        }
+      },
+      {
+        "field": "scalo_spd",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "SPD",
+          "english": "SPD"
+        }
+      },
+      {
+        "field": "scalo_gruene",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Grüne",
+          "english": "Greens"
+        }
+      },
+      {
+        "field": "scalo_fdp",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "FDP",
+          "english": "FDP"
+        }
+      },
+      {
+        "field": "scalo_linke",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Linke",
+          "english": "Left"
+        }
+      },
+      {
+        "field": "scalo_afd",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "AfD",
+          "english": "AfD"
+        }
+      },
+      {
+        "field": "scalo_bsw",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "BSW",
+          "english": "BSW"
+        }
+      }
+    ]
+  },
+  "ScaloPerson": {
+    "questions": [
+      {
+        "field": "scalo_pep1",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Olaf Scholz",
+          "english": "Olaf Scholz"
+        }
+      },
+      {
+        "field": "scalo_pep2",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Friedrich Merz",
+          "english": "Friedrich Merz"
+        }
+      },
+      {
+        "field": "scalo_pep3",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Robert Habeck",
+          "english": "Robert Habeck"
+        }
+      },
+      {
+        "field": "scalo_pep4",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Christian Lindner",
+          "english": "Christian Lindner"
+        }
+      },
+      {
+        "field": "scalo_pep5",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Alice Weidel",
+          "english": "Alice Weidel"
+        }
+      },
+      {
+        "field": "scalo_pep6",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Janine Wissler",
+          "english": "Janine Wissler"
+        }
+      },
+      {
+        "field": "scalo_pep7",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Sahra Wagenknecht",
+          "english": "Sahra Wagenknecht"
+        }
+      },
+      {
+        "field": "scalo_pep8",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Markus Söder",
+          "english": "Markus Söder"
+        }
+      },
+      {
+        "field": "scalo_pep9",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Annalena Baerbock",
+          "english": "Annalena Baerbock"
+        }
+      },
+      {
+        "field": "scalo_pep10",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Lars Klingbeil",
+          "english": "Lars Klingbeil"
+        }
+      },
+      {
+        "field": "scalo_pep11",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Tino Chrupalla",
+          "english": "Tino Chrupalla"
+        }
+      },
+      {
+        "field": "scalo_pep12",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Martin Schirdewan",
+          "english": "Martin Schirdewan"
+        }
+      },
+      {
+        "field": "scalo_pep13",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Ricarda Lang",
+          "english": "Ricarda Lang"
+        }
+      },
+      {
+        "field": "scalo_pep14",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Omid Nouripour",
+          "english": "Omid Nouripour"
+        }
+      },
+      {
+        "field": "scalo_pep15",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Saskia Esken",
+          "english": "Saskia Esken"
+        }
+      },
+      {
+        "field": "scalo_pep16",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Amira Mohamed Ali",
+          "english": "Amira Mohamed Ali"
+        }
+      }
+    ]
+  },
+  "LeftRightParty": {
+    "questions": [
+      {
+        "field": "lr_CDU",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 11,
+        "text": {
+          "german": "CDU",
+          "english": "CDU"
+        }
+      },
+      {
+        "field": "lr_CSU",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 11,
+        "text": {
+          "german": "CSU",
+          "english": "CSU"
+        }
+      },
+      {
+        "field": "lr_SPD",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 11,
+        "text": {
+          "german": "SPD",
+          "english": "SPD"
+        }
+      },
+      {
+        "field": "lr_Gruene",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 11,
+        "text": {
+          "german": "Grüne",
+          "english": "Greens"
+        }
+      },
+      {
+        "field": "lr_FDP",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 11,
+        "text": {
+          "german": "FDP",
+          "english": "FDP"
+        }
+      },
+      {
+        "field": "lr_Linke",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 11,
+        "text": {
+          "german": "Linke",
+          "english": "Left"
+        }
+      },
+      {
+        "field": "lr_AfD",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 11,
+        "text": {
+          "german": "AfD",
+          "english": "AfD"
+        }
+      },
+      {
+        "field": "lr_BSW",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 11,
+        "text": {
+          "german": "BSW",
+          "english": "BSW"
+        }
+      }
+    ]
+  },
+  "PoliticalQuestions": {
+    "questions": [
+      {
+        "field": "politics_question_one",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 5,
+        "text": {
+          "german": "Wichtige Fragen zur Bundespolitik in Deutschland kann ich gut verstehen und einschätzen.",
+          "english": "I am able to understand important questions regarding federal politics in Germany."
+        }
+      },
+      {
+        "field": "politics_question_two",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 5,
+        "text": {
+          "german": "Die Abgeordneten des deutschen Bundestages bemühen sich um einen engen Kontakt zur Bevölkerung.",
+          "english": "The members of the German parliament strive to keep in close touch with the people."
+        }
+      },
+      {
+        "field": "politics_question_three",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 5,
+        "text": {
+          "german": "Ich traue mir zu, mich an einem Gespräch über politische Fragen zur Bundespolitik aktiv zu beteiligen.",
+          "english": "I have the confidence to take an active part in a discussion about issues regarding federal politics."
+        }
+      },
+      {
+        "field": "politics_question_four",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 5,
+        "text": {
+          "german": "Die Abgeordneten des deutschen Bundestages kümmern sich darum, was Leute wie ich denken.",
+          "english": "The members of the German parliament care about what people like me think."
+        }
+      },
+      {
+        "field": "politics_question_five",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 5,
+        "text": {
+          "german": "In schwierigen Situationen kann ich mich auf meine Fähigkeiten verlassen.",
+          "english": "In difficult situations, I can trust my capabilities."
+        }
+      },
+      {
+        "field": "politics_question_six",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 5,
+        "text": {
+          "german": "Die meisten Probleme kann ich aus eigener Kraft gut meistern.",
+          "english": "I can cope with most problems myself."
+        }
+      },
+      {
+        "field": "politics_question_seven",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 5,
+        "text": {
+          "german": "Auch anstrengende und komplizierte Aufgaben kann ich in der Regel gut lösen.",
+          "english": "In general, I can solve challenging and complex tasks."
+        }
+      }
+    ]
+  }
+}

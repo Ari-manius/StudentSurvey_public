@@ -1,0 +1,189 @@
+{
+  "GenderAge": {
+    "questions": [
+      {
+        "field": "age",
+        "type": "number",
+        "text": {
+          "german": "Bitte geben Sie Ihr Geburtsjahr an.",
+          "english": "Please enter your birthyear."
+        },
+        "placeholder": "Enter"
+      },
+      {
+        "field": "gender",
+        "type": "radio",
+        "text": {
+          "german": "Bitte geben Sie Ihr Gechlecht an.",
+          "english": "Please enter your gender."
+        },
+        "options": [
+          {
+            "value": "1",
+            "text": {"german": "Weiblich", "english": "Female"}
+          },
+          {
+            "value": "2", 
+            "text": {"german": "Männlich", "english": "Male"}
+          },
+          {
+            "value": "3",
+            "text": {"german": "Divers", "english": "Diverse"}
+          },
+          {
+            "value": "0",
+            "text": {"german": "Keine Angabe", "english": "No answer"}
+          }
+        ]
+      }
+    ]
+  },
+  "Financial": {
+    "questions": [
+      {
+        "field": "income",
+        "type": "number",
+        "text": {
+          "german": "Bitte geben Sie Ihr verfügbares monatliches Einkommen in Euro(€) an.",
+          "english": "Please enter your monthly disposable income in euros (€)."
+        },
+        "placeholder": "Enter"
+      },
+      {
+        "field": "rent",
+        "type": "number", 
+        "text": {
+          "german": "Bitte geben Sie Ihre Monatsmiete in Euro(€) an. Wenn Sie zu Hause leben und keine Miete zahlen, geben Sie \"0\" an.",
+          "english": "Please enter your monthly rent, in euros (€). If you live at home and do not pay rent, enter \"0\"."
+        },
+        "placeholder": "Enter"
+      }
+    ]
+  },
+  "Secondary": {
+    "questions": [
+      {
+        "field": "postcode",
+        "type": "formfield",
+        "text": {
+          "german": "Wie lauten die ersten beiden Ziffern der Postleitzahl des Wohnortes, an dem Sie wohnhaft waren, während Sie Ihr Abitur gemacht haben? Falls Sie im Ausland gewohnt haben, geben Sie bitte \"00\" an.",
+          "english": "What are the first two digits of the postcode of your place of residence at the time when you completed high school? If you lived outside of Germany, please type in \"00\"."
+        }
+      },
+      {
+        "field": "secondary_year",
+        "type": "formfield",
+        "text": {
+          "german": "Wann haben Sie ihr Abitur gemacht?",
+          "english": "When did you complete your secondary education?"
+        }
+      }
+    ]
+  },
+  "LevelFamily": {
+    "questions": [
+      {
+        "field": "school_mother",
+        "type": "radio",
+        "text": {
+          "german": "Bitte geben Sie den höchsten <b>Schulabschluss</b> an, den Ihre <b>Mutter</b> erreicht hat.",
+          "english": "Please select the highest school education level reached by your mother."
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Schule beendet ohne Abschluss", "english": "School Graduation without Degree"}},
+          {"value": "2", "text": {"german": "Volks- / Hauptschulabschluss bzw. Polytechnische Oberschule mit Abschluss 8. oder 9. Klasse", "english": "Primary School Graduation with Degree"}},
+          {"value": "3", "text": {"german": "Mittlere Reife, Realschulabschluss bzw. Polytechnische Oberschule mit Abschluss 10. Klasse", "english": "Secondary School Graduation"}},
+          {"value": "4", "text": {"german": "Fachhochschulreife (Abschluss einer Fachoberschule etc.)", "english": "Higher School without Graduation"}},
+          {"value": "5", "text": {"german": "Abitur bzw. Erweiterte Oberschule mit Abschluss 12. Klasse (Hochschulreife)", "english": "High School Graduation"}},
+          {"value": "6", "text": {"german": "Anderen Bildungsabschluss", "english": "Other Degree"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
+        ]
+      },
+      {
+        "field": "work_edu_mother",
+        "type": "radio",
+        "text": {
+          "german": "Bitte geben Sie den höchsten <b>beruflichen Bildungsabschluss</b> an, den Ihre <b>Mutter</b> erreicht hat.",
+          "english": "Please select the highest working education level reached by your mother."
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Keinen beruflichen Ausbildungsabschluss", "english": "No working education"}},
+          {"value": "2", "text": {"german": "Beruflich-betriebliche Anlernzeit mit Abschlusszeugnis, aber keine Lehre", "english": "Workplace education with certificate"}},
+          {"value": "3", "text": {"german": "Teilfacharbeiterabschluss", "english": "Partial vocational training"}},
+          {"value": "4", "text": {"german": "Abgeschlossene Lehre", "english": "Vocational Training"}},
+          {"value": "5", "text": {"german": "Berufsfachschulabschluss", "english": "Vocational school qualification"}},
+          {"value": "6", "text": {"german": "Fachschulabschluss", "english": "Technical school qualification"}},
+          {"value": "7", "text": {"german": "Meister-, Techniker- oder gleichwertiger Fachschulabschluss", "english": "Master, technician or equivalent technical school qualification"}},
+          {"value": "8", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule)", "english": "Higher school degree (also degree from an engineering school)"}},
+          {"value": "9", "text": {"german": "Hochschulabschluss", "english": "University degree"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
+        ]
+      },
+      {
+        "field": "ocu_mother",
+        "type": "radio",
+        "text": {
+          "german": "Bitte geben Sie an, ob Ihre <b>Mutter</b> berufstätig ist.",
+          "english": "Please select if your mother currently has an occupation."
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Nicht berufstätig", "english": "Not employed"}},
+          {"value": "2", "text": {"german": "Berufstätig, Teilzeit", "english": "Employed, Part-time"}},
+          {"value": "3", "text": {"german": "Berufstätig, Vollzeit", "english": "Employed, Full-time"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
+        ]
+      },
+      {
+        "field": "school_father",
+        "type": "radio",
+        "text": {
+          "german": "Bitte geben Sie den höchsten <b>Schulabschluss</b> an, den Ihr <b>Vater</b> erreicht hat.",
+          "english": "Please select the highest school education level reached by your father."
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Schule beendet ohne Abschluss", "english": "School Graduation without Degree"}},
+          {"value": "2", "text": {"german": "Volks- / Hauptschulabschluss bzw. Polytechnische Oberschule mit Abschluss 8. oder 9. Klasse", "english": "Primary School Graduation with Degree"}},
+          {"value": "3", "text": {"german": "Mittlere Reife, Realschulabschluss bzw. Polytechnische Oberschule mit Abschluss 10. Klasse", "english": "Secondary School Graduation"}},
+          {"value": "4", "text": {"german": "Fachhochschulreife (Abschluss einer Fachoberschule etc.)", "english": "Higher School without Graduation"}},
+          {"value": "5", "text": {"german": "Abitur bzw. Erweiterte Oberschule mit Abschluss 12. Klasse (Hochschulreife)", "english": "High School Graduation"}},
+          {"value": "6", "text": {"german": "Anderen Bildungsabschluss", "english": "Other Degree"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
+        ]
+      },
+      {
+        "field": "work_edu_father",
+        "type": "radio",
+        "text": {
+          "german": "Bitte geben Sie den höchsten <b>beruflichen Bildungsabschluss</b> an, den Ihr <b>Vater</b> erreicht hat.",
+          "english": "Please select the highest working education level reached by your father."
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Keinen beruflichen Ausbildungsabschluss", "english": "No working education"}},
+          {"value": "2", "text": {"german": "Beruflich-betriebliche Anlernzeit mit Abschlusszeugnis, aber keine Lehre", "english": "Workplace education with certificate"}},
+          {"value": "3", "text": {"german": "Teilfacharbeiterabschluss", "english": "Partial vocational training"}},
+          {"value": "4", "text": {"german": "Abgeschlossene Lehre", "english": "Vocational Training"}},
+          {"value": "5", "text": {"german": "Berufsfachschulabschluss", "english": "Vocational school qualification"}},
+          {"value": "6", "text": {"german": "Fachschulabschluss", "english": "Technical school qualification"}},
+          {"value": "7", "text": {"german": "Meister-, Techniker- oder gleichwertiger Fachschulabschluss", "english": "Master, technician or equivalent technical school qualification"}},
+          {"value": "8", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule)", "english": "University degree (also degree from an engineering school)"}},
+          {"value": "9", "text": {"german": "Hochschulabschluss", "english": "Higher University degree"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
+        ]
+      },
+      {
+        "field": "ocu_father",
+        "type": "radio",
+        "text": {
+          "german": "Bitte geben Sie an, ob Ihr <b>Vater</b> berufstätig ist.",
+          "english": "Please select if your father currently has an occupation."
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Nicht berufstätig", "english": "Not employed"}},
+          {"value": "2", "text": {"german": "Berufstätig, Teilzeit", "english": "Employed, Part-time"}},
+          {"value": "3", "text": {"german": "Berufstätig, Vollzeit", "english": "Employed, Full-time"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
+        ]
+      }
+    ]
+  }
+}

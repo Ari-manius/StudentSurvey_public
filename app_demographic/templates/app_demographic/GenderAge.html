@@ -6,33 +6,29 @@
 {% endblock %}
 
 {% block title %}
-Student Survey - University Konstanz
+{% include "global/title_Global.html" %}
 {% endblock %}
 
 {% block content %}
 <div class="container">
-
     <input id="time" type="hidden" name="time_age"/>
 
-    <div class="mb-3 border pt-2 pb-2 px-2">
-        <p class="german"> Bitte geben Sie Ihr Alter in Jahren an.</p>
-        <p class="english"> Please enter your age in years.</p>
-        <input type="number" name="age" placeholder="Enter">
-        {{ formfield_errors 'age' }}
-    </div>
-
-    <div class="mb-3 border pt-2 pb-2 px-2">
-        <p class="german"> Bitte geben Sie Ihr Gechlecht an.</p>
-        <p class="english"> Please enter your gender.</p>
-        <div class="german"><input type="radio" name="gender" value="1"> Weiblich</div>
-        <div class="english"><input type="radio" name="gender" value="1"> Female</div>
-        <div class="german"><input type="radio" name="gender" value="2"> Männlich</div>
-        <div class="english"><input type="radio" name="gender" value="2"> Male</div>
-        <div class="german"><input type="radio" name="gender" value="3"> Divers</div>
-        <div class="english"><input type="radio" name="gender" value="3"> Diverse</div>
-        <div class="german"><input type="radio" name="gender" value="-999"> Keine Angabe</div>
-        <div class="english"><input type="radio" name="gender" value="-999"> No answer</div>
-    </div>
+    {% for question in questions %}
+        <div class="mb-3 border pt-2 pb-2 px-2">
+            <p class="german">{{ question.text.german }}</p>
+            <p class="english">{{ question.text.english }}</p>
+            
+            {% if question.type == "number" %}
+                <input type="number" name="{{ question.field }}" placeholder="{{ question.placeholder }}">
+                {{ formfield_errors question.field }}
+            {% elif question.type == "radio" %}
+                {% for option in question.options %}
+                    <div class="german"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.german }}</div>
+                    <div class="english"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.english }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% endfor %}
 
     <button class="otree-btn-next btn btn-primary next-button otree-next-button">
         <span class="german"> Weiter </span>

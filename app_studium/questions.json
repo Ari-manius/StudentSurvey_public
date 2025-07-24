@@ -1,0 +1,154 @@
+{
+  "Study": {
+    "questions": [
+      {
+        "field": "study_program",
+        "type": "radio",
+        "text": {
+          "german": "In welchem der folgenden Studiengänge sind Sie eingeschrieben?",
+          "english": "In which of the following study programs are you enrolled?"
+        },
+        "options": [
+          {
+            "value": "2",
+            "text": {"german": "B.Ed. Politikwissenschaften als Nebenfach", "english": "B.Ed. Political Science as minor subject"}
+          },
+          {
+            "value": "1",
+            "text": {"german": "BA. Politik - Verwaltung - Management", "english": "BA. Politics - Administration - Management"}
+          },
+          {
+            "value": "3",
+            "text": {"german": "MSc. Wirtschaftspädagogik", "english": "MSc. Wirtschaftspädagogik"}
+          },
+          {
+            "value": "4",
+            "text": {"german": "MSc.Social and Economic Data Science (SEDS)", "english": "MSc.Social and Economic Data Science (SEDS)"}
+          },
+          {
+            "value": "0",
+            "text": {"german": "Keine Angabe", "english": "No Answer"}
+          }
+        ]
+      },
+      {
+        "field": "study_program_other",
+        "type": "text",
+        "text": {
+          "german": "Andere/Other:",
+          "english": "Other:"
+        }
+      },
+      {
+        "field": "semester_of_study",
+        "type": "number",
+        "text": {
+          "german": "In welchem Fachsemester befinden Sie sich?",
+          "english": "What semester of study are you in?"
+        }
+      },
+      {
+        "field": "consecutive_study_program", 
+        "type": "radio",
+        "text": {
+          "german": "Wollen Sie unmittelbar nach dem BA-Studium Ihre akademische Laufbahn fortsetzen und welchen Abschluss streben Sie an?",
+          "english": "Do you plan to continue your academic career after your BA studies and which degree do you aim for?"
+        },
+        "options": [
+          {
+            "value": "1",
+            "text": {"german": "Master Abschluss", "english": "Master's Degree"}
+          },
+          {
+            "value": "2",
+            "text": {"german": "Promotion", "english": "PhD. Doctor's Degree"}
+          },
+          {
+            "value": "3",
+            "text": {"german": "Nein", "english": "No"}
+          },
+          {
+            "value": "0",
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }
+        ]
+      }
+    ]
+  },
+  "FreshersCamp": {
+    "questions": [
+      {
+        "field": "fresherscamp_student",
+        "type": "radio",
+        "text": {
+          "german": "Waren Sie zu Beginn diesen Semesters auf dem Erstihof?",
+          "english": "Did you go to a freshers camp at the beginning of this semester?"
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Hof 1: Oktober 6, 2024 - Oktober 8, 2024", "english": "Camp 1: October 6, 2024 - October 8, 2024"}},
+          {"value": "2", "text": {"german": "Hof 2: Oktober 7, 2024 - Oktober 9, 2024", "english": "Camp 2: October 7, 2024 - October 9, 2024"}},
+          {"value": "3", "text": {"german": "Hof 3: Oktober 9, 2024 - Oktober 11, 2024", "english": "Camp 3: October 9, 2024 - October 11, 2024"}},
+          {"value": "4", "text": {"german": "Hof 4: Oktober 11, 2024 - Oktober 13, 2024", "english": "Camp 4: October 11, 2024 - October 13, 2024"}},
+          {"value": "0", "text": {"german": "Nein", "english": "No"}}
+        ]
+      },
+      {
+        "field": "freshersweek_student",
+        "type": "radio",
+        "text": {
+          "german": "Haben Sie an Veranstaltungen der Erstiwoche teilgenommen?",
+          "english": "Did you participate in any events of the \"freshers\" week?"
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Ja", "english": "Yes"}},
+          {"value": "0", "text": {"german": "Nein", "english": "No"}}
+        ]
+      }
+    ]
+  },
+  "Tutorials": {
+    "questions": [
+      {
+        "field": "tutorial",
+        "type": "radio",
+        "text": {
+          "german": "An welchem Tutorium nehmen Sie teil?",
+          "english": "In which tutorial do you participate?"
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Wed, 15.15-16.45, Aytac, Robin", "english": "Wed, 15.15-16.45, Aytac, Robin"}},
+          {"value": "2", "text": {"german": "Tue, 11.45-13.15, Barth, Mike", "english": "Tue, 11.45-13.15, Barth, Mike"}},
+          {"value": "3", "text": {"german": "Thu, 8.15-9.45, Brodkorb, Philipp", "english": "Thu, 8.15-9.45, Brodkorb, Philipp"}},
+          {"value": "4", "text": {"german": "Mon, 13.30-15.00, Löffler, Alban", "english": "Mon, 13.30-15.00, Löffler, Alban"}},
+          {"value": "5", "text": {"german": "Tue, 8.15-9.45, Neumeyer, Finn", "english": "Tue, 8.15-9.45, Neumeyer, Finn"}},
+          {"value": "6", "text": {"german": "Fri, 11.45-13.15, Neuner, Nils", "english": "Fri, 11.45-13.15, Neuner, Nils"}},
+          {"value": "7", "text": {"german": "Wed, 15.15-16.45, Stickel, Marlene", "english": "Wed, 15.15-16.45, Stickel, Marlene"}},
+          {"value": "8", "text": {"german": "Mon, 17.00-18.30, Wagner, Theresa", "english": "Mon, 17.00-18.30, Wagner, Theresa"}},
+          {"value": "0", "text": {"german": "An keiner", "english": "None"}}
+        ]
+      },
+      {
+        "field": "grade",
+        "type": "radio",
+        "text": {
+          "german": "Welche Note erwarten Sie für sich in der Klausur dieser Vorlesung am Ende des Semesters?",
+          "english": "What grade do you expect to receive in the final exam of this lecture at the end of the semester?"
+        },
+        "options": [
+          {"value": "1.0", "text": {"german": "1.0", "english": "1.0"}},
+          {"value": "1.3", "text": {"german": "1.3", "english": "1.3"}},
+          {"value": "1.7", "text": {"german": "1.7", "english": "1.7"}},
+          {"value": "2.0", "text": {"german": "2.0", "english": "2.0"}},
+          {"value": "2.3", "text": {"german": "2.3", "english": "2.3"}},
+          {"value": "2.7", "text": {"german": "2.7", "english": "2.7"}},
+          {"value": "3.0", "text": {"german": "3.0", "english": "3.0"}},
+          {"value": "3.3", "text": {"german": "3.3", "english": "3.3"}},
+          {"value": "3.7", "text": {"german": "3.7", "english": "3.7"}},
+          {"value": "4.0", "text": {"german": "4.0", "english": "4.0"}},
+          {"value": "5.0", "text": {"german": "5.0", "english": "5.0"}},
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}}
+        ]
+      }
+    ]
+  }
+}

@@ -3,7 +3,6 @@
 
 {% block styles %}
 <link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
-
 {% endblock %}
 
 {% block title %}
@@ -11,110 +10,50 @@ Student Survey - University Konstanz
 {% endblock %}
  
 {% block content %}
-<div class="table">
+<div class="container">
     <input id="time" type="hidden" name="time_political_qs"/>
 
-    <div  class="mb-3 bg-light border pt-2 pb-2 px-2 ">
-        <fieldset>
-            <p class="german">Wie sehr stimmen Sie den folgenden Aussagen zu oder nicht zu? Es fallen Ihnen sicherlich konrete Beispiele zu den Fragen ein aber hier geht es um Ihren persönlichen Gesamteindruck.</p>
-
-            <p class="english">How strongly do you agree or disagree with the following statements? You might remember specific instances relating to the questions but try to a answer from a general perspective.</p>
-            <div class="table">
-                <table class="table">
-                    <thead>
+    <div class="mb-3 bg-light border pt-2 pb-2 px-2">
+        <p class="german">Wie sehr stimmen Sie den folgenden Aussagen zu oder nicht zu? Es fallen Ihnen sicherlich konrete Beispiele zu den Fragen ein aber hier geht es um Ihren persönlichen Gesamteindruck.</p>
+        <p class="english">How strongly do you agree or disagree with the following statements? You might remember specific instances relating to the questions but try to a answer from a general perspective.</p>
+        
+        <div class="table">
+            <table class="table">
+                <thead>
+                <tr>
+                    <td></td>
+                    <th style="vertical-align: top"><p class="german mb-0">Stimme voll und ganz zu</p><p class="english mb-0">Completely Agree</p></th>
+                    <th style="vertical-align: top"><p class="german mb-0">Stimme zu</p><p class="english mb-0">Agree</p></th>
+                    <th style="vertical-align: top"><p class="german mb-0">Weder noch</p><p class="english mb-0">Neither agree nor disagree</p></th>
+                    <th style="vertical-align: top"><p class="german mb-0">Stimme nicht zu</p><p class="english mb-0">Disagree</p></th>
+                    <th style="vertical-align: top"><p class="german mb-0">Stimme überhaupt nicht zu</p><p class="english mb-0">Completely Disagree</p></th>
+                    <th style="vertical-align: top"><p class="german mb-0">Keine Angabe</p><p class="english mb-0">No Answer</p></th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for question in questions %}
                     <tr>
-                        <td></td>
-                        <th style="vertical-align: top"><p class="german mb-0">Stimme voll und ganz zu</p><p class="english mb-0">Completely Agree</p></th>
-                        <th style="vertical-align: top"><p class="german mb-0">Stimme zu</p><p class="english mb-0">Agree</p></th>
-                        <th style="vertical-align: top"><p class="german mb-0">Weder noch</p><p class="english mb-0">Neither agree nor disagree</p></th>
-                        <th style="vertical-align: top"><p class="german mb-0">Stimme nicht zu</p><p class="english mb-0">Disagree</p></th>
-                        <th style="vertical-align: top"><p class="german mb-0">Stimme überhaupt nicht zu</p><p class="english mb-0">Completely Disagree</p></th>
-                        <th style="vertical-align: top"><p class="german mb-0">Keine Angabe</p><p class="english mb-0">No Answer</p></th>
+                        <th style="font-weight:normal">
+                            <span class="german">{{ question.text.german }}</span>
+                            <span class="english">{{ question.text.english }}</span>
+                        </th>
+                        <th><input type="radio" name="{{ question.field }}" value="5"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="4"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="3"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="2"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="1"></th>
+                        <th><input type="radio" name="{{ question.field }}" value="0"></th>
                     </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th style="font-weight:normal"> <span class="german"> Wichtige Fragen zur Bundespolitik in Deutschland kann ich gut verstehen und einschätzen.</span>
-                                <span class="english">I am able to understand important questions regarding federal politics in Germany.</span> </th>
-                                <th><input type="radio" name="politics_question_one" value="5"></th>
-                                <th><input type="radio" name="politics_question_one" value="4"></th>
-                                <th><input type="radio" name="politics_question_one" value="3"></th>
-                                <th><input type="radio" name="politics_question_one" value="2"></th>
-                                <th><input type="radio" name="politics_question_one" value="1"></th>
-                                <th><input type="radio" name="politics_question_one" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"> <span class="german">Die Abgeordneten des deutschen Bundestages bemühen sich um einen engen Kontakt zur Bevölkerung.</span>
-                                <span class="english">The members of the German parliament strive to keep in close touch with the people.</span></th>
-                                    <th><input type="radio" name="politics_question_two" value="5"></th>
-                                    <th><input type="radio" name="politics_question_two" value="4"></th>
-                                    <th><input type="radio" name="politics_question_two" value="3"></th>
-                                    <th><input type="radio" name="politics_question_two" value="2"></th>
-                                    <th><input type="radio" name="politics_question_two" value="1"></th>
-                                    <th><input type="radio" name="politics_question_two" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"><span class="german">Ich traue mir zu, mich an einem Gespräch über politische Fragen zur Bundespolitik aktiv zu beteiligen.</span>
-                                <span class="english">I have the confidence to take an active part in a discussion about issues regarding federal politics.</span></th>
-                                    <th><input type="radio" name="politics_question_three" value="5"></th>
-                                    <th><input type="radio" name="politics_question_three" value="4"></th>
-                                    <th><input type="radio" name="politics_question_three" value="3"></th>
-                                    <th><input type="radio" name="politics_question_three" value="2"></th>
-                                    <th><input type="radio" name="politics_question_three" value="1"></th>
-                                    <th><input type="radio" name="politics_question_three" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"><span class="german">Die Abgeordneten des deutschen Bundestages kümmern sich darum, was Leute wie ich denken.</span>
-                                <span class="english">The members of the German parliament care about what people like me think.</span></th>
-                                    <th><input type="radio" name="politics_question_four" value="5"></th>
-                                    <th><input type="radio" name="politics_question_four" value="4"></th>
-                                    <th><input type="radio" name="politics_question_four" value="3"></th>
-                                    <th><input type="radio" name="politics_question_four" value="2"></th>
-                                    <th><input type="radio" name="politics_question_four" value="1"></th>
-                                    <th><input type="radio" name="politics_question_four" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"><span class="german">In schwierigen Situationen kann ich mich auf meine Fähigkeiten verlassen.</span>
-                                <span class="english">In difficult situations, I can trust my capabilities.</span></th>
-                                    <th><input type="radio" name="politics_question_five" value="5"></th>
-                                    <th><input type="radio" name="politics_question_five" value="4"></th>
-                                    <th><input type="radio" name="politics_question_five" value="3"></th>
-                                    <th><input type="radio" name="politics_question_five" value="2"></th>
-                                    <th><input type="radio" name="politics_question_five" value="1"></th>
-                                    <th><input type="radio" name="politics_question_five" value="-999"></th>
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"><span class="german">Die meisten Probleme kann ich aus eigener Kraft gut meistern.</span>
-                                <span class="english">I can cope with most problems myself.</span></th>
-                                    <th><input type="radio" name="politics_question_six" value="5"></th>
-                                    <th><input type="radio" name="politics_question_six" value="4"></th>
-                                    <th><input type="radio" name="politics_question_six" value="3"></th>
-                                    <th><input type="radio" name="politics_question_six" value="2"></th>
-                                    <th><input type="radio" name="politics_question_six" value="1"></th>
-                                    <th><input type="radio" name="politics_question_six" value="-999"></th>
-                                
-
-                        </tr>
-                        <tr>
-                            <th style="font-weight:normal"><span class="german">Auch anstrengende und komplizierte Aufgaben kann ich in der Regel gut lösen.</span>
-                                <span class="english">In general, I can solve challenging and complex tasks.</span></th>
-                                    <th><input type="radio" name="politics_question_seven" value="5"></th>
-                                    <th><input type="radio" name="politics_question_seven" value="4"></th>
-                                    <th><input type="radio" name="politics_question_seven" value="3"></th>
-                                    <th><input type="radio" name="politics_question_seven" value="2"></th>
-                                    <th><input type="radio" name="politics_question_seven" value="1"></th>
-                                    <th><input type="radio" name="politics_question_seven" value="-999"></th>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </fieldset>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <br>
     <button class="otree-btn-next btn btn-primary next-button otree-next-button">
         <span class="german"> Weiter </span>
         <span class="english"> Next </span>
     </button>
 </div>
+
 {% endblock %}

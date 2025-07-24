@@ -26,20 +26,15 @@
                         <tr>
                             <td></td>
                             <th>
-                                <p class="english">-2: I strongly dislike this person.</p> 
-                                <p class="german">-2: Ich habe eine starke Abneigung gegenüber dieser Person.</p></th>
+                                <p>&#128534;</p></th>
                             <th>
-                                <p class="english">-1: I dislike this person.</p> 
-                                <p class="german">-1: Ich mag diese Person nicht.</p></th>
+                                <p>&#128577;</p></th>
                             <th>
-                                <p class="english">0: I have no feelings towards this person.</p> 
-                                <p class="german">0: Ich habe keine oder neutrale Gefühle gegenüber dieser Person.</p></th>
+                                <p>&#128528;</p></th>
                             <th>
-                                <p class="english">+1: I like this person.</p> 
-                                <p class="german">1: Ich mag diese Person.</p></th>
+                                <p>&#128578;</p></th>
                             <th>
-                                <p class="english">+2: I strongly like this person.</p>
-                                <p class="german">+2: Ich habe eine starke Zuneigung gegenüber dieser Person.</p></th>
+                                <p>&#128512;</p></th>
                         </tr>
                     </thead>
 
@@ -272,105 +267,6 @@
                             <th><input type="radio" name="sentiment_21" value="0"></th>
                             <th><input type="radio" name="sentiment_21" value="1"></th>
                             <th><input type="radio" name="sentiment_21" value="2"></th>
-                        </tr>
-                        {% endif %}
-                        
-                        {% if player.person_22 != "x" %}
-                        <tr>
-                            <th>{{ player.person_22 }}</th>
-                            <th><input type="radio" name="sentiment_22" value="-2"></th>
-                            <th><input type="radio" name="sentiment_22" value="1"></th>
-                            <th><input type="radio" name="sentiment_22" value="0"></th>
-                            <th><input type="radio" name="sentiment_22" value="1"></th>
-                            <th><input type="radio" name="sentiment_22" value="2"></th>
-                        </tr>
-                        {% endif %}
-                        
-                        {% if player.person_23 != "x" %}
-                        <tr>
-                            <th>{{ player.person_23 }}</th>
-                            <th><input type="radio" name="sentiment_23" value="-2"></th>
-                            <th><input type="radio" name="sentiment_23" value="1"></th>
-                            <th><input type="radio" name="sentiment_23" value="0"></th>
-                            <th><input type="radio" name="sentiment_23" value="1"></th>
-                            <th><input type="radio" name="sentiment_23" value="2"></th>
-                        </tr>
-                        {% endif %}
-                        
-                        {% if player.person_24 != "x" %}
-                        <tr>
-                            <th>{{ player.person_24 }}</th>
-                            <th><input type="radio" name="sentiment_24" value="-2"></th>
-                            <th><input type="radio" name="sentiment_24" value="1"></th>
-                            <th><input type="radio" name="sentiment_24" value="0"></th>
-                            <th><input type="radio" name="sentiment_24" value="1"></th>
-                            <th><input type="radio" name="sentiment_24" value="2"></th>
-                        </tr>
-                        {% endif %}
-                        
-                        {% if player.person_25 != "x" %}
-                        <tr>
-                            <th>{{ player.person_25 }}</th>
-                            <th><input type="radio" name="sentiment_25" value="-2"></th>
-                            <th><input type="radio" name="sentiment_25" value="1"></th>
-                            <th><input type="radio" name="sentiment_25" value="0"></th>
-                            <th><input type="radio" name="sentiment_25" value="1"></th>
-                            <th><input type="radio" name="sentiment_25" value="2"></th>
-                        </tr>
-                        {% endif %}
-                        
-                        {% if player.person_26 != "x" %}
-                        <tr>
-                            <th>{{ player.person_26 }}</th>
-                            <th><input type="radio" name="sentiment_26" value="-2"></th>
-                            <th><input type="radio" name="sentiment_26" value="1"></th>
-                            <th><input type="radio" name="sentiment_26" value="0"></th>
-                            <th><input type="radio" name="sentiment_26" value="1"></th>
-                            <th><input type="radio" name="sentiment_26" value="2"></th>
-                        </tr>
-                        {% endif %}
-                        
-                        {% if player.person_27 != "x" %}
-                        <tr>
-                            <th>{{ player.person_27 }}</th>
-                            <th><input type="radio" name="sentiment_27" value="-2"></th>
-                            <th><input type="radio" name="sentiment_27" value="1"></th>
-                            <th><input type="radio" name="sentiment_27" value="0"></th>
-                            <th><input type="radio" name="sentiment_27" value="1"></th>
-                            <th><input type="radio" name="sentiment_27" value="2"></th>
-                        </tr>
-                        {% endif %}
-                        
-                        {% if player.person_28 != "x" %}
-                        <tr>
-                            <th>{{ player.person_28 }}</th>
-                            <th><input type="radio" name="sentiment_28" value="-2"></th>
-                            <th><input type="radio" name="sentiment_28" value="1"></th>
-                            <th><input type="radio" name="sentiment_28" value="0"></th>
-                            <th><input type="radio" name="sentiment_28" value="1"></th>
-                            <th><input type="radio" name="sentiment_28" value="2"></th>
-                        </tr>
-                        {% endif %}
-                        
-                        {% if player.person_29 != "x" %}
-                        <tr>
-                            <th>{{ player.person_29 }}</th>
-                            <th><input type="radio" name="sentiment_29" value="-2"></th>
-                            <th><input type="radio" name="sentiment_29" value="1"></th>
-                            <th><input type="radio" name="sentiment_29" value="0"></th>
-                            <th><input type="radio" name="sentiment_29" value="1"></th>
-                            <th><input type="radio" name="sentiment_29" value="2"></th>
-                        </tr>
-                        {% endif %}
-                        
-                        {% if player.person_30 != "x" %}
-                        <tr>
-                            <th>{{ player.person_30 }}</th>
-                            <th><input type="radio" name="sentiment_30" value="-2"></th>
-                            <th><input type="radio" name="sentiment_30" value="1"></th>
-                            <th><input type="radio" name="sentiment_30" value="0"></th>
-                            <th><input type="radio" name="sentiment_30" value="1"></th>
-                            <th><input type="radio" name="sentiment_30" value="2"></th>
                         </tr>
                         {% endif %}
                     </tbody>

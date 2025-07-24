@@ -11,16 +11,14 @@
 
 {% block content %}
 <div class="container">
-
-    <input id="time" type="hidden" name="time_age"/>
+    <input id="time" type="hidden" name="time_postcode"/>
 
     {% for question in questions %}
-        <div class="mb-3 border pt-2 pb-2 px-2">
-            <p class="german">{{ question.text.german }}</p>
-            <p class="english">{{ question.text.english }}</p>
-            
-            {% if question.type == "number" %}
-                <input type="number" name="{{ question.field }}" placeholder="{{ question.placeholder }}">
+        <div class="mb-3 bg-light border pt-2 pb-2 px-2">
+            {% if question.type == "formfield" %}
+                <p class="german">{{ question.text.german }}</p>
+                <p class="english">{{ question.text.english }}</p>
+                {% formfield question.field %}
             {% endif %}
         </div>
     {% endfor %}
@@ -29,6 +27,5 @@
         <span class="german"> Weiter </span>
         <span class="english"> Next </span>
     </button>
-
 </div>
 {% endblock %}

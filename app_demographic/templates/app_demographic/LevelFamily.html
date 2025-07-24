@@ -6,137 +6,30 @@
 {% endblock %}
 
 {% block title %}
-Student Survey - University Konstanz
+{% include "global/title_Global.html" %}
 {% endblock %}
 
 {% block content %}
 <div class="container">
-    <br>
-    <!-- <h3 class="english">Occupation of your Mother</h3>
-    <h3 class="german">Berufstätigkeit Ihrer Mutter</h3> -->
     <input id="time" type="hidden" name="time_age"/>
-    <hr>
 
-    <div class="mb-3">
-        <p class="german">Bitte geben Sie den höchsten <b>Schulabschluss</b> an, den Ihre <b>Mutter</b> erreicht hat.</p>
-        <p class="english">Please select the highest school education level reached by your mother.</p>
-        <div class="german"><input type="radio" name="school_mother" value="0"> Schule beendet ohne Abschluss</div>
-        <div class="english"><input type="radio" name="school_mother" value="0"> School Graduation without Degree</div>
-        <div class="german"><input type="radio" name="school_mother" value="1"> Volks- / Hauptschulabschluss bzw. Polytechnische Oberschule
-            mit Abschluss 8. oder 9. Klasse</div>
-        <div class="english"><input type="radio" name="school_mother" value="1"> Primary School Graduation with Degree</div>
-        <div class="german"><input type="radio" name="school_mother" value="2"> Mittlere Reife, Realschulabschluss bzw. Polytechnische Oberschule
-            mit Abschluss 10. Klasse</div>
-        <div class="english"><input type="radio" name="school_mother" value="2"> Secondary School Graduation</div>
-        <div class="german"><input type="radio" name="school_mother" value="3"> Fachhochschulreife (Abschluss einer Fachoberschule etc.)</div>
-        <div class="english"><input type="radio" name="school_mother" value="3"> Higher School without Graduation</div>
-        <div class="german"><input type="radio" name="school_mother" value="4"> Abitur bzw. Erweiterte Oberschule mit Abschluss 12. Klasse (Hochschulreife)</div>
-        <div class="english"><input type="radio" name="school_mother" value="4"> High School Graduation</div>
-        <div class="german"><input type="radio" name="school_mother" value="5"> Anderen Bildungsabschluss</div>
-        <div class="english"><input type="radio" name="school_mother" value="5"> Other Degree</div>
-        <div class="german"><input type="radio" name="school_mother" value="-999"> Keine Angabe</div>
-        <div class="english"><input type="radio" name="school_mother" value="-999"> No answer</div>
-    </div>
-
-    <div class="mb-3">
-        <p class="german">Bitte geben Sie den höchsten <b>beruflichen Bildungsabschluss</b> an, den Ihre <b>Mutter</b> erreicht hat.</p>
-        <p class="english">Please select the highest working education level reached by your mother.</p>
-        <div class="german"><input type="radio" name="work_edu_mother" value="0"> Keinen beruflichen Ausbildungsabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_mother" value="0"> No working education </div>
-        <div class="german"><input type="radio" name="work_edu_mother" value="1"> Beruflich-betriebliche Anlernzeit mit Abschlusszeugnis, aber keine Lehre </div>
-        <div class="english"><input type="radio" name="work_edu_mother" value="1"> Workplace education with certificate </div>
-        <div class="german"><input type="radio" name="work_edu_mother" value="2"> Teilfacharbeiterabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_mother" value="2"> Partial vocational training </div>
-        <div class="german"><input type="radio" name="work_edu_mother" value="3"> Abgeschlossene Lehre </div>
-        <div class="english"><input type="radio" name="work_edu_mother" value="3"> Vocational Training </div>
-        <div class="german"><input type="radio" name="work_edu_mother" value="4"> Berufsfachschulabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_mother" value="4"> Vocational school qualification </div>
-        <div class="german"><input type="radio" name="work_edu_mother" value="5"> Fachschulabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_mother" value="5"> Technical school qualification </div>
-        <div class="german"><input type="radio" name="work_edu_mother" value="6"> Meister-, Techniker- oder gleichwertiger Fachschulabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_mother" value="6"> Master, technician or equivalent technical school qualification </div>
-        <div class="german"><input type="radio" name="work_edu_mother" value="7"> Fachhochschulabschluss (auch Abschluss einer Ingenieurschule) </div>
-        <div class="english"><input type="radio" name="work_edu_mother" value="7"> Higher school degree (also degree from an engineering school) </div>
-        <div class="german"><input type="radio" name="work_edu_mother" value="8"> Hochschulabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_mother" value="8"> University degree </div>
-        <div class="german"><input type="radio" name="work_edu_mother" value="-999"> Keine Angabe</div>
-        <div class="english"><input type="radio" name="edu_mother" value="-999"> No answer</div>
-    </div>
-
-    <div class="mb-3">
-        <p class="german">Bitte geben Sie an, ob Ihre <b>Mutter</b> berufstätig ist.</p>
-        <p class="english">Please select if your mother currently has an occupation.</p>
-        <div class="german"><input type="radio" name="ocu_mother" value="0"> Nicht berufstätig</div>
-        <div class="english"><input type="radio" name="ocu_mother" value="0"> Not employed</div>
-        <div class="german"><input type="radio" name="ocu_mother" value="1"> Berufstätig, Teilzeit</div>
-        <div class="english"><input type="radio" name="ocu_mother" value="1"> Employed, Part-time</div>
-        <div class="german"><input type="radio" name="ocu_mother" value="2"> Berufstätig, Vollzeit</div>
-        <div class="english"><input type="radio" name="ocu_mother" value="2"> Employed, Full-time</div>
-        <div class="german"><input type="radio" name="ocu_mother" value="-999"> Keine Angabe</div>
-        <div class="english"><input type="radio" name="ocu_mother" value="-999"> No answer</div>
-    </div>
-
-    <br>
-
-    <div class="mb-3">
-        <p class="german">Bitte geben Sie den höchsten <b>Schulabschluss</b> an, den Ihr <b>Vater</b> erreicht hat.</p>
-        <p class="english">Please select the highest school education level reached by your father.</p>
-        <div class="german"><input type="radio" name="school_father" value="0"> Schule beendet ohne Abschluss</div>
-        <div class="english"><input type="radio" name="school_father" value="0"> School Graduation without Degree</div>
-        <div class="german"><input type="radio" name="school_father" value="1"> Volks- / Hauptschulabschluss bzw. Polytechnische Oberschule
-            mit Abschluss 8. oder 9. Klasse</div>
-        <div class="english"><input type="radio" name="school_father" value="1"> Primary School Graduation with Degree</div>
-        <div class="german"><input type="radio" name="school_father" value="2"> Mittlere Reife, Realschulabschluss bzw. Polytechnische Oberschule
-            mit Abschluss 10. Klasse</div>
-        <div class="english"><input type="radio" name="school_father" value="2"> Secondary School Graduation</div>
-        <div class="german"><input type="radio" name="school_father" value="3"> Fachhochschulreife (Abschluss einer Fachoberschule etc.)</div>
-        <div class="english"><input type="radio" name="school_father" value="3"> Higher School without Graduation</div>
-        <div class="german"><input type="radio" name="school_father" value="4"> Abitur bzw. Erweiterte Oberschule mit Abschluss 12. Klasse (Hochschulreife)</div>
-        <div class="english"><input type="radio" name="school_father" value="4"> High School Graduation</div>
-        <div class="german"><input type="radio" name="school_father" value="5"> Anderen Bildungsabschluss</div>
-        <div class="english"><input type="radio" name="school_father" value="5"> Other Degree</div>
-        <div class="german"><input type="radio" name="school_father" value="-999"> Keine Angabe</div>
-        <div class="english"><input type="radio" name="school_father" value="-999"> No answer</div>
-    </div>
-
-    <div class="mb-3">
-        <p class="german">Bitte geben Sie den höchsten <b>beruflichen Bildungsabschluss</b> an, den Ihr <b>Vater</b> erreicht hat.</p>
-        <p class="english">Please select the highest working education level reached by your father.</p>
-
-        <div class="german"><input type="radio" name="work_edu_father" value="0"> Keinen beruflichen Ausbildungsabschluss</div>
-        <div class="english"><input type="radio" name="work_edu_father" value="0"> No working education </div>
-        <div class="german"><input type="radio" name="work_edu_father" value="1"> Beruflich-betriebliche Anlernzeit mit Abschlusszeugnis, aber keine Lehre </div>
-        <div class="english"><input type="radio" name="work_edu_father" value="1"> Workplace education with certificate </div>
-        <div class="german"><input type="radio" name="work_edu_father" value="2"> Teilfacharbeiterabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_father" value="2"> Partial vocational training </div>
-        <div class="german"><input type="radio" name="work_edu_father" value="3"> Abgeschlossene Lehre </div>
-        <div class="english"><input type="radio" name="work_edu_father" value="3"> Vocational Training </div>
-        <div class="german"><input type="radio" name="work_edu_father" value="4"> Berufsfachschulabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_father" value="4"> Vocational school qualification </div>
-        <div class="german"><input type="radio" name="work_edu_father" value="5"> Fachschulabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_father" value="5"> Technical school qualification </div>
-        <div class="german"><input type="radio" name="work_edu_father" value="6"> Meister-, Techniker- oder gleichwertiger Fachschulabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_father" value="6"> Master, technician or equivalent technical school qualification </div>
-        <div class="german"><input type="radio" name="work_edu_father" value="7"> Fachhochschulabschluss (auch Abschluss einer Ingenieurschule) </div>
-        <div class="english"><input type="radio" name="work_edu_father" value="7"> University degree (also degree from an engineering school) </div>
-        <div class="german"><input type="radio" name="work_edu_father" value="8"> Hochschulabschluss </div>
-        <div class="english"><input type="radio" name="work_edu_father" value="8"> Higher University degree </div>
-        <div class="german"><input type="radio" name="work_edu_father" value="-999"> Keine Angabe</div>
-        <div class="english"><input type="radio" name="edu_father" value="-999"> No answer</div>
-    </div>
-
-    <div class="mb-3">
-        <p class="german">Bitte geben Sie an, ob Ihr <b>Vater</b> berufstätig ist.</p>
-        <p class="english">Please select if your father currently has an occupation.</p>
-        <div class="german"><input type="radio" name="ocu_father" value="0"> Nicht berufstätig</div>
-        <div class="english"><input type="radio" name="ocu_father" value="0"> Not employed</div>
-        <div class="german"><input type="radio" name="ocu_father" value="1"> Berufstätig, Teilzeit</div>
-        <div class="english"><input type="radio" name="ocu_father" value="1"> Employed, Part-time</div>
-        <div class="german"><input type="radio" name="ocu_father" value="2"> Berufstätig, Vollzeit</div>
-        <div class="english"><input type="radio" name="ocu_father" value="2"> Employed, Full-time</div>
-        <div class="german"><input type="radio" name="ocu_father" value="-999"> Keine Angabe</div>
-        <div class="english"><input type="radio" name="ocu_father" value="-999"> No answer</div>
-    </div>
+    {% for question in questions %}
+        <div class="mb-3">
+            <p class="german">{{ question.text.german|safe }}</p>
+            <p class="english">{{ question.text.english|safe }}</p>
+            
+            {% if question.type == "radio" %}
+                {% for option in question.options %}
+                    <div class="german"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.german }}</div>
+                    <div class="english"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.english }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+        {% if forloop.counter == 3 %}
+            <br>
+        {% endif %}
+    {% endfor %}
 
     <button class="otree-btn-next btn btn-primary next-button otree-next-button">
         <span class="german"> Weiter </span>
