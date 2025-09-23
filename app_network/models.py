@@ -69,15 +69,6 @@ class Player(BasePlayer):
     person_19 = models.StringField(blank=True, label="Code 19", max_length=3, min_length=3, initial="x")
     person_20 = models.StringField(blank=True, label="Code 20", max_length=3, min_length=3, initial="x")
     person_21 = models.StringField(blank=True, label="Code 21", max_length=3, min_length=3, initial="x")
-    person_22 = models.StringField(blank=True, label="Code 22", max_length=3, min_length=3, initial="x")
-    person_23 = models.StringField(blank=True, label="Code 23", max_length=3, min_length=3, initial="x")
-    person_24 = models.StringField(blank=True, label="Code 24", max_length=3, min_length=3, initial="x")
-    person_25 = models.StringField(blank=True, label="Code 25", max_length=3, min_length=3, initial="x")
-    person_26 = models.StringField(blank=True, label="Code 26", max_length=3, min_length=3, initial="x")
-    person_27 = models.StringField(blank=True, label="Code 27", max_length=3, min_length=3, initial="x")
-    person_28 = models.StringField(blank=True, label="Code 28", max_length=3, min_length=3, initial="x")
-    person_29 = models.StringField(blank=True, label="Code 29", max_length=3, min_length=3, initial="x")
-    person_30 = models.StringField(blank=True, label="Code 30", max_length=3, min_length=3, initial="x")
 
     def person_1_error_message(self, value):
         if value not in codes:
@@ -160,42 +151,6 @@ class Player(BasePlayer):
             return "Please enter a valid code."
 
     def person_21_error_message(self, value):
-        if value not in codes:
-            return "Please enter a valid code."
-
-    def person_22_error_message(self, value):
-        if value not in codes:
-            return "Please enter a valid code."
-
-    def person_23_error_message(self, value):
-        if value not in codes:
-            return "Please enter a valid code."
-
-    def person_24_error_message(self, value):
-        if value not in codes:
-            return "Please enter a valid code."
-
-    def person_25_error_message(self, value):
-        if value not in codes:
-            return "Please enter a valid code."
-
-    def person_26_error_message(self, value):
-        if value not in codes:
-            return "Please enter a valid code."
-
-    def person_27_error_message(self, value):
-        if value not in codes:
-            return "Please enter a valid code."
-
-    def person_28_error_message(self, value):
-        if value not in codes:
-            return "Please enter a valid code."
-
-    def person_29_error_message(self, value):
-        if value not in codes:
-            return "Please enter a valid code."
-
-    def person_30_error_message(self, value):
         if value not in codes:
             return "Please enter a valid code."
 
@@ -326,60 +281,6 @@ class Player(BasePlayer):
     study_21 = models.BooleanField(blank=True, initial=False) 
     council_21 = models.BooleanField(blank=True, initial=False)
 
-    friend_22 = models.BooleanField(blank=True, initial=False)
-    value_22 = models.BooleanField(blank=True, initial=False)    
-    politics_22 = models.BooleanField(blank=True, initial=False)
-    study_22 = models.BooleanField(blank=True, initial=False) 
-    council_22 = models.BooleanField(blank=True, initial=False)
-
-    friend_23 = models.BooleanField(blank=True, initial=False)
-    value_23 = models.BooleanField(blank=True, initial=False)    
-    politics_23 = models.BooleanField(blank=True, initial=False)
-    study_23 = models.BooleanField(blank=True, initial=False) 
-    council_23 = models.BooleanField(blank=True, initial=False)
-
-    friend_24 = models.BooleanField(blank=True, initial=False)
-    value_24 = models.BooleanField(blank=True, initial=False)    
-    politics_24 = models.BooleanField(blank=True, initial=False)
-    study_24 = models.BooleanField(blank=True, initial=False) 
-    council_24 = models.BooleanField(blank=True, initial=False)
-
-    friend_25 = models.BooleanField(blank=True, initial=False)
-    value_25 = models.BooleanField(blank=True, initial=False)    
-    politics_25 = models.BooleanField(blank=True, initial=False)
-    study_25 = models.BooleanField(blank=True, initial=False) 
-    council_25 = models.BooleanField(blank=True, initial=False)
-
-    friend_26 = models.BooleanField(blank=True, initial=False)
-    value_26 = models.BooleanField(blank=True, initial=False)    
-    politics_26 = models.BooleanField(blank=True, initial=False)
-    study_26 = models.BooleanField(blank=True, initial=False) 
-    council_26 = models.BooleanField(blank=True, initial=False)
-
-    friend_27 = models.BooleanField(blank=True, initial=False)
-    value_27 = models.BooleanField(blank=True, initial=False)    
-    politics_27 = models.BooleanField(blank=True, initial=False)
-    study_27 = models.BooleanField(blank=True, initial=False) 
-    council_27 = models.BooleanField(blank=True, initial=False)
-
-    friend_28 = models.BooleanField(blank=True, initial=False)
-    value_28 = models.BooleanField(blank=True, initial=False)    
-    politics_28 = models.BooleanField(blank=True, initial=False)
-    study_28 = models.BooleanField(blank=True, initial=False) 
-    council_28 = models.BooleanField(blank=True, initial=False)
-
-    friend_29 = models.BooleanField(blank=True, initial=False)
-    value_29 = models.BooleanField(blank=True, initial=False)    
-    politics_29 = models.BooleanField(blank=True, initial=False)
-    study_29 = models.BooleanField(blank=True, initial=False) 
-    council_29 = models.BooleanField(blank=True, initial=False)
-
-    friend_30 = models.BooleanField(blank=True, initial=False)
-    value_30 = models.BooleanField(blank=True, initial=False)    
-    politics_30 = models.BooleanField(blank=True, initial=False)
-    study_30 = models.BooleanField(blank=True, initial=False) 
-    council_30 = models.BooleanField(blank=True, initial=False)
-
     linksrechts_1 = models.IntegerField(blank=True, max=11, min=1, label="")
     linksrechts_2 = models.IntegerField(blank=True, max=11, min=1, label="")
     linksrechts_3 = models.IntegerField(blank=True, max=11, min=1, label="")
@@ -401,17 +302,6 @@ class Player(BasePlayer):
     linksrechts_19 = models.IntegerField(blank=True, max=11, min=1, label="")
     linksrechts_20 = models.IntegerField(blank=True, max=11, min=1, label="")
     linksrechts_21 = models.IntegerField(blank=True, max=11, min=1, label="")
-    linksrechts_22 = models.IntegerField(blank=True, max=11, min=1, label="")
-    linksrechts_23 = models.IntegerField(blank=True, max=11, min=1, label="")
-    linksrechts_24 = models.IntegerField(blank=True, max=11, min=1, label="") 
-    linksrechts_25 = models.IntegerField(blank=True, max=11, min=1, label="")
-    linksrechts_26 = models.IntegerField(blank=True, max=11, min=1, label="")
-    linksrechts_27 = models.IntegerField(blank=True, max=11, min=1, label="")
-    linksrechts_28 = models.IntegerField(blank=True, max=11, min=1, label="")
-    linksrechts_29 = models.IntegerField(blank=True, max=11, min=1, label="")
-    linksrechts_30 = models.IntegerField(blank=True, max=11, min=1, label="")
-    
-    linksrechts_self = models.IntegerField(blank=True, max=11, min=1, label="")
 
     sentiment_1 = models.IntegerField(blank=True, max=2, min=-2, label="", )
     sentiment_2 = models.IntegerField(blank=True, max=2, min=-2, label="", )
@@ -434,12 +324,25 @@ class Player(BasePlayer):
     sentiment_19 = models.IntegerField(blank=True, max=2, min=-2, label="")
     sentiment_20 = models.IntegerField(blank=True, max=2, min=-2, label="")
     sentiment_21 = models.IntegerField(blank=True, max=2, min=-2, label="")
-    sentiment_22 = models.IntegerField(blank=True, max=2, min=-2, label="")
-    sentiment_23 = models.IntegerField(blank=True, max=2, min=-2, label="")
-    sentiment_24 = models.IntegerField(blank=True, max=2, min=-2, label="") 
-    sentiment_25 = models.IntegerField(blank=True, max=2, min=-2, label="")
-    sentiment_26 = models.IntegerField(blank=True, max=2, min=-2, label="")
-    sentiment_27 = models.IntegerField(blank=True, max=2, min=-2, label="")
-    sentiment_28 = models.IntegerField(blank=True, max=2, min=-2, label="")
-    sentiment_29 = models.IntegerField(blank=True, max=2, min=-2, label="")
-    sentiment_30 = models.IntegerField(blank=True, max=2, min=-2, label="")
+
+    grade_1 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_2 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_3 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_4 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_5 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_6 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_7 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_8 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_9 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_10 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_11 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_12 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_13 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_14 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_15 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_16 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_17 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_18 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_19 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_20 = models.IntegerField(blank=True, max=11, min=1, label="")
+    grade_21 = models.IntegerField(blank=True, max=11, min=1, label="")

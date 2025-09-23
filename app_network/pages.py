@@ -14,8 +14,7 @@ class NetworkNamedPersons(Page):
     form_fields = ['person_1', 'person_2', 'person_3', 'person_4', 'person_5', 'person_6',
                    'person_7', 'person_8', 'person_9', 'person_10', 'person_11', 'person_12',
                    'person_13', 'person_14', 'person_15', 'person_16', 'person_17', 'person_18',
-                   'person_19', 'person_20', 'person_21', 'person_22', 'person_23', 'person_24',
-                   'person_25', 'person_26', 'person_27', 'person_28', 'person_29', 'person_30']    
+                   'person_19', 'person_20', 'person_21']    
 
     def vars_for_template(self):
         return {'lang': self.participant.vars.get('language')}
@@ -26,22 +25,21 @@ class LeftrightNetworkAssessment(Page): #8
         return {'lang': self.participant.vars.get('language')}
     form_model = Player
     form_fields = ['linksrechts_1', 'linksrechts_2', 'linksrechts_3', 'linksrechts_4', 'linksrechts_5', 'linksrechts_6', 'linksrechts_7', 'linksrechts_8', 'linksrechts_9', 'linksrechts_10', 'linksrechts_11',
-                   'linksrechts_12', 'linksrechts_13', 'linksrechts_14', 'linksrechts_15', 'linksrechts_16', 'linksrechts_17', 'linksrechts_18', 'linksrechts_19', 'linksrechts_20', 'linksrechts_21',
-                   'linksrechts_22', 'linksrechts_23', 'linksrechts_24', 'linksrechts_25', 'linksrechts_26', 'linksrechts_27', 'linksrechts_28', 'linksrechts_29', 'linksrechts_30']
+                   'linksrechts_12', 'linksrechts_13', 'linksrechts_14', 'linksrechts_15', 'linksrechts_16', 'linksrechts_17', 'linksrechts_18', 'linksrechts_19', 'linksrechts_20', 'linksrechts_21']
+
+class AcademicNetworkAssessment(Page): #8
+    def vars_for_template(self):
+        return {'lang': self.participant.vars.get('language')}
+    form_model = Player
+    form_fields = ['grade_1', 'grade_2', 'grade_3', 'grade_4', 'grade_5', 'grade_6', 'grade_7', 'grade_8', 'grade_9', 'grade_10', 'grade_11',
+                   'grade_12', 'grade_13', 'grade_14', 'grade_15', 'grade_16', 'grade_17', 'grade_18', 'grade_19', 'grade_20', 'grade_21']
 
 class SentimentAssesment(Page): #8
     def vars_for_template(self):
         return {'lang': self.participant.vars.get('language')}
     form_model = Player
     form_fields = ['sentiment_1', 'sentiment_2', 'sentiment_3', 'sentiment_4', 'sentiment_5', 'sentiment_6', 'sentiment_7', 'sentiment_8', 'sentiment_9', 'sentiment_10', 'sentiment_11',
-                   'sentiment_12', 'sentiment_13', 'sentiment_14', 'sentiment_15', 'sentiment_16', 'sentiment_17', 'sentiment_18', 'sentiment_19', 'sentiment_20', 'sentiment_21',
-                   'sentiment_22', 'sentiment_23', 'sentiment_24', 'sentiment_25', 'sentiment_26', 'sentiment_27', 'sentiment_28', 'sentiment_29', 'sentiment_30']
-
-class LeftrightSelfAssessment(Page): #8
-    def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
-    form_model = Player
-    form_fields = ['linksrechts_self']
+                   'sentiment_12', 'sentiment_13', 'sentiment_14', 'sentiment_15', 'sentiment_16', 'sentiment_17', 'sentiment_18', 'sentiment_19', 'sentiment_20', 'sentiment_21']
 
 class SpecialNetworks(Page): #8
     def vars_for_template(self):
@@ -68,18 +66,7 @@ class SpecialNetworks(Page): #8
         'friend_18', 'value_18', 'politics_18', 'council_18', 'study_18',
         'friend_19', 'value_19', 'politics_19', 'council_19', 'study_19',
         'friend_20', 'value_20', 'politics_20', 'council_20', 'study_20',
-        'friend_21', 'value_21', 'politics_21', 'council_21', 'study_21',
-        'friend_22', 'value_22', 'politics_22', 'council_22', 'study_22',
-        'friend_23', 'value_23', 'politics_23', 'council_23', 'study_23',
-        'friend_24', 'value_24', 'politics_24', 'council_24', 'study_24',
-        'friend_25', 'value_25', 'politics_25', 'council_25', 'study_25',
-        'friend_26', 'value_26', 'politics_26', 'council_26', 'study_26',
-        'friend_27', 'value_27', 'politics_27', 'council_27', 'study_27',
-        'friend_28', 'value_28', 'politics_28', 'council_28', 'study_28',
-        'friend_29', 'value_29', 'politics_29', 'council_29', 'study_29',
-        'friend_30', 'value_30', 'politics_30', 'council_30', 'study_30']              
+        'friend_21', 'value_21', 'politics_21', 'council_21', 'study_21']              
  
                    
-page_sequence = [NetworkNamedPersons, SpecialNetworks, SentimentAssesment, LeftrightSelfAssessment ,LeftrightNetworkAssessment] 
-
-# docker compose up -d --build 
+page_sequence = [NetworkNamedPersons, SpecialNetworks, SentimentAssesment ,LeftrightNetworkAssessment, AcademicNetworkAssessment] 

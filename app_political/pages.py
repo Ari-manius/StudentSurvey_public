@@ -9,6 +9,12 @@ def load_questions():
     with open(questions_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+class LeftrightSelfAssessment(Page): #8
+    def vars_for_template(self):
+        return {'lang': self.participant.vars.get('language')}
+    form_model = Player
+    form_fields = ['linksrechts_self']
+
 class Sonntagsfrage(Page): #5
     def vars_for_template(self):
         questions_data = load_questions()
@@ -84,4 +90,4 @@ class Participation(Page):
                    'social_networks_11']
 
 
-page_sequence = [Participation, LeftRightParty, ScaloParty, ScaloPerson, PoliticalQuestions, Sonntagsfrage]
+page_sequence = [LeftrightSelfAssessment, Participation, LeftRightParty, ScaloParty, ScaloPerson, PoliticalQuestions, Sonntagsfrage]

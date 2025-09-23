@@ -99,3 +99,5 @@ class Player(BasePlayer):
     participation_demonstration_1 = models.IntegerField(blank=True, max=2, min=0, label="")
     petition_signatory = models.IntegerField(blank=True, max=2, min=0, label="")
     petition_signatory_1 = models.IntegerField(blank=True, max=2, min=0, label = "")
+
+    linksrechts_self = models.IntegerField(blank=True, max=11, min=1, label="")
