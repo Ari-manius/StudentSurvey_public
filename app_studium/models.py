@@ -28,13 +28,33 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    # Study
+    semester_of_study = models.IntegerField(blank=True, max=24, min=1, label="Enter number (1-24)")
+    study_program = models.IntegerField(blank=True, max=4, min=0)
+    #study_program_other = models.StringField(blank=True, label="Andere/Other:")
+    consecutive_academic_career = models.IntegerField(blank=True, max=4, min=0)
+
+    # Class
     tutorial = models.IntegerField(blank=True, max=8, min=0, label="")
-    grade = models.StringField(blank=True, label="")
+    grade_expectation = models.IntegerField(blank=True)
+    time_class = models.IntegerField(blank=True, label="Hours per week (0-100)", min=0, max=100)
 
-    fresherscamp_student = models.IntegerField(blank=True, max= 5, min=0, label="")
+    # MSL
+    motivation_intrinsic_goal = models.IntegerField(blank=True, max=8, min=0, label="")
+    motivation_extrinsic_goal = models.IntegerField(blank=True, max=8, min=0, label="")
+    motivation_task_value = models.IntegerField(blank=True, max=8, min=0, label="")
+
+    expentancy_control_learning = models.IntegerField(blank=True, max=8, min=0, label="")
+    expentancy_self_efficacy_learning = models.IntegerField(blank=True, max=8, min=0, label="")
+
+    affective_test_anxiety = models.IntegerField(blank=True, max=8, min=0, label="")
+    affective_academic_stress = models.IntegerField(blank=True, max=8, min=0, label="")
+
+    resource_time = models.IntegerField(blank=True, max=8, min=0, label="")
+    resource_effort = models.IntegerField(blank=True, max=8, min=0, label="")
+    resource_peer = models.IntegerField(blank=True, max=8, min=0, label="")
+    resource_help = models.IntegerField(blank=True, max=8, min=0, label="")
+
+    # Social 
+    fresherscamp_student = models.IntegerField(blank=True, max= 5, min=0, label="")    
     freshersweek_student = models.IntegerField(blank=True, max= 2, min=0, label="")
-
-    semester_of_study = models.IntegerField(blank=True, max=24, min=1, label="")
-    consecutive_study_program = models.IntegerField(blank=True, max=4, min=0, label="")
-    study_program = models.IntegerField(blank=True, max=4, min=0, label="")
-    study_program_other = models.StringField(blank=True, label="Andere/Other:")

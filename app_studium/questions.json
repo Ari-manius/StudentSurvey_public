@@ -10,12 +10,12 @@
         },
         "options": [
           {
-            "value": "2",
-            "text": {"german": "B.Ed. Politikwissenschaften als Nebenfach", "english": "B.Ed. Political Science as minor subject"}
-          },
-          {
             "value": "1",
             "text": {"german": "BA. Politik - Verwaltung - Management", "english": "BA. Politics - Administration - Management"}
+          },
+          {
+            "value": "2",
+            "text": {"german": "B.Ed. Politikwissenschaften als Nebenfach", "english": "B.Ed. Political Science as minor subject"}
           },
           {
             "value": "3",
@@ -26,29 +26,25 @@
             "text": {"german": "MSc.Social and Economic Data Science (SEDS)", "english": "MSc.Social and Economic Data Science (SEDS)"}
           },
           {
+            "value": "5",
+            "text": {"german": "Anderer Studiengang", "english": "Other program"}
+          },
+          {
             "value": "0",
             "text": {"german": "Keine Angabe", "english": "No Answer"}
           }
         ]
       },
       {
-        "field": "study_program_other",
-        "type": "text",
-        "text": {
-          "german": "Andere/Other:",
-          "english": "Other:"
-        }
-      },
-      {
         "field": "semester_of_study",
         "type": "number",
         "text": {
           "german": "In welchem Fachsemester befinden Sie sich?",
-          "english": "What semester of study are you in?"
+          "english": "What is you current semester number?"
         }
       },
       {
-        "field": "consecutive_study_program", 
+        "field": "consecutive_academic_career", 
         "type": "radio",
         "text": {
           "german": "Wollen Sie unmittelbar nach dem BA-Studium Ihre akademische Laufbahn fortsetzen und welchen Abschluss streben Sie an?",
@@ -85,10 +81,10 @@
           "english": "Did you go to a freshers camp at the beginning of this semester?"
         },
         "options": [
-          {"value": "1", "text": {"german": "Hof 1: Oktober 6, 2024 - Oktober 8, 2024", "english": "Camp 1: October 6, 2024 - October 8, 2024"}},
-          {"value": "2", "text": {"german": "Hof 2: Oktober 7, 2024 - Oktober 9, 2024", "english": "Camp 2: October 7, 2024 - October 9, 2024"}},
-          {"value": "3", "text": {"german": "Hof 3: Oktober 9, 2024 - Oktober 11, 2024", "english": "Camp 3: October 9, 2024 - October 11, 2024"}},
-          {"value": "4", "text": {"german": "Hof 4: Oktober 11, 2024 - Oktober 13, 2024", "english": "Camp 4: October 11, 2024 - October 13, 2024"}},
+          {"value": "1", "text": {"german": "Hof 1: 29.09.25 - 1.10.25", "english": "Camp 1: 29.09.25 - 1.10.25"}},
+          {"value": "2", "text": {"german": "Hof 2: 1.10.25 - 3.10.25", "english": "Camp 2: 1.10.25 - 3.10.25"}},
+          {"value": "3", "text": {"german": "Hof 3: 3.10.25 - 5.10.25", "english": "Camp 2: 3.10.25 - 5.10.25"}},
+          {"value": "4", "text": {"german": "Hof 4: 5.10.25 - 7.10.25", "english": "Camp 2: 5.10.25 - 7.10.25"}},
           {"value": "0", "text": {"german": "Nein", "english": "No"}}
         ]
       },
@@ -106,8 +102,16 @@
       }
     ]
   },
-  "Tutorials": {
+  "Class": {
     "questions": [
+      {
+        "field": "time_class",
+        "type": "number",
+        "text": {
+          "german": "Wie viele Stunden pro Woche lernen Sie für diesen Kurs?",
+          "english": "How many hours per week do you study for this course?"
+        }
+      },
       {
         "field": "tutorial",
         "type": "radio",
@@ -116,15 +120,12 @@
           "english": "In which tutorial do you participate?"
         },
         "options": [
-          {"value": "1", "text": {"german": "Wed, 15.15-16.45, Aytac, Robin", "english": "Wed, 15.15-16.45, Aytac, Robin"}},
-          {"value": "2", "text": {"german": "Tue, 11.45-13.15, Barth, Mike", "english": "Tue, 11.45-13.15, Barth, Mike"}},
-          {"value": "3", "text": {"german": "Thu, 8.15-9.45, Brodkorb, Philipp", "english": "Thu, 8.15-9.45, Brodkorb, Philipp"}},
-          {"value": "4", "text": {"german": "Mon, 13.30-15.00, Löffler, Alban", "english": "Mon, 13.30-15.00, Löffler, Alban"}},
-          {"value": "5", "text": {"german": "Tue, 8.15-9.45, Neumeyer, Finn", "english": "Tue, 8.15-9.45, Neumeyer, Finn"}},
-          {"value": "6", "text": {"german": "Fri, 11.45-13.15, Neuner, Nils", "english": "Fri, 11.45-13.15, Neuner, Nils"}},
-          {"value": "7", "text": {"german": "Wed, 15.15-16.45, Stickel, Marlene", "english": "Wed, 15.15-16.45, Stickel, Marlene"}},
-          {"value": "8", "text": {"german": "Mon, 17.00-18.30, Wagner, Theresa", "english": "Mon, 17.00-18.30, Wagner, Theresa"}},
-          {"value": "0", "text": {"german": "An keiner", "english": "None"}}
+          {"value": "1", "text": {"german": "Dienstag, 11:45-13:15, Joshua Tress", "english": "Tuesday, 11:45-13:15, Joshua Tress"}},
+          {"value": "2", "text": {"german": "Mittwoch, 17:00-18:30, Noah Kriegler", "english": "Wednesday, 17:00-18:30, Noah Kriegler"}},
+          {"value": "2", "text": {"german": "Donnerstag, 8:15-9:45, Noah Kriegler", "english": "Thursday, 8:15-9:45, Noah Kriegler"}},
+          {"value": "1", "text": {"german": "Donnerstag, 15:15-16:45, Theresa Wagner", "english": "Thursday, 15:15-16:45, Theresa Wagner"}},
+          {"value": "1", "text": {"german": "Donnerstag, 17:00-18:30, Theresa Wagner", "english": "Thursday, 17:00-18:30, Theresa Wagner"}},
+          {"value": "0", "text": {"german": "An keinem", "english": "None of these"}}
         ]
       },
       {
@@ -148,6 +149,220 @@
           {"value": "5.0", "text": {"german": "5.0", "english": "5.0"}},
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}}
         ]
+      }
+    ]
+  },
+  "MotivatedStrategies":{
+    "questions": [
+      {
+        "field": "motivation_intrinsic_goal",
+        "type": "radio",
+        "text": {
+          "german": "Test",
+          "english": "In a class like this, I prefer course material that feeds my curiosity, even if it is difficult to learn."
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      },
+      {
+        "field": "motivation_extrinsic_goal",
+        "type": "radio",
+        "text": {
+          "german": "",
+          "english": ""
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      },
+      {
+        "field": "motivation_task_value",
+        "type": "radio",
+        "text": {
+          "german": "",
+          "english": ""
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      },
+      {
+        "field": "expentancy_control_learning",
+        "type": "radio",
+        "text": {
+          "german": "",
+          "english": ""
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      },
+      {
+        "field": "expentancy_self_efficacy_learning",
+        "type": "radio",
+        "text": {
+          "german": "",
+          "english": ""
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      },
+      {
+        "field": "affective_test_anxiety",
+        "type": "radio",
+        "text": {
+          "german": "",
+          "english": ""
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      },
+      {
+        "field": "affective_academic_stress",
+        "type": "radio",
+        "text": {
+          "german": "",
+          "english": ""
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      },
+      {
+        "field": "resource_time",
+        "type": "radio",
+        "text": {
+          "german": "",
+          "english": ""
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      },
+      {
+        "field": "resource_effort",
+        "type": "radio",
+        "text": {
+          "german": "",
+          "english": ""
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      },
+      {
+        "field": "resource_peer",
+        "type": "radio",
+        "text": {
+          "german": "",
+          "english": ""
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      },
+      {
+        "field": "resource_help",
+        "type": "radio",
+        "text": {
+          "german": "",
+          "english": ""
+        },
+        "options": [
+          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
+          {"value": "1", "text": {"german": "Gar nicht zutreffend", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Nicht zutreffend", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Wenig nicht zutreffend", "english": "Little not true of me"}},
+          {"value": "4", "text": {"german": "Halbwegs zutrefffend", "english": "Half-true"}},
+          {"value": "5", "text": {"german": "Wenig zutreffend", "english": "Little true of me"}},
+          {"value": "6", "text": {"german": "Zutreffend", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Sehr zutreffend", "english": "Very true of me"}}
+        ]
+      }
+    ]
+  },
+  "Removed":{
+    "questions": [
+      {
+        "field": "study_program_other",
+        "type": "text",
+        "text": {
+          "german": "Andere/Other:",
+          "english": "Other:"
+        }
       }
     ]
   }

@@ -18,7 +18,8 @@ class GenderAge(Page): #3
             'questions': questions_data['GenderAge']['questions']
         }
     form_model = Player
-    form_fields = ['age', 'gender']
+    form_fields = ['age', 
+                    'gender']
 
 
 class LevelFamily(Page): #3
@@ -29,9 +30,15 @@ class LevelFamily(Page): #3
             'questions': questions_data['LevelFamily']['questions']
         }
     form_model = Player
-    form_fields = ['work_edu_father', 'work_edu_mother', 'ocu_mother', 'ocu_father', 'school_mother', 'school_father']
+    form_fields = ['edu_family_1gen_m',
+                    'edu_family_1gen_f',
+                    'edu_family_2gen_m1',
+                    'edu_family_2gen_f1',
+                    'edu_family_2gen_m2',
+                    'edu_family_2gen_f2',
+                   ]
 
-class Financial(Page): #3
+class Financial(Page): 
     def vars_for_template(self):
         questions_data = load_questions()
         return {
@@ -39,7 +46,12 @@ class Financial(Page): #3
             'questions': questions_data['Financial']['questions']
         }
     form_model = Player
-    form_fields = ['rent', 'income']
+    form_fields = ["financial_situation_general_current",
+                    "financial_situation_personal_current", 
+                    "financial_situation_general_future",
+                    "financial_situation_personal_future",
+                    "time_work",
+                    ]
 
 class Secondary(Page):
     def vars_for_template(self):
@@ -49,6 +61,7 @@ class Secondary(Page):
             'questions': questions_data['Secondary']['questions']
         }
     form_model = Player
-    form_fields = ['postcode', 'secondary_year']
+    form_fields = ['postcode', 
+                    'secondary_year']
 
-page_sequence = [GenderAge, Secondary, LevelFamily, Financial]
+page_sequence = [Financial, GenderAge, Secondary, LevelFamily]
