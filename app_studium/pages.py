@@ -39,15 +39,15 @@ class MotivatedStrategies(Page): #13
         }
     form_model = Player
     form_fields = [
-        'motivation_intrinsic_goal',
-        'motivation_extrinsic_goal',
-        'motivation_task_value',
-        'expentancy_control_learning',
-        'expentancy_self_efficacy_learning',
-        'affective_test_anxiety',
+        'motivation_intrinsic_goal_1',
+        'motivation_extrinsic_goal_1',
+        'motivation_intrinsic_goal_2',
+        'motivation_extrinsic_goal_2',
+        'motivation_intrinsic_goal_3',
+        'motivation_extrinsic_goal_3',
+        'motivation_extrinsic_goal_4',
         'affective_academic_stress',
         'resource_time',
-        'resource_effort',
         'resource_peer',
         'resource_help'
     ]
@@ -64,4 +64,4 @@ class Study(Page):
                     'semester_of_study', 
                     'consecutive_academic_career']
  
-page_sequence = [Study, FreshersCamp, Class, MotivatedStrategies]
+page_sequence = [FreshersCamp, Study, Class, MotivatedStrategies]

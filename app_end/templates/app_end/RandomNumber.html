@@ -18,24 +18,24 @@
     <hr>
 
     <div  class="mb-3 bg-light border pt-2 pb-2 px-2 ">
-        <p class="german">Sie werden diesen 6-stelligen Code am Ende des Semester brauchen. Bitte notieren Sie sich die folgende Nummer oder machen Sie einen Screenshot. Sie dient als Beleg dafür, dass Sie an der Befragung teilgenommen haben und wird es Ihnen erlauben Ihre Bonuspunkte zu erhalten.</p>
-        <p class="english">You will need this 6-number code at the end of the semester. Please write it down or take a screenshot. It serves as proof that you have particpiated in this survey and will allow you to claim your bonus points.</p>
-            <p>ID-Code: <b>{{ student_code }}</b></p>
+        <p class="german">Sie werden den 6-stelligen Zufalls-Code am Ende des Semester brauchen. Bitte notieren Sie sich die folgende Nummer oder machen Sie einen Screenshot. Sie dient als Beleg dafür, dass Sie an der Befragung teilgenommen haben und wird es Ihnen erlauben Ihre Bonuspunkte zu erhalten.</p>
+        <p class="english">You will need the random 6-number code at the end of the semester. Please write it down or take a screenshot. It serves as proof that you have particpiated in this survey and will allow you to claim your bonus points.</p>
+            <p>Survey-Code: <b>{{ student_code }}</b></p>
             <p class="english">Random-Code: <b>{{ player.rnumber }}</b></p>
             <p class="german">Zufalls-Code: <b>{{ player.rnumber }}</b></p>
     </div>
 
     <div  class="mb-3 bg-light border pt-2 pb-2 px-2 ">
 
-        <p class="german">Bitte geben Sie zur Bestätigung folgendes in das Textfeld ein: "{ID-Code}_{Zufalls-Code}"</p>
+        <p class="german">Bitte geben Sie zur Bestätigung folgendes in das Textfeld ein: "{Survey-Code}_{Zufalls-Code}"</p>
         <p class="english">In order to confirm, please enter the following into the field below: "{ID-Code}_{Random-Code}"</p>
         
         <input type="string" name="rnumbercheck" required="" id="id_rnumbercheck" class="form-control">
         {{ formfield_errors 'rnumbercheck' }}
 
-        <p class="german"> <span style="color: red;">Hinweis:</span> Bitte halten Sie die Notiz bis zum Semesterende griffbereit. Sie werden immer wieder danach gefragt.
+        <p class="german"> <span style="color: red;">Hinweis:</span> Bitte halten sie den Zufallscode und den Surveycode bis zum Semesterende griffbereit. Sie werden ihn brauchen für die Bonuspunkte.
         </p>
-        <p class="english"> <span style="color: red;">Note:</span> Please keep the note at hand until the end of the semester. You will be asked for it again.
+        <p class="english"> <span style="color: red;">Note:</span> Please keep the suvrey-code and the random-code until the end of the semester. You will need it for the Bonus points.
         </p>
     </div>
 

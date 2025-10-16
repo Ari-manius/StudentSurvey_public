@@ -17,18 +17,6 @@ network among student + performance (build up this area)
 - liste mit random codes (3-stellige) manuell ausgegeben (Option!!!)
 - hashfunktion mit matrikelnummer / personalisiert 
 
-
-## Vignette App
-- [Vignette App Blueprint](https://docs.google.com/document/d/1BRRiqEtoOX3URnHSSgDCcNFG5OksqOhchNA4S4MAbEc/edit?tab=t.0)
-
-- Opinion or fact
-- is there a narrotor
-- what are the sides to be believed
-	- Parents
-	- school
-	- teacher
-	- child
-
 ## Project Expansion Ideas
 - Student Survey Pipeline 
 - Full Data Pipeline for Cleaning 

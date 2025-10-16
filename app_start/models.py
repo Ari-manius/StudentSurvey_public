@@ -34,9 +34,6 @@ class Player(BasePlayer):
     operating_system = models.IntegerField()
     browser = models.IntegerField()
     time = models.StringField(initial="-999")
-
     lang = models.IntegerField()
-    language = models.IntegerField() 
     use_of_device = models.IntegerField(blank=True, max=3, min=1, label="")
-    participant_label = models.StringField()
 

@@ -31,7 +31,6 @@ class Player(BasePlayer):
     # Study
     semester_of_study = models.IntegerField(blank=True, max=24, min=1, label="Enter number (1-24)")
     study_program = models.IntegerField(blank=True, max=4, min=0)
-    #study_program_other = models.StringField(blank=True, label="Andere/Other:")
     consecutive_academic_career = models.IntegerField(blank=True, max=4, min=0)
 
     # Class
@@ -40,18 +39,15 @@ class Player(BasePlayer):
     time_class = models.IntegerField(blank=True, label="Hours per week (0-100)", min=0, max=100)
 
     # MSL
-    motivation_intrinsic_goal = models.IntegerField(blank=True, max=8, min=0, label="")
-    motivation_extrinsic_goal = models.IntegerField(blank=True, max=8, min=0, label="")
-    motivation_task_value = models.IntegerField(blank=True, max=8, min=0, label="")
-
-    expentancy_control_learning = models.IntegerField(blank=True, max=8, min=0, label="")
-    expentancy_self_efficacy_learning = models.IntegerField(blank=True, max=8, min=0, label="")
-
-    affective_test_anxiety = models.IntegerField(blank=True, max=8, min=0, label="")
+    motivation_intrinsic_goal_1 = models.IntegerField(blank=True, max=8, min=0, label="")
+    motivation_intrinsic_goal_2 = models.IntegerField(blank=True, max=8, min=0, label="")
+    motivation_intrinsic_goal_3 = models.IntegerField(blank=True, max=8, min=0, label="")
+    motivation_extrinsic_goal_1 = models.IntegerField(blank=True, max=8, min=0, label="")
+    motivation_extrinsic_goal_2 = models.IntegerField(blank=True, max=8, min=0, label="")
+    motivation_extrinsic_goal_3 = models.IntegerField(blank=True, max=8, min=0, label="")
+    motivation_extrinsic_goal_4 = models.IntegerField(blank=True, max=8, min=0, label="")
     affective_academic_stress = models.IntegerField(blank=True, max=8, min=0, label="")
-
     resource_time = models.IntegerField(blank=True, max=8, min=0, label="")
-    resource_effort = models.IntegerField(blank=True, max=8, min=0, label="")
     resource_peer = models.IntegerField(blank=True, max=8, min=0, label="")
     resource_help = models.IntegerField(blank=True, max=8, min=0, label="")
 

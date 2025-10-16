@@ -135,7 +135,7 @@
   "Sonntagsfrage": {
     "questions": [
       {
-        "field": "sunday_poll",
+        "field": "sunday_party_vote",
         "type": "radio",
         "text": {
           "german": "Wenn nächsten Sonntag Bundestagswahl wäre, welche Partei würden Sie mit Ihrer Zweitstimme wählen?",
@@ -147,59 +147,14 @@
           {"value": "3", "text": {"german": "SPD", "english": "SPD"}},
           {"value": "4", "text": {"german": "AfD", "english": "AfD"}},
           {"value": "5", "text": {"german": "FDP", "english": "FDP"}},
-          {"value": "6", "text": {"german": "Die Linke", "english": "Die Linke"}},
-          {"value": "7", "text": {"german": "Bündnis 90/Die Grünen", "english": "Bündnis 90/Die Grünen"}},
+          {"value": "6", "text": {"german": "Die LINKE", "english": "Die LINKE"}},
+          {"value": "7", "text": {"german": "Bündnis 90 / Die Grünen", "english": "Bündnis 90 / Die Grünen"}},
           {"value": "8", "text": {"german": "BSW", "english": "BSW"}},
           {"value": "9", "text": {"german": "Andere Partei", "english": "Other party"}},
           {"value": "10", "text": {"german": "Würde nicht wählen", "english": "Would not vote"}},
           {"value": "11", "text": {"german": "Bin nicht wahlberechtigt", "english": "Not eligible to vote"}},
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
         ]
-      },
-      {
-        "field": "sunday_party_vote",
-        "type": "text",
-        "text": {
-          "german": "Falls 'Andere Partei': Welche?",
-          "english": "If 'Other party': Which one?"
-        }
-      },
-      {
-        "field": "sunday_not_eligible",
-        "type": "radio",
-        "text": {
-          "german": "Falls Sie nicht wahlberechtigt sind: Welche Partei würden Sie wählen, wenn Sie könnten?",
-          "english": "If you are not eligible to vote: Which party would you vote for if you could?"
-        },
-        "options": [
-          {"value": "1", "text": {"german": "CDU", "english": "CDU"}},
-          {"value": "2", "text": {"german": "CSU", "english": "CSU"}},
-          {"value": "3", "text": {"german": "SPD", "english": "SPD"}},
-          {"value": "4", "text": {"german": "AfD", "english": "AfD"}},
-          {"value": "5", "text": {"german": "FDP", "english": "FDP"}},
-          {"value": "6", "text": {"german": "Die Linke", "english": "Die Linke"}},
-          {"value": "7", "text": {"german": "Bündnis 90/Die Grünen", "english": "Bündnis 90/Die Grünen"}},
-          {"value": "8", "text": {"german": "BSW", "english": "BSW"}},
-          {"value": "9", "text": {"german": "Andere Partei", "english": "Other party"}},
-          {"value": "10", "text": {"german": "Würde nicht wählen", "english": "Would not vote"}},
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
-        ]
-      },
-      {
-        "field": "noteligible_sunday_party_vote",
-        "type": "text",
-        "text": {
-          "german": "Falls 'Andere Partei': Welche?",
-          "english": "If 'Other party': Which one?"
-        }
-      },
-      {
-        "field": "reason_no_vote",
-        "type": "text",
-        "text": {
-          "german": "Falls Sie nicht wählen würden: Warum nicht?",
-          "english": "If you would not vote: Why not?"
-        }
       }
     ]
   },
@@ -287,7 +242,7 @@
       }
     ]
   },
-  "ScaloPerson": {
+  "ScaloGerPerson": {
     "questions": [
       {
         "field": "scalo_pep1",
@@ -295,8 +250,8 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Olaf Scholz",
-          "english": "Olaf Scholz"
+          "german": "Boris Pistorius",
+          "english": "Boris Pistorius"
         }
       },
       {
@@ -305,8 +260,8 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Friedrich Merz",
-          "english": "Friedrich Merz"
+          "german": "Bärbel Bas",
+          "english": "Bärbel Bas"
         }
       },
       {
@@ -325,8 +280,8 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Christian Lindner",
-          "english": "Christian Lindner"
+          "german": "Franziska Brantner",
+          "english": "Franziska Brantner"
         }
       },
       {
@@ -355,8 +310,8 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Sahra Wagenknecht",
-          "english": "Sahra Wagenknecht"
+          "german": "Jens Spahn",
+          "english": "Jens Spahn"
         }
       },
       {
@@ -375,8 +330,8 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Annalena Baerbock",
-          "english": "Annalena Baerbock"
+          "german": "Dorothee Bär",
+          "english": "Dorothee Bär"
         }
       },
       {
@@ -405,8 +360,8 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Martin Schirdewan",
-          "english": "Martin Schirdewan"
+          "german": "Ines Schwerdtner",
+          "english": "Ines Schwerdtner"
         }
       },
       {
@@ -415,8 +370,8 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Ricarda Lang",
-          "english": "Ricarda Lang"
+          "german": "Friedrich Merz",
+          "english": "Friedrich Merz"
         }
       },
       {
@@ -425,8 +380,8 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Omid Nouripour",
-          "english": "Omid Nouripour"
+          "german": "Vladimir Putin",
+          "english": "Vladimir Putin"
         }
       },
       {
@@ -435,8 +390,8 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Saskia Esken",
-          "english": "Saskia Esken"
+          "german": "Donald Trump",
+          "english": "Donald Trump"
         }
       },
       {
@@ -445,8 +400,38 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Amira Mohamed Ali",
-          "english": "Amira Mohamed Ali"
+          "german": "Benjamin Netanyahu",
+          "english": "Benjamin Netanyahu"
+        }
+      },
+      {
+        "field": "scalo_pep17",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Emmanuel Macron",
+          "english": "Emmanuel Macron"
+        }
+      },
+      {
+        "field": "scalo_pep18",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Giorgia Meloni",
+          "english": "Giorgia Meloni"
+        }
+      },
+      {
+        "field": "scalo_pep19",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Keir Starmer",
+          "english": "Keir Starmer"
         }
       }
     ]

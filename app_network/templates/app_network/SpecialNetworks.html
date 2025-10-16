@@ -18,17 +18,17 @@
     <input id="time" type="hidden" name="time_leftright_selfassessment"/>
 
     <div class="mb-3 border pt-2 pb-2 px-2 ">
-                    <p class="german"> In welchen Beziehungen stehen Sie zu den folgenden Personen? (Sie können mehrere Beziehungen für jede Person angeben.)</p>
-                    <p class="english"> What relation do you have towards the following people? (You can select multiple relations for each person.)</p>
+                    <p class="german"> In welchen Beziehungen stehen Sie zu den folgenden Personen? (Sie können mehrere Arten von Beziehungen für jede Person angeben.)</p>
+                    <p class="english"> What is your relation towards the following people? (You can select multiple types of relations for each person.)</p>
             <div class="table-responsive">
                 <table class="table">
                     <thead>
                     <tr>
                         <td></td>
-                        <th><p class="english"> We are friends.</p> <p class="german"> Wir sind Freunde.</p></th>
-                        <th><p class="english"> I value and trust this person.</p> <p class="german"> Ich schätze und vertraue dieser Person.</p></th>
-                        <th><p class="english"> We dicuss politics regularly.</p> <p class="german"> Wir diskutieren regelmäßig über Politik.</p></th>
-                        <th><p class="english"> We learn together regularly.</p> <p class="german"> Wir lernen regelmäßig zusammen.</p></th>
+                        <th><p class="english"> I am friends with this person.</p> <p class="german"> Ich bin mit dieser Person befreundet.</p></th>
+                        <th><p class="english"> I knew this person before beginning my bachelor.</p> <p class="german"> Ich kannte diese Person bevor ich meinen Bachelor angefangen habe.</p></th>
+                        <th><p class="english"> We dicuss political topics regularly.</p> <p class="german"> Wir diskutieren regelmäßig über politische Themen.</p></th>
+                        <th><p class="english"> We study together regularly.</p> <p class="german"> Wir lernen regelmäßig zusammen.</p></th>
                         <th><p class="english"> I know them through the Student Council.</p> <p class="german"> Ich kenne diese Person aus der Fachschaft.</p></th>
                     </tr>
                     </thead>
@@ -37,7 +37,7 @@
                         <tr>
                             <th>{{ player.person_1 }}</th>
                             <th><input type="checkbox" name="friend_1" value="1"></th>
-                            <th><input type="checkbox" name="value_1" value="1"></th>
+                            <th><input type="checkbox" name="old_1" value="1"></th>
                             <th><input type="checkbox" name="politics_1" value="1"></th>
                             <th><input type="checkbox" name="study_1" value="1"></th>
                             <th><input type="checkbox" name="council_1" value="1"></th>
@@ -48,7 +48,7 @@
                         <tr>
                             <th>{{ player.person_2 }}</th>
                             <th><input type="checkbox" name="friend_2" value="1"></th>
-                            <th><input type="checkbox" name="value_2" value="1"></th>
+                            <th><input type="checkbox" name="old_2" value="1"></th>
                             <th><input type="checkbox" name="politics_2" value="1"></th>
                             <th><input type="checkbox" name="study_2" value="1"></th>
                             <th><input type="checkbox" name="council_2" value="1"></th>
@@ -59,7 +59,7 @@
                         <tr>
                             <th>{{ player.person_3 }}</th>
                             <th><input type="checkbox" name="friend_3" value="1"></th>
-                            <th><input type="checkbox" name="value_3" value="1"></th>
+                            <th><input type="checkbox" name="old_3" value="1"></th>
                             <th><input type="checkbox" name="politics_3" value="1"></th>
                             <th><input type="checkbox" name="study_3" value="1"></th>
                             <th><input type="checkbox" name="council_3" value="1"></th>
@@ -70,7 +70,7 @@
                         <tr>
                             <th>{{ player.person_4 }}</th>
                             <th><input type="checkbox" name="friend_4" value="1"></th>
-                            <th><input type="checkbox" name="value_4" value="1"></th>
+                            <th><input type="checkbox" name="old_4" value="1"></th>
                             <th><input type="checkbox" name="politics_4" value="1"></th>
                             <th><input type="checkbox" name="study_4" value="1"></th>
                             <th><input type="checkbox" name="council_4" value="1"></th>
@@ -81,7 +81,7 @@
                         <tr>
                             <th>{{ player.person_5 }}</th>
                             <th><input type="checkbox" name="friend_5" value="1"></th>
-                            <th><input type="checkbox" name="value_5" value="1"></th>
+                            <th><input type="checkbox" name="old_5" value="1"></th>
                             <th><input type="checkbox" name="politics_5" value="1"></th>
                             <th><input type="checkbox" name="study_5" value="1"></th>
                             <th><input type="checkbox" name="council_5" value="1"></th>
@@ -92,7 +92,7 @@
                         <tr>
                             <th>{{ player.person_6 }}</th>
                             <th><input type="checkbox" name="friend_6" value="1"></th>
-                            <th><input type="checkbox" name="value_6" value="1"></th>
+                            <th><input type="checkbox" name="old_6" value="1"></th>
                             <th><input type="checkbox" name="politics_6" value="1"></th>
                             <th><input type="checkbox" name="study_6" value="1"></th>
                             <th><input type="checkbox" name="council_6" value="1"></th>
@@ -103,7 +103,7 @@
                         <tr>
                             <th>{{ player.person_7 }}</th>
                             <th><input type="checkbox" name="friend_7" value="1"></th>
-                            <th><input type="checkbox" name="value_7" value="1"></th>
+                            <th><input type="checkbox" name="old_7" value="1"></th>
                             <th><input type="checkbox" name="politics_7" value="1"></th>
                             <th><input type="checkbox" name="study_7" value="1"></th>
                             <th><input type="checkbox" name="council_7" value="1"></th>
@@ -114,7 +114,7 @@
                         <tr>
                             <th>{{ player.person_8 }}</th>
                             <th><input type="checkbox" name="friend_8" value="1"></th>
-                            <th><input type="checkbox" name="value_8" value="1"></th>
+                            <th><input type="checkbox" name="old_8" value="1"></th>
                             <th><input type="checkbox" name="politics_8" value="1"></th>
                             <th><input type="checkbox" name="study_8" value="1"></th>
                             <th><input type="checkbox" name="council_8" value="1"></th>
@@ -125,7 +125,7 @@
                         <tr>
                             <th>{{ player.person_9 }}</th>
                             <th><input type="checkbox" name="friend_9" value="1"></th>
-                            <th><input type="checkbox" name="value_9" value="1"></th>
+                            <th><input type="checkbox" name="old_9" value="1"></th>
                             <th><input type="checkbox" name="politics_9" value="1"></th>
                             <th><input type="checkbox" name="study_9" value="1"></th>
                             <th><input type="checkbox" name="council_9" value="1"></th>
@@ -136,7 +136,7 @@
                         <tr>
                             <th>{{ player.person_10 }}</th>
                             <th><input type="checkbox" name="friend_10" value="1"></th>
-                            <th><input type="checkbox" name="value_10" value="1"></th>
+                            <th><input type="checkbox" name="old_10" value="1"></th>
                             <th><input type="checkbox" name="politics_10" value="1"></th>
                             <th><input type="checkbox" name="study_10" value="1"></th>
                             <th><input type="checkbox" name="council_10" value="1"></th>
@@ -147,7 +147,7 @@
                         <tr>
                             <th>{{ player.person_11 }}</th>
                             <th><input type="checkbox" name="friend_11" value="1"></th>
-                            <th><input type="checkbox" name="value_11" value="1"></th>
+                            <th><input type="checkbox" name="old_11" value="1"></th>
                             <th><input type="checkbox" name="politics_11" value="1"></th>
                             <th><input type="checkbox" name="study_11" value="1"></th>
                             <th><input type="checkbox" name="council_11" value="1"></th>
@@ -158,7 +158,7 @@
                         <tr>
                             <th>{{ player.person_12 }}</th>
                             <th><input type="checkbox" name="friend_12" value="1"></th>
-                            <th><input type="checkbox" name="value_12" value="1"></th>
+                            <th><input type="checkbox" name="old_12" value="1"></th>
                             <th><input type="checkbox" name="politics_12" value="1"></th>
                             <th><input type="checkbox" name="study_12" value="1"></th>
                             <th><input type="checkbox" name="council_12" value="1"></th>
@@ -169,7 +169,7 @@
                         <tr>
                             <th>{{ player.person_13 }}</th>
                             <th><input type="checkbox" name="friend_13" value="1"></th>
-                            <th><input type="checkbox" name="value_13" value="1"></th>
+                            <th><input type="checkbox" name="old_13" value="1"></th>
                             <th><input type="checkbox" name="politics_13" value="1"></th>
                             <th><input type="checkbox" name="study_13" value="1"></th>
                             <th><input type="checkbox" name="council_13" value="1"></th>
@@ -180,7 +180,7 @@
                         <tr>
                             <th>{{ player.person_14 }}</th>
                             <th><input type="checkbox" name="friend_14" value="1"></th>
-                            <th><input type="checkbox" name="value_14" value="1"></th>
+                            <th><input type="checkbox" name="old_14" value="1"></th>
                             <th><input type="checkbox" name="politics_14" value="1"></th>
                             <th><input type="checkbox" name="study_14" value="1"></th>
                             <th><input type="checkbox" name="council_14" value="1"></th>
@@ -191,7 +191,7 @@
                         <tr>
                             <th>{{ player.person_15 }}</th>
                             <th><input type="checkbox" name="friend_15" value="1"></th>
-                            <th><input type="checkbox" name="value_15" value="1"></th>
+                            <th><input type="checkbox" name="old_15" value="1"></th>
                             <th><input type="checkbox" name="politics_15" value="1"></th>
                             <th><input type="checkbox" name="study_15" value="1"></th>
                             <th><input type="checkbox" name="council_15" value="1"></th>
@@ -202,7 +202,7 @@
                         <tr>
                             <th>{{ player.person_16 }}</th>
                             <th><input type="checkbox" name="friend_16" value="1"></th>
-                            <th><input type="checkbox" name="value_16" value="1"></th>
+                            <th><input type="checkbox" name="old_16" value="1"></th>
                             <th><input type="checkbox" name="politics_16" value="1"></th>
                             <th><input type="checkbox" name="study_16" value="1"></th>
                             <th><input type="checkbox" name="council_16" value="1"></th>
@@ -213,7 +213,7 @@
                         <tr>
                             <th>{{ player.person_17 }}</th>
                             <th><input type="checkbox" name="friend_17" value="1"></th>
-                            <th><input type="checkbox" name="value_17" value="1"></th>
+                            <th><input type="checkbox" name="old_17" value="1"></th>
                             <th><input type="checkbox" name="politics_17" value="1"></th>
                             <th><input type="checkbox" name="study_17" value="1"></th>
                             <th><input type="checkbox" name="council_17" value="1"></th>
@@ -224,7 +224,7 @@
                         <tr>
                             <th>{{ player.person_18 }}</th>
                             <th><input type="checkbox" name="friend_18" value="1"></th>
-                            <th><input type="checkbox" name="value_18" value="1"></th>
+                            <th><input type="checkbox" name="old_18" value="1"></th>
                             <th><input type="checkbox" name="politics_18" value="1"></th>
                             <th><input type="checkbox" name="study_18" value="1"></th>
                             <th><input type="checkbox" name="council_18" value="1"></th>
@@ -235,7 +235,7 @@
                         <tr>
                             <th>{{ player.person_19 }}</th>
                             <th><input type="checkbox" name="friend_19" value="1"></th>
-                            <th><input type="checkbox" name="value_19" value="1"></th>
+                            <th><input type="checkbox" name="old_19" value="1"></th>
                             <th><input type="checkbox" name="politics_19" value="1"></th>
                             <th><input type="checkbox" name="study_19" value="1"></th>
                             <th><input type="checkbox" name="council_19" value="1"></th>
@@ -246,7 +246,7 @@
                         <tr>
                             <th>{{ player.person_20 }}</th>
                             <th><input type="checkbox" name="friend_20" value="1"></th>
-                            <th><input type="checkbox" name="value_20" value="1"></th>
+                            <th><input type="checkbox" name="old_20" value="1"></th>
                             <th><input type="checkbox" name="politics_20" value="1"></th>
                             <th><input type="checkbox" name="study_20" value="1"></th>
                             <th><input type="checkbox" name="council_20" value="1"></th>
@@ -257,7 +257,7 @@
                         <tr>
                             <th>{{ player.person_21 }}</th>
                             <th><input type="checkbox" name="friend_21" value="1"></th>
-                            <th><input type="checkbox" name="value_21" value="1"></th>
+                            <th><input type="checkbox" name="old_21" value="1"></th>
                             <th><input type="checkbox" name="politics_21" value="1"></th>
                             <th><input type="checkbox" name="study_21" value="1"></th>
                             <th><input type="checkbox" name="council_21" value="1"></th>

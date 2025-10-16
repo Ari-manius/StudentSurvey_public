@@ -31,11 +31,7 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     ### Sonntagsfrage
-    sunday_poll = models.IntegerField(blank=True, max=4, min=1, label="")
-    sunday_party_vote = models.IntegerField(blank=True, max=8, min=1, label="")
-    sunday_not_eligible = models.IntegerField(blank=True, max=8, min=1, label="")
-    noteligible_sunday_party_vote = models.IntegerField(blank=True, max=8, min=1, label="")
-    reason_no_vote = models.StringField(blank=True, label="")
+    sunday_party_vote = models.IntegerField(blank=True, max=11, min=0, label="")
 
     lr_CDU = models.StringField(blank=True, initial="0")
     lr_CSU = models.StringField(blank=True, initial="0")
@@ -57,22 +53,26 @@ class Player(BasePlayer):
     scalo_bsw = models.StringField(blank=True)
 
     ### scalometer peps
-    scalo_pep1 = models.StringField(blank=True, initial="0") # Scholz
-    scalo_pep2 = models.StringField(blank=True, initial="0") # Harris 
-    scalo_pep3 = models.StringField(blank=True, initial="0") # Lauterbach
-    scalo_pep4 = models.StringField(blank=True, initial="0") # Lindner
-    scalo_pep5 = models.StringField(blank=True, initial="0") # Merz
-    scalo_pep6 = models.StringField(blank=True, initial="0") # Zelenski  
-    scalo_pep7 = models.StringField(blank=True, initial="0") # Trump
-    scalo_pep8 = models.StringField(blank=True, initial="0") # Habeck
-    scalo_pep9 = models.StringField(blank=True, initial="0") # Thunberg
-    scalo_pep10 = models.StringField(blank=True, initial="0") # Putin
-    scalo_pep11 = models.StringField(blank=True, initial="0") # Höcke
-    scalo_pep12 = models.StringField(blank=True, initial="0") # Söder
-    scalo_pep13 = models.StringField(blank=True, initial="0") # Baerbock
-    scalo_pep14 = models.StringField(blank=True, initial="0") # Weidel
-    scalo_pep15 = models.StringField(blank=True, initial="0") # Wagenknecht
-    scalo_pep16 = models.StringField(blank=True, initial="0") # Netanjahu 
+    scalo_pep1 = models.StringField(blank=True, initial="0") #Boris Pistorius 
+    scalo_pep2 = models.StringField(blank=True, initial="0") #Bärbel Bas 
+    scalo_pep3 = models.StringField(blank=True, initial="0") #Robert Habeck
+    scalo_pep4 = models.StringField(blank=True, initial="0") #Franziska Brantner 
+    scalo_pep5 = models.StringField(blank=True, initial="0") #Alice Weidel
+    scalo_pep6 = models.StringField(blank=True, initial="0") #Janine Wissler
+    scalo_pep7 = models.StringField(blank=True, initial="0") #Jens Spahn 
+    scalo_pep8 = models.StringField(blank=True, initial="0") #Markus Söder
+    scalo_pep9 = models.StringField(blank=True, initial="0") #Dorothee Bär 
+    scalo_pep10 = models.StringField(blank=True, initial="0") #Lars Klingbeil
+    scalo_pep11 = models.StringField(blank=True, initial="0") #Tino Chrupalla 
+    scalo_pep12 = models.StringField(blank=True, initial="0") #Ines Schwerdtner 
+    scalo_pep13 = models.StringField(blank=True, initial="0") #Friedrich Merz
+    
+    scalo_pep14 = models.StringField(blank=True, initial="0") #Vladimir Putinb
+    scalo_pep15 = models.StringField(blank=True, initial="0") #Donald Trump
+    scalo_pep16 = models.StringField(blank=True, initial="0") #Genocidal Isreally Prime Minister
+    scalo_pep17 = models.StringField(blank=True, initial="0") #Emmanuel Macron 
+    scalo_pep18 = models.StringField(blank=True, initial="0") #Giorgia Meloni
+    scalo_pep19 = models.StringField(blank=True, initial="0") #Keir Starmer 
 
     politics_question_one = models.StringField(blank=True, initial='0')
     politics_question_two = models.StringField(blank=True, initial='0')
@@ -81,7 +81,6 @@ class Player(BasePlayer):
     politics_question_five = models.StringField(blank=True, initial='0')
     politics_question_six = models.StringField(blank=True, initial='0')
     politics_question_seven = models.StringField(blank=True, initial='0')
-
 
     social_networks_1 = models.IntegerField(blank=True, max=2, min=0, label="")
     social_networks_2 = models.IntegerField(blank=True, max=2, min=0, label="")
@@ -96,8 +95,4 @@ class Player(BasePlayer):
     social_networks_11 = models.StringField(blank=True, label="Andere/Other:")
 
     participation_demonstration = models.IntegerField(blank=True, max=2, min=0, label="")
-    participation_demonstration_1 = models.IntegerField(blank=True, max=2, min=0, label="")
     petition_signatory = models.IntegerField(blank=True, max=2, min=0, label="")
-    petition_signatory_1 = models.IntegerField(blank=True, max=2, min=0, label = "")
-
-    linksrechts_self = models.IntegerField(blank=True, max=11, min=1, label="")

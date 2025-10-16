@@ -23,10 +23,8 @@
                     <div class="german"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.german }}</div>
                     <div class="english"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.english }}</div>
                 {% endfor %}
-            {% elif question.type == "text" %}
-                {% formfield player.study_program_other %}
             {% elif question.type == "number" %}
-                {% formfield player.semester_of_study %}
+                {% form.semester_of_study %}
             {% endif %}
         </div>
     {% endfor %}

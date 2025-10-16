@@ -17,18 +17,17 @@
         <div class="mb-3">
             <p class="german">{{ question.text.german|safe }}</p>
             <p class="english">{{ question.text.english|safe }}</p>
-            
+
             {% if question.type == "radio" %}
                 {% for option in question.options %}
                     <div class="german"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.german }}</div>
                     <div class="english"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.english }}</div>
                 {% endfor %}
             {% endif %}
+
+            {{ formfield_errors question.field }}
         </div>
-        
-        {% if forloop.counter == 3 %}
-            <br>
-        {% endif %}
+
     {% endfor %}
 
     <button class="otree-btn-next btn btn-primary next-button otree-next-button">
