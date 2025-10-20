@@ -15,10 +15,12 @@
 
     {% for question in questions %}
         <div class="mb-3 bg-light border pt-2 pb-2 px-2">
-            {% if question.type == "formfield" %}
+            {% if question.type == "number" %}
                 <p class="german">{{ question.text.german }}</p>
                 <p class="english">{{ question.text.english }}</p>
-                {% formfield question.field %}
+
+                <input type="number" name="{{ question.field }}" placeholder="{{ question.placeholder }}">
+                {{ formfield_errors question.field }}
             {% endif %}
         </div>
     {% endfor %}

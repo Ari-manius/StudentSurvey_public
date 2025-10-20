@@ -35,7 +35,7 @@ class Player(BasePlayer):
 
     # Class
     tutorial = models.IntegerField(blank=True, max=8, min=0, label="")
-    grade_expectation = models.IntegerField(blank=True)
+    grade = models.StringField(blank=True)
     time_class = models.IntegerField(blank=True, label="Hours per week (0-100)", min=0, max=100)
 
     # MSL

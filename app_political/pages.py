@@ -19,8 +19,6 @@ class Sonntagsfrage(Page): #5
     form_model = Player
     form_fields = ['sunday_party_vote']
 
-
-
 class ScaloParty(Page): #6
     def vars_for_template(self):
         questions_data = load_questions()

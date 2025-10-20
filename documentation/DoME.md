@@ -55,3 +55,7 @@ network among student + performance (build up this area)
 - Covid Late Damages Questions for next years! 
 - Q:"i knew this person before the semester started" 
 - Remove -999 for 0's for non answers 
+
+***
+- randomization
+- language dependent error messages

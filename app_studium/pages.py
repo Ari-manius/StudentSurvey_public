@@ -28,7 +28,7 @@ class Class(Page): #13
             'questions': questions_data['Class']['questions']
         }
     form_model = Player
-    form_fields = ['time_class', 'tutorial', 'grade_expectation']
+    form_fields = ['time_class', 'tutorial', 'grade']
 
 class MotivatedStrategies(Page): #13
     def vars_for_template(self):
@@ -60,8 +60,8 @@ class Study(Page):
             'questions': questions_data['Study']['questions']
         }
     form_model = Player
-    form_fields = ['study_program', 
-                    'semester_of_study', 
+    form_fields = ['study_program',
+                    'semester_of_study',
                     'consecutive_academic_career']
  
 page_sequence = [FreshersCamp, Study, Class, MotivatedStrategies]

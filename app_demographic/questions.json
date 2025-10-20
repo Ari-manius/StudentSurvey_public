@@ -8,7 +8,7 @@
           "german": "Bitte geben Sie Ihr Geburtsjahr an.",
           "english": "Please enter your birthyear."
         },
-        "placeholder": "Enter"
+        "placeholder": "Enter a Number"
       },
       {
         "field": "gender",
@@ -121,7 +121,7 @@
         "type": "radio",
         "text": {
           "german": "Was glauben Sie, wie wird die wirtschaftliche Lage in Deutschland IN EINEM JAHR sein?",
-          "english": "How do you believe will the economic situation will be in germany in ONE YEAR?"
+          "english": "How do you believe will the economic situation will be in Germany in ONE YEAR?"
         },
         "options": [
           {
@@ -196,10 +196,14 @@
         "field": "time_work",
         "type": "number",
         "text": {
-          "german": "Wie viele Stunden pro Woche arbeiten Sie für Geld?",
+          "german": "Wie viele Stunden pro Woche sind Sie erwerbstätig?",
           "english": "How many hours per week do you work for pay?"
         },
-        "placeholder": "Enter"
+        "placeholder": "Enter a Number",
+        "error": {
+          "german": "Bitte geben Sie eine gültige Stundenzahl ein.",
+          "english": "Please enter a valid number of hours."
+        }
       }
     ]
   },
@@ -207,19 +211,21 @@
     "questions": [
       {
         "field": "postcode",
-        "type": "formfield",
+        "type": "number",
         "text": {
           "german": "Wie lauten die ersten beiden Ziffern der Postleitzahl des Wohnortes, an dem Sie wohnhaft waren, während Sie Ihr Abitur gemacht haben? Falls Sie im Ausland gewohnt haben, geben Sie bitte \"00\" an.",
           "english": "What are the first two digits of the postcode of your place of residence at the time when you completed high school? If you lived outside of Germany, please type in \"00\"."
-        }
+        },
+        "placeholder": "Enter Numbers (PP)"
       },
       {
         "field": "secondary_year",
-        "type": "formfield",
+        "type": "number",
         "text": {
           "german": "Wann haben Sie ihr Abitur gemacht?",
-          "english": "When did you complete your secondary education?"
-        }
+          "english": "When did you graduate and complete your secondary education?"
+        },
+        "placeholder": "Enter Numbers (YYYY)"
       }
     ]
   },

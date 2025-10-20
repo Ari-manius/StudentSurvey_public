@@ -30,8 +30,8 @@ class Player(BasePlayer):
     gender = models.IntegerField(blank=True, max=10, min=0, label="")
 
     # Secondary Education 
-    postcode = models.IntegerField(blank=True, label='Postcode (PP)', min=00, max=99)
-    secondary_year = models.IntegerField(blank=True, label='Year of Graduation (YYYY)', min=1980, max=2020)
+    postcode = models.IntegerField(blank=True, min=00, max=99)
+    secondary_year = models.IntegerField(blank=True, min=1980, max=2025)
 
     # Work / Academic Family Background 
     edu_family_1gen_m = models.IntegerField(blank=True, max=11, min=0, label="")
@@ -46,5 +46,5 @@ class Player(BasePlayer):
     financial_situation_general_current = models.IntegerField(blank=True, label="", min=0, max=10)
     financial_situation_personal_future = models.IntegerField(blank=True, label="", min=0, max=10)
     financial_situation_general_future = models.IntegerField(blank=True, label="", min=0, max=10)
-    time_work = models.IntegerField(blank=True, label="", min=0, max=10000)
+    time_work = models.IntegerField(blank=True, label="", min=0, max=168)
 

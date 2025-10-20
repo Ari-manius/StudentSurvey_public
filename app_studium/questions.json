@@ -81,10 +81,10 @@
           "english": "Did you go to a freshers camp at the beginning of this semester?"
         },
         "options": [
-          {"value": "1", "text": {"german": "Hof 1: 29.09.25 - 1.10.25", "english": "Camp 1: 29.09.25 - 1.10.25"}},
-          {"value": "2", "text": {"german": "Hof 2: 1.10.25 - 3.10.25", "english": "Camp 2: 1.10.25 - 3.10.25"}},
-          {"value": "3", "text": {"german": "Hof 3: 3.10.25 - 5.10.25", "english": "Camp 2: 3.10.25 - 5.10.25"}},
-          {"value": "4", "text": {"german": "Hof 4: 5.10.25 - 7.10.25", "english": "Camp 2: 5.10.25 - 7.10.25"}},
+          {"value": "1", "text": {"german": "Hof 29.09.25 - 1.10.25", "english": "Camp 29.09.25 - 1.10.25"}},
+          {"value": "2", "text": {"german": "Hof 1.10.25 - 3.10.25", "english": "Camp 1.10.25 - 3.10.25"}},
+          {"value": "3", "text": {"german": "Hof 3.10.25 - 5.10.25", "english": "Camp 3.10.25 - 5.10.25"}},
+          {"value": "4", "text": {"german": "Hof 5.10.25 - 7.10.25", "english": "Camp 5.10.25 - 7.10.25"}},
           {"value": "0", "text": {"german": "Nein", "english": "No"}}
         ]
       },
@@ -129,7 +129,7 @@
         ]
       },
       {
-        "field": "grade_expectation",
+        "field": "grade",
         "type": "radio",
         "text": {
           "german": "Welche Note erwarten Sie für sich in der Klausur dieser Vorlesung am Ende des Semesters?",
@@ -163,13 +163,13 @@
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       },
       {
@@ -181,13 +181,13 @@
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       },
       {
@@ -199,13 +199,13 @@
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       },
       {
@@ -217,13 +217,13 @@
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       },
       {
@@ -235,31 +235,31 @@
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       },
       {
         "field": "motivation_extrinsic_goal_3",
         "type": "radio",
         "text": {
-          "german": "Wenn ich kann, möchte ich in diesem Kurs bessere Noten erzielen als die meisten anderen Schüler.",
+          "german": "Wenn ich kann, möchte ich in diesem Kurs bessere Noten erzielen als die meisten anderen Studierenden.",
           "english": "If I can, I want to get better grades in this class than most of the other students."
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       },
       {
@@ -271,31 +271,31 @@
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       },
       {
         "field": "affective_academic_stress",
         "type": "radio",
         "text": {
-          "german": "Wenn ich lerne, denke ich an die Konsequenzen eines Scheiterns.",
+          "german": "Wenn ich lerne, denke ich an die Konsequenzen des Scheiterns.",
           "english": "When I study I think of the consequences of failing."
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       },
       {
@@ -307,13 +307,13 @@
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       },
       {
@@ -325,13 +325,13 @@
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       },
       {
@@ -343,13 +343,13 @@
         },
         "options": [
           {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
-          {"value": "1", "text": {"german": "1: Gar nicht zutreffend", "english": "1: Not at all true of me"}},
-          {"value": "2", "text": {"german": "2: Nicht zutreffend", "english": "2: Not true of me"}},
-          {"value": "3", "text": {"german": "3: Wenig nicht zutreffend", "english": "3: Little not true of me"}},
-          {"value": "4", "text": {"german": "4: Halbwegs zutrefffend", "english": "4: Half-true"}},
-          {"value": "5", "text": {"german": "5: Wenig zutreffend", "english": "5: Little true of me"}},
-          {"value": "6", "text": {"german": "6: Zutreffend", "english": "6: True of me"}},
-          {"value": "7", "text": {"german": "7: Sehr zutreffend", "english": "7: Very true of me"}}
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
         ]
       }
     ]
