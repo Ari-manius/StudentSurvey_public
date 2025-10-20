@@ -92,7 +92,9 @@ class Player(BasePlayer):
     social_networks_8 = models.IntegerField(blank=True, max=2, min=0, label="")
     social_networks_9 = models.IntegerField(blank=True, max=2, min=0, label="")
     social_networks_10 = models.IntegerField(blank=True, max=2, min=0, label="")
-    social_networks_11 = models.StringField(blank=True, label="Andere/Other:")
+    social_networks_11 = models.IntegerField(blank=True, max=2, min=0, label="")
+    social_networks_12 = models.IntegerField(blank=True, max=2, min=0, label="")
+    social_networks_13 = models.StringField(blank=True, label="Andere/Other:")
 
     participation_demonstration = models.IntegerField(blank=True, max=2, min=0, label="")
     petition_signatory = models.IntegerField(blank=True, max=2, min=0, label="")

@@ -26,247 +26,246 @@
                     <tr>
                         <td></td>
                         <th><p class="english"> I am friends with this person.</p> <p class="german"> Ich bin mit dieser Person befreundet.</p></th>
-                        <th><p class="english"> I knew this person before beginning my bachelor.</p> <p class="german"> Ich kannte diese Person bevor ich meinen Bachelor angefangen habe.</p></th>
+                        <th><p class="english"> I knew this person before starting university.</p> <p class="german"> Ich kannte diese Person bevor ich zur Uni gekommen bin.</p></th>
                         <th><p class="english"> We dicuss political topics regularly.</p> <p class="german"> Wir diskutieren regelmäßig über politische Themen.</p></th>
                         <th><p class="english"> We study together regularly.</p> <p class="german"> Wir lernen regelmäßig zusammen.</p></th>
-                        <th><p class="english"> I know them through the Student Council.</p> <p class="german"> Ich kenne diese Person aus der Fachschaft.</p></th>
+                        <th><p class="english"> I would ask this person for help with personal problems.</p> <p class="german"> Ich würde diese Person bei persönlichen Problemen um Hilfe fragen.</p></th>
                     </tr>
                     </thead>
                     <tbody>
                         {% if player.person_1 != "x" %}
                         <tr>
                             <th>{{ player.person_1 }}</th>
-                            <th><input type="checkbox" name="friend_1" value="1"></th>
-                            <th><input type="checkbox" name="old_1" value="1"></th>
-                            <th><input type="checkbox" name="politics_1" value="1"></th>
-                            <th><input type="checkbox" name="study_1" value="1"></th>
-                            <th><input type="checkbox" name="council_1" value="1"></th>
+                            <td><input type="checkbox" name="friend_1" value="1"></td>
+                            <td><input type="checkbox" name="old_1" value="1"></td>
+                            <td><input type="checkbox" name="politics_1" value="1"></td>
+                            <td><input type="checkbox" name="study_1" value="1"></td>
+                            <td><input type="checkbox" name="support_1" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_2 != "x" %}
                         <tr>
                             <th>{{ player.person_2 }}</th>
-                            <th><input type="checkbox" name="friend_2" value="1"></th>
-                            <th><input type="checkbox" name="old_2" value="1"></th>
-                            <th><input type="checkbox" name="politics_2" value="1"></th>
-                            <th><input type="checkbox" name="study_2" value="1"></th>
-                            <th><input type="checkbox" name="council_2" value="1"></th>
+                            <td><input type="checkbox" name="friend_2" value="1"></td>
+                            <td><input type="checkbox" name="old_2" value="1"></td>
+                            <td><input type="checkbox" name="politics_2" value="1"></td>
+                            <td><input type="checkbox" name="study_2" value="1"></td>
+                            <td><input type="checkbox" name="support_2" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_3 != "x" %}
                         <tr>
                             <th>{{ player.person_3 }}</th>
-                            <th><input type="checkbox" name="friend_3" value="1"></th>
-                            <th><input type="checkbox" name="old_3" value="1"></th>
-                            <th><input type="checkbox" name="politics_3" value="1"></th>
-                            <th><input type="checkbox" name="study_3" value="1"></th>
-                            <th><input type="checkbox" name="council_3" value="1"></th>
+                            <td><input type="checkbox" name="friend_3" value="1"></td>
+                            <td><input type="checkbox" name="old_3" value="1"></td>
+                            <td><input type="checkbox" name="politics_3" value="1"></td>
+                            <td><input type="checkbox" name="study_3" value="1"></td>
+                            <td><input type="checkbox" name="support_3" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_4 != "x" %}
                         <tr>
                             <th>{{ player.person_4 }}</th>
-                            <th><input type="checkbox" name="friend_4" value="1"></th>
-                            <th><input type="checkbox" name="old_4" value="1"></th>
-                            <th><input type="checkbox" name="politics_4" value="1"></th>
-                            <th><input type="checkbox" name="study_4" value="1"></th>
-                            <th><input type="checkbox" name="council_4" value="1"></th>
+                            <td><input type="checkbox" name="friend_4" value="1"></td>
+                            <td><input type="checkbox" name="old_4" value="1"></td>
+                            <td><input type="checkbox" name="politics_4" value="1"></td>
+                            <td><input type="checkbox" name="study_4" value="1"></td>
+                            <td><input type="checkbox" name="support_4" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_5 != "x" %}
                         <tr>
                             <th>{{ player.person_5 }}</th>
-                            <th><input type="checkbox" name="friend_5" value="1"></th>
-                            <th><input type="checkbox" name="old_5" value="1"></th>
-                            <th><input type="checkbox" name="politics_5" value="1"></th>
-                            <th><input type="checkbox" name="study_5" value="1"></th>
-                            <th><input type="checkbox" name="council_5" value="1"></th>
+                            <td><input type="checkbox" name="friend_5" value="1"></td>
+                            <td><input type="checkbox" name="old_5" value="1"></td>
+                            <td><input type="checkbox" name="politics_5" value="1"></td>
+                            <td><input type="checkbox" name="study_5" value="1"></td>
+                            <td><input type="checkbox" name="support_5" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_6 != "x" %}
                         <tr>
                             <th>{{ player.person_6 }}</th>
-                            <th><input type="checkbox" name="friend_6" value="1"></th>
-                            <th><input type="checkbox" name="old_6" value="1"></th>
-                            <th><input type="checkbox" name="politics_6" value="1"></th>
-                            <th><input type="checkbox" name="study_6" value="1"></th>
-                            <th><input type="checkbox" name="council_6" value="1"></th>
+                            <td><input type="checkbox" name="friend_6" value="1"></td>
+                            <td><input type="checkbox" name="old_6" value="1"></td>
+                            <td><input type="checkbox" name="politics_6" value="1"></td>
+                            <td><input type="checkbox" name="study_6" value="1"></td>
+                            <td><input type="checkbox" name="support_6" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_7 != "x" %}
                         <tr>
                             <th>{{ player.person_7 }}</th>
-                            <th><input type="checkbox" name="friend_7" value="1"></th>
-                            <th><input type="checkbox" name="old_7" value="1"></th>
-                            <th><input type="checkbox" name="politics_7" value="1"></th>
-                            <th><input type="checkbox" name="study_7" value="1"></th>
-                            <th><input type="checkbox" name="council_7" value="1"></th>
+                            <td><input type="checkbox" name="friend_7" value="1"></td>
+                            <td><input type="checkbox" name="old_7" value="1"></td>
+                            <td><input type="checkbox" name="politics_7" value="1"></td>
+                            <td><input type="checkbox" name="study_7" value="1"></td>
+                            <td><input type="checkbox" name="support_7" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_8 != "x" %}
                         <tr>
                             <th>{{ player.person_8 }}</th>
-                            <th><input type="checkbox" name="friend_8" value="1"></th>
-                            <th><input type="checkbox" name="old_8" value="1"></th>
-                            <th><input type="checkbox" name="politics_8" value="1"></th>
-                            <th><input type="checkbox" name="study_8" value="1"></th>
-                            <th><input type="checkbox" name="council_8" value="1"></th>
+                            <td><input type="checkbox" name="friend_8" value="1"></td>
+                            <td><input type="checkbox" name="old_8" value="1"></td>
+                            <td><input type="checkbox" name="politics_8" value="1"></td>
+                            <td><input type="checkbox" name="study_8" value="1"></td>
+                            <td><input type="checkbox" name="support_8" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_9 != "x" %}
                         <tr>
                             <th>{{ player.person_9 }}</th>
-                            <th><input type="checkbox" name="friend_9" value="1"></th>
-                            <th><input type="checkbox" name="old_9" value="1"></th>
-                            <th><input type="checkbox" name="politics_9" value="1"></th>
-                            <th><input type="checkbox" name="study_9" value="1"></th>
-                            <th><input type="checkbox" name="council_9" value="1"></th>
+                            <td><input type="checkbox" name="friend_9" value="1"></td>
+                            <td><input type="checkbox" name="old_9" value="1"></td>
+                            <td><input type="checkbox" name="politics_9" value="1"></td>
+                            <td><input type="checkbox" name="study_9" value="1"></td>
+                            <td><input type="checkbox" name="support_9" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_10 != "x" %}
                         <tr>
                             <th>{{ player.person_10 }}</th>
-                            <th><input type="checkbox" name="friend_10" value="1"></th>
-                            <th><input type="checkbox" name="old_10" value="1"></th>
-                            <th><input type="checkbox" name="politics_10" value="1"></th>
-                            <th><input type="checkbox" name="study_10" value="1"></th>
-                            <th><input type="checkbox" name="council_10" value="1"></th>
+                            <td><input type="checkbox" name="friend_10" value="1"></td>
+                            <td><input type="checkbox" name="old_10" value="1"></td>
+                            <td><input type="checkbox" name="politics_10" value="1"></td>
+                            <td><input type="checkbox" name="study_10" value="1"></td>
+                            <td><input type="checkbox" name="support_10" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_11 != "x" %}
                         <tr>
                             <th>{{ player.person_11 }}</th>
-                            <th><input type="checkbox" name="friend_11" value="1"></th>
-                            <th><input type="checkbox" name="old_11" value="1"></th>
-                            <th><input type="checkbox" name="politics_11" value="1"></th>
-                            <th><input type="checkbox" name="study_11" value="1"></th>
-                            <th><input type="checkbox" name="council_11" value="1"></th>
+                            <td><input type="checkbox" name="friend_11" value="1"></td>
+                            <td><input type="checkbox" name="old_11" value="1"></td>
+                            <td><input type="checkbox" name="politics_11" value="1"></td>
+                            <td><input type="checkbox" name="study_11" value="1"></td>
+                            <td><input type="checkbox" name="support_11" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_12 != "x" %}
                         <tr>
                             <th>{{ player.person_12 }}</th>
-                            <th><input type="checkbox" name="friend_12" value="1"></th>
-                            <th><input type="checkbox" name="old_12" value="1"></th>
-                            <th><input type="checkbox" name="politics_12" value="1"></th>
-                            <th><input type="checkbox" name="study_12" value="1"></th>
-                            <th><input type="checkbox" name="council_12" value="1"></th>
+                            <td><input type="checkbox" name="friend_12" value="1"></td>
+                            <td><input type="checkbox" name="old_12" value="1"></td>
+                            <td><input type="checkbox" name="politics_12" value="1"></td>
+                            <td><input type="checkbox" name="study_12" value="1"></td>
+                            <td><input type="checkbox" name="support_12" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_13 != "x" %}
                         <tr>
                             <th>{{ player.person_13 }}</th>
-                            <th><input type="checkbox" name="friend_13" value="1"></th>
-                            <th><input type="checkbox" name="old_13" value="1"></th>
-                            <th><input type="checkbox" name="politics_13" value="1"></th>
-                            <th><input type="checkbox" name="study_13" value="1"></th>
-                            <th><input type="checkbox" name="council_13" value="1"></th>
+                            <td><input type="checkbox" name="friend_13" value="1"></td>
+                            <td><input type="checkbox" name="old_13" value="1"></td>
+                            <td><input type="checkbox" name="politics_13" value="1"></td>
+                            <td><input type="checkbox" name="study_13" value="1"></td>
+                            <td><input type="checkbox" name="support_13" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_14 != "x" %}
                         <tr>
                             <th>{{ player.person_14 }}</th>
-                            <th><input type="checkbox" name="friend_14" value="1"></th>
-                            <th><input type="checkbox" name="old_14" value="1"></th>
-                            <th><input type="checkbox" name="politics_14" value="1"></th>
-                            <th><input type="checkbox" name="study_14" value="1"></th>
-                            <th><input type="checkbox" name="council_14" value="1"></th>
+                            <td><input type="checkbox" name="friend_14" value="1"></td>
+                            <td><input type="checkbox" name="old_14" value="1"></td>
+                            <td><input type="checkbox" name="politics_14" value="1"></td>
+                            <td><input type="checkbox" name="study_14" value="1"></td>
+                            <td><input type="checkbox" name="support_14" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_15 != "x" %}
                         <tr>
                             <th>{{ player.person_15 }}</th>
-                            <th><input type="checkbox" name="friend_15" value="1"></th>
-                            <th><input type="checkbox" name="old_15" value="1"></th>
-                            <th><input type="checkbox" name="politics_15" value="1"></th>
-                            <th><input type="checkbox" name="study_15" value="1"></th>
-                            <th><input type="checkbox" name="council_15" value="1"></th>
+                            <td><input type="checkbox" name="friend_15" value="1"></td>
+                            <td><input type="checkbox" name="old_15" value="1"></td>
+                            <td><input type="checkbox" name="politics_15" value="1"></td>
+                            <td><input type="checkbox" name="study_15" value="1"></td>
+                            <td><input type="checkbox" name="support_15" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_16 != "x" %}
                         <tr>
                             <th>{{ player.person_16 }}</th>
-                            <th><input type="checkbox" name="friend_16" value="1"></th>
-                            <th><input type="checkbox" name="old_16" value="1"></th>
-                            <th><input type="checkbox" name="politics_16" value="1"></th>
-                            <th><input type="checkbox" name="study_16" value="1"></th>
-                            <th><input type="checkbox" name="council_16" value="1"></th>
+                            <td><input type="checkbox" name="friend_16" value="1"></td>
+                            <td><input type="checkbox" name="old_16" value="1"></td>
+                            <td><input type="checkbox" name="politics_16" value="1"></td>
+                            <td><input type="checkbox" name="study_16" value="1"></td>
+                            <td><input type="checkbox" name="support_16" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_17 != "x" %}
                         <tr>
                             <th>{{ player.person_17 }}</th>
-                            <th><input type="checkbox" name="friend_17" value="1"></th>
-                            <th><input type="checkbox" name="old_17" value="1"></th>
-                            <th><input type="checkbox" name="politics_17" value="1"></th>
-                            <th><input type="checkbox" name="study_17" value="1"></th>
-                            <th><input type="checkbox" name="council_17" value="1"></th>
+                            <td><input type="checkbox" name="friend_17" value="1"></td>
+                            <td><input type="checkbox" name="old_17" value="1"></td>
+                            <td><input type="checkbox" name="politics_17" value="1"></td>
+                            <td><input type="checkbox" name="study_17" value="1"></td>
+                            <td><input type="checkbox" name="support_17" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_18 != "x" %}
                         <tr>
                             <th>{{ player.person_18 }}</th>
-                            <th><input type="checkbox" name="friend_18" value="1"></th>
-                            <th><input type="checkbox" name="old_18" value="1"></th>
-                            <th><input type="checkbox" name="politics_18" value="1"></th>
-                            <th><input type="checkbox" name="study_18" value="1"></th>
-                            <th><input type="checkbox" name="council_18" value="1"></th>
+                            <td><input type="checkbox" name="friend_18" value="1"></td>
+                            <td><input type="checkbox" name="old_18" value="1"></td>
+                            <td><input type="checkbox" name="politics_18" value="1"></td>
+                            <td><input type="checkbox" name="study_18" value="1"></td>
+                            <td><input type="checkbox" name="support_18" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_19 != "x" %}
                         <tr>
                             <th>{{ player.person_19 }}</th>
-                            <th><input type="checkbox" name="friend_19" value="1"></th>
-                            <th><input type="checkbox" name="old_19" value="1"></th>
-                            <th><input type="checkbox" name="politics_19" value="1"></th>
-                            <th><input type="checkbox" name="study_19" value="1"></th>
-                            <th><input type="checkbox" name="council_19" value="1"></th>
+                            <td><input type="checkbox" name="friend_19" value="1"></td>
+                            <td><input type="checkbox" name="old_19" value="1"></td>
+                            <td><input type="checkbox" name="politics_19" value="1"></td>
+                            <td><input type="checkbox" name="study_19" value="1"></td>
+                            <td><input type="checkbox" name="support_19" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_20 != "x" %}
                         <tr>
                             <th>{{ player.person_20 }}</th>
-                            <th><input type="checkbox" name="friend_20" value="1"></th>
-                            <th><input type="checkbox" name="old_20" value="1"></th>
-                            <th><input type="checkbox" name="politics_20" value="1"></th>
-                            <th><input type="checkbox" name="study_20" value="1"></th>
-                            <th><input type="checkbox" name="council_20" value="1"></th>
+                            <td><input type="checkbox" name="friend_20" value="1"></td>
+                            <td><input type="checkbox" name="old_20" value="1"></td>
+                            <td><input type="checkbox" name="politics_20" value="1"></td>
+                            <td><input type="checkbox" name="study_20" value="1"></td>
+                            <td><input type="checkbox" name="support_20" value="1"></td>
                         </tr>
                         {% endif %}
 
                         {% if player.person_21 != "x" %}
                         <tr>
                             <th>{{ player.person_21 }}</th>
-                            <th><input type="checkbox" name="friend_21" value="1"></th>
-                            <th><input type="checkbox" name="old_21" value="1"></th>
-                            <th><input type="checkbox" name="politics_21" value="1"></th>
-                            <th><input type="checkbox" name="study_21" value="1"></th>
-                            <th><input type="checkbox" name="council_21" value="1"></th>
+                            <td><input type="checkbox" name="friend_21" value="1"></td>
+                            <td><input type="checkbox" name="old_21" value="1"></td>
+                            <td><input type="checkbox" name="politics_21" value="1"></td>
+                            <td><input type="checkbox" name="study_21" value="1"></td>
+                            <td><input type="checkbox" name="support_21" value="1"></td>
                         </tr>
                         {% endif %}
                     </tbody>
                 </table>
             </div>
-        </fieldset>
     </div>
     </div>
     </div>

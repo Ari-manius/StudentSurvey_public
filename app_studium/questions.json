@@ -40,8 +40,9 @@
         "type": "number",
         "text": {
           "german": "In welchem Fachsemester befinden Sie sich?",
-          "english": "What is you current semester number?"
-        }
+          "english": "What is you current semester count?"
+        },
+        "placeholder": "Enter Semesters (1-24)"
       },
       {
         "field": "consecutive_academic_career", 
@@ -81,10 +82,10 @@
           "english": "Did you go to a freshers camp at the beginning of this semester?"
         },
         "options": [
-          {"value": "1", "text": {"german": "Hof 29.09.25 - 1.10.25", "english": "Camp 29.09.25 - 1.10.25"}},
-          {"value": "2", "text": {"german": "Hof 1.10.25 - 3.10.25", "english": "Camp 1.10.25 - 3.10.25"}},
-          {"value": "3", "text": {"german": "Hof 3.10.25 - 5.10.25", "english": "Camp 3.10.25 - 5.10.25"}},
-          {"value": "4", "text": {"german": "Hof 5.10.25 - 7.10.25", "english": "Camp 5.10.25 - 7.10.25"}},
+          {"value": "1", "text": {"german": "Hof 1: 29.09.25 - 1.10.25", "english": "Camp 1: 29.09.25 - 1.10.25"}},
+          {"value": "2", "text": {"german": "Hof 2: 10.25 - 3.10.25", "english": "Camp 2: 10.25 - 3.10.25"}},
+          {"value": "3", "text": {"german": "Hof 3: 10.25 - 5.10.25", "english": "Camp 3: 10.25 - 5.10.25"}},
+          {"value": "4", "text": {"german": "Hof 4: 10.25 - 7.10.25", "english": "Camp 4: 10.25 - 7.10.25"}},
           {"value": "0", "text": {"german": "Nein", "english": "No"}}
         ]
       },
@@ -110,7 +111,8 @@
         "text": {
           "german": "Wie viele Stunden pro Woche lernen Sie für diesen Kurs?",
           "english": "How many hours per week do you study for this course?"
-        }
+        },
+        "placeholder": "Enter Hours (0-168)"
       },
       {
         "field": "tutorial",

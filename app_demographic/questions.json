@@ -8,7 +8,7 @@
           "german": "Bitte geben Sie Ihr Geburtsjahr an.",
           "english": "Please enter your birthyear."
         },
-        "placeholder": "Enter a Number"
+        "placeholder": "Enter Year (YYYY)"
       },
       {
         "field": "gender",
@@ -199,7 +199,7 @@
           "german": "Wie viele Stunden pro Woche sind Sie erwerbstätig?",
           "english": "How many hours per week do you work for pay?"
         },
-        "placeholder": "Enter a Number",
+        "placeholder": "Enter Hours (0-168)",
         "error": {
           "german": "Bitte geben Sie eine gültige Stundenzahl ein.",
           "english": "Please enter a valid number of hours."
@@ -225,7 +225,7 @@
           "german": "Wann haben Sie ihr Abitur gemacht?",
           "english": "When did you graduate and complete your secondary education?"
         },
-        "placeholder": "Enter Numbers (YYYY)"
+        "placeholder": "Enter Year (YYYY)"
       }
     ]
   },

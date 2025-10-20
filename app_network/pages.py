@@ -45,27 +45,27 @@ class SpecialNetworks(Page): #8
         return {'lang': self.participant.vars.get('language')}
     form_model = Player
     form_fields = [
-        'friend_1', 'old_1', 'politics_1', 'council_1', 'study_1',
-        'friend_2', 'old_2', 'politics_2', 'council_2', 'study_2',
-        'friend_3', 'old_3', 'politics_3', 'council_3', 'study_3',
-        'friend_4', 'old_4', 'politics_4', 'council_4', 'study_4',
-        'friend_5', 'old_5', 'politics_5', 'council_5', 'study_5',
-        'friend_6', 'old_6', 'politics_6', 'council_6', 'study_6',
-        'friend_7', 'old_7', 'politics_7', 'council_7', 'study_7',
-        'friend_8', 'old_8', 'politics_8', 'council_8', 'study_8',
-        'friend_9', 'old_9', 'politics_9', 'council_9', 'study_9',
-        'friend_10', 'old_10', 'politics_10', 'council_10', 'study_10',
-        'friend_11', 'old_11', 'politics_11', 'council_11', 'study_11',
-        'friend_12', 'old_12', 'politics_12', 'council_12', 'study_12',
-        'friend_13', 'old_13', 'politics_13', 'council_13', 'study_13',
-        'friend_14', 'old_14', 'politics_14', 'council_14', 'study_14',
-        'friend_15', 'old_15', 'politics_15', 'council_15', 'study_15',
-        'friend_16', 'old_16', 'politics_16', 'council_16', 'study_16',
-        'friend_17', 'old_17', 'politics_17', 'council_17', 'study_17',
-        'friend_18', 'old_18', 'politics_18', 'council_18', 'study_18',
-        'friend_19', 'old_19', 'politics_19', 'council_19', 'study_19',
-        'friend_20', 'old_20', 'politics_20', 'council_20', 'study_20',
-        'friend_21', 'old_21', 'politics_21', 'council_21', 'study_21']              
+        'friend_1', 'old_1', 'politics_1', 'support_1', 'study_1',
+        'friend_2', 'old_2', 'politics_2', 'support_2', 'study_2',
+        'friend_3', 'old_3', 'politics_3', 'support_3', 'study_3',
+        'friend_4', 'old_4', 'politics_4', 'support_4', 'study_4',
+        'friend_5', 'old_5', 'politics_5', 'support_5', 'study_5',
+        'friend_6', 'old_6', 'politics_6', 'support_6', 'study_6',
+        'friend_7', 'old_7', 'politics_7', 'support_7', 'study_7',
+        'friend_8', 'old_8', 'politics_8', 'support_8', 'study_8',
+        'friend_9', 'old_9', 'politics_9', 'support_9', 'study_9',
+        'friend_10', 'old_10', 'politics_10', 'support_10', 'study_10',
+        'friend_11', 'old_11', 'politics_11', 'support_11', 'study_11',
+        'friend_12', 'old_12', 'politics_12', 'support_12', 'study_12',
+        'friend_13', 'old_13', 'politics_13', 'support_13', 'study_13',
+        'friend_14', 'old_14', 'politics_14', 'support_14', 'study_14',
+        'friend_15', 'old_15', 'politics_15', 'support_15', 'study_15',
+        'friend_16', 'old_16', 'politics_16', 'support_16', 'study_16',
+        'friend_17', 'old_17', 'politics_17', 'support_17', 'study_17',
+        'friend_18', 'old_18', 'politics_18', 'support_18', 'study_18',
+        'friend_19', 'old_19', 'politics_19', 'support_19', 'study_19',
+        'friend_20', 'old_20', 'politics_20', 'support_20', 'study_20',
+        'friend_21', 'old_21', 'politics_21', 'support_21', 'study_21']              
  
 class NetworkNarrative(Page): #8
     def vars_for_template(self):

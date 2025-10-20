@@ -1,14 +1,22 @@
 from otree.api import Currency as c, currency_range
 from ._builtin import Page, WaitPage
 from .models import Constants, Player
-import json
+import random
 import os
+import json
 
 def load_questions():
     """Load questions from JSON file"""
     questions_path = os.path.join(os.path.dirname(__file__), 'questions.json')
     with open(questions_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+        data = json.load(f)
+    
+    # Shuffle questions within each category
+    for category in data.values():
+        if 'questions' in category and isinstance(category['questions'], list):
+            random.shuffle(category['questions'])
+    
+    return data
 
 class FreshersCamp(Page):
     def vars_for_template(self):

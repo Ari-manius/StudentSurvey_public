@@ -29,14 +29,14 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     # Study
-    semester_of_study = models.IntegerField(blank=True, max=24, min=1, label="Enter number (1-24)")
+    semester_of_study = models.IntegerField(blank=True, max=24, min=1, label="")
     study_program = models.IntegerField(blank=True, max=4, min=0)
     consecutive_academic_career = models.IntegerField(blank=True, max=4, min=0)
 
     # Class
     tutorial = models.IntegerField(blank=True, max=8, min=0, label="")
     grade = models.StringField(blank=True)
-    time_class = models.IntegerField(blank=True, label="Hours per week (0-100)", min=0, max=100)
+    time_class = models.IntegerField(blank=True, label="", min=0, max=168)
 
     # MSL
     motivation_intrinsic_goal_1 = models.IntegerField(blank=True, max=8, min=0, label="")

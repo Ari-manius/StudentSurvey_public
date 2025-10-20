@@ -123,6 +123,24 @@
       },
       {
         "field": "social_networks_11",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "Discord",
+          "english": "Discord"
+        }
+      },
+      {
+        "field": "social_networks_12",
+        "type": "checkbox",
+        "section": "social_platforms",
+        "text": {
+          "german": "Reddit",
+          "english": "Reddit"
+        }
+      },
+      {
+        "field": "social_networks_13",
         "type": "formfield",
         "section": "social_platforms",
         "text": {

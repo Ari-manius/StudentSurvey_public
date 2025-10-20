@@ -24,7 +24,8 @@
                     <div class="english"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.english }}</div>
                 {% endfor %}
             {% elif question.type == "number" %}
-                {% form.semester_of_study %}
+                <input type="number" name="{{ question.field }}" placeholder="{{ question.placeholder }}">
+                {{ formfield_errors question.field }}
             {% endif %}
         </div>
     {% endfor %}

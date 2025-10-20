@@ -29,7 +29,8 @@
                   {% endif %}
               {% endfor %}
           {% elif question.type == "number" %}
-            {% form.time_class %}
+            <input type="number" name="{{ question.field }}" placeholder="{{ question.placeholder }}">
+            {{ formfield_errors question.field }}
           {% endif %}
 
        </div>

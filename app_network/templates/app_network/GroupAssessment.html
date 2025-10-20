@@ -10,194 +10,192 @@
 {% endblock %}
 
 {% block content %}
-<div class="table">
-    <div>
+<div class="container">
     <input id="time" type="hidden" name="time_leftright_selfassessment"/>
-                    <p class="german"> Welche Freundenkreise würden Sie den folgenden Personen zuweisen? </p>
-                    <p class="english"> Which friendship-groups would you assign to the following persons? </p>
-                    <p class="german"> (Personen in der selben Gruppe sollten die selbe Nummer erhalten.) </p>
-                    <p class="english"> (People in the same group should have the same number)</p>
-            <div class="table">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <td></td>
-                            <th>
-                                <p class="german">Gruppen Nummer: </p>
-                                <p class="english">Group Number: </p>
-                            </th>
-                        </tr>
-                    </thead>
+    <div class="mb-3 bg-light border pt-2 pb-2 px-2">
+        <p class="german"> Welche Freundenkreise würden Sie den folgenden Personen zuweisen? </p>
+        <p class="english"> Which friendship-groups would you assign to the following persons? </p>
+        <p class="german"> (Personen in der selben Gruppe sollten die selbe Nummer erhalten.) </p>
+        <p class="english"> (People in the same group should have the same number)</p>
 
-                    <tbody>
-                        {% if player.person_1 != "x" %}
-                        <tr>
-                            <th>{{ player.person_1 }}</th>
-                            <td>{% form.group_1 %}</td> 
-                        </tr>
-                        {% endif %}
-                        
-                        {% if player.person_2 != "x" %}
-                        <tr>
-                            <th>{{ player.person_2 }}</th>
-                            <td>{% form.group_2 %}</td> 
-                        </tr>
-                        {% endif %}
+        <div class="table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <th>
+                            <p class="german">Gruppen Nummer: </p>
+                            <p class="english">Group Number: </p>
+                        </th>
+                    </tr>
+                </thead>
 
-                        {% if player.person_3 != "x" %}
-                        <tr>
-                            <th>{{ player.person_3 }}</th>
-                            <th>{% form.group_3 %} </th> 
-                        </tr>
-                        {% endif %}
+                <tbody>
+                    {% if player.person_1 != "x" %}
+                    <tr>
+                        <th>{{ player.person_1 }}</th>
+                        <td>{% form.group_1 %}</td> 
+                    </tr>
+                    {% endif %}
+                    
+                    {% if player.person_2 != "x" %}
+                    <tr>
+                        <th>{{ player.person_2 }}</th>
+                        <td>{% form.group_2 %}</td> 
+                    </tr>
+                    {% endif %}
 
-
-                        {% if player.person_4 != "x" %}
-                        <tr>
-                            <th>{{ player.person_4 }}</th>
-                            <th>{% form.group_4 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_3 != "x" %}
+                    <tr>
+                        <th>{{ player.person_3 }}</th>
+                        <td>{% form.group_3 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_5 != "x" %}
-                        <tr>
-                            <th>{{ player.person_5 }}</th>
-                            <th>{% form.group_5 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_4 != "x" %}
+                    <tr>
+                        <th>{{ player.person_4 }}</th>
+                        <td>{% form.group_4 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_6 != "x" %}
-                        <tr>
-                            <th>{{ player.person_6 }}</th>
-                            <th>{% form.group_6 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_5 != "x" %}
+                    <tr>
+                        <th>{{ player.person_5 }}</th>
+                        <td>{% form.group_5 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_7 != "x" %}
-                        <tr>
-                            <th>{{ player.person_7 }}</th>
-                            <th>{% form.group_7 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_6 != "x" %}
+                    <tr>
+                        <th>{{ player.person_6 }}</th>
+                        <td>{% form.group_6 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_8 != "x" %}
-                        <tr>
-                            <th>{{ player.person_8 }}</th>
-                            <th>{% form.group_8 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_7 != "x" %}
+                    <tr>
+                        <th>{{ player.person_7 }}</th>
+                        <td>{% form.group_7 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_9 != "x" %}
-                        <tr>
-                            <th>{{ player.person_9 }}</th>
-                            <th>{% form.group_9 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_8 != "x" %}
+                    <tr>
+                        <th>{{ player.person_8 }}</th>
+                        <td>{% form.group_8 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_10 != "x" %}
-                        <tr>
-                            <th>{{ player.person_10 }}</th>
-                            <th>{% form.group_10 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_9 != "x" %}
+                    <tr>
+                        <th>{{ player.person_9 }}</th>
+                        <td>{% form.group_9 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_11 != "x" %}
-                        <tr>
-                            <th>{{ player.person_11 }}</th>
-                            <th>{% form.group_11 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_10 != "x" %}
+                    <tr>
+                        <th>{{ player.person_10 }}</th>
+                        <td>{% form.group_10 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_12 != "x" %}
-                        <tr>
-                            <th>{{ player.person_12 }}</th>
-                            <th>{% form.group_12 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_11 != "x" %}
+                    <tr>
+                        <th>{{ player.person_11 }}</th>
+                        <td>{% form.group_11 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_13 != "x" %}
-                        <tr>
-                            <th>{{ player.person_13 }}</th>
-                            <th>{% form.group_13 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_12 != "x" %}
+                    <tr>
+                        <th>{{ player.person_12 }}</th>
+                        <td>{% form.group_12 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_14 != "x" %}
-                        <tr>
-                            <th>{{ player.person_14 }}</th>
-                            <th>{% form.group_14 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_13 != "x" %}
+                    <tr>
+                        <th>{{ player.person_13 }}</th>
+                        <td>{% form.group_13 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_15 != "x" %}
-                        <tr>
-                            <th>{{ player.person_15 }}</th>
-                            <th>{% form.group_15 %} </th> 
-                        </tr>
-                        {% endif %}
-
-                        {% if player.person_16 != "x" %}
-                        <tr>
-                            <th>{{ player.person_16 }}</th>
-                            <th>{% form.group_16 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_14 != "x" %}
+                    <tr>
+                        <th>{{ player.person_14 }}</th>
+                        <td>{% form.group_14 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_17 != "x" %}
-                        <tr>
-                            <th>{{ player.person_17 }}</th>
-                            <th>{% form.group_17 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_15 != "x" %}
+                    <tr>
+                        <th>{{ player.person_15 }}</th>
+                        <td>{% form.group_15 %}</td>  
+                    </tr>
+                    {% endif %}
+
+                    {% if player.person_16 != "x" %}
+                    <tr>
+                        <th>{{ player.person_16 }}</th>
+                        <td>{% form.group_16 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_18 != "x" %}
-                        <tr>
-                            <th>{{ player.person_18 }}</th>
-                            <th>{% form.group_18 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_17 != "x" %}
+                    <tr>
+                        <th>{{ player.person_17 }}</th>
+                        <td>{% form.group_17 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_19 != "x" %}
-                        <tr>
-                            <th>{{ player.person_19 }}</th>
-                            <th>{% form.group_19 %} </th> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_18 != "x" %}
+                    <tr>
+                        <th>{{ player.person_18 }}</th>
+                        <td>{% form.group_18 %}</td>  
+                    </tr>
+                    {% endif %}
 
 
-                        {% if player.person_20 != "x" %}
-                        <tr>
-                            <th>{{ player.person_20 }}</th>
-                            <td>{% form.group_20 %} </td> 
-                        </tr>
-                        {% endif %}
+                    {% if player.person_19 != "x" %}
+                    <tr>
+                        <th>{{ player.person_19 }}</th>
+                        <td>{% form.group_19 %}</td>  
+                    </tr>
+                    {% endif %}
 
-                        {% if player.person_21 != "x" %}
-                        <tr>
-                            <th>{{ player.person_21 }}</th>
-                            <td>{% form.group_21 %} </td> 
-                        </tr>
-                        {% endif %}
-                    </tbody>
-                </table>
-            </div>
-        </fieldset>
-    </div>
-    </div>
+
+                    {% if player.person_20 != "x" %}
+                    <tr>
+                        <th>{{ player.person_20 }}</th>
+                        <td>{% form.group_20 %} </td> 
+                    </tr>
+                    {% endif %}
+
+                    {% if player.person_21 != "x" %}
+                    <tr>
+                        <th>{{ player.person_21 }}</th>
+                        <td>{% form.group_21 %} </td> 
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <br>

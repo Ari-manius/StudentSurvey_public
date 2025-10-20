@@ -1,13 +1,21 @@
 from ._builtin import Page
 from .models import Player
-import json
+import random
 import os
+import json
 
 def load_questions():
     """Load questions from JSON file"""
     questions_path = os.path.join(os.path.dirname(__file__), 'questions.json')
     with open(questions_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+        data = json.load(f)
+    
+    # Shuffle questions within each category
+    for category in data.values():
+        if 'questions' in category and isinstance(category['questions'], list):
+            random.shuffle(category['questions'])
+    
+    return data
 
 class Sonntagsfrage(Page): #5
     def vars_for_template(self):
@@ -81,7 +89,9 @@ class Participation(Page):
                    'social_networks_8',
                    'social_networks_9', 
                    'social_networks_10', 
-                   'social_networks_11']
+                   'social_networks_11',
+                   'social_networks_12',
+                   'social_networks_13']
 
 
 page_sequence = [Participation, LeftRightParty, ScaloParty, ScaloPerson, PoliticalQuestions, Sonntagsfrage]
