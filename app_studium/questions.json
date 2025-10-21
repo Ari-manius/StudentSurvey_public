@@ -83,9 +83,9 @@
         },
         "options": [
           {"value": "1", "text": {"german": "Hof 1: 29.09.25 - 1.10.25", "english": "Camp 1: 29.09.25 - 1.10.25"}},
-          {"value": "2", "text": {"german": "Hof 2: 10.25 - 3.10.25", "english": "Camp 2: 10.25 - 3.10.25"}},
-          {"value": "3", "text": {"german": "Hof 3: 10.25 - 5.10.25", "english": "Camp 3: 10.25 - 5.10.25"}},
-          {"value": "4", "text": {"german": "Hof 4: 10.25 - 7.10.25", "english": "Camp 4: 10.25 - 7.10.25"}},
+          {"value": "2", "text": {"german": "Hof 2: 1.10.25 - 3.10.25", "english": "Camp 2: 1.10.25 - 3.10.25"}},
+          {"value": "3", "text": {"german": "Hof 3: 3.10.25 - 5.10.25", "english": "Camp 3: 3.10.25 - 5.10.25"}},
+          {"value": "4", "text": {"german": "Hof 4: 5.10.25 - 7.10.25", "english": "Camp 4: 5.10.25 - 7.10.25"}},
           {"value": "0", "text": {"german": "Nein", "english": "No"}}
         ]
       },
@@ -124,9 +124,10 @@
         "options": [
           {"value": "1", "text": {"german": "Dienstag, 11:45-13:15, Joshua Tress", "english": "Tuesday, 11:45-13:15, Joshua Tress"}},
           {"value": "2", "text": {"german": "Mittwoch, 17:00-18:30, Noah Kriegler", "english": "Wednesday, 17:00-18:30, Noah Kriegler"}},
-          {"value": "2", "text": {"german": "Donnerstag, 8:15-9:45, Noah Kriegler", "english": "Thursday, 8:15-9:45, Noah Kriegler"}},
-          {"value": "1", "text": {"german": "Donnerstag, 15:15-16:45, Theresa Wagner", "english": "Thursday, 15:15-16:45, Theresa Wagner"}},
-          {"value": "1", "text": {"german": "Donnerstag, 17:00-18:30, Theresa Wagner", "english": "Thursday, 17:00-18:30, Theresa Wagner"}},
+          {"value": "3", "text": {"german": "Donnerstag, 8:15-9:45, Noah Kriegler", "english": "Thursday, 8:15-9:45, Noah Kriegler"}},
+          {"value": "4", "text": {"german": "Donnerstag, 15:15-16:45, Theresa Wagner", "english": "Thursday, 15:15-16:45, Theresa Wagner"}},
+          {"value": "5", "text": {"german": "Donnerstag, 17:00-18:30, Theresa Wagner", "english": "Thursday, 17:00-18:30, Theresa Wagner"}},
+          {"value": "6", "text": {"german": "Mittwoch, 13:30-14:45, Mike Barth", "english": "Wednesday, 13:30-14:45, Mike Barth"}},
           {"value": "0", "text": {"german": "An keinem", "english": "None of these"}}
         ]
       },
