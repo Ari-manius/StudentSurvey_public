@@ -95,7 +95,7 @@ class Player(BasePlayer):
     time_firstendpage= models.StringField(initial="-999")
     time_endpage= models.StringField(initial="-999")
 
-
+    network_narrative = models.LongStringField(blank=True)
 
     #time_rnumber= models.StringField(initial="-999")
     #link_check = models.StringField(blank=True)

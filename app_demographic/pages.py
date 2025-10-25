@@ -11,10 +11,10 @@ def load_questions():
     with open(questions_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
-    # Shuffle questions within each category
-    for category in data.values():
-        if 'questions' in category and isinstance(category['questions'], list):
-            random.shuffle(category['questions'])
+    # # Shuffle questions within each category
+    # for category in data.values():
+    #     if 'questions' in category and isinstance(category['questions'], list):
+    #         random.shuffle(category['questions'])
     
     return data
 

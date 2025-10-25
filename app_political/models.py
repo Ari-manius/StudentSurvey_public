@@ -59,7 +59,7 @@ class Player(BasePlayer):
     scalo_pep4 = models.StringField(blank=True, initial="0") #Franziska Brantner 
     scalo_pep5 = models.StringField(blank=True, initial="0") #Alice Weidel
     scalo_pep6 = models.StringField(blank=True, initial="0") #Janine Wissler
-    scalo_pep7 = models.StringField(blank=True, initial="0") #Jens Spahn 
+    scalo_pep7 = models.StringField(blank=True, initial="0") #Julia Klöckner 
     scalo_pep8 = models.StringField(blank=True, initial="0") #Markus Söder
     scalo_pep9 = models.StringField(blank=True, initial="0") #Dorothee Bär 
     scalo_pep10 = models.StringField(blank=True, initial="0") #Lars Klingbeil
@@ -73,6 +73,7 @@ class Player(BasePlayer):
     scalo_pep17 = models.StringField(blank=True, initial="0") #Emmanuel Macron 
     scalo_pep18 = models.StringField(blank=True, initial="0") #Giorgia Meloni
     scalo_pep19 = models.StringField(blank=True, initial="0") #Keir Starmer 
+    scalo_pep20 = models.StringField(blank=True, initial="0") #Greta Thunberg 
 
     politics_question_one = models.StringField(blank=True, initial='0')
     politics_question_two = models.StringField(blank=True, initial='0')

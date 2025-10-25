@@ -15,7 +15,7 @@
           },
           {
             "value": "2",
-            "text": {"german": "B.Ed. Politikwissenschaften als Nebenfach", "english": "B.Ed. Political Science as minor subject"}
+            "text": {"german": "B.Ed. Politikwissenschaften im Lehramt", "english": "B.Ed. Political Science as education subject"}
           },
           {
             "value": "3",
@@ -31,7 +31,7 @@
           },
           {
             "value": "0",
-            "text": {"german": "Keine Angabe", "english": "No Answer"}
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
           }
         ]
       },
@@ -48,8 +48,8 @@
         "field": "consecutive_academic_career", 
         "type": "radio",
         "text": {
-          "german": "Wollen Sie unmittelbar nach dem BA-Studium Ihre akademische Laufbahn fortsetzen und welchen Abschluss streben Sie an?",
-          "english": "Do you plan to continue your academic career after your BA studies and which degree do you aim for?"
+          "german": "Wollen Sie unmittelbar nach Ihrem Abschluss Ihre akademische Laufbahn fortsetzen und welchen Abschluss streben Sie an?",
+          "english": "Do you plan to continue your academic career after your graduation and which degree do you aim for?"
         },
         "options": [
           {
@@ -82,19 +82,19 @@
           "english": "Did you go to a freshers camp at the beginning of this semester?"
         },
         "options": [
-          {"value": "1", "text": {"german": "Hof 1: 29.09.25 - 1.10.25", "english": "Camp 1: 29.09.25 - 1.10.25"}},
-          {"value": "2", "text": {"german": "Hof 2: 1.10.25 - 3.10.25", "english": "Camp 2: 1.10.25 - 3.10.25"}},
-          {"value": "3", "text": {"german": "Hof 3: 3.10.25 - 5.10.25", "english": "Camp 3: 3.10.25 - 5.10.25"}},
-          {"value": "4", "text": {"german": "Hof 4: 5.10.25 - 7.10.25", "english": "Camp 4: 5.10.25 - 7.10.25"}},
-          {"value": "0", "text": {"german": "Nein", "english": "No"}}
+          {"value": "1", "text": {"german": "29. September 2025 bis 1. Oktober 2025", "english": "29. September 2025 bis 1. October 2025"}},
+          {"value": "2", "text": {"german": "1. Oktober 2025 bis 3. Oktober 2025", "english": "1. October 2025 bis 3. October 2025"}},
+          {"value": "3", "text": {"german": "3. Oktober 2025 bis 5. Oktober 2025", "english": "3. October 2025 bis 5. October 2025"}},
+          {"value": "4", "text": {"german": "5. Oktober 2025 bis 7. Oktober 2025", "english": "5. October 2025 bis 7. October 2025"}},
+          {"value": "5", "text": {"german": "Nein", "english": "No"}}
         ]
       },
       {
         "field": "freshersweek_student",
         "type": "radio",
         "text": {
-          "german": "Haben Sie an Veranstaltungen der Erstiwoche teilgenommen?",
-          "english": "Did you participate in any events of the \"freshers\" week?"
+          "german": "Haben Sie an Veranstaltungen der Erstiwoche, zum Beispiel PubCrawls, teilgenommen? ",
+          "english": "Did you participate in any first-semester events of the \"freshers\" week, for example  pubcrawls?"
         },
         "options": [
           {"value": "1", "text": {"german": "Ja", "english": "Yes"}},
@@ -150,7 +150,7 @@
           {"value": "3.7", "text": {"german": "3.7", "english": "3.7"}},
           {"value": "4.0", "text": {"german": "4.0", "english": "4.0"}},
           {"value": "5.0", "text": {"german": "5.0", "english": "5.0"}},
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}}
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       }
     ]
@@ -165,32 +165,32 @@
           "english": "In a class like this, I prefer course material that feeds my curiosity, even if it is difficult to learn."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
         "field": "motivation_extrinsic_goal_1",
         "type": "radio",
         "text": {
-          "german": "Ich möchte in diesem Kurs gute Leistungen erbringen, weil es wichtig ist, meiner Familie, meinen Freunden, meinem Arbeitgeber und anderen meine Fähigkeiten zu zeigen.",
-          "english": "I want to do well in this class because it is important to show my ability to my family, friends, employer, or others."
+          "german": "Ich möchte in diesem Kurs gute Leistungen erbringen, weil es wichtig ist, meiner Familie, meinen Bekannten, meinem zukünftigen Arbeitgeber und anderen meine Fähigkeiten zu zeigen.",
+          "english": "I want to do well in this class because it is important to show my ability to my family, friends, future employer, or others."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
@@ -198,17 +198,17 @@
         "type": "radio",
         "text": {
           "german": "Wenn ich in diesem Kurs die Möglichkeit dazu habe, wähle ich Kursaufgaben, von denen ich lernen kann, auch wenn sie keine gute Note garantieren.",
-          "english": "When I have the opportunity in this dass, I choose course assignments that I can learn from even if they don't guarantee a good grade."
+          "english": "When I have the opportunity in this class, I choose course assignments that I can learn from even if they don't guarantee a good grade."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
@@ -219,14 +219,14 @@
           "english": "The most important thing for me right now is improving my overall grade point average, so my main concern in this class is getting a good grade."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
@@ -237,14 +237,14 @@
           "english": "The most satisfying thing for me in this course is trying to understand the content as thoroughly as possible."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
@@ -255,14 +255,14 @@
           "english": "If I can, I want to get better grades in this class than most of the other students."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
@@ -273,32 +273,32 @@
           "english": "I am studying for my degree course in order to have good career opportunities later."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
         "field": "affective_academic_stress",
         "type": "radio",
         "text": {
-          "german": "Wenn ich lerne, denke ich an die Konsequenzen des Scheiterns.",
-          "english": "When I study I think of the consequences of failing."
+          "german": "Im Rahmen des Studiums, denke ich an die Konsequenzen des Scheiterns.",
+          "english": "In my studies I think of the consequences of failing."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
@@ -309,14 +309,14 @@
           "english": "I make sure I keep up with the weekly readings and assignments for this course."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
@@ -327,14 +327,14 @@
           "english": "When I can't understand the material in this course, I know who to ask for help."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
@@ -345,14 +345,14 @@
           "english": "I try to work with other students from this class to complete the course assignments."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}},
           {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
           {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
           {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
           {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
           {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
           {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}}
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       }
     ]

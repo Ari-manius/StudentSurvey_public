@@ -32,7 +32,7 @@
           },
           {
             "value": "0",
-            "text": {"german": "Keine Angabe", "english": "No answer"}
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
           }
         ]
       }
@@ -49,71 +49,63 @@
         },
         "options": [
           {
-            "value": "1",
-            "text": {"german": "Weiß nicht", "english": "Don't know"}
-          },
-          {
-            "value": "2", 
+            "value": "1", 
             "text": {"german": "Sehr Schlecht", "english": "Very Bad"}
           },
           {
-            "value": "3",
+            "value": "2",
             "text": {"german": "Schlecht", "english": "Bad"}
           },
           {
-            "value": "4",
+            "value": "3",
             "text": {"german": "Teils gut / teils schlecht", "english": "Part good / part bad"}
           },
           {
-            "value": "5", 
+            "value": "4", 
             "text": {"german": "Gut", "english": "Good"}
           },
           {
-            "value": "6",
+            "value": "5",
             "text": {"german": "Sehr Gut", "english": "Very Good"}
           },
           {
             "value": "0",
-            "text": {"german": "Keine Angabe", "english": "No answer"}
-          }
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }          
         ]
       },
       {
         "field": "financial_situation_personal_current",
         "type": "radio",
         "text": {
-          "german": "Und Ihre eigene wirtschaftliche Lage heute?",
-          "english": "And your own financial situation today?"
+          "german": "Wie beurteilen Sie ganz allgemein die Ihre eigene wirtschaftliche Lage heute?",
+          "english": "How do you judge your own current economic situation?"
         },
         "options": [
           {
-            "value": "1",
-            "text": {"german": "Weiß nicht", "english": "Don't know"}
-          },
-          {
-            "value": "2", 
+            "value": "1", 
             "text": {"german": "Sehr Schlecht", "english": "Very Bad"}
           },
           {
-            "value": "3",
+            "value": "2",
             "text": {"german": "Schlecht", "english": "Bad"}
           },
           {
-            "value": "4",
+            "value": "3",
             "text": {"german": "Teils gut / teils schlecht", "english": "Part good / part bad"}
           },
           {
-            "value": "5", 
+            "value": "4", 
             "text": {"german": "Gut", "english": "Good"}
           },
           {
-            "value": "6",
+            "value": "5",
             "text": {"german": "Sehr Gut", "english": "Very Good"}
           },
           {
             "value": "0",
-            "text": {"german": "Keine Angabe", "english": "No answer"}
-          }
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }   
         ]
       },  
       {
@@ -125,71 +117,63 @@
         },
         "options": [
           {
-            "value": "1",
-            "text": {"german": "Weiß nicht", "english": "Don't know"}
+            "value": "1", 
+            "text": {"german": "Sehr Schlecht", "english": "Very Bad"}
           },
           {
-            "value": "2", 
-            "text": {"german": "Wesentlich schlechter als heute", "english": "Much worse than today"}
+            "value": "2",
+            "text": {"german": "Schlecht", "english": "Bad"}
           },
           {
             "value": "3",
-            "text": {"german": "Etwas schlechter als heute", "english": "A little bit worse than today"}
+            "text": {"german": "Teils gut / teils schlecht", "english": "Part good / part bad"}
           },
           {
-            "value": "4",
-            "text": {"german": "Gleichbleibend", "english": "Same"}
+            "value": "4", 
+            "text": {"german": "Gut", "english": "Good"}
           },
           {
-            "value": "5", 
-            "text": {"german": "Etwas besser als heute", "english": "A little bit better than today"}
-          },
-          {
-            "value": "6",
-            "text": {"german": "Wesentlich besser als heute", "english": "Much better than today"}
+            "value": "5",
+            "text": {"german": "Sehr Gut", "english": "Very Good"}
           },
           {
             "value": "0",
-            "text": {"german": "Keine Angabe", "english": "No answer"}
-          }
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }   
         ]
       },
       {
         "field": "financial_situation_personal_future",
         "type": "radio",
         "text": {
-          "german": "Und wie wird Ihre eigene wirtschaftliche Lage IN EINEM JAHR sein?",
-          "english": "And will your own financial situation be in ONE YEAR?"
+          "german": "Was glauben Sie, wie wird Ihre eigene wirtschaftliche Lage IN EINEM JAHR sein?",
+          "english": "How do you believe will be your own economic situation in a year?"
         },
         "options": [
           {
-            "value": "1",
-            "text": {"german": "Weiß nicht", "english": "Don't know"}
+            "value": "1", 
+            "text": {"german": "Sehr Schlecht", "english": "Very Bad"}
           },
           {
-            "value": "2", 
-            "text": {"german": "Wesentlich schlechter als heute", "english": "Much worse than today"}
+            "value": "2",
+            "text": {"german": "Schlecht", "english": "Bad"}
           },
           {
             "value": "3",
-            "text": {"german": "Etwas schlechter als heute", "english": "A little bit worse than today"}
+            "text": {"german": "Teils gut / teils schlecht", "english": "Part good / part bad"}
           },
           {
-            "value": "4",
-            "text": {"german": "Gleichbleibend", "english": "Same"}
+            "value": "4", 
+            "text": {"german": "Gut", "english": "Good"}
           },
           {
-            "value": "5", 
-            "text": {"german": "Etwas besser als heute", "english": "A little bit better than today"}
-          },
-          {
-            "value": "6",
-            "text": {"german": "Wesentlich besser als heute", "english": "Much better than today"}
+            "value": "5",
+            "text": {"german": "Sehr Gut", "english": "Very Good"}
           },
           {
             "value": "0",
-            "text": {"german": "Keine Angabe", "english": "No answer"}
-          }
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }   
         ]
       },
       {
@@ -235,126 +219,78 @@
         "field": "edu_family_1gen_f",
         "type": "radio",
         "text": {
-          "german": "Bitte geben Sie den höchsten <b>beruflichen Bildungsabschluss</b> an, den Ihre <b>Mutter</b> erreicht hat.",
-          "english": "Please select the highest working education level reached by your <b>mother</b>."
+          "german": "Bitte geben Sie an, ob Ihre <b>Mutter</b> einen akademischen Abschluss erreicht hat.",
+          "english": "Please select if your <b>mother</b> reached an academic degree."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}},
-          {"value": "1", "text": {"german": "Weiß nicht", "english": "Don't know"}},
-          {"value": "2", "text": {"german": "Keinen beruflichen Ausbildungsabschluss", "english": "No working education"}},
-          {"value": "3", "text": {"german": "Beruflich-betriebliche Anlernzeit mit Abschlusszeugnis, aber keine Lehre", "english": "Workplace education with certificate"}},
-          {"value": "4", "text": {"german": "Teilfacharbeiterabschluss", "english": "Partial vocational training"}},
-          {"value": "5", "text": {"german": "Abgeschlossene Lehre", "english": "Vocational Training"}},
-          {"value": "6", "text": {"german": "Berufsfachschulabschluss", "english": "Vocational school qualification"}},
-          {"value": "7", "text": {"german": "Fachschulabschluss", "english": "Technical school qualification"}},
-          {"value": "8", "text": {"german": "Meister-, Techniker- oder gleichwertiger Fachschulabschluss", "english": "Master, technician or equivalent technical school qualification"}},
-          {"value": "9", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule)", "english": "Higher school degree (also degree from an engineering school)"}},
-          {"value": "10", "text": {"german": "Hochschulabschluss", "english": "University degree"}}
+          {"value": "1", "text": {"german": "Keinen akademischen Bildungsabschluss", "english": "No academic education"}},
+          {"value": "2", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule) oder Hochschulabschluss", "english": "Higher school degree (also degree from an engineering school) or University"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
         "field": "edu_family_1gen_m",
         "type": "radio",
         "text": {
-          "german": "Bitte geben Sie den höchsten <b>beruflichen Bildungsabschluss</b> an, den Ihr <b>Vater</b> erreicht hat.",
-          "english": "Please select the highest working education level reached by your <b>father</b>."
+          "german": "Bitte geben Sie an, ob Ihr <b>Vater</b> einen akademischen Abschluss erreicht hat.",
+          "english": "Please select if your <b>father</b> reached an academic degree."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}},
-          {"value": "1", "text": {"german": "Weiß nicht", "english": "Don't know"}},
-          {"value": "2", "text": {"german": "Keinen beruflichen Ausbildungsabschluss", "english": "No working education"}},
-          {"value": "3", "text": {"german": "Beruflich-betriebliche Anlernzeit mit Abschlusszeugnis, aber keine Lehre", "english": "Workplace education with certificate"}},
-          {"value": "4", "text": {"german": "Teilfacharbeiterabschluss", "english": "Partial vocational training"}},
-          {"value": "5", "text": {"german": "Abgeschlossene Lehre", "english": "Vocational Training"}},
-          {"value": "6", "text": {"german": "Berufsfachschulabschluss", "english": "Vocational school qualification"}},
-          {"value": "7", "text": {"german": "Fachschulabschluss", "english": "Technical school qualification"}},
-          {"value": "8", "text": {"german": "Meister-, Techniker- oder gleichwertiger Fachschulabschluss", "english": "Master, technician or equivalent technical school qualification"}},
-          {"value": "9", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule)", "english": "Higher school degree (also degree from an engineering school)"}},
-          {"value": "10", "text": {"german": "Hochschulabschluss", "english": "University degree"}}
+          {"value": "1", "text": {"german": "Keinen akademischen Bildungsabschluss", "english": "No academic education"}},
+          {"value": "2", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule) oder Hochschulabschluss", "english": "Higher school degree (also degree from an engineering school) or University"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
         "field": "edu_family_2gen_f1",
         "type": "radio",
         "text": {
-          "german": "Bitte geben Sie den höchsten <b>beruflichen Bildungsabschluss</b> an, den Ihre <b>Großmutter (Mütterlicherseits)</b> erreicht hat.",
-          "english": "Please select the highest working education level reached by your <b>grandmother (on your mothers side)</b>."
+          "german": "Bitte geben Sie an, ob Ihre <b>Großmutter mütterlicherseits</b> einen akademischen Abschluss erreicht hat.",
+          "english": "Please select if your <b>grandmother on your mothers side</b> reached an academic degree."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}},
-          {"value": "1", "text": {"german": "Weiß nicht", "english": "Don't know"}},
-          {"value": "2", "text": {"german": "Keinen beruflichen Ausbildungsabschluss", "english": "No working education"}},
-          {"value": "3", "text": {"german": "Beruflich-betriebliche Anlernzeit mit Abschlusszeugnis, aber keine Lehre", "english": "Workplace education with certificate"}},
-          {"value": "4", "text": {"german": "Teilfacharbeiterabschluss", "english": "Partial vocational training"}},
-          {"value": "5", "text": {"german": "Abgeschlossene Lehre", "english": "Vocational Training"}},
-          {"value": "6", "text": {"german": "Berufsfachschulabschluss", "english": "Vocational school qualification"}},
-          {"value": "7", "text": {"german": "Fachschulabschluss", "english": "Technical school qualification"}},
-          {"value": "8", "text": {"german": "Meister-, Techniker- oder gleichwertiger Fachschulabschluss", "english": "Master, technician or equivalent technical school qualification"}},
-          {"value": "9", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule)", "english": "Higher school degree (also degree from an engineering school)"}},
-          {"value": "10", "text": {"german": "Hochschulabschluss", "english": "University degree"}}
+          {"value": "1", "text": {"german": "Keinen akademischen Bildungsabschluss", "english": "No academic education"}},
+          {"value": "2", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule) oder Hochschulabschluss", "english": "Higher school degree (also degree from an engineering school) or University"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
         "field": "edu_family_2gen_m1",
         "type": "radio",
         "text": {
-          "german": "Bitte geben Sie den höchsten <b>beruflichen Bildungsabschluss</b> an, den Ihr <b>Großvater</b> (Mütterlicherseits) erreicht hat.",
-          "english": "Please select the highest working education level reached by your <b>grandfather (on your mothers side)</b>."
+          "german": "Bitte geben Sie an, ob Ihre <b>Großvater mütterlicherseits</b> einen akademischen Abschluss erreicht hat.",
+          "english": "Please select if your <b>grandfather on your mothers side</b> reached an academic degree."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}},
-          {"value": "1", "text": {"german": "Weiß nicht", "english": "Don't know"}},
-          {"value": "2", "text": {"german": "Keinen beruflichen Ausbildungsabschluss", "english": "No working education"}},
-          {"value": "3", "text": {"german": "Beruflich-betriebliche Anlernzeit mit Abschlusszeugnis, aber keine Lehre", "english": "Workplace education with certificate"}},
-          {"value": "4", "text": {"german": "Teilfacharbeiterabschluss", "english": "Partial vocational training"}},
-          {"value": "5", "text": {"german": "Abgeschlossene Lehre", "english": "Vocational Training"}},
-          {"value": "6", "text": {"german": "Berufsfachschulabschluss", "english": "Vocational school qualification"}},
-          {"value": "7", "text": {"german": "Fachschulabschluss", "english": "Technical school qualification"}},
-          {"value": "8", "text": {"german": "Meister-, Techniker- oder gleichwertiger Fachschulabschluss", "english": "Master, technician or equivalent technical school qualification"}},
-          {"value": "9", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule)", "english": "Higher school degree (also degree from an engineering school)"}},
-          {"value": "10", "text": {"german": "Hochschulabschluss", "english": "University degree"}}
+          {"value": "1", "text": {"german": "Keinen akademischen Bildungsabschluss", "english": "No academic education"}},
+          {"value": "2", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule) oder Hochschulabschluss", "english": "Higher school degree (also degree from an engineering school) or University"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
         "field": "edu_family_2gen_f2",
         "type": "radio",
         "text": {
-          "german": "Bitte geben Sie den höchsten <b>beruflichen Bildungsabschluss</b> an, den Ihre <b>Großmutter</b> (Väterlicherseits) erreicht hat.",
-          "english": "Please select the highest working education level reached by your <b>grandmother (on your fathers side)</b>."
+          "german": "Bitte geben Sie an, ob Ihr <b>Großvater väterlicherseits</b> einen akademischen Abschluss erreicht hat.",
+          "english": "Please select if your <b>grandfather on your fathers side</b> reached an academic degree."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}},
-          {"value": "1", "text": {"german": "Weiß nicht", "english": "Don't know"}},
-          {"value": "2", "text": {"german": "Keinen beruflichen Ausbildungsabschluss", "english": "No working education"}},
-          {"value": "3", "text": {"german": "Beruflich-betriebliche Anlernzeit mit Abschlusszeugnis, aber keine Lehre", "english": "Workplace education with certificate"}},
-          {"value": "4", "text": {"german": "Teilfacharbeiterabschluss", "english": "Partial vocational training"}},
-          {"value": "5", "text": {"german": "Abgeschlossene Lehre", "english": "Vocational Training"}},
-          {"value": "6", "text": {"german": "Berufsfachschulabschluss", "english": "Vocational school qualification"}},
-          {"value": "7", "text": {"german": "Fachschulabschluss", "english": "Technical school qualification"}},
-          {"value": "8", "text": {"german": "Meister-, Techniker- oder gleichwertiger Fachschulabschluss", "english": "Master, technician or equivalent technical school qualification"}},
-          {"value": "9", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule)", "english": "Higher school degree (also degree from an engineering school)"}},
-          {"value": "10", "text": {"german": "Hochschulabschluss", "english": "University degree"}}
+          {"value": "1", "text": {"german": "Keinen akademischen Bildungsabschluss", "english": "No academic education"}},
+          {"value": "2", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule) oder Hochschulabschluss", "english": "Higher school degree (also degree from an engineering school) or University"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
         "field": "edu_family_2gen_m2",
         "type": "radio",
         "text": {
-          "german": "Bitte geben Sie den höchsten <b>beruflichen Bildungsabschluss</b> an, den Ihr <b>Großvater</b> (Väterlicherseits) erreicht hat.",
-          "english": "Please select the highest working education level reached by your <b>grandfather (on your father side)</b>."
+          "german": "Bitte geben Sie an, ob Ihre <b>Großmutter väterlicherseits</b> einen akademischen Abschluss erreicht hat.",
+          "english": "Please select if your <b>grandmother on your fathers side</b> reached an academic degree."
         },
         "options": [
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}},
-          {"value": "1", "text": {"german": "Weiß nicht", "english": "Don't know"}},
-          {"value": "2", "text": {"german": "Keinen beruflichen Ausbildungsabschluss", "english": "No working education"}},
-          {"value": "3", "text": {"german": "Beruflich-betriebliche Anlernzeit mit Abschlusszeugnis, aber keine Lehre", "english": "Workplace education with certificate"}},
-          {"value": "4", "text": {"german": "Teilfacharbeiterabschluss", "english": "Partial vocational training"}},
-          {"value": "5", "text": {"german": "Abgeschlossene Lehre", "english": "Vocational Training"}},
-          {"value": "6", "text": {"german": "Berufsfachschulabschluss", "english": "Vocational school qualification"}},
-          {"value": "7", "text": {"german": "Fachschulabschluss", "english": "Technical school qualification"}},
-          {"value": "8", "text": {"german": "Meister-, Techniker- oder gleichwertiger Fachschulabschluss", "english": "Master, technician or equivalent technical school qualification"}},
-          {"value": "9", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule)", "english": "Higher school degree (also degree from an engineering school)"}},
-          {"value": "10", "text": {"german": "Hochschulabschluss", "english": "University degree"}}
+          {"value": "1", "text": {"german": "Keinen akademischen Bildungsabschluss", "english": "No academic education"}},
+          {"value": "2", "text": {"german": "Fachhochschulabschluss (auch Abschluss einer Ingenieurschule) oder Hochschulabschluss", "english": "Higher school degree (also degree from an engineering school) or University"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       }
     ]

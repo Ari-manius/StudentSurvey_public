@@ -11,7 +11,7 @@
         "options": [
           {"value": "1", "text": {"german": "Ja", "english": "Yes"}},
           {"value": "2", "text": {"german": "Nein", "english": "No"}},
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}}
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
@@ -24,7 +24,7 @@
         "options": [
           {"value": "1", "text": {"german": "Ja", "english": "Yes"}},
           {"value": "2", "text": {"german": "Nein", "english": "No"}},
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No Answer"}}
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
       {
@@ -32,8 +32,8 @@
         "type": "checkbox",
         "section": "social_platforms",
         "section_header": {
-          "german": "Welche der sozialen Plattformen nutzen Sie? (Mehrfachnennung möglich, sonstige können in das Textfeld eingetragen werden)",
-          "english": "Which of the social platforms do you use? (Multiple choices possible, enter other platforms in the field.)"
+          "german": "Welche sozialen Plattformen und Kanäle nutzen Sie? (Mehrfachnennung möglich, sonstige können in das Textfeld eingetragen werden)",
+          "english": "Which of social platforms and channels do you use? (Multiple choices possible, enter other platforms in the field.)"
         },
         "text": {
           "german": "Facebook",
@@ -45,8 +45,8 @@
         "type": "checkbox",
         "section": "social_platforms",
         "text": {
-          "german": "Twitter",
-          "english": "Twitter"
+          "german": "Twitter / X",
+          "english": "Twitter / X"
         }
       },
       {
@@ -171,7 +171,7 @@
           {"value": "9", "text": {"german": "Andere Partei", "english": "Other party"}},
           {"value": "10", "text": {"german": "Würde nicht wählen", "english": "Would not vote"}},
           {"value": "11", "text": {"german": "Bin nicht wahlberechtigt", "english": "Not eligible to vote"}},
-          {"value": "0", "text": {"german": "Keine Angabe", "english": "No answer"}}
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       }
     ]
@@ -328,8 +328,8 @@
         "scale_min": -5,
         "scale_max": 5,
         "text": {
-          "german": "Jens Spahn",
-          "english": "Jens Spahn"
+          "german": "Julia Klöckner",
+          "english": "Julia Klöckner"
         }
       },
       {
@@ -450,6 +450,16 @@
         "text": {
           "german": "Keir Starmer",
           "english": "Keir Starmer"
+        }
+      },
+      {
+        "field": "scalo_pep20",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Greta Thunberg",
+          "english": "Greta Thunberg"
         }
       }
     ]

@@ -4,6 +4,12 @@ from ._builtin import Page, WaitPage
 from .models import Constants, Player
 from . import *
 
+class NetworkNarrative(Page): #8
+    def vars_for_template(self):
+        return {'lang': self.participant.vars.get('language')}
+    form_model = Player
+    form_fields = ["network_narrative"]
+
 class RandomNumber(Page): #16
     def vars_for_template(self):
         label = self.participant.label
@@ -25,4 +31,4 @@ class End(Page): #15
     form_model = Player
     form_fields = ['time_endpage']
 
-page_sequence = [RandomNumber, FirstEndPage, End]
+page_sequence = [NetworkNarrative, RandomNumber, FirstEndPage, End]
