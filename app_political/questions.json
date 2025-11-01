@@ -31,10 +31,6 @@
         "field": "social_networks_1",
         "type": "checkbox",
         "section": "social_platforms",
-        "section_header": {
-          "german": "Welche sozialen Plattformen und Kanäle nutzen Sie? (Mehrfachnennung möglich, sonstige können in das Textfeld eingetragen werden)",
-          "english": "Which of social platforms and channels do you use? (Multiple choices possible, enter other platforms in the field.)"
-        },
         "text": {
           "german": "Facebook",
           "english": "Facebook"

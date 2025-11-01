@@ -46,5 +46,5 @@ class Player(BasePlayer):
     financial_situation_general_current = models.IntegerField(blank=True, label="", min=0, max=10)
     financial_situation_personal_future = models.IntegerField(blank=True, label="", min=0, max=10)
     financial_situation_general_future = models.IntegerField(blank=True, label="", min=0, max=10)
-    time_work = models.IntegerField(blank=True, label="", min=0, max=168)
+    time_work = models.IntegerField(blank=True, label="", min=0, max=168, initial =0)
 

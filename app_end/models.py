@@ -89,7 +89,7 @@ class Player(BasePlayer):
         
     feedback = models.LongStringField(blank=True)
 
-    catdog = models.IntegerField(blank=True, max=4, min=-999, label="")
+    #catdog = models.IntegerField(blank=True, max=4, min=-999, label="")
     #animal_other = models.StringField(label="Andere/Other:")
     
     time_firstendpage= models.StringField(initial="-999")
