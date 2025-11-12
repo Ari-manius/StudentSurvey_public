@@ -72,4 +72,9 @@ class Study(Page):
                     'semester_of_study',
                     'consecutive_academic_career']
  
-page_sequence = [FreshersCamp, Study, Class, MotivatedStrategies]
+page_sequence = [
+                #FreshersCamp, 
+                #Study, 
+                Class, 
+                MotivatedStrategies
+                ]

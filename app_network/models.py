@@ -33,19 +33,6 @@ class Group(BaseGroup):
     pass
 
 class Player(BasePlayer):
-    ### Participant Code
-    participantcode = models.StringField(blank=False, label="Participant Code")
-
-    def participantcode_error_message(self, value):
-        # Check if the input is exactly 3 letters long and contains only alphanumeric characters
-        label = self.participant.label
-
-        # Check if the code is in the allowed list and not the same as their own
-        if value not in codes:
-            return "This code is not a valid code."
-
-        if value == label:
-            return "You cannot enter your own code."
     
     # NetworkNamedPersons fields
     person_1 = models.StringField(blank=True, label="Code 1", max_length=3, min_length=3, initial="x")

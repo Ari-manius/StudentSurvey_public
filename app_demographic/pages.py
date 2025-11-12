@@ -74,4 +74,9 @@ class Secondary(Page):
     form_fields = ['postcode',
                     'secondary_year']
 
-page_sequence = [Financial, GenderAge, Secondary, LevelFamily]
+page_sequence = [
+                 Financial, 
+                 #GenderAge, 
+                 #Secondary, 
+                 #LevelFamily
+                 ]
