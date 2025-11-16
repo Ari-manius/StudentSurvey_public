@@ -19,6 +19,10 @@ def load_questions():
     return data
 
 class FreshersCamp(Page):
+    def is_displayed(self):
+        # Only show to new participants (not returning)
+        return not self.participant.is_returning_participant
+
     def vars_for_template(self):
         questions_data = load_questions()
         return {
@@ -61,6 +65,10 @@ class MotivatedStrategies(Page): #13
     ]
 
 class Study(Page):
+    def is_displayed(self):
+        # Only show to new participants (not returning)
+        return not self.participant.is_returning_participant
+
     def vars_for_template(self):
         questions_data = load_questions()
         return {
@@ -73,8 +81,8 @@ class Study(Page):
                     'consecutive_academic_career']
  
 page_sequence = [
-                #FreshersCamp, 
-                #Study, 
-                Class, 
+                FreshersCamp,
+                Study,
+                Class,
                 MotivatedStrategies
                 ]

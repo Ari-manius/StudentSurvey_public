@@ -19,6 +19,10 @@ def load_questions():
     return data
 
 class GenderAge(Page): #3
+    def is_displayed(self):
+        # Only show to new participants (not returning)
+        return not self.participant.is_returning_participant
+
     def vars_for_template(self):
         questions_data = load_questions()
         return {
@@ -31,6 +35,10 @@ class GenderAge(Page): #3
 
 
 class LevelFamily(Page): #3
+    def is_displayed(self):
+        # Only show to new participants (not returning)
+        return not self.participant.is_returning_participant
+
     def vars_for_template(self):
         questions_data = load_questions()
         return {
@@ -63,6 +71,10 @@ class Financial(Page):
                     ]
 
 class Secondary(Page):
+    def is_displayed(self):
+        # Only show to new participants (not returning)
+        return not self.participant.is_returning_participant
+
     def vars_for_template(self):
         questions_data = load_questions()
         return {
@@ -75,8 +87,8 @@ class Secondary(Page):
                     'secondary_year']
 
 page_sequence = [
-                 Financial, 
-                 #GenderAge, 
-                 #Secondary, 
-                 #LevelFamily
+                 Financial,
+                 GenderAge,
+                 Secondary,
+                 LevelFamily
                  ]
