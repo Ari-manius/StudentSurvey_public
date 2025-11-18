@@ -1,0 +1,300 @@
+{
+  "Migration": {
+    "questions": [
+      {
+        "field": "migration_eco",
+        "type": "radio",
+        "text": {
+          "german": "Vielfalt durch Migration stärkt die deutsche Wirtschaft.",
+          "english": "Diversity through migration strengthens the German economy."
+        },
+        "options": [
+          {
+            "value": "7",
+            "text": {"german": "Stimme voll und ganz zu", "english": "Very strongly agree"}
+          },
+          {
+            "value": "6", 
+            "text": {"german": "Stimme zu", "english": "Strongly agree"}
+          },
+          {
+            "value": "5",
+            "text": {"german": "Stimme eher zu", "english": "Agree"}
+          },
+          {
+            "value": "4",
+            "text": {"german": "Teils teils", "english": "Neutral"}
+          },
+          {
+            "value": "3", 
+            "text": {"german": "Stimme eher nicht zu", "english": "Disagree"}
+          },
+          {
+            "value": "2",
+            "text": {"german": "Stimme nicht zu", "english": "Strongly disagree"}
+          },
+          {
+            "value": "1",
+            "text": {"german": "Stimme überhaupt nicht zu", "english": "Very strongly disagree"}
+          },
+          {
+            "value": "0",
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }
+        ]
+      },
+      {
+        "field": "migration_border",
+        "type": "radio",
+        "text": {
+          "german": "Die Grenzen sollten stärker kontrolliert werden, um illegale Einwanderung zu verhindern.",
+          "english": "The border should be controlled more heavily, to prevent illegal immigration."
+        },
+        "options": [
+          {
+            "value": "7",
+            "text": {"german": "Stimme voll und ganz zu", "english": "Very strongly agree"}
+          },
+          {
+            "value": "6", 
+            "text": {"german": "Stimme zu", "english": "Strongly agree"}
+          },
+          {
+            "value": "5",
+            "text": {"german": "Stimme eher zu", "english": "Agree"}
+          },
+          {
+            "value": "4",
+            "text": {"german": "Teils teils", "english": "Neutral"}
+          },
+          {
+            "value": "3", 
+            "text": {"german": "Stimme eher nicht zu", "english": "Disagree"}
+          },
+          {
+            "value": "2",
+            "text": {"german": "Stimme nicht zu", "english": "Strongly disagree"}
+          },
+          {
+            "value": "1",
+            "text": {"german": "Stimme überhaupt nicht zu", "english": "Very strongly disagree"}
+          },
+          {
+            "value": "0",
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }
+        ]
+      },
+      {
+        "field": "migration_social",
+        "type": "radio",
+        "text": {
+          "german": "Einwanderung belastet unser Sozialsystem übermäßig.",
+          "english": "Immigration burdening is our social "
+        },
+        "options": [
+          {
+            "value": "7",
+            "text": {"german": "Stimme voll und ganz zu", "english": "Very strongly agree"}
+          },
+          {
+            "value": "6", 
+            "text": {"german": "Stimme zu", "english": "Strongly agree"}
+          },
+          {
+            "value": "5",
+            "text": {"german": "Stimme eher zu", "english": "Agree"}
+          },
+          {
+            "value": "4",
+            "text": {"german": "Teils teils", "english": "Neutral"}
+          },
+          {
+            "value": "3", 
+            "text": {"german": "Stimme eher nicht zu", "english": "Disagree"}
+          },
+          {
+            "value": "2",
+            "text": {"german": "Stimme nicht zu", "english": "Strongly disagree"}
+          },
+          {
+            "value": "1",
+            "text": {"german": "Stimme überhaupt nicht zu", "english": "Very strongly disagree"}
+          },
+          {
+            "value": "0",
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }
+        ]
+      },
+      {
+        "field": "migration_limit",
+        "type": "radio",
+        "text": {
+          "german": "Deutschland sollte die Zuwanderung insgesamt stärker begrenzen als bisher.",
+          "english": "Germany should limit immigration more than now"
+        },
+        "options": [
+          {
+            "value": "7",
+            "text": {"german": "Stimme voll und ganz zu", "english": "Very strongly agree"}
+          },
+          {
+            "value": "6", 
+            "text": {"german": "Stimme zu", "english": "Strongly agree"}
+          },
+          {
+            "value": "5",
+            "text": {"german": "Stimme eher zu", "english": "Agree"}
+          },
+          {
+            "value": "4",
+            "text": {"german": "Teils teils", "english": "Neutral"}
+          },
+          {
+            "value": "3", 
+            "text": {"german": "Stimme eher nicht zu", "english": "Disagree"}
+          },
+          {
+            "value": "2",
+            "text": {"german": "Stimme nicht zu", "english": "Strongly disagree"}
+          },
+          {
+            "value": "1",
+            "text": {"german": "Stimme überhaupt nicht zu", "english": "Very strongly disagree"}
+          },
+          {
+            "value": "0",
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }
+        ]
+      },
+      {
+        "field": "migration_number",
+        "type": "radio",
+        "text": {
+          "german": "Die derzeitige Zahl an Asylsuchenden in Deutschland ist zu hoch.",
+          "english": "The current number of asylum seeker in Germany is to high."
+        },
+        "options": [
+          {
+            "value": "7",
+            "text": {"german": "Stimme voll und ganz zu", "english": "Very strongly agree"}
+          },
+          {
+            "value": "6", 
+            "text": {"german": "Stimme zu", "english": "Strongly agree"}
+          },
+          {
+            "value": "5",
+            "text": {"german": "Stimme eher zu", "english": "Agree"}
+          },
+          {
+            "value": "4",
+            "text": {"german": "Teils teils", "english": "Neutral"}
+          },
+          {
+            "value": "3", 
+            "text": {"german": "Stimme eher nicht zu", "english": "Disagree"}
+          },
+          {
+            "value": "2",
+            "text": {"german": "Stimme nicht zu", "english": "Strongly disagree"}
+          },
+          {
+            "value": "1",
+            "text": {"german": "Stimme überhaupt nicht zu", "english": "Very strongly disagree"}
+          },
+          {
+            "value": "0",
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }
+        ]
+      },
+      {
+        "field": "migration_return",
+        "type": "radio",
+        "text": {
+          "german": "Ausreisepflichtige Personen sollten konsequenter abgeschoben werden als bisher.",
+          "english": "Persons required to leave the country should be deported more consistently than has been the case to date."
+        },
+        "options": [
+          {
+            "value": "7",
+            "text": {"german": "Stimme voll und ganz zu", "english": "Very strongly agree"}
+          },
+          {
+            "value": "6", 
+            "text": {"german": "Stimme zu", "english": "Strongly agree"}
+          },
+          {
+            "value": "5",
+            "text": {"german": "Stimme eher zu", "english": "Agree"}
+          },
+          {
+            "value": "4",
+            "text": {"german": "Teils teils", "english": "Neutral"}
+          },
+          {
+            "value": "3", 
+            "text": {"german": "Stimme eher nicht zu", "english": "Disagree"}
+          },
+          {
+            "value": "2",
+            "text": {"german": "Stimme nicht zu", "english": "Strongly disagree"}
+          },
+          {
+            "value": "1",
+            "text": {"german": "Stimme überhaupt nicht zu", "english": "Very strongly disagree"}
+          },
+          {
+            "value": "0",
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }
+        ]
+      },
+      {
+        "field": "migration_culture",
+        "type": "radio",
+        "text": {
+          "german": "Zuwanderung gefährdet auf Dauer die deutsche Kultur.",
+          "english": "Immigration poses a long-term threat to German culture."
+        },
+        "options": [
+          {
+            "value": "7",
+            "text": {"german": "Stimme voll und ganz zu", "english": "Very strongly agree"}
+          },
+          {
+            "value": "6", 
+            "text": {"german": "Stimme zu", "english": "Strongly agree"}
+          },
+          {
+            "value": "5",
+            "text": {"german": "Stimme eher zu", "english": "Agree"}
+          },
+          {
+            "value": "4",
+            "text": {"german": "Teils teils", "english": "Neutral"}
+          },
+          {
+            "value": "3", 
+            "text": {"german": "Stimme eher nicht zu", "english": "Disagree"}
+          },
+          {
+            "value": "2",
+            "text": {"german": "Stimme nicht zu", "english": "Strongly disagree"}
+          },
+          {
+            "value": "1",
+            "text": {"german": "Stimme überhaupt nicht zu", "english": "Very strongly disagree"}
+          },
+          {
+            "value": "0",
+            "text": {"german": "Weiß nicht", "english": "Don't know"}
+          }
+        ]
+      }
+    ]
+  }
+}
