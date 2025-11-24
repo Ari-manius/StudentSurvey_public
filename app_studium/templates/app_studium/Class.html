@@ -11,8 +11,9 @@
 
 {% block content %}
 <div class="container">
-   <input id="time" type="hidden" name="time_tutorial_expected_grade"/>
-
+    <input id="time" type="hidden" name="time_tutorial_expected_grade"/>
+    <p class="german">Hier haben wir einige Fragen zu diesem Kurs für Sie.</p>
+    <p class="english">Here we have a few questions for you about your this course.</p>
    <!-- Section 1: Self Assessment (tutorial, time, grade) -->
 
    {% for question in questions %}
@@ -37,8 +38,6 @@
 
        </div>
    {% endfor %}
-
-   <hr style="margin-top: 40px; margin-bottom: 40px;">
 
    <!-- Section 2: Network Grade Assessment -->
    {% if network_player %}

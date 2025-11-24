@@ -1,6 +1,19 @@
 from otree.api import Currency as c, currency_range, safe_json
 from ._builtin import Page, WaitPage
 from .models import Constants, Player
+import os
+
+
+# Load valid participant codes from room file
+def get_valid_codes():
+    code_file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '_rooms', 'code_list.txt')
+    try:
+        with open(code_file_path, 'r') as file:
+            codes = [line.strip() for line in file.readlines()]
+        codes.append("x")  # Add 'x' as valid code for empty entries
+        return codes
+    except FileNotFoundError:
+        return ["x"]  # Fallback if file not found
 
 
 class NetworkNamedPersons(Page):
@@ -13,10 +26,41 @@ class NetworkNamedPersons(Page):
                    'person_31', 'person_32', 'person_33', 'person_34', 'person_35', 'person_36',
                    'person_37', 'person_38', 'person_39', 'person_40', 'person_41', 'person_42',
                    'person_43', 'person_44', 'person_45', 'person_46', 'person_47', 'person_48',
-                   'person_49', 'person_50']    
+                   'person_49', 'person_50']
 
     def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
+        valid_codes = get_valid_codes()
+        return {
+            'lang': self.participant.vars.get('language'),
+            'valid_codes': valid_codes,
+            'valid_codes_json': safe_json(valid_codes),
+            'my_code': self.participant.label if self.participant.label else 'N/A'
+        }
+
+    def error_message(self, values):
+        valid_codes = get_valid_codes()
+        errors = {}
+        my_code = self.participant.label.lower() if self.participant.label else None
+
+        # Check each person code
+        for i in range(1, 51):
+            field_name = f'person_{i}'
+            code = values.get(field_name, '').lower().strip()
+
+            # Skip validation for 'x' (empty entry)
+            if code == 'x':
+                continue
+
+            # Check if user entered their own code
+            if my_code and code == my_code:
+                errors[field_name] = f'You cannot enter your own code ("{code}").'
+                continue
+
+            # Check if code is valid
+            if code and code not in [c.lower() for c in valid_codes]:
+                errors[field_name] = f'Invalid code: "{code}". Please enter a valid participant code or "x" to skip.'
+
+        return errors if errors else None
 
 class GroupAssessment(Page): #8
     def vars_for_template(self):

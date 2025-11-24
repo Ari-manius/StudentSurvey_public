@@ -134,3 +134,6 @@ class Player(BasePlayer):
     migration_culture_48 = models.IntegerField(blank=True, max=7, min=0, label="")
     migration_culture_49 = models.IntegerField(blank=True, max=7, min=0, label="")
     migration_culture_50 = models.IntegerField(blank=True, max=7, min=0, label="")
+
+    # Time tracking field
+    time_migration = models.StringField(initial="-999")

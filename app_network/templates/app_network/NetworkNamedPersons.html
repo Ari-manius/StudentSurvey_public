@@ -14,15 +14,31 @@
 
 <div class="container">
     <input id="time" type="hidden" name="time_networknamedstudents" />
+        <p class="german">Nun haben wir einige Fragen zu Ihrem sozialen Netzwerk im Semester.</p>
+        <p class="english">Now we have a few questions about your social network in the semester.</p>
+
+    <!-- Datalist for autocomplete of participant codes -->
+    <datalist id="valid-codes">
+        {% for code in valid_codes %}
+        <option value="{{ code }}">
+        {% endfor %}
+    </datalist>
 
     <div class="mb-3 bg-light border pt-2 pb-2 px-2">
+        <div class="alert alert-info">
+            <p class="german"><strong>Ihr Code:</strong> <code style="font-size: 1.2em; font-weight: bold;">{{ my_code }}</code></p>
+            <p class="english"><strong>Your Code:</strong> <code style="font-size: 1.2em; font-weight: bold;">{{ my_code }}</code></p>
+        </div>
+
         <p class="german">Bitte geben Sie hier die 3-stelligen Codes ein, welche Sie mit Bekannten ausgetauscht haben.</p>
         <p class="german">Tragen Sie je Feld nur eine Person ein und merken Sie sich, wer diese Person ist.</p>
         <p class="german">Bitte lassen Sie unbenutzte Feldern unverändert.</p>
+        <p class="german"><strong>Hinweis:</strong> Nur gültige Teilnehmercodes aus der Vorlesung werden akzeptiert. Bitte geben Sie nicht Ihren eigenen Code ein.</p>
 
         <p class="english">Please share the 3-symbol survey codes that you exchanged with the people you know.</p>
         <p class="english">Enter each codes into one of the fields below and remember who has which code.</p>
         <p class="english">Please leave the unused fields unchanged.</p>
+        <p class="english"><strong>Note:</strong> Only valid participant codes from the lecture will be accepted. Please do not enter your own code.</p>
     
         <div class="form-container">
             <div class="form-column">
@@ -92,5 +108,54 @@
     </button>
 </div>
 
+<script>
+    // Valid codes from server
+    const validCodes = {{ valid_codes_json|safe }};
+    const validCodesLower = validCodes.map(c => c.toLowerCase());
+    const myCode = '{{ my_code }}'.toLowerCase();
+
+    // Attach datalist to all person input fields and add validation
+    document.addEventListener('DOMContentLoaded', function() {
+        // Find all person_* input fields
+        for (let i = 1; i <= 50; i++) {
+            const input = document.querySelector(`input[name="person_${i}"]`);
+            if (input) {
+                // Attach datalist for autocomplete
+                input.setAttribute('list', 'valid-codes');
+                input.setAttribute('autocomplete', 'off');
+
+                // Convert to lowercase on input
+                input.addEventListener('input', function(e) {
+                    e.target.value = e.target.value.toLowerCase();
+                });
+
+                // Add validation on blur (when user leaves the field)
+                input.addEventListener('blur', function(e) {
+                    const value = e.target.value.trim().toLowerCase();
+
+                    // Skip validation for empty or 'x' values
+                    if (!value || value === 'x') {
+                        e.target.style.borderColor = '';
+                        return;
+                    }
+
+                    // Check if user entered their own code
+                    if (value === myCode) {
+                        e.target.style.borderColor = '#ffc107'; // Orange border for own code (warning)
+                        alert('Please do not enter your own code!');
+                        return;
+                    }
+
+                    // Check if code is valid
+                    if (validCodesLower.includes(value)) {
+                        e.target.style.borderColor = '#28a745'; // Green border for valid
+                    } else {
+                        e.target.style.borderColor = '#dc3545'; // Red border for invalid
+                    }
+                });
+            }
+        }
+    });
+</script>
 
 {% endblock %}

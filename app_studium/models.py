@@ -105,3 +105,8 @@ class Player(BasePlayer):
     grade_48 = models.IntegerField(blank=True, max=11, min=0, label="")
     grade_49 = models.IntegerField(blank=True, max=11, min=0, label="")
     grade_50 = models.IntegerField(blank=True, max=11, min=0, label="")
+
+    # Time tracking fields
+    time_tutorial_expected_grade = models.StringField(initial="-999")
+    time_postcode = models.StringField(initial="-999")
+    time_fresherscamp = models.StringField(initial="-999")

@@ -152,8 +152,8 @@
         "field": "sunday_party_vote",
         "type": "radio",
         "text": {
-          "german": "Wenn nächsten Sonntag Bundestagswahl wäre, welche Partei würden Sie mit Ihrer Zweitstimme wählen?",
-          "english": "If there were a federal election next Sunday, which party would you vote for with your second vote?"
+          "german": "Wenn am nächsten Sonntag Bundestagswahl wäre, welche Partei würden Sie mit Ihrer Zweitstimme wählen?",
+          "english": "If there was a federal election next Sunday, which party would you vote for with your second vote?"
         },
         "options": [
           {"value": "1", "text": {"german": "CDU", "english": "CDU"}},

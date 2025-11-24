@@ -690,3 +690,8 @@ class Player(BasePlayer):
     linksrechts_48 = models.IntegerField(blank=True, max=11, min=0, label="")
     linksrechts_49 = models.IntegerField(blank=True, max=11, min=0, label="")
     linksrechts_50 = models.IntegerField(blank=True, max=11, min=0, label="")
+
+    # Time tracking fields
+    time_networknamedstudents = models.StringField(initial="-999")
+    time_leftright_selfassessment = models.StringField(initial="-999")
+    time_leftright_assessment = models.StringField(initial="-999")

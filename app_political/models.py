@@ -106,3 +106,11 @@ class Player(BasePlayer):
 
     participation_demonstration = models.IntegerField(blank=True, max=2, min=0, label="")
     petition_signatory = models.IntegerField(blank=True, max=2, min=0, label="")
+
+    # Time tracking fields
+    time_interest_uni = models.StringField(initial="-999")
+    time_scaloparty = models.StringField(initial="-999")
+    time_scaloperson = models.StringField(initial="-999")
+    time_leftright = models.StringField(initial="-999")
+    time_sundayquestion = models.StringField(initial="-999")
+    time_political_qs = models.StringField(initial="-999")

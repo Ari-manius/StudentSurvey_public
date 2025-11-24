@@ -22,12 +22,17 @@ class PlayerBot(Bot):
                 consecutive_academic_career=random.randint(0, 4)
             )
 
-        # Class page
-        yield pages.Class, dict(
+        # Class page - includes self assessment and network grade assessment
+        class_data = dict(
             time_class=random.randint(0, 20),
             tutorial=random.randint(0, 8),
             grade=random.choice(['1.0', '1.3', '1.7', '2.0', '2.3', '2.7', '3.0', '3.3', '3.7', '4.0', '5.0'])
         )
+        # Add network grade assessments
+        class_data.update({f'grade_{i}': random.randint(0, 11) for i in range(1, 51)})
+
+        from otree.api import Submission
+        yield Submission(pages.Class, class_data, check_html=False)
 
         # MotivatedStrategies page
         yield pages.MotivatedStrategies, dict(

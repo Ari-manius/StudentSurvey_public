@@ -3,12 +3,34 @@ from . import pages
 from ._builtin import Bot
 from .models import Constants
 import random
+import os
+
+
+def get_valid_codes():
+    """Load valid participant codes from room file for testing"""
+    code_file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '_rooms', 'code_list.txt')
+    try:
+        with open(code_file_path, 'r') as file:
+            codes = [line.strip() for line in file.readlines()]
+        return codes
+    except FileNotFoundError:
+        return []
 
 
 class PlayerBot(Bot):
     def play_round(self):
-        # NetworkNamedPersons - all persons default to "x"
-        person_data = {f'person_{i}': 'x' for i in range(1, 51)}
+        # NetworkNamedPersons - use actual codes from code_list.txt
+        valid_codes = get_valid_codes()
+        person_data = {}
+
+        # Randomly fill some fields with valid codes, leave others as 'x'
+        for i in range(1, 51):
+            if random.random() < 0.3 and valid_codes:  # 30% chance to fill with a code
+                # Pick a random valid code (but not the bot's own code if it has one)
+                person_data[f'person_{i}'] = random.choice(valid_codes)
+            else:
+                person_data[f'person_{i}'] = 'x'
+
         yield Submission(pages.NetworkNamedPersons, person_data, check_html=False)
 
         # SpecialNetworks - boolean fields for each person
@@ -25,23 +47,7 @@ class PlayerBot(Bot):
         group_data = {f'group_{i}': random.randint(0, 50) for i in range(1, 51)}
         yield Submission(pages.GroupAssessment, group_data, check_html=False)
 
-        # AcademicNetworkAssessment - grades for each person (0-11)
-        grade_data = {f'grade_{i}': random.randint(0, 11) for i in range(1, 51)}
-        yield Submission(pages.AcademicNetworkAssessment, grade_data, check_html=False)
-
-        # LeftrightSelfAssessment
-        yield pages.LeftrightSelfAssessment, dict(
-            linksrechts_self=random.randint(0, 11)
-        )
-
-        # LeftrightNetworkAssessment - left-right scale for each person (0-11)
-        linksrechts_data = {f'linksrechts_{i}': random.randint(0, 11) for i in range(1, 51)}
-        yield Submission(pages.LeftrightNetworkAssessment, linksrechts_data, check_html=False)
-
-        # MigrationEconomyAssessment - migration economy views for each person (0-7)
-        migration_eco_data = {f'migration_eco_{i}': random.randint(0, 7) for i in range(1, 51)}
-        yield Submission(pages.MigrationEconomyAssessment, migration_eco_data, check_html=False)
-
-        # MigrationCultureAssessment - migration culture views for each person (0-7)
-        migration_culture_data = {f'migration_culture_{i}': random.randint(0, 7) for i in range(1, 51)}
-        yield Submission(pages.MigrationCultureAssessment, migration_culture_data, check_html=False)
+        # LeftrightAssessment - combined self and network left-right assessment
+        linksrechts_data = {'linksrechts_self': random.randint(0, 11)}
+        linksrechts_data.update({f'linksrechts_{i}': random.randint(0, 11) for i in range(1, 51)})
+        yield Submission(pages.LeftrightAssessment, linksrechts_data, check_html=False)

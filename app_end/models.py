@@ -97,7 +97,7 @@ class Player(BasePlayer):
 
     network_narrative = models.LongStringField(blank=True)
 
-    #time_rnumber= models.StringField(initial="-999")
+    time_rnumber = models.StringField(initial="-999")
     #link_check = models.StringField(blank=True)
 #     randomnumber_vl_1 = models.IntegerField()
 #     randomnumber_vl_2 = models.IntegerField()
