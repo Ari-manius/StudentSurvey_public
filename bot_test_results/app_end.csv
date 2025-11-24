@@ -1,0 +1,11 @@
+participant.id_in_session,participant.code,participant.label,participant._is_bot,participant._index_in_pages,participant._max_page_index,participant._current_app_name,participant._current_page_name,participant.time_started_utc,participant.visited,participant.mturk_worker_id,participant.mturk_assignment_id,participant.payoff,player.id_in_group,player.role,player.payoff,player.group_assignment,player.rnumber,player.rnumbercheck,player.feedback,player.time_firstendpage,player.time_endpage,player.network_narrative,group.id_in_subsession,subsession.round_number,session.code,session.label,session.mturk_HITId,session.mturk_HITGroupId,session.comment,session.is_demo
+1,1ah4k5nj,,1,29,28,app_end,End,2025-11-22 18:20:14.757921,1,,,0.0,1,,0.0,2,288329,None_288329,Thank you,22,1,Great survey!,1,1,ah79ub28,,,,,0
+2,rs11d2id,,1,29,28,app_end,End,2025-11-22 18:20:14.774923,1,,,0.0,2,,0.0,1,713546,None_713546,,21,2,No comments,1,1,ah79ub28,,,,,0
+3,k3olv5bf,,1,29,28,app_end,End,2025-11-22 18:20:14.780854,1,,,0.0,3,,0.0,0,109635,None_109635,Thank you,37,2,Great survey!,1,1,ah79ub28,,,,,0
+4,c5hpua0v,,1,29,28,app_end,End,2025-11-22 18:20:14.786371,1,,,0.0,4,,0.0,2,762085,None_762085,Thank you,37,5,,1,1,ah79ub28,,,,,0
+5,kxk3oy4z,,1,29,28,app_end,End,2025-11-22 18:20:14.792158,1,,,0.0,5,,0.0,0,935384,None_935384,,40,5,Great survey!,1,1,ah79ub28,,,,,0
+6,vf6kigfk,,1,29,28,app_end,End,2025-11-22 18:20:14.797362,1,,,0.0,6,,0.0,1,903236,None_903236,Thank you,24,1,No comments,1,1,ah79ub28,,,,,0
+7,rnnv0fqe,,1,29,28,app_end,End,2025-11-22 18:20:14.803214,1,,,0.0,7,,0.0,2,294088,None_294088,Good survey,32,3,Interesting questions,1,1,ah79ub28,,,,,0
+8,4xq1weeb,,1,29,28,app_end,End,2025-11-22 18:20:14.808946,1,,,0.0,8,,0.0,2,446297,None_446297,Good survey,35,4,Great survey!,1,1,ah79ub28,,,,,0
+9,5j1e86r9,,1,29,28,app_end,End,2025-11-22 18:20:14.814644,1,,,0.0,9,,0.0,1,376754,None_376754,Thank you,27,2,Great survey!,1,1,ah79ub28,,,,,0
+10,0ge6vo2j,,1,29,28,app_end,End,2025-11-22 18:20:14.819939,1,,,0.0,10,,0.0,2,775499,None_775499,Good survey,25,4,Interesting questions,1,1,ah79ub28,,,,,0

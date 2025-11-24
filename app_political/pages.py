@@ -46,7 +46,7 @@ class ScaloPerson(Page): #7
         }
     form_model = Player
     form_fields = ['scalo_pep1', 'scalo_pep2', 'scalo_pep3', 'scalo_pep4', 'scalo_pep5', 'scalo_pep6', 'scalo_pep7', 'scalo_pep8',
-                   'scalo_pep9', 'scalo_pep10', 'scalo_pep11', 'scalo_pep12', 'scalo_pep13', 'scalo_pep14', 'scalo_pep15', 'scalo_pep16', 'scalo_pep17', 'scalo_pep18', 'scalo_pep19', 'scalo_pep20']
+                   'scalo_pep9', 'scalo_pep10', 'scalo_pep11', 'scalo_pep12', 'scalo_pep13', 'scalo_pep14', 'scalo_pep15', 'scalo_pep16', 'scalo_pep17', 'scalo_pep18', 'scalo_pep19', 'scalo_pep20', 'scalo_pep21','scalo_pep22','scalo_pep23','scalo_pep24','scalo_pep25','scalo_pep26']
 
 class LeftRightParty(Page): #9
     def vars_for_template(self):

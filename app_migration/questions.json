@@ -90,7 +90,7 @@
         "type": "radio",
         "text": {
           "german": "Einwanderung belastet unser Sozialsystem übermäßig.",
-          "english": "Immigration burdening is our social "
+          "english": "Immigration burdening is our social."
         },
         "options": [
           {
@@ -132,7 +132,7 @@
         "type": "radio",
         "text": {
           "german": "Deutschland sollte die Zuwanderung insgesamt stärker begrenzen als bisher.",
-          "english": "Germany should limit immigration more than now"
+          "english": "Germany should limit immigration more than now."
         },
         "options": [
           {

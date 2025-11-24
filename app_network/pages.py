@@ -18,16 +18,6 @@ class NetworkNamedPersons(Page):
     def vars_for_template(self):
         return {'lang': self.participant.vars.get('language')}
 
-class AcademicNetworkAssessment(Page): #8
-    form_model = Player
-    form_fields = ['grade_1', 'grade_2', 'grade_3', 'grade_4', 'grade_5', 'grade_6', 'grade_7', 'grade_8', 'grade_9', 'grade_10', 'grade_11',
-                   'grade_12', 'grade_13', 'grade_14', 'grade_15', 'grade_16', 'grade_17', 'grade_18', 'grade_19', 'grade_20', 'grade_21',
-                   'grade_22', 'grade_23', 'grade_24', 'grade_25', 'grade_26', 'grade_27', 'grade_28', 'grade_29', 'grade_30', 'grade_31',
-                   'grade_32', 'grade_33', 'grade_34', 'grade_35', 'grade_36', 'grade_37', 'grade_38', 'grade_39', 'grade_40', 'grade_41',
-                   'grade_42', 'grade_43', 'grade_44', 'grade_45', 'grade_46', 'grade_47', 'grade_48', 'grade_49', 'grade_50']
-    def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
-
 class GroupAssessment(Page): #8
     def vars_for_template(self):
         return {'lang': self.participant.vars.get('language')}
@@ -94,15 +84,10 @@ class SpecialNetworks(Page): #8
         'friend_49', 'old_49', 'politics_49', 'support_49', 'study_49',
         'friend_50', 'old_50', 'politics_50', 'support_50', 'study_50']              
                    
-class LeftrightSelfAssessment(Page): 
-    def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
+class LeftrightAssessment(Page):
     form_model = Player
-    form_fields = ['linksrechts_self']
-
-class LeftrightNetworkAssessment(Page): 
-    form_model = Player
-    form_fields = ['linksrechts_1', 'linksrechts_2', 'linksrechts_3', 'linksrechts_4', 'linksrechts_5', 'linksrechts_6', 'linksrechts_7', 'linksrechts_8', 'linksrechts_9', 'linksrechts_10', 'linksrechts_11',
+    form_fields = ['linksrechts_self',
+                   'linksrechts_1', 'linksrechts_2', 'linksrechts_3', 'linksrechts_4', 'linksrechts_5', 'linksrechts_6', 'linksrechts_7', 'linksrechts_8', 'linksrechts_9', 'linksrechts_10', 'linksrechts_11',
                    'linksrechts_12', 'linksrechts_13', 'linksrechts_14', 'linksrechts_15', 'linksrechts_16', 'linksrechts_17', 'linksrechts_18', 'linksrechts_19', 'linksrechts_20', 'linksrechts_21',
                    'linksrechts_22', 'linksrechts_23', 'linksrechts_24', 'linksrechts_25', 'linksrechts_26', 'linksrechts_27', 'linksrechts_28', 'linksrechts_29', 'linksrechts_30', 'linksrechts_31',
                    'linksrechts_32', 'linksrechts_33', 'linksrechts_34', 'linksrechts_35', 'linksrechts_36', 'linksrechts_37', 'linksrechts_38', 'linksrechts_39', 'linksrechts_40', 'linksrechts_41',
@@ -110,24 +95,4 @@ class LeftrightNetworkAssessment(Page):
     def vars_for_template(self):
         return {'lang': self.participant.vars.get('language')}
 
-class MigrationEconomyAssessment(Page): 
-    form_model = Player
-    form_fields = ['migration_eco_1', 'migration_eco_2', 'migration_eco_3', 'migration_eco_4', 'migration_eco_5', 'migration_eco_6', 'migration_eco_7', 'migration_eco_8', 'migration_eco_9', 'migration_eco_10', 'migration_eco_11',
-                   'migration_eco_12', 'migration_eco_13', 'migration_eco_14', 'migration_eco_15', 'migration_eco_16', 'migration_eco_17', 'migration_eco_18', 'migration_eco_19', 'migration_eco_20', 'migration_eco_21',
-                   'migration_eco_22', 'migration_eco_23', 'migration_eco_24', 'migration_eco_25', 'migration_eco_26', 'migration_eco_27', 'migration_eco_28', 'migration_eco_29', 'migration_eco_30', 'migration_eco_31',
-                   'migration_eco_32', 'migration_eco_33', 'migration_eco_34', 'migration_eco_35', 'migration_eco_36', 'migration_eco_37', 'migration_eco_38', 'migration_eco_39', 'migration_eco_40', 'migration_eco_41',
-                   'migration_eco_42', 'migration_eco_43', 'migration_eco_44', 'migration_eco_45', 'migration_eco_46', 'migration_eco_47', 'migration_eco_48', 'migration_eco_49', 'migration_eco_50']
-    def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
-
-class MigrationCultureAssessment(Page): 
-    form_model = Player
-    form_fields = ['migration_culture_1', 'migration_culture_2', 'migration_culture_3', 'migration_culture_4', 'migration_culture_5', 'migration_culture_6', 'migration_culture_7', 'migration_culture_8', 'migration_culture_9', 'migration_culture_10', 'migration_culture_11',
-                   'migration_culture_12', 'migration_culture_13', 'migration_culture_14', 'migration_culture_15', 'migration_culture_16', 'migration_culture_17', 'migration_culture_18', 'migration_culture_19', 'migration_culture_20', 'migration_culture_21',
-                   'migration_culture_22', 'migration_culture_23', 'migration_culture_24', 'migration_culture_25', 'migration_culture_26', 'migration_culture_27', 'migration_culture_28', 'migration_culture_29', 'migration_culture_30', 'migration_culture_31',
-                   'migration_culture_32', 'migration_culture_33', 'migration_culture_34', 'migration_culture_35', 'migration_culture_36', 'migration_culture_37', 'migration_culture_38', 'migration_culture_39', 'migration_culture_40', 'migration_culture_41',
-                   'migration_culture_42', 'migration_culture_43', 'migration_culture_44', 'migration_culture_45', 'migration_culture_46', 'migration_culture_47', 'migration_culture_48', 'migration_culture_49', 'migration_culture_50']
-    def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
-
-page_sequence = [NetworkNamedPersons, SpecialNetworks, GroupAssessment, AcademicNetworkAssessment, LeftrightSelfAssessment, LeftrightNetworkAssessment, MigrationEconomyAssessment, MigrationCultureAssessment] 
+page_sequence = [NetworkNamedPersons, SpecialNetworks, GroupAssessment, LeftrightAssessment] 

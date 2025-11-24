@@ -1,0 +1,11 @@
+participant.id_in_session,participant.code,participant.label,participant._is_bot,participant._index_in_pages,participant._max_page_index,participant._current_app_name,participant._current_page_name,participant.time_started_utc,participant.visited,participant.mturk_worker_id,participant.mturk_assignment_id,participant.payoff,player.id_in_group,player.role,player.payoff,player.age,player.gender,player.postcode,player.secondary_year,player.edu_family_1gen_m,player.edu_family_1gen_f,player.edu_family_2gen_m1,player.edu_family_2gen_f1,player.edu_family_2gen_m2,player.edu_family_2gen_f2,player.financial_situation_personal_current,player.financial_situation_general_current,player.financial_situation_personal_future,player.financial_situation_general_future,player.time_work,group.id_in_subsession,subsession.round_number,session.code,session.label,session.mturk_HITId,session.mturk_HITGroupId,session.comment,session.is_demo
+1,1ah4k5nj,,1,29,28,app_end,End,2025-11-22 18:20:14.757921,1,,,0.0,1,,0.0,2004,4,72,2017,9,4,7,0,6,4,4,9,5,10,17,1,1,ah79ub28,,,,,0
+2,rs11d2id,,1,29,28,app_end,End,2025-11-22 18:20:14.774923,1,,,0.0,2,,0.0,2008,5,17,2011,7,5,5,4,0,5,6,4,7,9,6,1,1,ah79ub28,,,,,0
+3,k3olv5bf,,1,29,28,app_end,End,2025-11-22 18:20:14.780854,1,,,0.0,3,,0.0,2005,5,65,2014,2,5,0,6,3,11,10,4,5,10,36,1,1,ah79ub28,,,,,0
+4,c5hpua0v,,1,29,28,app_end,End,2025-11-22 18:20:14.786371,1,,,0.0,4,,0.0,2002,8,67,2012,1,1,9,5,6,8,2,9,9,3,28,1,1,ah79ub28,,,,,0
+5,kxk3oy4z,,1,29,28,app_end,End,2025-11-22 18:20:14.792158,1,,,0.0,5,,0.0,2005,2,38,2010,7,1,10,4,6,0,6,9,4,0,10,1,1,ah79ub28,,,,,0
+6,vf6kigfk,,1,29,28,app_end,End,2025-11-22 18:20:14.797362,1,,,0.0,6,,0.0,2003,2,65,2021,11,4,11,2,8,4,3,3,7,6,0,1,1,ah79ub28,,,,,0
+7,rnnv0fqe,,1,29,28,app_end,End,2025-11-22 18:20:14.803214,1,,,0.0,7,,0.0,2001,5,10,2017,1,3,9,2,2,2,2,4,0,7,17,1,1,ah79ub28,,,,,0
+8,4xq1weeb,,1,29,28,app_end,End,2025-11-22 18:20:14.808946,1,,,0.0,8,,0.0,2000,6,71,2017,1,0,6,4,6,2,6,10,4,9,13,1,1,ah79ub28,,,,,0
+9,5j1e86r9,,1,29,28,app_end,End,2025-11-22 18:20:14.814644,1,,,0.0,9,,0.0,2008,4,58,2015,6,8,4,0,8,4,9,9,2,4,31,1,1,ah79ub28,,,,,0
+10,0ge6vo2j,,1,29,28,app_end,End,2025-11-22 18:20:14.819939,1,,,0.0,10,,0.0,2000,7,45,2022,1,1,9,1,0,11,1,1,0,4,32,1,1,ah79ub28,,,,,0

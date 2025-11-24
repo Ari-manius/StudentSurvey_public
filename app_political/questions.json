@@ -457,6 +457,66 @@
           "german": "Greta Thunberg",
           "english": "Greta Thunberg"
         }
+      },
+      {
+        "field": "scalo_pep21",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Cem Özdemir",
+          "english": "Cem Özdemir"
+        }
+      },
+      {
+        "field": "scalo_pep22",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Manuel Hagen",
+          "english": "Manuel Hagen"
+        }
+      },
+      {
+        "field": "scalo_pep23",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Andreas Stoch",
+          "english": "Andreas Stoch"
+        }
+      },
+      {
+        "field": "scalo_pep24",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Hans-Ulrich Rülke",
+          "english": "Hans-Ulrich Rülke"
+        }
+      },
+      {
+        "field": "scalo_pep25",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Markus Frohnmaier",
+          "english": "Markus Frohnmaier"
+        }
+      },
+      {
+        "field": "scalo_pep26",
+        "type": "scale",
+        "scale_min": -5,
+        "scale_max": 5,
+        "text": {
+          "german": "Kim Sophie Bohnen",
+          "english": "Kim Sophie Bohnen"
+        }
       }
     ]
   },

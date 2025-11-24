@@ -13,6 +13,8 @@
 <div class="container">
    <input id="time" type="hidden" name="time_tutorial_expected_grade"/>
 
+   <!-- Section 1: Self Assessment (tutorial, time, grade) -->
+
    {% for question in questions %}
        <div class="mb-3 border pt-2 pb-2 px-2">
           <p class="german">{{ question.text.german }}</p>
@@ -36,6 +38,943 @@
        </div>
    {% endfor %}
 
+   <hr style="margin-top: 40px; margin-bottom: 40px;">
+
+   <!-- Section 2: Network Grade Assessment -->
+   {% if network_player %}
+
+   <div class="mb-3 border pt-2 pb-2 px-2">
+       <p class="german">Welche Abschlussnoten für die Klausur dieser Vorlesung erwarten Sie für die Personen, von denen Sie zuvor den Code erhalten haben?</p>
+       <p class="english">What final grades for the exam of this lecture would you expect, for the people you have exchanged your codes with?</p>
+       
+       <div class="table-responsive">
+           <table class="table table-sm">
+               <thead>
+               <tr>
+                   <td></td>
+                   <th><p>1,0</p></th>
+                   <th><p>1,3</p></th>
+                   <th><p>1,7</p></th>
+                   <th><p>2,0</p></th>
+                   <th><p>2,3</p></th>
+                   <th><p>2,7</p></th>
+                   <th><p>3,0</p></th>
+                   <th><p>3,3</p></th>
+                   <th><p>3,7</p></th>
+                   <th><p>4,0</p></th>
+                   <th><p>5,0</p></th>
+                   <th><p class="german">Weiß nicht</p><p class="english">Don't know</p></th>
+               </tr>
+               </thead>
+               
+               <tbody>
+                   {% if network_player.person_1 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_1 }}</th>
+                       <td><input type="radio" name="grade_1" value="1"></td>
+                       <td><input type="radio" name="grade_1" value="2"></td>
+                       <td><input type="radio" name="grade_1" value="3"></td>
+                       <td><input type="radio" name="grade_1" value="4"></td>
+                       <td><input type="radio" name="grade_1" value="5"></td>
+                       <td><input type="radio" name="grade_1" value="6"></td>
+                       <td><input type="radio" name="grade_1" value="7"></td>
+                       <td><input type="radio" name="grade_1" value="8"></td>
+                       <td><input type="radio" name="grade_1" value="9"></td>
+                       <td><input type="radio" name="grade_1" value="10"></td>
+                       <td><input type="radio" name="grade_1" value="11"></td>
+                       <td><input type="radio" name="grade_1" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_2 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_2 }}</th>
+                       <td><input type="radio" name="grade_2" value="1"></td>
+                       <td><input type="radio" name="grade_2" value="2"></td>
+                       <td><input type="radio" name="grade_2" value="3"></td>
+                       <td><input type="radio" name="grade_2" value="4"></td>
+                       <td><input type="radio" name="grade_2" value="5"></td>
+                       <td><input type="radio" name="grade_2" value="6"></td>
+                       <td><input type="radio" name="grade_2" value="7"></td>
+                       <td><input type="radio" name="grade_2" value="8"></td>
+                       <td><input type="radio" name="grade_2" value="9"></td>
+                       <td><input type="radio" name="grade_2" value="10"></td>
+                       <td><input type="radio" name="grade_2" value="11"></td>
+                       <td><input type="radio" name="grade_2" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_3 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_3 }}</th>
+                       <td><input type="radio" name="grade_3" value="1"></td>
+                       <td><input type="radio" name="grade_3" value="2"></td>
+                       <td><input type="radio" name="grade_3" value="3"></td>
+                       <td><input type="radio" name="grade_3" value="4"></td>
+                       <td><input type="radio" name="grade_3" value="5"></td>
+                       <td><input type="radio" name="grade_3" value="6"></td>
+                       <td><input type="radio" name="grade_3" value="7"></td>
+                       <td><input type="radio" name="grade_3" value="8"></td>
+                       <td><input type="radio" name="grade_3" value="9"></td>
+                       <td><input type="radio" name="grade_3" value="10"></td>
+                       <td><input type="radio" name="grade_3" value="11"></td>
+                       <td><input type="radio" name="grade_3" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_4 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_4 }}</th>
+                       <td><input type="radio" name="grade_4" value="1"></td>
+                       <td><input type="radio" name="grade_4" value="2"></td>
+                       <td><input type="radio" name="grade_4" value="3"></td>
+                       <td><input type="radio" name="grade_4" value="4"></td>
+                       <td><input type="radio" name="grade_4" value="5"></td>
+                       <td><input type="radio" name="grade_4" value="6"></td>
+                       <td><input type="radio" name="grade_4" value="7"></td>
+                       <td><input type="radio" name="grade_4" value="8"></td>
+                       <td><input type="radio" name="grade_4" value="9"></td>
+                       <td><input type="radio" name="grade_4" value="10"></td>
+                       <td><input type="radio" name="grade_4" value="11"></td>
+                       <td><input type="radio" name="grade_4" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_5 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_5 }}</th>
+                       <td><input type="radio" name="grade_5" value="1"></td>
+                       <td><input type="radio" name="grade_5" value="2"></td>
+                       <td><input type="radio" name="grade_5" value="3"></td>
+                       <td><input type="radio" name="grade_5" value="4"></td>
+                       <td><input type="radio" name="grade_5" value="5"></td>
+                       <td><input type="radio" name="grade_5" value="6"></td>
+                       <td><input type="radio" name="grade_5" value="7"></td>
+                       <td><input type="radio" name="grade_5" value="8"></td>
+                       <td><input type="radio" name="grade_5" value="9"></td>
+                       <td><input type="radio" name="grade_5" value="10"></td>
+                       <td><input type="radio" name="grade_5" value="11"></td>
+                       <td><input type="radio" name="grade_5" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_6 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_6 }}</th>
+                       <td><input type="radio" name="grade_6" value="1"></td>
+                       <td><input type="radio" name="grade_6" value="2"></td>
+                       <td><input type="radio" name="grade_6" value="3"></td>
+                       <td><input type="radio" name="grade_6" value="4"></td>
+                       <td><input type="radio" name="grade_6" value="5"></td>
+                       <td><input type="radio" name="grade_6" value="6"></td>
+                       <td><input type="radio" name="grade_6" value="7"></td>
+                       <td><input type="radio" name="grade_6" value="8"></td>
+                       <td><input type="radio" name="grade_6" value="9"></td>
+                       <td><input type="radio" name="grade_6" value="10"></td>
+                       <td><input type="radio" name="grade_6" value="11"></td>
+                       <td><input type="radio" name="grade_6" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_7 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_7 }}</th>
+                       <td><input type="radio" name="grade_7" value="1"></td>
+                       <td><input type="radio" name="grade_7" value="2"></td>
+                       <td><input type="radio" name="grade_7" value="3"></td>
+                       <td><input type="radio" name="grade_7" value="4"></td>
+                       <td><input type="radio" name="grade_7" value="5"></td>
+                       <td><input type="radio" name="grade_7" value="6"></td>
+                       <td><input type="radio" name="grade_7" value="7"></td>
+                       <td><input type="radio" name="grade_7" value="8"></td>
+                       <td><input type="radio" name="grade_7" value="9"></td>
+                       <td><input type="radio" name="grade_7" value="10"></td>
+                       <td><input type="radio" name="grade_7" value="11"></td>
+                       <td><input type="radio" name="grade_7" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_8 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_8 }}</th>
+                       <td><input type="radio" name="grade_8" value="1"></td>
+                       <td><input type="radio" name="grade_8" value="2"></td>
+                       <td><input type="radio" name="grade_8" value="3"></td>
+                       <td><input type="radio" name="grade_8" value="4"></td>
+                       <td><input type="radio" name="grade_8" value="5"></td>
+                       <td><input type="radio" name="grade_8" value="6"></td>
+                       <td><input type="radio" name="grade_8" value="7"></td>
+                       <td><input type="radio" name="grade_8" value="8"></td>
+                       <td><input type="radio" name="grade_8" value="9"></td>
+                       <td><input type="radio" name="grade_8" value="10"></td>
+                       <td><input type="radio" name="grade_8" value="11"></td>
+                       <td><input type="radio" name="grade_8" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_9 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_9 }}</th>
+                       <td><input type="radio" name="grade_9" value="1"></td>
+                       <td><input type="radio" name="grade_9" value="2"></td>
+                       <td><input type="radio" name="grade_9" value="3"></td>
+                       <td><input type="radio" name="grade_9" value="4"></td>
+                       <td><input type="radio" name="grade_9" value="5"></td>
+                       <td><input type="radio" name="grade_9" value="6"></td>
+                       <td><input type="radio" name="grade_9" value="7"></td>
+                       <td><input type="radio" name="grade_9" value="8"></td>
+                       <td><input type="radio" name="grade_9" value="9"></td>
+                       <td><input type="radio" name="grade_9" value="10"></td>
+                       <td><input type="radio" name="grade_9" value="11"></td>
+                       <td><input type="radio" name="grade_9" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_10 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_10 }}</th>
+                       <td><input type="radio" name="grade_10" value="1"></td>
+                       <td><input type="radio" name="grade_10" value="2"></td>
+                       <td><input type="radio" name="grade_10" value="3"></td>
+                       <td><input type="radio" name="grade_10" value="4"></td>
+                       <td><input type="radio" name="grade_10" value="5"></td>
+                       <td><input type="radio" name="grade_10" value="6"></td>
+                       <td><input type="radio" name="grade_10" value="7"></td>
+                       <td><input type="radio" name="grade_10" value="8"></td>
+                       <td><input type="radio" name="grade_10" value="9"></td>
+                       <td><input type="radio" name="grade_10" value="10"></td>
+                       <td><input type="radio" name="grade_10" value="11"></td>
+                       <td><input type="radio" name="grade_10" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_11 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_11 }}</th>
+                       <td><input type="radio" name="grade_11" value="1"></td>
+                       <td><input type="radio" name="grade_11" value="2"></td>
+                       <td><input type="radio" name="grade_11" value="3"></td>
+                       <td><input type="radio" name="grade_11" value="4"></td>
+                       <td><input type="radio" name="grade_11" value="5"></td>
+                       <td><input type="radio" name="grade_11" value="6"></td>
+                       <td><input type="radio" name="grade_11" value="7"></td>
+                       <td><input type="radio" name="grade_11" value="8"></td>
+                       <td><input type="radio" name="grade_11" value="9"></td>
+                       <td><input type="radio" name="grade_11" value="10"></td>
+                       <td><input type="radio" name="grade_11" value="11"></td>
+                       <td><input type="radio" name="grade_11" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_12 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_12 }}</th>
+                       <td><input type="radio" name="grade_12" value="1"></td>
+                       <td><input type="radio" name="grade_12" value="2"></td>
+                       <td><input type="radio" name="grade_12" value="3"></td>
+                       <td><input type="radio" name="grade_12" value="4"></td>
+                       <td><input type="radio" name="grade_12" value="5"></td>
+                       <td><input type="radio" name="grade_12" value="6"></td>
+                       <td><input type="radio" name="grade_12" value="7"></td>
+                       <td><input type="radio" name="grade_12" value="8"></td>
+                       <td><input type="radio" name="grade_12" value="9"></td>
+                       <td><input type="radio" name="grade_12" value="10"></td>
+                       <td><input type="radio" name="grade_12" value="11"></td>
+                       <td><input type="radio" name="grade_12" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_13 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_13 }}</th>
+                       <td><input type="radio" name="grade_13" value="1"></td>
+                       <td><input type="radio" name="grade_13" value="2"></td>
+                       <td><input type="radio" name="grade_13" value="3"></td>
+                       <td><input type="radio" name="grade_13" value="4"></td>
+                       <td><input type="radio" name="grade_13" value="5"></td>
+                       <td><input type="radio" name="grade_13" value="6"></td>
+                       <td><input type="radio" name="grade_13" value="7"></td>
+                       <td><input type="radio" name="grade_13" value="8"></td>
+                       <td><input type="radio" name="grade_13" value="9"></td>
+                       <td><input type="radio" name="grade_13" value="10"></td>
+                       <td><input type="radio" name="grade_13" value="11"></td>
+                       <td><input type="radio" name="grade_13" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_14 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_14 }}</th>
+                       <td><input type="radio" name="grade_14" value="1"></td>
+                       <td><input type="radio" name="grade_14" value="2"></td>
+                       <td><input type="radio" name="grade_14" value="3"></td>
+                       <td><input type="radio" name="grade_14" value="4"></td>
+                       <td><input type="radio" name="grade_14" value="5"></td>
+                       <td><input type="radio" name="grade_14" value="6"></td>
+                       <td><input type="radio" name="grade_14" value="7"></td>
+                       <td><input type="radio" name="grade_14" value="8"></td>
+                       <td><input type="radio" name="grade_14" value="9"></td>
+                       <td><input type="radio" name="grade_14" value="10"></td>
+                       <td><input type="radio" name="grade_14" value="11"></td>
+                       <td><input type="radio" name="grade_14" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_15 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_15 }}</th>
+                       <td><input type="radio" name="grade_15" value="1"></td>
+                       <td><input type="radio" name="grade_15" value="2"></td>
+                       <td><input type="radio" name="grade_15" value="3"></td>
+                       <td><input type="radio" name="grade_15" value="4"></td>
+                       <td><input type="radio" name="grade_15" value="5"></td>
+                       <td><input type="radio" name="grade_15" value="6"></td>
+                       <td><input type="radio" name="grade_15" value="7"></td>
+                       <td><input type="radio" name="grade_15" value="8"></td>
+                       <td><input type="radio" name="grade_15" value="9"></td>
+                       <td><input type="radio" name="grade_15" value="10"></td>
+                       <td><input type="radio" name="grade_15" value="11"></td>
+                       <td><input type="radio" name="grade_15" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_16 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_16 }}</th>
+                       <td><input type="radio" name="grade_16" value="1"></td>
+                       <td><input type="radio" name="grade_16" value="2"></td>
+                       <td><input type="radio" name="grade_16" value="3"></td>
+                       <td><input type="radio" name="grade_16" value="4"></td>
+                       <td><input type="radio" name="grade_16" value="5"></td>
+                       <td><input type="radio" name="grade_16" value="6"></td>
+                       <td><input type="radio" name="grade_16" value="7"></td>
+                       <td><input type="radio" name="grade_16" value="8"></td>
+                       <td><input type="radio" name="grade_16" value="9"></td>
+                       <td><input type="radio" name="grade_16" value="10"></td>
+                       <td><input type="radio" name="grade_16" value="11"></td>
+                       <td><input type="radio" name="grade_16" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_17 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_17 }}</th>
+                       <td><input type="radio" name="grade_17" value="1"></td>
+                       <td><input type="radio" name="grade_17" value="2"></td>
+                       <td><input type="radio" name="grade_17" value="3"></td>
+                       <td><input type="radio" name="grade_17" value="4"></td>
+                       <td><input type="radio" name="grade_17" value="5"></td>
+                       <td><input type="radio" name="grade_17" value="6"></td>
+                       <td><input type="radio" name="grade_17" value="7"></td>
+                       <td><input type="radio" name="grade_17" value="8"></td>
+                       <td><input type="radio" name="grade_17" value="9"></td>
+                       <td><input type="radio" name="grade_17" value="10"></td>
+                       <td><input type="radio" name="grade_17" value="11"></td>
+                       <td><input type="radio" name="grade_17" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_18 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_18 }}</th>
+                       <td><input type="radio" name="grade_18" value="1"></td>
+                       <td><input type="radio" name="grade_18" value="2"></td>
+                       <td><input type="radio" name="grade_18" value="3"></td>
+                       <td><input type="radio" name="grade_18" value="4"></td>
+                       <td><input type="radio" name="grade_18" value="5"></td>
+                       <td><input type="radio" name="grade_18" value="6"></td>
+                       <td><input type="radio" name="grade_18" value="7"></td>
+                       <td><input type="radio" name="grade_18" value="8"></td>
+                       <td><input type="radio" name="grade_18" value="9"></td>
+                       <td><input type="radio" name="grade_18" value="10"></td>
+                       <td><input type="radio" name="grade_18" value="11"></td>
+                       <td><input type="radio" name="grade_18" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_19 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_19 }}</th>
+                       <td><input type="radio" name="grade_19" value="1"></td>
+                       <td><input type="radio" name="grade_19" value="2"></td>
+                       <td><input type="radio" name="grade_19" value="3"></td>
+                       <td><input type="radio" name="grade_19" value="4"></td>
+                       <td><input type="radio" name="grade_19" value="5"></td>
+                       <td><input type="radio" name="grade_19" value="6"></td>
+                       <td><input type="radio" name="grade_19" value="7"></td>
+                       <td><input type="radio" name="grade_19" value="8"></td>
+                       <td><input type="radio" name="grade_19" value="9"></td>
+                       <td><input type="radio" name="grade_19" value="10"></td>
+                       <td><input type="radio" name="grade_19" value="11"></td>
+                       <td><input type="radio" name="grade_19" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_20 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_20 }}</th>
+                       <td><input type="radio" name="grade_20" value="1"></td>
+                       <td><input type="radio" name="grade_20" value="2"></td>
+                       <td><input type="radio" name="grade_20" value="3"></td>
+                       <td><input type="radio" name="grade_20" value="4"></td>
+                       <td><input type="radio" name="grade_20" value="5"></td>
+                       <td><input type="radio" name="grade_20" value="6"></td>
+                       <td><input type="radio" name="grade_20" value="7"></td>
+                       <td><input type="radio" name="grade_20" value="8"></td>
+                       <td><input type="radio" name="grade_20" value="9"></td>
+                       <td><input type="radio" name="grade_20" value="10"></td>
+                       <td><input type="radio" name="grade_20" value="11"></td>
+                       <td><input type="radio" name="grade_20" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_21 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_21 }}</th>
+                       <td><input type="radio" name="grade_21" value="1"></td>
+                       <td><input type="radio" name="grade_21" value="2"></td>
+                       <td><input type="radio" name="grade_21" value="3"></td>
+                       <td><input type="radio" name="grade_21" value="4"></td>
+                       <td><input type="radio" name="grade_21" value="5"></td>
+                       <td><input type="radio" name="grade_21" value="6"></td>
+                       <td><input type="radio" name="grade_21" value="7"></td>
+                       <td><input type="radio" name="grade_21" value="8"></td>
+                       <td><input type="radio" name="grade_21" value="9"></td>
+                       <td><input type="radio" name="grade_21" value="10"></td>
+                       <td><input type="radio" name="grade_21" value="11"></td>
+                       <td><input type="radio" name="grade_21" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_22 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_22 }}</th>
+                       <td><input type="radio" name="grade_22" value="1"></td>
+                       <td><input type="radio" name="grade_22" value="2"></td>
+                       <td><input type="radio" name="grade_22" value="3"></td>
+                       <td><input type="radio" name="grade_22" value="4"></td>
+                       <td><input type="radio" name="grade_22" value="5"></td>
+                       <td><input type="radio" name="grade_22" value="6"></td>
+                       <td><input type="radio" name="grade_22" value="7"></td>
+                       <td><input type="radio" name="grade_22" value="8"></td>
+                       <td><input type="radio" name="grade_22" value="9"></td>
+                       <td><input type="radio" name="grade_22" value="10"></td>
+                       <td><input type="radio" name="grade_22" value="11"></td>
+                       <td><input type="radio" name="grade_22" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_23 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_23 }}</th>
+                       <td><input type="radio" name="grade_23" value="1"></td>
+                       <td><input type="radio" name="grade_23" value="2"></td>
+                       <td><input type="radio" name="grade_23" value="3"></td>
+                       <td><input type="radio" name="grade_23" value="4"></td>
+                       <td><input type="radio" name="grade_23" value="5"></td>
+                       <td><input type="radio" name="grade_23" value="6"></td>
+                       <td><input type="radio" name="grade_23" value="7"></td>
+                       <td><input type="radio" name="grade_23" value="8"></td>
+                       <td><input type="radio" name="grade_23" value="9"></td>
+                       <td><input type="radio" name="grade_23" value="10"></td>
+                       <td><input type="radio" name="grade_23" value="11"></td>
+                       <td><input type="radio" name="grade_23" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_24 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_24 }}</th>
+                       <td><input type="radio" name="grade_24" value="1"></td>
+                       <td><input type="radio" name="grade_24" value="2"></td>
+                       <td><input type="radio" name="grade_24" value="3"></td>
+                       <td><input type="radio" name="grade_24" value="4"></td>
+                       <td><input type="radio" name="grade_24" value="5"></td>
+                       <td><input type="radio" name="grade_24" value="6"></td>
+                       <td><input type="radio" name="grade_24" value="7"></td>
+                       <td><input type="radio" name="grade_24" value="8"></td>
+                       <td><input type="radio" name="grade_24" value="9"></td>
+                       <td><input type="radio" name="grade_24" value="10"></td>
+                       <td><input type="radio" name="grade_24" value="11"></td>
+                       <td><input type="radio" name="grade_24" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_25 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_25 }}</th>
+                       <td><input type="radio" name="grade_25" value="1"></td>
+                       <td><input type="radio" name="grade_25" value="2"></td>
+                       <td><input type="radio" name="grade_25" value="3"></td>
+                       <td><input type="radio" name="grade_25" value="4"></td>
+                       <td><input type="radio" name="grade_25" value="5"></td>
+                       <td><input type="radio" name="grade_25" value="6"></td>
+                       <td><input type="radio" name="grade_25" value="7"></td>
+                       <td><input type="radio" name="grade_25" value="8"></td>
+                       <td><input type="radio" name="grade_25" value="9"></td>
+                       <td><input type="radio" name="grade_25" value="10"></td>
+                       <td><input type="radio" name="grade_25" value="11"></td>
+                       <td><input type="radio" name="grade_25" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_26 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_26 }}</th>
+                       <td><input type="radio" name="grade_26" value="1"></td>
+                       <td><input type="radio" name="grade_26" value="2"></td>
+                       <td><input type="radio" name="grade_26" value="3"></td>
+                       <td><input type="radio" name="grade_26" value="4"></td>
+                       <td><input type="radio" name="grade_26" value="5"></td>
+                       <td><input type="radio" name="grade_26" value="6"></td>
+                       <td><input type="radio" name="grade_26" value="7"></td>
+                       <td><input type="radio" name="grade_26" value="8"></td>
+                       <td><input type="radio" name="grade_26" value="9"></td>
+                       <td><input type="radio" name="grade_26" value="10"></td>
+                       <td><input type="radio" name="grade_26" value="11"></td>
+                       <td><input type="radio" name="grade_26" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_27 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_27 }}</th>
+                       <td><input type="radio" name="grade_27" value="1"></td>
+                       <td><input type="radio" name="grade_27" value="2"></td>
+                       <td><input type="radio" name="grade_27" value="3"></td>
+                       <td><input type="radio" name="grade_27" value="4"></td>
+                       <td><input type="radio" name="grade_27" value="5"></td>
+                       <td><input type="radio" name="grade_27" value="6"></td>
+                       <td><input type="radio" name="grade_27" value="7"></td>
+                       <td><input type="radio" name="grade_27" value="8"></td>
+                       <td><input type="radio" name="grade_27" value="9"></td>
+                       <td><input type="radio" name="grade_27" value="10"></td>
+                       <td><input type="radio" name="grade_27" value="11"></td>
+                       <td><input type="radio" name="grade_27" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_28 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_28 }}</th>
+                       <td><input type="radio" name="grade_28" value="1"></td>
+                       <td><input type="radio" name="grade_28" value="2"></td>
+                       <td><input type="radio" name="grade_28" value="3"></td>
+                       <td><input type="radio" name="grade_28" value="4"></td>
+                       <td><input type="radio" name="grade_28" value="5"></td>
+                       <td><input type="radio" name="grade_28" value="6"></td>
+                       <td><input type="radio" name="grade_28" value="7"></td>
+                       <td><input type="radio" name="grade_28" value="8"></td>
+                       <td><input type="radio" name="grade_28" value="9"></td>
+                       <td><input type="radio" name="grade_28" value="10"></td>
+                       <td><input type="radio" name="grade_28" value="11"></td>
+                       <td><input type="radio" name="grade_28" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_29 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_29 }}</th>
+                       <td><input type="radio" name="grade_29" value="1"></td>
+                       <td><input type="radio" name="grade_29" value="2"></td>
+                       <td><input type="radio" name="grade_29" value="3"></td>
+                       <td><input type="radio" name="grade_29" value="4"></td>
+                       <td><input type="radio" name="grade_29" value="5"></td>
+                       <td><input type="radio" name="grade_29" value="6"></td>
+                       <td><input type="radio" name="grade_29" value="7"></td>
+                       <td><input type="radio" name="grade_29" value="8"></td>
+                       <td><input type="radio" name="grade_29" value="9"></td>
+                       <td><input type="radio" name="grade_29" value="10"></td>
+                       <td><input type="radio" name="grade_29" value="11"></td>
+                       <td><input type="radio" name="grade_29" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_30 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_30 }}</th>
+                       <td><input type="radio" name="grade_30" value="1"></td>
+                       <td><input type="radio" name="grade_30" value="2"></td>
+                       <td><input type="radio" name="grade_30" value="3"></td>
+                       <td><input type="radio" name="grade_30" value="4"></td>
+                       <td><input type="radio" name="grade_30" value="5"></td>
+                       <td><input type="radio" name="grade_30" value="6"></td>
+                       <td><input type="radio" name="grade_30" value="7"></td>
+                       <td><input type="radio" name="grade_30" value="8"></td>
+                       <td><input type="radio" name="grade_30" value="9"></td>
+                       <td><input type="radio" name="grade_30" value="10"></td>
+                       <td><input type="radio" name="grade_30" value="11"></td>
+                       <td><input type="radio" name="grade_30" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_31 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_31 }}</th>
+                       <td><input type="radio" name="grade_31" value="1"></td>
+                       <td><input type="radio" name="grade_31" value="2"></td>
+                       <td><input type="radio" name="grade_31" value="3"></td>
+                       <td><input type="radio" name="grade_31" value="4"></td>
+                       <td><input type="radio" name="grade_31" value="5"></td>
+                       <td><input type="radio" name="grade_31" value="6"></td>
+                       <td><input type="radio" name="grade_31" value="7"></td>
+                       <td><input type="radio" name="grade_31" value="8"></td>
+                       <td><input type="radio" name="grade_31" value="9"></td>
+                       <td><input type="radio" name="grade_31" value="10"></td>
+                       <td><input type="radio" name="grade_31" value="11"></td>
+                       <td><input type="radio" name="grade_31" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_32 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_32 }}</th>
+                       <td><input type="radio" name="grade_32" value="1"></td>
+                       <td><input type="radio" name="grade_32" value="2"></td>
+                       <td><input type="radio" name="grade_32" value="3"></td>
+                       <td><input type="radio" name="grade_32" value="4"></td>
+                       <td><input type="radio" name="grade_32" value="5"></td>
+                       <td><input type="radio" name="grade_32" value="6"></td>
+                       <td><input type="radio" name="grade_32" value="7"></td>
+                       <td><input type="radio" name="grade_32" value="8"></td>
+                       <td><input type="radio" name="grade_32" value="9"></td>
+                       <td><input type="radio" name="grade_32" value="10"></td>
+                       <td><input type="radio" name="grade_32" value="11"></td>
+                       <td><input type="radio" name="grade_32" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_33 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_33 }}</th>
+                       <td><input type="radio" name="grade_33" value="1"></td>
+                       <td><input type="radio" name="grade_33" value="2"></td>
+                       <td><input type="radio" name="grade_33" value="3"></td>
+                       <td><input type="radio" name="grade_33" value="4"></td>
+                       <td><input type="radio" name="grade_33" value="5"></td>
+                       <td><input type="radio" name="grade_33" value="6"></td>
+                       <td><input type="radio" name="grade_33" value="7"></td>
+                       <td><input type="radio" name="grade_33" value="8"></td>
+                       <td><input type="radio" name="grade_33" value="9"></td>
+                       <td><input type="radio" name="grade_33" value="10"></td>
+                       <td><input type="radio" name="grade_33" value="11"></td>
+                       <td><input type="radio" name="grade_33" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_34 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_34 }}</th>
+                       <td><input type="radio" name="grade_34" value="1"></td>
+                       <td><input type="radio" name="grade_34" value="2"></td>
+                       <td><input type="radio" name="grade_34" value="3"></td>
+                       <td><input type="radio" name="grade_34" value="4"></td>
+                       <td><input type="radio" name="grade_34" value="5"></td>
+                       <td><input type="radio" name="grade_34" value="6"></td>
+                       <td><input type="radio" name="grade_34" value="7"></td>
+                       <td><input type="radio" name="grade_34" value="8"></td>
+                       <td><input type="radio" name="grade_34" value="9"></td>
+                       <td><input type="radio" name="grade_34" value="10"></td>
+                       <td><input type="radio" name="grade_34" value="11"></td>
+                       <td><input type="radio" name="grade_34" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_35 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_35 }}</th>
+                       <td><input type="radio" name="grade_35" value="1"></td>
+                       <td><input type="radio" name="grade_35" value="2"></td>
+                       <td><input type="radio" name="grade_35" value="3"></td>
+                       <td><input type="radio" name="grade_35" value="4"></td>
+                       <td><input type="radio" name="grade_35" value="5"></td>
+                       <td><input type="radio" name="grade_35" value="6"></td>
+                       <td><input type="radio" name="grade_35" value="7"></td>
+                       <td><input type="radio" name="grade_35" value="8"></td>
+                       <td><input type="radio" name="grade_35" value="9"></td>
+                       <td><input type="radio" name="grade_35" value="10"></td>
+                       <td><input type="radio" name="grade_35" value="11"></td>
+                       <td><input type="radio" name="grade_35" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_36 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_36 }}</th>
+                       <td><input type="radio" name="grade_36" value="1"></td>
+                       <td><input type="radio" name="grade_36" value="2"></td>
+                       <td><input type="radio" name="grade_36" value="3"></td>
+                       <td><input type="radio" name="grade_36" value="4"></td>
+                       <td><input type="radio" name="grade_36" value="5"></td>
+                       <td><input type="radio" name="grade_36" value="6"></td>
+                       <td><input type="radio" name="grade_36" value="7"></td>
+                       <td><input type="radio" name="grade_36" value="8"></td>
+                       <td><input type="radio" name="grade_36" value="9"></td>
+                       <td><input type="radio" name="grade_36" value="10"></td>
+                       <td><input type="radio" name="grade_36" value="11"></td>
+                       <td><input type="radio" name="grade_36" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_37 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_37 }}</th>
+                       <td><input type="radio" name="grade_37" value="1"></td>
+                       <td><input type="radio" name="grade_37" value="2"></td>
+                       <td><input type="radio" name="grade_37" value="3"></td>
+                       <td><input type="radio" name="grade_37" value="4"></td>
+                       <td><input type="radio" name="grade_37" value="5"></td>
+                       <td><input type="radio" name="grade_37" value="6"></td>
+                       <td><input type="radio" name="grade_37" value="7"></td>
+                       <td><input type="radio" name="grade_37" value="8"></td>
+                       <td><input type="radio" name="grade_37" value="9"></td>
+                       <td><input type="radio" name="grade_37" value="10"></td>
+                       <td><input type="radio" name="grade_37" value="11"></td>
+                       <td><input type="radio" name="grade_37" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_38 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_38 }}</th>
+                       <td><input type="radio" name="grade_38" value="1"></td>
+                       <td><input type="radio" name="grade_38" value="2"></td>
+                       <td><input type="radio" name="grade_38" value="3"></td>
+                       <td><input type="radio" name="grade_38" value="4"></td>
+                       <td><input type="radio" name="grade_38" value="5"></td>
+                       <td><input type="radio" name="grade_38" value="6"></td>
+                       <td><input type="radio" name="grade_38" value="7"></td>
+                       <td><input type="radio" name="grade_38" value="8"></td>
+                       <td><input type="radio" name="grade_38" value="9"></td>
+                       <td><input type="radio" name="grade_38" value="10"></td>
+                       <td><input type="radio" name="grade_38" value="11"></td>
+                       <td><input type="radio" name="grade_38" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_39 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_39 }}</th>
+                       <td><input type="radio" name="grade_39" value="1"></td>
+                       <td><input type="radio" name="grade_39" value="2"></td>
+                       <td><input type="radio" name="grade_39" value="3"></td>
+                       <td><input type="radio" name="grade_39" value="4"></td>
+                       <td><input type="radio" name="grade_39" value="5"></td>
+                       <td><input type="radio" name="grade_39" value="6"></td>
+                       <td><input type="radio" name="grade_39" value="7"></td>
+                       <td><input type="radio" name="grade_39" value="8"></td>
+                       <td><input type="radio" name="grade_39" value="9"></td>
+                       <td><input type="radio" name="grade_39" value="10"></td>
+                       <td><input type="radio" name="grade_39" value="11"></td>
+                       <td><input type="radio" name="grade_39" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_40 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_40 }}</th>
+                       <td><input type="radio" name="grade_40" value="1"></td>
+                       <td><input type="radio" name="grade_40" value="2"></td>
+                       <td><input type="radio" name="grade_40" value="3"></td>
+                       <td><input type="radio" name="grade_40" value="4"></td>
+                       <td><input type="radio" name="grade_40" value="5"></td>
+                       <td><input type="radio" name="grade_40" value="6"></td>
+                       <td><input type="radio" name="grade_40" value="7"></td>
+                       <td><input type="radio" name="grade_40" value="8"></td>
+                       <td><input type="radio" name="grade_40" value="9"></td>
+                       <td><input type="radio" name="grade_40" value="10"></td>
+                       <td><input type="radio" name="grade_40" value="11"></td>
+                       <td><input type="radio" name="grade_40" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_41 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_41 }}</th>
+                       <td><input type="radio" name="grade_41" value="1"></td>
+                       <td><input type="radio" name="grade_41" value="2"></td>
+                       <td><input type="radio" name="grade_41" value="3"></td>
+                       <td><input type="radio" name="grade_41" value="4"></td>
+                       <td><input type="radio" name="grade_41" value="5"></td>
+                       <td><input type="radio" name="grade_41" value="6"></td>
+                       <td><input type="radio" name="grade_41" value="7"></td>
+                       <td><input type="radio" name="grade_41" value="8"></td>
+                       <td><input type="radio" name="grade_41" value="9"></td>
+                       <td><input type="radio" name="grade_41" value="10"></td>
+                       <td><input type="radio" name="grade_41" value="11"></td>
+                       <td><input type="radio" name="grade_41" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_42 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_42 }}</th>
+                       <td><input type="radio" name="grade_42" value="1"></td>
+                       <td><input type="radio" name="grade_42" value="2"></td>
+                       <td><input type="radio" name="grade_42" value="3"></td>
+                       <td><input type="radio" name="grade_42" value="4"></td>
+                       <td><input type="radio" name="grade_42" value="5"></td>
+                       <td><input type="radio" name="grade_42" value="6"></td>
+                       <td><input type="radio" name="grade_42" value="7"></td>
+                       <td><input type="radio" name="grade_42" value="8"></td>
+                       <td><input type="radio" name="grade_42" value="9"></td>
+                       <td><input type="radio" name="grade_42" value="10"></td>
+                       <td><input type="radio" name="grade_42" value="11"></td>
+                       <td><input type="radio" name="grade_42" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_43 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_43 }}</th>
+                       <td><input type="radio" name="grade_43" value="1"></td>
+                       <td><input type="radio" name="grade_43" value="2"></td>
+                       <td><input type="radio" name="grade_43" value="3"></td>
+                       <td><input type="radio" name="grade_43" value="4"></td>
+                       <td><input type="radio" name="grade_43" value="5"></td>
+                       <td><input type="radio" name="grade_43" value="6"></td>
+                       <td><input type="radio" name="grade_43" value="7"></td>
+                       <td><input type="radio" name="grade_43" value="8"></td>
+                       <td><input type="radio" name="grade_43" value="9"></td>
+                       <td><input type="radio" name="grade_43" value="10"></td>
+                       <td><input type="radio" name="grade_43" value="11"></td>
+                       <td><input type="radio" name="grade_43" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_44 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_44 }}</th>
+                       <td><input type="radio" name="grade_44" value="1"></td>
+                       <td><input type="radio" name="grade_44" value="2"></td>
+                       <td><input type="radio" name="grade_44" value="3"></td>
+                       <td><input type="radio" name="grade_44" value="4"></td>
+                       <td><input type="radio" name="grade_44" value="5"></td>
+                       <td><input type="radio" name="grade_44" value="6"></td>
+                       <td><input type="radio" name="grade_44" value="7"></td>
+                       <td><input type="radio" name="grade_44" value="8"></td>
+                       <td><input type="radio" name="grade_44" value="9"></td>
+                       <td><input type="radio" name="grade_44" value="10"></td>
+                       <td><input type="radio" name="grade_44" value="11"></td>
+                       <td><input type="radio" name="grade_44" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_45 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_45 }}</th>
+                       <td><input type="radio" name="grade_45" value="1"></td>
+                       <td><input type="radio" name="grade_45" value="2"></td>
+                       <td><input type="radio" name="grade_45" value="3"></td>
+                       <td><input type="radio" name="grade_45" value="4"></td>
+                       <td><input type="radio" name="grade_45" value="5"></td>
+                       <td><input type="radio" name="grade_45" value="6"></td>
+                       <td><input type="radio" name="grade_45" value="7"></td>
+                       <td><input type="radio" name="grade_45" value="8"></td>
+                       <td><input type="radio" name="grade_45" value="9"></td>
+                       <td><input type="radio" name="grade_45" value="10"></td>
+                       <td><input type="radio" name="grade_45" value="11"></td>
+                       <td><input type="radio" name="grade_45" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_46 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_46 }}</th>
+                       <td><input type="radio" name="grade_46" value="1"></td>
+                       <td><input type="radio" name="grade_46" value="2"></td>
+                       <td><input type="radio" name="grade_46" value="3"></td>
+                       <td><input type="radio" name="grade_46" value="4"></td>
+                       <td><input type="radio" name="grade_46" value="5"></td>
+                       <td><input type="radio" name="grade_46" value="6"></td>
+                       <td><input type="radio" name="grade_46" value="7"></td>
+                       <td><input type="radio" name="grade_46" value="8"></td>
+                       <td><input type="radio" name="grade_46" value="9"></td>
+                       <td><input type="radio" name="grade_46" value="10"></td>
+                       <td><input type="radio" name="grade_46" value="11"></td>
+                       <td><input type="radio" name="grade_46" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_47 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_47 }}</th>
+                       <td><input type="radio" name="grade_47" value="1"></td>
+                       <td><input type="radio" name="grade_47" value="2"></td>
+                       <td><input type="radio" name="grade_47" value="3"></td>
+                       <td><input type="radio" name="grade_47" value="4"></td>
+                       <td><input type="radio" name="grade_47" value="5"></td>
+                       <td><input type="radio" name="grade_47" value="6"></td>
+                       <td><input type="radio" name="grade_47" value="7"></td>
+                       <td><input type="radio" name="grade_47" value="8"></td>
+                       <td><input type="radio" name="grade_47" value="9"></td>
+                       <td><input type="radio" name="grade_47" value="10"></td>
+                       <td><input type="radio" name="grade_47" value="11"></td>
+                       <td><input type="radio" name="grade_47" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_48 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_48 }}</th>
+                       <td><input type="radio" name="grade_48" value="1"></td>
+                       <td><input type="radio" name="grade_48" value="2"></td>
+                       <td><input type="radio" name="grade_48" value="3"></td>
+                       <td><input type="radio" name="grade_48" value="4"></td>
+                       <td><input type="radio" name="grade_48" value="5"></td>
+                       <td><input type="radio" name="grade_48" value="6"></td>
+                       <td><input type="radio" name="grade_48" value="7"></td>
+                       <td><input type="radio" name="grade_48" value="8"></td>
+                       <td><input type="radio" name="grade_48" value="9"></td>
+                       <td><input type="radio" name="grade_48" value="10"></td>
+                       <td><input type="radio" name="grade_48" value="11"></td>
+                       <td><input type="radio" name="grade_48" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_49 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_49 }}</th>
+                       <td><input type="radio" name="grade_49" value="1"></td>
+                       <td><input type="radio" name="grade_49" value="2"></td>
+                       <td><input type="radio" name="grade_49" value="3"></td>
+                       <td><input type="radio" name="grade_49" value="4"></td>
+                       <td><input type="radio" name="grade_49" value="5"></td>
+                       <td><input type="radio" name="grade_49" value="6"></td>
+                       <td><input type="radio" name="grade_49" value="7"></td>
+                       <td><input type="radio" name="grade_49" value="8"></td>
+                       <td><input type="radio" name="grade_49" value="9"></td>
+                       <td><input type="radio" name="grade_49" value="10"></td>
+                       <td><input type="radio" name="grade_49" value="11"></td>
+                       <td><input type="radio" name="grade_49" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+                   {% if network_player.person_50 != "x" %}
+                   <tr>
+                       <th>{{ network_player.person_50 }}</th>
+                       <td><input type="radio" name="grade_50" value="1"></td>
+                       <td><input type="radio" name="grade_50" value="2"></td>
+                       <td><input type="radio" name="grade_50" value="3"></td>
+                       <td><input type="radio" name="grade_50" value="4"></td>
+                       <td><input type="radio" name="grade_50" value="5"></td>
+                       <td><input type="radio" name="grade_50" value="6"></td>
+                       <td><input type="radio" name="grade_50" value="7"></td>
+                       <td><input type="radio" name="grade_50" value="8"></td>
+                       <td><input type="radio" name="grade_50" value="9"></td>
+                       <td><input type="radio" name="grade_50" value="10"></td>
+                       <td><input type="radio" name="grade_50" value="11"></td>
+                       <td><input type="radio" name="grade_50" value="0"></td>
+                   </tr>
+                   {% endif %}
+
+               </tbody>
+           </table>
+       </div>
+   </div>
+   {% endif %}
+
+   <br>
    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
       <span class="german"> Weiter </span>
       <span class="english"> Next </span>

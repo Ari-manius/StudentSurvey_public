@@ -35,12 +35,26 @@ class FreshersCamp(Page):
 class Class(Page): #13
     def vars_for_template(self):
         questions_data = load_questions()
+        # Get all players for this participant to access network app data
+        all_players = self.participant.get_players()
+        network_player = None
+        for p in all_players:
+            if hasattr(p, 'person_1'):  # Check if this is the network app player
+                network_player = p
+                break
+
         return {
             'lang': self.participant.vars.get('language'),
-            'questions': questions_data['Class']['questions']
+            'questions': questions_data['Class']['questions'],
+            'network_player': network_player
         }
     form_model = Player
-    form_fields = ['time_class', 'tutorial', 'grade']
+    form_fields = ['time_class', 'tutorial', 'grade',
+                   'grade_1', 'grade_2', 'grade_3', 'grade_4', 'grade_5', 'grade_6', 'grade_7', 'grade_8', 'grade_9', 'grade_10', 'grade_11',
+                   'grade_12', 'grade_13', 'grade_14', 'grade_15', 'grade_16', 'grade_17', 'grade_18', 'grade_19', 'grade_20', 'grade_21',
+                   'grade_22', 'grade_23', 'grade_24', 'grade_25', 'grade_26', 'grade_27', 'grade_28', 'grade_29', 'grade_30', 'grade_31',
+                   'grade_32', 'grade_33', 'grade_34', 'grade_35', 'grade_36', 'grade_37', 'grade_38', 'grade_39', 'grade_40', 'grade_41',
+                   'grade_42', 'grade_43', 'grade_44', 'grade_45', 'grade_46', 'grade_47', 'grade_48', 'grade_49', 'grade_50']
 
 class MotivatedStrategies(Page): #13
     def vars_for_template(self):

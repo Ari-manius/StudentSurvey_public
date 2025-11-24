@@ -1,0 +1,11 @@
+participant.id_in_session,participant.code,participant.label,participant._is_bot,participant._index_in_pages,participant._max_page_index,participant._current_app_name,participant._current_page_name,participant.time_started_utc,participant.visited,participant.mturk_worker_id,participant.mturk_assignment_id,participant.payoff,player.id_in_group,player.role,player.payoff,player.device_type,player.operating_system,player.browser,player.time,player.lang,player.use_of_device,group.id_in_subsession,subsession.round_number,session.code,session.label,session.mturk_HITId,session.mturk_HITGroupId,session.comment,session.is_demo
+1,1ah4k5nj,,1,29,28,app_end,End,2025-11-22 18:20:14.757921,1,,,0.0,1,,0.0,2,2,0,21,1,3,1,1,ah79ub28,,,,,0
+2,rs11d2id,,1,29,28,app_end,End,2025-11-22 18:20:14.774923,1,,,0.0,2,,0.0,2,1,0,28,0,3,1,1,ah79ub28,,,,,0
+3,k3olv5bf,,1,29,28,app_end,End,2025-11-22 18:20:14.780854,1,,,0.0,3,,0.0,1,2,3,13,1,3,1,1,ah79ub28,,,,,0
+4,c5hpua0v,,1,29,28,app_end,End,2025-11-22 18:20:14.786371,1,,,0.0,4,,0.0,0,1,2,27,0,3,1,1,ah79ub28,,,,,0
+5,kxk3oy4z,,1,29,28,app_end,End,2025-11-22 18:20:14.792158,1,,,0.0,5,,0.0,0,1,1,26,0,1,1,1,ah79ub28,,,,,0
+6,vf6kigfk,,1,29,28,app_end,End,2025-11-22 18:20:14.797362,1,,,0.0,6,,0.0,0,0,2,10,1,3,1,1,ah79ub28,,,,,0
+7,rnnv0fqe,,1,29,28,app_end,End,2025-11-22 18:20:14.803214,1,,,0.0,7,,0.0,2,3,0,10,1,2,1,1,ah79ub28,,,,,0
+8,4xq1weeb,,1,29,28,app_end,End,2025-11-22 18:20:14.808946,1,,,0.0,8,,0.0,0,0,2,17,0,1,1,1,ah79ub28,,,,,0
+9,5j1e86r9,,1,29,28,app_end,End,2025-11-22 18:20:14.814644,1,,,0.0,9,,0.0,0,2,2,18,1,2,1,1,ah79ub28,,,,,0
+10,0ge6vo2j,,1,29,28,app_end,End,2025-11-22 18:20:14.819939,1,,,0.0,10,,0.0,1,1,2,13,1,3,1,1,ah79ub28,,,,,0
