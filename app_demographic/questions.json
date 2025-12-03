@@ -14,7 +14,7 @@
         "field": "gender",
         "type": "radio",
         "text": {
-          "german": "Bitte geben Sie Ihr Gechlecht an.",
+          "german": "Bitte geben Sie Ihr Geschlecht an.",
           "english": "Please enter your gender."
         },
         "options": [
@@ -50,7 +50,7 @@
         "options": [
           {
             "value": "1", 
-            "text": {"german": "Sehr Schlecht", "english": "Very Bad"}
+            "text": {"german": "Sehr schlecht", "english": "Very bad"}
           },
           {
             "value": "2",
@@ -84,7 +84,7 @@
         "options": [
           {
             "value": "1", 
-            "text": {"german": "Sehr Schlecht", "english": "Very Bad"}
+            "text": {"german": "Sehr schlecht", "english": "Very bad"}
           },
           {
             "value": "2",
@@ -118,7 +118,7 @@
         "options": [
           {
             "value": "1", 
-            "text": {"german": "Sehr Schlecht", "english": "Very Bad"}
+            "text": {"german": "Sehr schlecht", "english": "Very bad"}
           },
           {
             "value": "2",
@@ -152,7 +152,7 @@
         "options": [
           {
             "value": "1", 
-            "text": {"german": "Sehr Schlecht", "english": "Very Bad"}
+            "text": {"german": "Sehr schlecht", "english": "Very bad"}
           },
           {
             "value": "2",

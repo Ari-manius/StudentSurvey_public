@@ -31,4 +31,4 @@ class End(Page): #15
     form_model = Player
     form_fields = ['time_endpage']
 
-page_sequence = [NetworkNarrative, RandomNumber, FirstEndPage, End]
+page_sequence = [RandomNumber, FirstEndPage, End]

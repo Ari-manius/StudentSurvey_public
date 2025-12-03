@@ -95,3 +95,6 @@ else:
         production.""",
         stacklevel=1,
     )
+
+# Browser configuration for bot testing
+BROWSER_COMMAND = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'

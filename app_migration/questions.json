@@ -90,7 +90,7 @@
         "type": "radio",
         "text": {
           "german": "Einwanderung belastet unser Sozialsystem übermäßig.",
-          "english": "Immigration burdening is our social."
+          "english": "Immigration is excessively burdening our social system."
         },
         "options": [
           {
@@ -174,7 +174,7 @@
         "type": "radio",
         "text": {
           "german": "Die derzeitige Zahl an Asylsuchenden in Deutschland ist zu hoch.",
-          "english": "The current number of asylum seeker in Germany is to high."
+          "english": "The current number of asylum seekers in Germany is too high."
         },
         "options": [
           {

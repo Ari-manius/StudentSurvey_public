@@ -40,7 +40,7 @@
         "type": "number",
         "text": {
           "german": "In welchem Fachsemester befinden Sie sich?",
-          "english": "What is you current semester count?"
+          "english": "What is your current semester count?"
         },
         "placeholder": "Enter Semesters (1-24)"
       },
@@ -215,7 +215,7 @@
         "field": "motivation_extrinsic_goal_2",
         "type": "radio",
         "text": {
-          "german": "Das Wichtigste für mich ist derzeit, meinen Notendurchschnitt zu verbessern, daher ist mein Hauptanliegen in diesem Kurs, eine gute Note zu erzielen.",
+          "german": "Das Wichtigste für mich ist derzeit, meinen Notendurchschnitt zu verbessern, daher ist mein Hauptanliegen in diesem Kurs eine gute Note zu erzielen.",
           "english": "The most important thing for me right now is improving my overall grade point average, so my main concern in this class is getting a good grade."
         },
         "options": [

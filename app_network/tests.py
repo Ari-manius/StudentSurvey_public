@@ -4,6 +4,16 @@ from ._builtin import Bot
 from .models import Constants
 import random
 import os
+import sys
+
+# Try to import LLM bot helper
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'utils', 'bot_testing'))
+
+try:
+    from llm_bot_helper import LLMBotPersona
+    USE_LLM = os.environ.get('USE_LLM_BOTS', '0') == '1'
+except ImportError:
+    USE_LLM = False
 
 
 def get_valid_codes():
@@ -19,6 +29,13 @@ def get_valid_codes():
 
 class PlayerBot(Bot):
     def play_round(self):
+        if USE_LLM:
+            # Initialize persona for consistent behavior
+            persona_id = hash(str(self.participant.id_in_session)) % 5
+            persona = LLMBotPersona(persona_id)
+            # Network data is complex and structural, keep random for now
+            # Could enhance later with LLM-driven network generation
+
         # NetworkNamedPersons - use actual codes from code_list.txt
         valid_codes = get_valid_codes()
         person_data = {}

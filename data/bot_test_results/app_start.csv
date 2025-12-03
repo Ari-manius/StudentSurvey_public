@@ -1,0 +1,6 @@
+participant.id_in_session,participant.code,participant.label,participant._is_bot,participant._index_in_pages,participant._max_page_index,participant._current_app_name,participant._current_page_name,participant.time_started_utc,participant.visited,participant.mturk_worker_id,participant.mturk_assignment_id,participant.payoff,player.id_in_group,player.role,player.payoff,player.device_type,player.operating_system,player.browser,player.time,player.lang,player.use_of_device,group.id_in_subsession,subsession.round_number,session.code,session.label,session.mturk_HITId,session.mturk_HITGroupId,session.comment,session.is_demo
+1,40nrxfrz,,1,25,24,app_end,End,2025-11-24 17:31:35.278763,1,,,0.0,1,,0.0,2,2,2,21,0,2,1,1,pb6qq2mv,,,,,0
+2,dbgutz2b,,1,25,24,app_end,End,2025-11-24 17:31:35.304211,1,,,0.0,2,,0.0,0,3,3,15,0,1,1,1,pb6qq2mv,,,,,0
+3,kyx7mt9v,,1,25,24,app_end,End,2025-11-24 17:31:35.314152,1,,,0.0,3,,0.0,1,1,4,11,1,2,1,1,pb6qq2mv,,,,,0
+4,fdbu05yf,,1,25,24,app_end,End,2025-11-24 17:31:35.324048,1,,,0.0,4,,0.0,2,0,1,21,1,1,1,1,pb6qq2mv,,,,,0
+5,1rcj2r9y,,1,25,24,app_end,End,2025-11-24 17:31:35.333197,1,,,0.0,5,,0.0,2,2,5,18,0,2,1,1,pb6qq2mv,,,,,0
