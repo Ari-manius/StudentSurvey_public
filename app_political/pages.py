@@ -20,60 +20,88 @@ def load_questions():
 class Sonntagsfrage(Page): #5
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['Sonntagsfrage']['questions']
         }
     form_model = Player
-    form_fields = ['sunday_party_vote']
+    form_fields = ['sunday_party_vote', 'sonntagsfrage_page_load_time', 'sonntagsfrage_page_submit_time', 'sonntagsfrage_page_duration_seconds']
+
+class kleineSonntagsfrage(Page): # Für Landtagswahl
+    def vars_for_template(self):
+        questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
+        return {
+            'lang': lang_code,
+            'questions': questions_data['kleineSonntagsfrage']['questions']
+        }
+    form_model = Player
+    form_fields = ['small_sunday_party_vote', 'kleine_sonntagsfrage_page_load_time', 'kleine_sonntagsfrage_page_submit_time', 'kleine_sonntagsfrage_page_duration_seconds']
 
 class ScaloParty(Page): #6
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['ScaloParty']['questions']
         }
     form_model = Player
-    form_fields = ['scalo_cdu', 'scalo_csu', 'scalo_spd', 'scalo_gruene', 'scalo_fdp', 'scalo_linke', 'scalo_afd', 'scalo_bsw']
+    form_fields = ['scalo_cdu', 'scalo_csu', 'scalo_spd', 'scalo_gruene', 'scalo_fdp', 'scalo_linke', 'scalo_afd', 'scalo_bsw',
+                   'scalo_party_page_load_time', 'scalo_party_page_submit_time', 'scalo_party_page_duration_seconds']
 
 class ScaloPerson(Page): #7
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['ScaloPerson']['questions']
         }
     form_model = Player
     form_fields = ['scalo_pep1', 'scalo_pep2', 'scalo_pep3', 'scalo_pep4', 'scalo_pep5', 'scalo_pep6', 'scalo_pep7', 'scalo_pep8',
-                   'scalo_pep9', 'scalo_pep10', 'scalo_pep11', 'scalo_pep12', 'scalo_pep13', 'scalo_pep14', 'scalo_pep15', 'scalo_pep16', 'scalo_pep17', 'scalo_pep18', 'scalo_pep19', 'scalo_pep20', 'scalo_pep21','scalo_pep22','scalo_pep23','scalo_pep24','scalo_pep25','scalo_pep26']
+                   'scalo_pep9', 'scalo_pep10', 'scalo_pep11', 'scalo_pep12', 'scalo_pep13', 'scalo_pep14', 'scalo_pep15', 'scalo_pep16', 'scalo_pep17', 'scalo_pep18', 'scalo_pep19', 'scalo_pep20', 'scalo_pep21','scalo_pep22','scalo_pep23','scalo_pep24','scalo_pep25','scalo_pep26',
+                   'scalo_person_page_load_time', 'scalo_person_page_submit_time', 'scalo_person_page_duration_seconds']
 
 class LeftRightParty(Page): #9
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['LeftRightParty']['questions']
         }
     form_model = Player
-    form_fields = ['lr_CDU', 'lr_CSU', 'lr_SPD', 'lr_Gruene', 'lr_FDP', 'lr_Linke', 'lr_AfD', 'lr_BSW']
+    form_fields = ['lr_CDU', 'lr_CSU', 'lr_SPD', 'lr_Gruene', 'lr_FDP', 'lr_Linke', 'lr_AfD', 'lr_BSW',
+                   'leftright_party_page_load_time', 'leftright_party_page_submit_time', 'leftright_party_page_duration_seconds']
 
 class PoliticalQuestions(Page): #10
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['PoliticalQuestions']['questions']
         }
     form_model = Player
     form_fields = ['politics_question_one', 'politics_question_two', 'politics_question_three', 'politics_question_four',
-                   'politics_question_five', 'politics_question_six', 'politics_question_seven']
+                   'politics_question_five', 'politics_question_six', 'politics_question_seven',
+                   'political_questions_page_load_time', 'political_questions_page_submit_time', 'political_questions_page_duration_seconds']
 
 class Participation(Page):
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['Participation']['questions']
         }
     form_model = Player
@@ -87,11 +115,14 @@ class Participation(Page):
                    'social_networks_6',
                    'social_networks_7',
                    'social_networks_8',
-                   'social_networks_9', 
-                   'social_networks_10', 
+                   'social_networks_9',
+                   'social_networks_10',
                    'social_networks_11',
                    'social_networks_12',
-                   'social_networks_13']
+                   'social_networks_13',
+                   'participation_page_load_time',
+                   'participation_page_submit_time',
+                   'participation_page_duration_seconds']
 
 
-page_sequence = [Participation, LeftRightParty, ScaloParty, ScaloPerson, PoliticalQuestions, Sonntagsfrage]
+page_sequence = [Participation, LeftRightParty, ScaloParty, ScaloPerson, PoliticalQuestions, Sonntagsfrage, kleineSonntagsfrage]

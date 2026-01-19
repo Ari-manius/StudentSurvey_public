@@ -11,7 +11,9 @@
 
 {% block content %}
 <div class="container">
-   <input id="time" type="hidden" name="time_tutorial_expected_grade"/>
+   <input id="motivated_strategies_page_load_time" type="hidden" name="motivated_strategies_page_load_time" />
+   <input id="motivated_strategies_page_submit_time" type="hidden" name="motivated_strategies_page_submit_time" />
+   <input id="motivated_strategies_page_duration_seconds" type="hidden" name="motivated_strategies_page_duration_seconds" />
     <p class="german"> Unten sehen sie verschiedene Aussagen über Ihr Studium, inwieweit treffen die folgenden Aussagen auf Sie zu?</p>
     <p class="english"> Below you can see different statements about your studies. How much would you agree with the following statements?</p>
 
@@ -45,4 +47,23 @@
    </button>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('motivated_strategies_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('motivated_strategies_page_submit_time').value = submitTime;
+                document.getElementById('motivated_strategies_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
 {% endblock %}

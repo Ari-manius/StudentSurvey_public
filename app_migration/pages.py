@@ -26,7 +26,8 @@ class Migration(Page):
                    'migration_culture_12', 'migration_culture_13', 'migration_culture_14', 'migration_culture_15', 'migration_culture_16', 'migration_culture_17', 'migration_culture_18', 'migration_culture_19', 'migration_culture_20', 'migration_culture_21',
                    'migration_culture_22', 'migration_culture_23', 'migration_culture_24', 'migration_culture_25', 'migration_culture_26', 'migration_culture_27', 'migration_culture_28', 'migration_culture_29', 'migration_culture_30', 'migration_culture_31',
                    'migration_culture_32', 'migration_culture_33', 'migration_culture_34', 'migration_culture_35', 'migration_culture_36', 'migration_culture_37', 'migration_culture_38', 'migration_culture_39', 'migration_culture_40', 'migration_culture_41',
-                   'migration_culture_42', 'migration_culture_43', 'migration_culture_44', 'migration_culture_45', 'migration_culture_46', 'migration_culture_47', 'migration_culture_48', 'migration_culture_49', 'migration_culture_50']
+                   'migration_culture_42', 'migration_culture_43', 'migration_culture_44', 'migration_culture_45', 'migration_culture_46', 'migration_culture_47', 'migration_culture_48', 'migration_culture_49', 'migration_culture_50',
+                   'migration_page_load_time', 'migration_page_submit_time', 'migration_page_duration_seconds']
 
     def vars_for_template(self):
         questions_data = load_questions()
@@ -38,8 +39,10 @@ class Migration(Page):
                 network_player = p
                 break
 
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['Migration']['questions'],
             'network_player': network_player
         }

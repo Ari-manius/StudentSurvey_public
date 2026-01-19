@@ -32,6 +32,7 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     ### Sonntagsfrage
     sunday_party_vote = models.IntegerField(blank=True, max=11, min=0, label="")
+    small_sunday_party_vote = models.IntegerField(blank=True, max=11, min=0, label="")
 
     lr_CDU = models.StringField(blank=True, initial=0)
     lr_CSU = models.StringField(blank=True, initial=0)
@@ -107,10 +108,37 @@ class Player(BasePlayer):
     participation_demonstration = models.IntegerField(blank=True, max=2, min=0, label="")
     petition_signatory = models.IntegerField(blank=True, max=2, min=0, label="")
 
-    # Time tracking fields
-    time_interest_uni = models.StringField(initial="-999")
-    time_scaloparty = models.StringField(initial="-999")
-    time_scaloperson = models.StringField(initial="-999")
-    time_leftright = models.StringField(initial="-999")
-    time_sundayquestion = models.StringField(initial="-999")
-    time_political_qs = models.StringField(initial="-999")
+    # Timestamp tracking for Sonntagsfrage page
+    sonntagsfrage_page_load_time = models.StringField(blank=True)
+    sonntagsfrage_page_submit_time = models.StringField(blank=True)
+    sonntagsfrage_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for kleineSonntagsfrage page
+    kleine_sonntagsfrage_page_load_time = models.StringField(blank=True)
+    kleine_sonntagsfrage_page_submit_time = models.StringField(blank=True)
+    kleine_sonntagsfrage_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for ScaloParty page
+    scalo_party_page_load_time = models.StringField(blank=True)
+    scalo_party_page_submit_time = models.StringField(blank=True)
+    scalo_party_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for ScaloPerson page
+    scalo_person_page_load_time = models.StringField(blank=True)
+    scalo_person_page_submit_time = models.StringField(blank=True)
+    scalo_person_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for LeftRightParty page
+    leftright_party_page_load_time = models.StringField(blank=True)
+    leftright_party_page_submit_time = models.StringField(blank=True)
+    leftright_party_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for PoliticalQuestions page
+    political_questions_page_load_time = models.StringField(blank=True)
+    political_questions_page_submit_time = models.StringField(blank=True)
+    political_questions_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for Participation page
+    participation_page_load_time = models.StringField(blank=True)
+    participation_page_submit_time = models.StringField(blank=True)
+    participation_page_duration_seconds = models.FloatField(blank=True)

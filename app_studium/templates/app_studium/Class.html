@@ -11,10 +11,18 @@
 
 {% block content %}
 <div class="container">
-    <input id="time" type="hidden" name="time_tutorial_expected_grade"/>
+    <input id="class_page_load_time" type="hidden" name="class_page_load_time" />
+    <input id="class_page_submit_time" type="hidden" name="class_page_submit_time" />
+    <input id="class_page_duration_seconds" type="hidden" name="class_page_duration_seconds" />
     <p class="german">Hier haben wir einige Fragen zu diesem Kurs für Sie.</p>
     <p class="english">Here we have a few questions for you about your this course.</p>
    <!-- Section 1: Self Assessment (tutorial, time, grade) -->
+
+   <div class="mb-3 border pt-2 pb-2 px-2">
+       <p class="german"><b>Wie viele Stunden pro Woche verbringen Sie durchschnittlich mit diesem Kurs (Vorlesung, Tutorium, Vor- und Nachbereitung)?</b></p>
+       <p class="english"><b>How many hours per week do you spend on average on this course (lecture, tutorial, preparation and follow-up)?</b></p>
+       <input type="number" name="time_class" min="0" max="168" placeholder="Stunden pro Woche / Hours per week" class="form-control">
+   </div>
 
    {% for question in questions %}
        <div class="mb-3 border pt-2 pb-2 px-2">
@@ -980,4 +988,23 @@
    </button>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('class_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('class_page_submit_time').value = submitTime;
+                document.getElementById('class_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
 {% endblock %}

@@ -135,5 +135,7 @@ class Player(BasePlayer):
     migration_culture_49 = models.IntegerField(blank=True, max=7, min=0, label="")
     migration_culture_50 = models.IntegerField(blank=True, max=7, min=0, label="")
 
-    # Time tracking field
-    time_migration = models.StringField(initial="-999")
+    # Timestamp tracking for Migration page
+    migration_page_load_time = models.StringField(blank=True)
+    migration_page_submit_time = models.StringField(blank=True)
+    migration_page_duration_seconds = models.FloatField(blank=True)

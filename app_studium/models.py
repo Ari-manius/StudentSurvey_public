@@ -106,7 +106,22 @@ class Player(BasePlayer):
     grade_49 = models.IntegerField(blank=True, max=11, min=0, label="")
     grade_50 = models.IntegerField(blank=True, max=11, min=0, label="")
 
-    # Time tracking fields
-    time_tutorial_expected_grade = models.StringField(initial="-999")
-    time_postcode = models.StringField(initial="-999")
-    time_fresherscamp = models.StringField(initial="-999")
+    # Timestamp tracking for FreshersCamp page
+    freshers_camp_page_load_time = models.StringField(blank=True)
+    freshers_camp_page_submit_time = models.StringField(blank=True)
+    freshers_camp_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for Class page
+    class_page_load_time = models.StringField(blank=True)
+    class_page_submit_time = models.StringField(blank=True)
+    class_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for MotivatedStrategies page
+    motivated_strategies_page_load_time = models.StringField(blank=True)
+    motivated_strategies_page_submit_time = models.StringField(blank=True)
+    motivated_strategies_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for Study page
+    study_page_load_time = models.StringField(blank=True)
+    study_page_submit_time = models.StringField(blank=True)
+    study_page_duration_seconds = models.FloatField(blank=True)

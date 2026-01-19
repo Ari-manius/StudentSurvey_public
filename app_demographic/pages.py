@@ -25,13 +25,18 @@ class GenderAge(Page): #3
 
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['GenderAge']['questions']
         }
     form_model = Player
     form_fields = ['age',
-                    'gender']
+                    'gender',
+                    'gender_age_page_load_time',
+                    'gender_age_page_submit_time',
+                    'gender_age_page_duration_seconds']
 
 
 class LevelFamily(Page): #3
@@ -41,8 +46,10 @@ class LevelFamily(Page): #3
 
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['LevelFamily']['questions']
         }
     form_model = Player
@@ -52,13 +59,17 @@ class LevelFamily(Page): #3
                     'edu_family_2gen_f1',
                     'edu_family_2gen_m2',
                     'edu_family_2gen_f2',
-                   ]
+                    'level_family_page_load_time',
+                    'level_family_page_submit_time',
+                    'level_family_page_duration_seconds']
 
 class Financial(Page):
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['Financial']['questions']
         }
 
@@ -68,7 +79,9 @@ class Financial(Page):
                     "financial_situation_general_future",
                     "financial_situation_personal_future",
                     "time_work",
-                    ]
+                    "financial_page_load_time",
+                    "financial_page_submit_time",
+                    "financial_page_duration_seconds"]
 
 class Secondary(Page):
     def is_displayed(self):
@@ -77,14 +90,19 @@ class Secondary(Page):
 
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['Secondary']['questions']
         }
 
     form_model = Player
     form_fields = ['postcode',
-                    'secondary_year']
+                    'secondary_year',
+                    'secondary_page_load_time',
+                    'secondary_page_submit_time',
+                    'secondary_page_duration_seconds']
 
 page_sequence = [
                  Financial,

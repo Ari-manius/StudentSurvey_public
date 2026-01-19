@@ -21,3 +21,18 @@
 - check for prior participation 
 - full pipeline 
 - code generation and distribution 
+
+
+***
+
+separate repos for analysis and also collect for year before 
+
+wave 1 and 2 participants questions answered before also skip parts of survey
+	studiums app mit motivations and strategies also as skipable parts 
+
+timestamp of survey and especially for vignette app 
+
+ai app
+
+wehrdienst app
+

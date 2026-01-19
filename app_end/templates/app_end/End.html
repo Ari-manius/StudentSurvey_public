@@ -15,10 +15,34 @@
         <img width="50%" height="50%" src="{% static 'images/ThankDog.webp' %}" />
     </div>
 
-    <input id="time" type="hidden" name="time_endpage"/>
+    <input id="end_page_load_time" type="hidden" name="end_page_load_time" />
+    <input id="end_page_submit_time" type="hidden" name="end_page_submit_time" />
+    <input id="end_page_duration_seconds" type="hidden" name="end_page_duration_seconds" />
     <br>
     <hr>
         <p class="german">Sie haben die Umfrage abgeschlossen und können das Browserfenster nun schließen.</p>
         <p class="english">You have completed the survey and may now close the browser window.</p>
 </div>
+
+<script>
+    // Timestamp tracking for End page
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('end_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('end_page_submit_time').value = submitTime;
+                document.getElementById('end_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
+
 {% endblock %}

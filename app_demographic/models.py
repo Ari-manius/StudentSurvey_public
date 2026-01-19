@@ -46,9 +46,25 @@ class Player(BasePlayer):
     financial_situation_general_current = models.IntegerField(blank=True, label="", min=0, max=10)
     financial_situation_personal_future = models.IntegerField(blank=True, label="", min=0, max=10)
     financial_situation_general_future = models.IntegerField(blank=True, label="", min=0, max=10)
-    time_work = models.IntegerField(blank=True, label="", min=0, max=168, initial =0)
+    time_work = models.IntegerField(blank=True, label="", min=0, max=168, initial=0)
 
-    # Time tracking fields
-    time_age = models.StringField(initial="-999")
-    time_postcode = models.StringField(initial="-999")
+    # Timestamp tracking for GenderAge page
+    gender_age_page_load_time = models.StringField(blank=True)
+    gender_age_page_submit_time = models.StringField(blank=True)
+    gender_age_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for LevelFamily page
+    level_family_page_load_time = models.StringField(blank=True)
+    level_family_page_submit_time = models.StringField(blank=True)
+    level_family_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for Financial page
+    financial_page_load_time = models.StringField(blank=True)
+    financial_page_submit_time = models.StringField(blank=True)
+    financial_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for Secondary page
+    secondary_page_load_time = models.StringField(blank=True)
+    secondary_page_submit_time = models.StringField(blank=True)
+    secondary_page_duration_seconds = models.FloatField(blank=True)
 

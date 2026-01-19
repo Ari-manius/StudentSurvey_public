@@ -11,12 +11,14 @@ from utils.participant_tracking.participant_utils import is_returning_participan
 
 class Welcome(Page): #1
     form_model = Player
-    form_fields = ['lang', 
-                   'time', 
-                   'device_type', 
-                   'operating_system', 
-                   'browser', 
-                   'use_of_device']
+    form_fields = ['lang',
+                   'device_type',
+                   'operating_system',
+                   'browser',
+                   'use_of_device',
+                   'start_page_load_time',
+                   'start_page_submit_time',
+                   'start_page_duration_seconds']
     
     def before_next_page(self):
         self.participant.vars['language'] = self.player.lang

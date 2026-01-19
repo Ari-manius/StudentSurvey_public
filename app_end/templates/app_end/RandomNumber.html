@@ -12,7 +12,9 @@
 {% block content %}
 
 <div class="container">
-    <input id="time" type="hidden" name="time_rnumber"/>
+    <input id="rnumber_page_load_time" type="hidden" name="rnumber_page_load_time" />
+    <input id="rnumber_page_submit_time" type="hidden" name="rnumber_page_submit_time" />
+    <input id="rnumber_page_duration_seconds" type="hidden" name="rnumber_page_duration_seconds" />
     <br>
     <h2 class="german"> Teilnahmecode</h2> <h2 class="english"> Participantion Code</h2>
     <hr>
@@ -41,25 +43,31 @@
 
     <br>
 
-    <!-- <div class="mb-3 border pt-2 pb-2 px-2">
-        <p class="german"> Nun noch die wichtigste Frage. Wenn Sie sich entscheiden <b>müssten</b>, wen mögen Sie lieber, Hunde oder Katzen?</p>
-        <p class="english"> Now the most important question. If you <b>had</b> to decide, who do you prefer, dogs or cats?</p>
-        <div class="german"><input type="radio" name="catdog" value="1"> Natürlich Katzen, keine Frage!</div>
-        <div class="english"><input type="radio" name="catdog" value="1"> Cats of course!</div>
-        <div class="german"><input type="radio" name="catdog" value="2"> Natürlich Hunde, keine Frage!</div>
-        <div class="english"><input type="radio" name="catdog" value="2"> Dogs of course!</div>
-        <div class="german"><input type="radio" name="catdog" value="3"> Wer würde solch eine Entscheidung verlangen, ich liebe beide gleich viel!</div>
-        <div class="english"><input type="radio" name="catdog" value="3"> How can you make me chose, I love them both equally!</div>
-        <div class="german"><input type="radio" name="catdog" value="4"> Ich mag beide nicht!</div>
-        <div class="english"><input type="radio" name="catdog" value="4"> Neither!</div>
-        <div class="german"><input type="radio" name="catdog" value="-999"> Keine Angabe...</div>
-        <div class="english"><input type="radio" name="catdog" value="-999"> No Answer...</div>
-    </div> -->
-
     <button class="otree-btn-next btn btn-primary next-button otree-next-button">
         <span class="german"> Weiter </span>
         <span class="english"> Next </span>
     </button>
 </div>
+
+<script>
+    // Timestamp tracking for RandomNumber page
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('rnumber_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('rnumber_page_submit_time').value = submitTime;
+                document.getElementById('rnumber_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
 
 {% endblock %}

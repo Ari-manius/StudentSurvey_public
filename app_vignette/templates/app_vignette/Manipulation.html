@@ -1,0 +1,104 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+{% include "global/title_Global.html" %}
+{% endblock %}
+
+{% block content %}
+<input id="vignette_start_time" type="hidden" name="w_vignette_start_time" />
+<input id="vignette_submit_time" type="hidden" name="w_vignette_submit_time" />
+<input id="vignette_duration_seconds" type="hidden" name="w_vignette_duration_seconds" />
+<br>
+<p class="german">Bitte lesen Sie den folgenden Text sorgfältig und beantworten Sie die unten stehende Frage.</p>
+<p class="english">Please read the following text carefully and answer the question below.</p>
+
+<!-- Vignette text -->
+<div class="mb-3 border pt-2 pb-2 px-2">
+<div class="german">
+    <p>
+        Angesichts der aktuellen sicherheitspolitischen Lage wird in Deutschland die Wiedereinführung der Wehrpflicht diskutiert. Als Hauptgrund nennt die Bundesregierung {{ player.w_rechtfertigung_de }}.
+    </p>
+    <p>
+        Das Gesetz sieht vor, dass künftig {{ player.w_zielgruppe_de }} einen verpflichtenden Dienst an der Waffe leisten müssen. Die Dauer dieses Dienstes beträgt einheitlich {{ player.w_dauer_de }}.
+    </p>
+    <p>
+        Um die Fairness zu erhöhen, wurde zudem folgende Regelung beschlossen: {{ player.w_kompensation_de }}
+    </p>
+</div>
+
+<div class="english">
+    <p>
+        In light of the current security situation, Germany is discussing the reintroduction of military service. The federal government cites {{ player.w_rechtfertigung_en }} as the main reason.
+    </p>
+    <p>
+        The law provides that in the future {{ player.w_zielgruppe_en }} will be required to perform mandatory military service. The duration of this service is uniformly {{ player.w_dauer_en }}.
+    </p>
+    <p>
+        To increase fairness, the following regulation has also been adopted: {{ player.w_kompensation_en }}
+    </p>
+</div>
+</div>
+
+<!-- Opinion question -->
+<div class="mb-3 border pt-2 pb-2 px-2">
+<p class="german"><b>Inwieweit befürworten oder lehnen Sie die Einführung der Wehrpflicht unter den oben genannten Bedingungen ab?</b></p>
+<p class="english"><b>To what extent do you support or reject the introduction of military service under the conditions mentioned above?</b></p>
+
+<div class="german"><input type="radio" name="w_opinion" value="1"> Stimme voll und ganz zu</div>
+<div class="english"><input type="radio" name="w_opinion" value="1"> Strongly Agree</div>
+<div class="german"><input type="radio" name="w_opinion" value="2"> Stimme eher zu</div>
+<div class="english"><input type="radio" name="w_opinion" value="2"> Agree</div>
+<div class="german"><input type="radio" name="w_opinion" value="3"> Stimme eher etwas zu</div>
+<div class="english"><input type="radio" name="w_opinion" value="3"> Somewhat Agree</div>
+<div class="german"><input type="radio" name="w_opinion" value="4"> Weder noch / Neutral</div>
+<div class="english"><input type="radio" name="w_opinion" value="4"> Neither Agree nor Disagree</div>
+<div class="german"><input type="radio" name="w_opinion" value="5"> Lehne eher etwas ab</div>
+<div class="english"><input type="radio" name="w_opinion" value="5"> Somewhat Disagree</div>
+<div class="german"><input type="radio" name="w_opinion" value="6"> Lehne eher ab</div>
+<div class="english"><input type="radio" name="w_opinion" value="6"> Disagree</div>
+<div class="german"><input type="radio" name="w_opinion" value="7"> Lehne voll und ganz ab</div>
+<div class="english"><input type="radio" name="w_opinion" value="7"> Strongly Disagree</div>
+<div class="german"><input type="radio" name="w_opinion" value="0"> Keine Angabe</div>
+<div class="english"><input type="radio" name="w_opinion" value="0"> No Answer</div>
+</div>
+
+<!-- Optional justification -->
+<div class="mb-3 border pt-2 pb-2 px-2">
+<label class="german"><b>Sie können kurz Ihre Antwort begründen (optional):</b></label>
+<label class="english"><b>You can briefly justify your answer (optional):</b></label>
+<textarea name="w_justification" rows="4" cols="50" class="form-control"></textarea>
+</div>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">
+    <span class="german"> Weiter </span>
+    <span class="english"> Next </span>
+</button>
+
+<script>
+    // Timestamp tracking for vignette decision-making
+    document.addEventListener('DOMContentLoaded', function() {
+        // Capture page load time
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('vignette_start_time').value = pageLoadTime;
+
+        // Capture form submission time and calculate duration
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('vignette_submit_time').value = submitTime;
+                document.getElementById('vignette_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
+{% endblock %}

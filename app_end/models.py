@@ -89,15 +89,22 @@ class Player(BasePlayer):
         
     feedback = models.LongStringField(blank=True)
 
-    #catdog = models.IntegerField(blank=True, max=4, min=-999, label="")
-    #animal_other = models.StringField(label="Andere/Other:")
-    
-    time_firstendpage= models.StringField(initial="-999")
-    time_endpage= models.StringField(initial="-999")
-
     network_narrative = models.LongStringField(blank=True)
 
-    time_rnumber = models.StringField(initial="-999")
+    # Timestamp tracking for RandomNumber page
+    rnumber_page_load_time = models.StringField(blank=True, doc="ISO timestamp when RandomNumber page loads")
+    rnumber_page_submit_time = models.StringField(blank=True, doc="ISO timestamp when RandomNumber response submitted")
+    rnumber_page_duration_seconds = models.FloatField(blank=True, doc="Duration in seconds")
+
+    # Timestamp tracking for FirstEndPage
+    firstend_page_load_time = models.StringField(blank=True, doc="ISO timestamp when FirstEndPage loads")
+    firstend_page_submit_time = models.StringField(blank=True, doc="ISO timestamp when FirstEndPage response submitted")
+    firstend_page_duration_seconds = models.FloatField(blank=True, doc="Duration in seconds")
+
+    # Timestamp tracking for End page
+    end_page_load_time = models.StringField(blank=True, doc="ISO timestamp when End page loads")
+    end_page_submit_time = models.StringField(blank=True, doc="ISO timestamp when End response submitted")
+    end_page_duration_seconds = models.FloatField(blank=True, doc="Duration in seconds")
     link_check = models.StringField(blank=True)
     randomnumber_vl_1 = models.IntegerField()
     randomnumber_vl_2 = models.IntegerField()

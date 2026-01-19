@@ -13,7 +13,9 @@
 {% block content %}
 
 <div class="container">
-    <input id="time" type="hidden" name="time_networknamedstudents" />
+    <input id="network_named_page_load_time" type="hidden" name="network_named_page_load_time" />
+    <input id="network_named_page_submit_time" type="hidden" name="network_named_page_submit_time" />
+    <input id="network_named_page_duration_seconds" type="hidden" name="network_named_page_duration_seconds" />
         <p class="german">Nun haben wir einige Fragen zu Ihrem sozialen Netzwerk im Semester.</p>
         <p class="english">Now we have a few questions about your social network in the semester.</p>
 
@@ -116,6 +118,9 @@
 
     // Attach datalist to all person input fields and add validation
     document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('network_named_page_load_time').value = pageLoadTime;
+
         // Find all person_* input fields
         for (let i = 1; i <= 50; i++) {
             const input = document.querySelector(`input[name="person_${i}"]`);
@@ -154,6 +159,19 @@
                     }
                 });
             }
+        }
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('network_named_page_submit_time').value = submitTime;
+                document.getElementById('network_named_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
         }
     });
 </script>

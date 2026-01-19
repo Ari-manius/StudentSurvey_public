@@ -172,6 +172,32 @@
       }
     ]
   },
+  "kleineSonntagsfrage": {
+    "questions": [
+      {
+        "field": "small_sunday_party_vote",
+        "type": "radio",
+        "text": {
+          "german": "Wenn am nächsten Sonntag Landtagswahl in Baden-Württemberg wäre, welche Partei würden Sie mit Ihrer Zweitstimme wählen?",
+          "english": "If there was a state election in Baden-Württemberg next Sunday, which party would you vote for with your second vote?"
+        },
+        "options": [
+          {"value": "1", "text": {"german": "CDU", "english": "CDU"}},
+          {"value": "2", "text": {"german": "CSU", "english": "CSU"}},
+          {"value": "3", "text": {"german": "SPD", "english": "SPD"}},
+          {"value": "4", "text": {"german": "AfD", "english": "AfD"}},
+          {"value": "5", "text": {"german": "FDP", "english": "FDP"}},
+          {"value": "6", "text": {"german": "Die LINKE", "english": "Die LINKE"}},
+          {"value": "7", "text": {"german": "Bündnis 90 / Die Grünen", "english": "Bündnis 90 / Die Grünen"}},
+          {"value": "8", "text": {"german": "BSW", "english": "BSW"}},
+          {"value": "9", "text": {"german": "Andere Partei", "english": "Other party"}},
+          {"value": "10", "text": {"german": "Würde nicht wählen", "english": "Would not vote"}},
+          {"value": "11", "text": {"german": "Bin nicht wahlberechtigt", "english": "Not eligible to vote"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
+        ]
+      }
+    ]
+  },
   "ScaloParty": {
     "questions": [
       {

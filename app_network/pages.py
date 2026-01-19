@@ -26,12 +26,15 @@ class NetworkNamedPersons(Page):
                    'person_31', 'person_32', 'person_33', 'person_34', 'person_35', 'person_36',
                    'person_37', 'person_38', 'person_39', 'person_40', 'person_41', 'person_42',
                    'person_43', 'person_44', 'person_45', 'person_46', 'person_47', 'person_48',
-                   'person_49', 'person_50']
+                   'person_49', 'person_50',
+                   'network_named_page_load_time', 'network_named_page_submit_time', 'network_named_page_duration_seconds']
 
     def vars_for_template(self):
         valid_codes = get_valid_codes()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'valid_codes': valid_codes,
             'valid_codes_json': safe_json(valid_codes),
             'my_code': self.participant.label if self.participant.label else 'N/A'
@@ -64,17 +67,22 @@ class NetworkNamedPersons(Page):
 
 class GroupAssessment(Page): #8
     def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
+        return {'lang': lang_code}
     form_model = Player
     form_fields = ['group_1', 'group_2', 'group_3', 'group_4', 'group_5', 'group_6', 'group_7', 'group_8', 'group_9', 'group_10', 'group_11',
                    'group_12', 'group_13', 'group_14', 'group_15', 'group_16', 'group_17', 'group_18', 'group_19', 'group_20', 'group_21',
                    'group_22', 'group_23', 'group_24', 'group_25', 'group_26', 'group_27', 'group_28', 'group_29', 'group_30', 'group_31',
                    'group_32', 'group_33', 'group_34', 'group_35', 'group_36', 'group_37', 'group_38', 'group_39', 'group_40', 'group_41',
-                   'group_42', 'group_43', 'group_44', 'group_45', 'group_46', 'group_47', 'group_48', 'group_49', 'group_50']
+                   'group_42', 'group_43', 'group_44', 'group_45', 'group_46', 'group_47', 'group_48', 'group_49', 'group_50',
+                   'group_assessment_page_load_time', 'group_assessment_page_submit_time', 'group_assessment_page_duration_seconds']
 
 class SpecialNetworks(Page): #8
     def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
+        return {'lang': lang_code}
     form_model = Player
     form_fields = [
         'friend_1', 'old_1', 'politics_1', 'support_1', 'study_1',
@@ -126,7 +134,8 @@ class SpecialNetworks(Page): #8
         'friend_47', 'old_47', 'politics_47', 'support_47', 'study_47',
         'friend_48', 'old_48', 'politics_48', 'support_48', 'study_48',
         'friend_49', 'old_49', 'politics_49', 'support_49', 'study_49',
-        'friend_50', 'old_50', 'politics_50', 'support_50', 'study_50']              
+        'friend_50', 'old_50', 'politics_50', 'support_50', 'study_50',
+        'special_networks_page_load_time', 'special_networks_page_submit_time', 'special_networks_page_duration_seconds']              
                    
 class LeftrightAssessment(Page):
     form_model = Player
@@ -135,8 +144,11 @@ class LeftrightAssessment(Page):
                    'linksrechts_12', 'linksrechts_13', 'linksrechts_14', 'linksrechts_15', 'linksrechts_16', 'linksrechts_17', 'linksrechts_18', 'linksrechts_19', 'linksrechts_20', 'linksrechts_21',
                    'linksrechts_22', 'linksrechts_23', 'linksrechts_24', 'linksrechts_25', 'linksrechts_26', 'linksrechts_27', 'linksrechts_28', 'linksrechts_29', 'linksrechts_30', 'linksrechts_31',
                    'linksrechts_32', 'linksrechts_33', 'linksrechts_34', 'linksrechts_35', 'linksrechts_36', 'linksrechts_37', 'linksrechts_38', 'linksrechts_39', 'linksrechts_40', 'linksrechts_41',
-                   'linksrechts_42', 'linksrechts_43', 'linksrechts_44', 'linksrechts_45', 'linksrechts_46', 'linksrechts_47', 'linksrechts_48', 'linksrechts_49', 'linksrechts_50']
+                   'linksrechts_42', 'linksrechts_43', 'linksrechts_44', 'linksrechts_45', 'linksrechts_46', 'linksrechts_47', 'linksrechts_48', 'linksrechts_49', 'linksrechts_50',
+                   'leftright_assessment_page_load_time', 'leftright_assessment_page_submit_time', 'leftright_assessment_page_duration_seconds']
     def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
+        return {'lang': lang_code}
 
 page_sequence = [NetworkNamedPersons, SpecialNetworks, GroupAssessment, LeftrightAssessment] 

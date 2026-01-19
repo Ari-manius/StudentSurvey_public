@@ -27,7 +27,6 @@ class PlayerBot(Bot):
         # app_start uses random (technical device/browser info, not suitable for LLM)
         yield pages.Welcome, dict(
             lang=random.choice([0, 1]),  # 0=English, 1=German
-            time=str(random.randint(10, 30)),
             device_type=random.randint(0, 2),
             operating_system=random.randint(0, 3),
             browser=random.randint(0, 5),

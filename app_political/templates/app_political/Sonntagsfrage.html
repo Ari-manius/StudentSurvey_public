@@ -6,12 +6,14 @@
 {% endblock %}
 
 {% block title %}
-Student Survey - University Konstanz
+{% include "global/title_Global.html" %}
 {% endblock %}
 
 {% block content %}
 <div class="container">
-    <input id="time" type="hidden" name="time_sundayquestion"/>
+    <input id="sonntagsfrage_page_load_time" type="hidden" name="sonntagsfrage_page_load_time" />
+    <input id="sonntagsfrage_page_submit_time" type="hidden" name="sonntagsfrage_page_submit_time" />
+    <input id="sonntagsfrage_page_duration_seconds" type="hidden" name="sonntagsfrage_page_duration_seconds" />
 
     {% for question in questions %}
     <div class="mb-3 border pt-2 pb-2 px-2">
@@ -39,4 +41,25 @@ Student Survey - University Konstanz
         <span class="english"> Next </span>
     </button>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('sonntagsfrage_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('sonntagsfrage_page_submit_time').value = submitTime;
+                document.getElementById('sonntagsfrage_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
+
 {% endblock %}

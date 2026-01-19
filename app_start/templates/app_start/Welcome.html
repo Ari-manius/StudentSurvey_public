@@ -7,11 +7,6 @@
 
 {% block scripts %}
 <script>
-   // Time stamp
-   var time = new Date();
-   var time = time.toISOString();
-   document.getElementById("time").value = time;
-
     // Catching the device type
     var ua = navigator.userAgent;
     var device_type = -999;
@@ -22,25 +17,44 @@
       } else {
         device_type = 3;
       }
-    document.getElementById('device_type').value = device_type; 
+    document.getElementById('device_type').value = device_type;
 
     // Catching the operating system
-    var os = -999; 
+    var os = -999;
         if (ua.indexOf("Win") != -1) os = 1;
         if (ua.indexOf("Mac") != -1) os = 2;
-        if (ua.indexOf("Linux") != -1) os = 3; 
-        if (ua.indexOf("Android") != -1) os = 4; 
+        if (ua.indexOf("Linux") != -1) os = 3;
+        if (ua.indexOf("Android") != -1) os = 4;
         if (ua.indexOf("like Mac") != -1) os = 5;
     document.getElementById('operating_system').value = os;
 
     // Catching the browser type
-    var browser = -999; 
-      if (ua.match(/chrome|chromium|crios/i)){browser = 1;} 
-      if(ua.match(/firefox|fxios/i)){browser = 2;} 
-      if(ua.match(/safari/i)){browser = 3;} 
-      if(ua.match(/opr\//i)){browser = 4;} 
-      if(ua.match(/edg/i)){browser = 5;} 
-    document.getElementById('browser').value = browser;    
+    var browser = -999;
+      if (ua.match(/chrome|chromium|crios/i)){browser = 1;}
+      if(ua.match(/firefox|fxios/i)){browser = 2;}
+      if(ua.match(/safari/i)){browser = 3;}
+      if(ua.match(/opr\//i)){browser = 4;}
+      if(ua.match(/edg/i)){browser = 5;}
+    document.getElementById('browser').value = browser;
+
+    // Timestamp tracking for Welcome page
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('start_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('start_page_submit_time').value = submitTime;
+                document.getElementById('start_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
 </script>
 {% endblock %}
 
@@ -63,7 +77,9 @@
     <input id="browser" type="hidden" name="browser"/>
     <input id="screen_height" type="hidden" name="screen_height"/>
     <input id="screen_width" type="hidden" name="screen_width"/>
-    <input id="time" type="hidden" name="time"/>
+    <input id="start_page_load_time" type="hidden" name="start_page_load_time" />
+    <input id="start_page_submit_time" type="hidden" name="start_page_submit_time" />
+    <input id="start_page_duration_seconds" type="hidden" name="start_page_duration_seconds" />
 
     <hr>
     <p> Es freut mich sehr Sie erneut begrüßen zu dürfen. Herzlichen Dank für Ihre Teilnahme an dieser Befragung. <b>Ein wichtiger Hinweis bevor wir starten: Sie werden nicht in der Lage sein, vorherige Seiten erneut zu besuchen.</b> Daher lassen Sie sich am besten Zeit beim Ausfüllen der Fragen.</p>

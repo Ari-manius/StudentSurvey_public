@@ -2,16 +2,20 @@ import os
 import warnings
 #import custom_python.get_config as cf
 
+
+
 SESSION_CONFIGS = [
      dict(
          name='SS_WS2526',
          display_name='Student Survey WS25/26',
          app_sequence=['app_start', 
-                       'app_demographic',                      
-                       'app_network',
-                       'app_studium',
-                       'app_migration', 
-                       'app_political',
+                        'app_demographic', 
+                        'app_vignette',
+                        'app_network',
+                        'app_migration',
+                        'app_AI', 
+                        'app_political',
+                        'app_studium',
                        'app_end'],
          num_demo_participants=3,
      ),

@@ -1,0 +1,65 @@
+{% extends "global/LanguageVersion_Global.html" %}
+{% load otree static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'ballot/ballot.css' }}">
+{% endblock %}
+
+{% block title %}
+{% include "global/title_Global.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <input id="kleine_sonntagsfrage_page_load_time" type="hidden" name="kleine_sonntagsfrage_page_load_time" />
+    <input id="kleine_sonntagsfrage_page_submit_time" type="hidden" name="kleine_sonntagsfrage_page_submit_time" />
+    <input id="kleine_sonntagsfrage_page_duration_seconds" type="hidden" name="kleine_sonntagsfrage_page_duration_seconds" />
+
+    {% for question in questions %}
+    <div class="mb-3 border pt-2 pb-2 px-2">
+        <p class="german">{{ question.text.german }}</p>
+        <p class="english">{{ question.text.english }}</p>
+        
+        {% if question.type == "radio" %}
+            {% for option in question.options %}
+                <div class="german"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.german }}</div>
+                <div class="english"><input type="radio" name="{{ question.field }}" value="{{ option.value }}"> {{ option.text.english }}</div>
+            {% endfor %}
+        {% elif question.type == "text" %}
+            <div class="german">
+                <input type="text" name="{{ question.field }}" placeholder="{{ question.text.german }}">
+            </div>
+            <div class="english">
+                <input type="text" name="{{ question.field }}" placeholder="{{ question.text.english }}">
+            </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        <span class="german"> Weiter </span>
+        <span class="english"> Next </span>
+    </button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('kleine_sonntagsfrage_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('kleine_sonntagsfrage_page_submit_time').value = submitTime;
+                document.getElementById('kleine_sonntagsfrage_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
+
+{% endblock %}

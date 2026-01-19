@@ -11,7 +11,9 @@
 
 {% block content %}
 <div class="container">
-    <input id="time" type="hidden" name="time_firstendpage"/>
+    <input id="firstend_page_load_time" type="hidden" name="firstend_page_load_time" />
+    <input id="firstend_page_submit_time" type="hidden" name="firstend_page_submit_time" />
+    <input id="firstend_page_duration_seconds" type="hidden" name="firstend_page_duration_seconds" />
 
     <p class="german"> Vielen herzlichen Dank für Ihre Aufmerksamkeit und die Teilnahme an dieser Befragung! Bitte klicken Sie auf "Abschicken", um die Umfrage zu beenden. </p>
     <p class="english"> Thank you very much for your attention and participation in this survey! Please click "submit" to finish the survey. </p>
@@ -30,5 +32,26 @@
         <span class="english"> Submit </span>
     </button>
 </div>
+
+<script>
+    // Timestamp tracking for FirstEndPage
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('firstend_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('firstend_page_submit_time').value = submitTime;
+                document.getElementById('firstend_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
 
 {% endblock %}

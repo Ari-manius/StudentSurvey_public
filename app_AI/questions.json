@@ -1,0 +1,164 @@
+{
+  "GenderAge": {
+    "questions": [
+      {
+        "field": "AI_use_1",
+        "type": "checkbox",
+        "section": "AI_use",
+        "text": {
+          "german": "Allgemeine Informationssuche",
+          "english": "Searching for information in general"
+        }
+      },
+      {
+        "field": "AI_use_2",
+        "type": "checkbox",
+        "section": "AI_use",
+        "text": {
+          "german": "Verständnis von Vorlesungsskripten oder Fachtexten",
+          "english": "Understanding lecture scripts and academic literature"
+        }
+      },
+      {
+        "field": "AI_use_3",
+        "type": "checkbox",
+        "section": "AI_use",
+        "text": {
+          "german": "Bearbeitung von Übungsblätter im Tutorat",
+          "english": "Working on exercise sheets for tutoring sessions"
+        }
+      },
+      {
+        "field": "AI_use_4",
+        "type": "checkbox",
+        "section": "AI_use",
+        "text": {
+          "german": "Beantwortung von Quizfragen",
+          "english": "Answering quiz questions"
+        }
+      },
+      {
+        "field": "AI_use_5",
+        "type": "checkbox",
+        "section": "AI_use",
+        "text": {
+          "german": "Vorbereitung auf Klausuren oder Prüfungen",
+          "english": "Preparing for exams"
+        }
+      },
+      {
+        "field": "AI_use_no",
+        "type": "checkbox",
+        "section": "AI_use",
+        "text": {
+          "german": "Ich benutze keine KI-Tools im Studium",
+          "english": "I do not use AI-tools for studying"
+        }
+      },
+      {
+        "field": "AI_use_other",
+        "type": "formfield",
+        "section": "AI_use",
+        "text": {
+          "german": "Andere",
+          "english": "Other"
+        }
+      },
+      {
+        "field": "AI_tool_1",
+        "type": "checkbox",
+        "section": "AI_tool",
+        "text": {
+          "german": "ChatGPT",
+          "english": "ChatGPT"
+        }
+      },
+      {
+        "field": "AI_tool_2",
+        "type": "checkbox",
+        "section": "AI_tool",
+        "text": {
+          "german": "Gemini",
+          "english": "Gemini"
+        }
+      },
+      {
+        "field": "AI_tool_3",
+        "type": "checkbox",
+        "section": "AI_tool",
+        "text": {
+          "german": "Perplexity",
+          "english": "Perplexity"
+        }
+      },
+      {
+        "field": "AI_tool_4",
+        "type": "checkbox",
+        "section": "AI_tool",
+        "text": {
+          "german": "Grok",
+          "english": "Grok"
+        }
+      },
+      {
+        "field": "AI_tool_5",
+        "type": "checkbox",
+        "section": "AI_tool",
+        "text": {
+          "german": "Claude",
+          "english": "Claude"
+        }
+      },
+      {
+        "field": "AI_tool_no",
+        "type": "checkbox",
+        "section": "AI_tool",
+        "text": {
+          "german": "Ich benutze keine KI-Tools im Studium",
+          "english": "I do not use AI-tools for studying"
+        }
+      },
+      {
+        "field": "AI_tool_other",
+        "type": "formfield",
+        "section": "AI_tool",
+        "text": {
+          "german": "Andere",
+          "english": "Other"
+        }
+      },
+      {
+        "field": "AI_subscription",
+        "type": "radio",
+        "section": "AI_subscription",
+        "text": {
+          "german": "Haben Sie ein kostenpflichtiges Abo für ein KI-basiertes Tool abgeschlossen?",
+          "english": "Do you have payed for subscription for an AI-based tool?"
+        },
+        "options": [
+          {"value": "1", "text": {"german": "Ja", "english": "Yes"}},
+          {"value": "2", "text": {"german": "Nein", "english": "No"}},
+          {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
+        ]
+      },
+      {
+        "field": "AI_prompt",
+        "type": "formfield",
+        "section": "AI_prompt",
+        "text": {
+          "german": "Welchen Satz (Prompt) würden Sie formulieren, um die KI bei der Beantwortung dieser Frage unterstützen zu lassen?",
+          "english": "Which sentence (prompt) would you formulate, to support the AI with answering the questions?"
+        }
+      },
+      {
+        "field": "AI_use_other",
+        "type": "formfield",
+        "section": "AI_use_other",
+        "text": {
+          "german": "Für welche weiteren Zwecke (auch private) verwenden Sie KI-Tools?",
+          "english": "For which uses (also private) do you use AI-tools?"
+        }
+      }
+    ]
+  }
+}

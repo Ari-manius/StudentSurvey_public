@@ -11,7 +11,9 @@
 
 {% block content %}
 <div class="container">
-    <input id="time" type="hidden" name="time_migration"/>
+    <input id="migration_page_load_time" type="hidden" name="migration_page_load_time" />
+    <input id="migration_page_submit_time" type="hidden" name="migration_page_submit_time" />
+    <input id="migration_page_duration_seconds" type="hidden" name="migration_page_duration_seconds" />
     <p class="german">Im Folgenden finden Sie einige Aussagen zur Migrations- und Integrationspolitik.</p>
     <p class="english">Below are some statements on migration and integration policy.</p>
 
@@ -1508,4 +1510,24 @@
     </button>
 
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('migration_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('migration_page_submit_time').value = submitTime;
+                document.getElementById('migration_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
 {% endblock %}

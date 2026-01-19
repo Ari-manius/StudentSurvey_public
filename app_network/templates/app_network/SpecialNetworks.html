@@ -15,7 +15,9 @@
     <div>
     <!-- <h3 class="german"> Beziehungen zu anderen Personen</h3>
     <h3 class="english"> Relationsship towards Other People</h3> -->
-    <input id="time" type="hidden" name="time_leftright_selfassessment"/>
+    <input id="special_networks_page_load_time" type="hidden" name="special_networks_page_load_time" />
+    <input id="special_networks_page_submit_time" type="hidden" name="special_networks_page_submit_time" />
+    <input id="special_networks_page_duration_seconds" type="hidden" name="special_networks_page_duration_seconds" />
     <p class="german">Im folgenden geht es um bestimmte Arten von sozialen Beziehungen.</p>
     <p class="english">In the following we ask you about specific social relations.</p>
 
@@ -597,4 +599,25 @@
         <span class="english"> Next </span>
     </button>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('special_networks_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('special_networks_page_submit_time').value = submitTime;
+                document.getElementById('special_networks_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
+
 {% endblock %}

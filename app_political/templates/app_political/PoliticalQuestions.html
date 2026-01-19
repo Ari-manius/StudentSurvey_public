@@ -11,7 +11,9 @@
  
 {% block content %}
 <div class="container">
-    <input id="time" type="hidden" name="time_political_qs"/>
+    <input id="political_questions_page_load_time" type="hidden" name="political_questions_page_load_time" />
+    <input id="political_questions_page_submit_time" type="hidden" name="political_questions_page_submit_time" />
+    <input id="political_questions_page_duration_seconds" type="hidden" name="political_questions_page_duration_seconds" />
     <p class="german">Nun geht es um Ihre generelle Einschätzung von politischen Prozessen.</p>
     <p class="english">Now we ask you for your general assessment of political processes.</p>
 
@@ -57,5 +59,25 @@
         <span class="english"> Next </span>
     </button>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('political_questions_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('political_questions_page_submit_time').value = submitTime;
+                document.getElementById('political_questions_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
 
 {% endblock %}

@@ -6,29 +6,51 @@ from . import *
 
 class NetworkNarrative(Page): #8
     def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
+        return {'lang': lang_code}
     form_model = Player
     form_fields = ["network_narrative"]
 
 class RandomNumber(Page): #16
     def vars_for_template(self):
         label = self.participant.label
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {'rnumber': safe_json(self.player.rnumber),
                 'student_code': label,
-                'lang': self.participant.vars.get('language')}
+                'lang': lang_code}
     form_model = Player
-    form_fields = ['rnumbercheck']
+    form_fields = [
+        'rnumbercheck',
+        'rnumber_page_load_time',
+        'rnumber_page_submit_time',
+        'rnumber_page_duration_seconds'
+    ]
 
 class FirstEndPage(Page): #14
     def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
+        return {'lang': lang_code}
     form_model = Player
-    form_fields = ['time_firstendpage', 'feedback']
+    form_fields = [
+        'feedback',
+        'firstend_page_load_time',
+        'firstend_page_submit_time',
+        'firstend_page_duration_seconds'
+    ]
 
 class End(Page): #15
     def vars_for_template(self):
-        return {'lang': self.participant.vars.get('language')}
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
+        return {'lang': lang_code}
     form_model = Player
-    form_fields = ['time_endpage']
+    form_fields = [
+        'end_page_load_time',
+        'end_page_submit_time',
+        'end_page_duration_seconds'
+    ]
 
 page_sequence = [RandomNumber, FirstEndPage, End]

@@ -691,7 +691,22 @@ class Player(BasePlayer):
     linksrechts_49 = models.IntegerField(blank=True, max=11, min=0, label="")
     linksrechts_50 = models.IntegerField(blank=True, max=11, min=0, label="")
 
-    # Time tracking fields
-    time_networknamedstudents = models.StringField(initial="-999")
-    time_leftright_selfassessment = models.StringField(initial="-999")
-    time_leftright_assessment = models.StringField(initial="-999")
+    # Timestamp tracking for NetworkNamedPersons page
+    network_named_page_load_time = models.StringField(blank=True)
+    network_named_page_submit_time = models.StringField(blank=True)
+    network_named_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for GroupAssessment page
+    group_assessment_page_load_time = models.StringField(blank=True)
+    group_assessment_page_submit_time = models.StringField(blank=True)
+    group_assessment_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for SpecialNetworks page
+    special_networks_page_load_time = models.StringField(blank=True)
+    special_networks_page_submit_time = models.StringField(blank=True)
+    special_networks_page_duration_seconds = models.FloatField(blank=True)
+
+    # Timestamp tracking for LeftrightAssessment page
+    leftright_assessment_page_load_time = models.StringField(blank=True)
+    leftright_assessment_page_submit_time = models.StringField(blank=True)
+    leftright_assessment_page_duration_seconds = models.FloatField(blank=True)

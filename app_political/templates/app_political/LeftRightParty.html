@@ -11,7 +11,9 @@
 
 {% block content %}
 <div class="container">
-    <input id="time" type="hidden" name="time_leftright"/>
+    <input id="leftright_party_page_load_time" type="hidden" name="leftright_party_page_load_time" />
+    <input id="leftright_party_page_submit_time" type="hidden" name="leftright_party_page_submit_time" />
+    <input id="leftright_party_page_duration_seconds" type="hidden" name="leftright_party_page_duration_seconds" />
     <p class="german">In der Politik reden die Leute häufig von "links" und "rechts" und benutzen dieses vereinfachte Schema zu Orietierung.</p>
     <p class="english">In politics, people sometimes talk of "left" and "right" and use this simplified structure for Orientation. </p>
 
@@ -70,4 +72,25 @@
     </button>
 
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('leftright_party_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('leftright_party_page_submit_time').value = submitTime;
+                document.getElementById('leftright_party_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
+
 {% endblock %}

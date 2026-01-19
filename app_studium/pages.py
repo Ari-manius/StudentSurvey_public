@@ -25,12 +25,15 @@ class FreshersCamp(Page):
 
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['FreshersCamp']['questions']
         }
     form_model = Player
-    form_fields = ['fresherscamp_student', 'freshersweek_student']
+    form_fields = ['fresherscamp_student', 'freshersweek_student',
+                   'freshers_camp_page_load_time', 'freshers_camp_page_submit_time', 'freshers_camp_page_duration_seconds']
 
 class Class(Page): #13
     def vars_for_template(self):
@@ -43,24 +46,29 @@ class Class(Page): #13
                 network_player = p
                 break
 
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['Class']['questions'],
             'network_player': network_player
         }
     form_model = Player
-    form_fields = ['time_class', 'tutorial', 'grade',
+    form_fields = ['tutorial', 'grade', 'time_class',
                    'grade_1', 'grade_2', 'grade_3', 'grade_4', 'grade_5', 'grade_6', 'grade_7', 'grade_8', 'grade_9', 'grade_10', 'grade_11',
                    'grade_12', 'grade_13', 'grade_14', 'grade_15', 'grade_16', 'grade_17', 'grade_18', 'grade_19', 'grade_20', 'grade_21',
                    'grade_22', 'grade_23', 'grade_24', 'grade_25', 'grade_26', 'grade_27', 'grade_28', 'grade_29', 'grade_30', 'grade_31',
                    'grade_32', 'grade_33', 'grade_34', 'grade_35', 'grade_36', 'grade_37', 'grade_38', 'grade_39', 'grade_40', 'grade_41',
-                   'grade_42', 'grade_43', 'grade_44', 'grade_45', 'grade_46', 'grade_47', 'grade_48', 'grade_49', 'grade_50']
+                   'grade_42', 'grade_43', 'grade_44', 'grade_45', 'grade_46', 'grade_47', 'grade_48', 'grade_49', 'grade_50',
+                   'class_page_load_time', 'class_page_submit_time', 'class_page_duration_seconds']
 
 class MotivatedStrategies(Page): #13
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['MotivatedStrategies']['questions']
         }
     form_model = Player
@@ -75,7 +83,10 @@ class MotivatedStrategies(Page): #13
         'affective_academic_stress',
         'resource_time',
         'resource_peer',
-        'resource_help'
+        'resource_help',
+        'motivated_strategies_page_load_time',
+        'motivated_strategies_page_submit_time',
+        'motivated_strategies_page_duration_seconds'
     ]
 
 class Study(Page):
@@ -85,14 +96,19 @@ class Study(Page):
 
     def vars_for_template(self):
         questions_data = load_questions()
+        language = self.participant.vars.get('language', 'en')
+        lang_code = 0 if language == 'de' else 1
         return {
-            'lang': self.participant.vars.get('language'),
+            'lang': lang_code,
             'questions': questions_data['Study']['questions']
         }
     form_model = Player
-    form_fields = ['study_program',
-                    'semester_of_study',
-                    'consecutive_academic_career']
+    form_fields = ['study_program', # move over to demographics
+                    'semester_of_study', # move over to demographics
+                    'consecutive_academic_career',
+                    'study_page_load_time',
+                    'study_page_submit_time',
+                    'study_page_duration_seconds']
  
 page_sequence = [
                 FreshersCamp,

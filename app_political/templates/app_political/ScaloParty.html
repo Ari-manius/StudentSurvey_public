@@ -11,7 +11,9 @@
 
 {% block content %}
 <div class="container">
-    <input id="time" type="hidden" name="time_scaloparty"/>
+    <input id="scalo_party_page_load_time" type="hidden" name="scalo_party_page_load_time" />
+    <input id="scalo_party_page_submit_time" type="hidden" name="scalo_party_page_submit_time" />
+    <input id="scalo_party_page_duration_seconds" type="hidden" name="scalo_party_page_duration_seconds" />
     <p class="german">Was halten Sie ganz allgemein von den folgenden einzelnen Parteien?</p>
     <p class="english">How much do you like or dislike each of the following parties?</p>
 
@@ -73,4 +75,25 @@
     </button>
 
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageLoadTime = new Date().toISOString();
+        document.getElementById('scalo_party_page_load_time').value = pageLoadTime;
+
+        const form = document.querySelector('form') || document.querySelector('[role="form"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                const submitTime = new Date().toISOString();
+                const startTime = new Date(pageLoadTime);
+                const endTime = new Date(submitTime);
+                const durationSeconds = (endTime - startTime) / 1000;
+
+                document.getElementById('scalo_party_page_submit_time').value = submitTime;
+                document.getElementById('scalo_party_page_duration_seconds').value = durationSeconds.toFixed(2);
+            });
+        }
+    });
+</script>
+
 {% endblock %}
