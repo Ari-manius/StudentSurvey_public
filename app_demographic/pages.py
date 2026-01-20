@@ -19,6 +19,8 @@ def load_questions():
     return data
 
 class GenderAge(Page): #3
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def is_displayed(self):
         # Only show to new participants (not returning)
         return not self.participant.is_returning_participant
@@ -40,6 +42,8 @@ class GenderAge(Page): #3
 
 
 class LevelFamily(Page): #3
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def is_displayed(self):
         # Only show to new participants (not returning)
         return not self.participant.is_returning_participant
@@ -64,6 +68,8 @@ class LevelFamily(Page): #3
                     'level_family_page_duration_seconds']
 
 class Financial(Page):
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def vars_for_template(self):
         questions_data = load_questions()
         language = self.participant.vars.get('language', 'en')
@@ -84,6 +90,8 @@ class Financial(Page):
                     "financial_page_duration_seconds"]
 
 class Secondary(Page):
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def is_displayed(self):
         # Only show to new participants (not returning)
         return not self.participant.is_returning_participant

@@ -17,6 +17,8 @@ def get_valid_codes():
 
 
 class NetworkNamedPersons(Page):
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     form_model = Player
     form_fields = ['person_1', 'person_2', 'person_3', 'person_4', 'person_5', 'person_6',
                    'person_7', 'person_8', 'person_9', 'person_10', 'person_11', 'person_12',
@@ -66,6 +68,8 @@ class NetworkNamedPersons(Page):
         return errors if errors else None
 
 class GroupAssessment(Page): #8
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def vars_for_template(self):
         language = self.participant.vars.get('language', 'en')
         lang_code = 0 if language == 'de' else 1
@@ -79,6 +83,8 @@ class GroupAssessment(Page): #8
                    'group_assessment_page_load_time', 'group_assessment_page_submit_time', 'group_assessment_page_duration_seconds']
 
 class SpecialNetworks(Page): #8
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def vars_for_template(self):
         language = self.participant.vars.get('language', 'en')
         lang_code = 0 if language == 'de' else 1
@@ -138,6 +144,8 @@ class SpecialNetworks(Page): #8
         'special_networks_page_load_time', 'special_networks_page_submit_time', 'special_networks_page_duration_seconds']              
                    
 class LeftrightAssessment(Page):
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     form_model = Player
     form_fields = ['linksrechts_self',
                    'linksrechts_1', 'linksrechts_2', 'linksrechts_3', 'linksrechts_4', 'linksrechts_5', 'linksrechts_6', 'linksrechts_7', 'linksrechts_8', 'linksrechts_9', 'linksrechts_10', 'linksrechts_11',

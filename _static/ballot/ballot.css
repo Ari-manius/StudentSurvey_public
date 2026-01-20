@@ -15,7 +15,7 @@ h3 {
 }
 
 p, label {
-    color: #555;
+    color: #16115d;
     line-height: 1.5;
 }
 
@@ -81,22 +81,53 @@ input[type="radio"], input[type="text"] {
     margin-top: 5px;
 }
 
-
-.otree-btn-next {
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white;
+.otree-btn-back {
+    background-color: #dc3545 !important; /* Red color */
+    color: white !important;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    display: block;
-    margin: 20px auto;
+    display: inline-block !important;
+    margin: 20px 10px 20px 0 !important;
     width: fit-content;
+    border: none !important;
+}
+
+.otree-btn-back:hover {
+    background-color: #c82333 !important; /* Darker shade for hover */
+    transform: scale(1.05);
+}
+
+.otree-btn-next {
+    background-color: #28a745 !important; /* Green color */
+    color: white !important;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block !important;
+    margin: 20px 0 !important;
+    width: fit-content;
+    border: none !important;
 }
 
 .otree-btn-next:hover {
-    background-color: #0056b3; /* Darker shade for hover */
+    background-color: #218838; /* Darker shade for hover */
     transform: scale(1.05);
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.button-container button {
+    display: inline-block !important;
+    margin: 0 !important;
 }
 
 div.german, div.english {

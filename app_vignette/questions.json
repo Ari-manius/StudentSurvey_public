@@ -1,0 +1,242 @@
+{
+  "Anfangsfrage": {
+    "questions": [
+      {
+        "field": "wehrmodell_rating",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 7,
+        "text": {
+          "german": "Wie bewerten Sie diese aktuell geltende Regelung?",
+          "english": "How do you rate the current regulation?"
+        },
+        "scale_labels": {
+          "min": {
+            "german": "Stimme voll und ganz ab",
+            "english": "Strongly disagree"
+          },
+          "max": {
+            "german": "Stimme voll und ganz zu",
+            "english": "Strongly agree"
+          }
+        }
+      },
+      {
+        "field": "affected_person_relationship",
+        "type": "checkbox",
+        "text": {
+          "german": "Gibt es in Ihrer Umgebung (Familien, Verwandtschaft, Bekannte oder Freundeskreis) jemanden, der von dieser Regel betroffen ist, also Jahrgang 2008 oder jünger und männlich?",
+          "english": "Is there someone in your environment (family, relatives, acquaintances, or circle of friends) who is affected by this rule, i.e., born in 2008 or later and male?"
+        },
+        "options": [
+          {
+            "value": "1",
+            "text": {
+              "german": "Ja, in meiner Familie",
+              "english": "Yes, in my family"
+            }
+          },
+          {
+            "value": "2",
+            "text": {
+              "german": "Ja, in meiner Verwandschaft",
+              "english": "Yes, in my extended family"
+            }
+          },
+          {
+            "value": "3",
+            "text": {
+              "german": "Ja, in meinem Freundekreis",
+              "english": "Yes, in my circle of friends"
+            }
+          },
+          {
+            "value": "4",
+            "text": {
+              "german": "Ja unter meinen Bekannten",
+              "english": "Yes, among my acquaintances"
+            }
+          },
+          {
+            "value": "5",
+            "text": {
+              "german": "Nein, niemanden",
+              "english": "No, no one"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "Wehrdienst-Vignette": {
+    "questions": [
+      {
+        "field": "vignette_justification",
+        "type": "radio",
+        "text": {
+          "german": "Rechtfertigung",
+          "english": "Justification"
+        },
+        "options": [
+          {
+            "value": "russia",
+            "text": {
+              "german": "...die zunehmende militärische Bedrohung durch Russland an den EU-Außengrenzen.",
+              "english": "...the increasing military threat from Russia at the EU's external borders."
+            }
+          },
+          {
+            "value": "china",
+            "text": {
+              "german": "...die wachsende globale Instabilität durch den militärischen Aufstieg Chinas.",
+              "english": "...the growing global instability due to China's military rise."
+            }
+          },
+          {
+            "value": "usa",
+            "text": {
+              "german": "...die wachsende territorialen Ambition und internationale Aggressivität der jetzigen US-Regierung.",
+              "english": "...the growing territorial ambitions and international aggression of the current US administration."
+            }
+          },
+          {
+            "value": "nato",
+            "text": {
+              "german": "...die zunehmende Unsicherheit über den Beistand innerhalb des NATO-Bündnisses.",
+              "english": "...the increasing uncertainty about support within the NATO alliance."
+            }
+          },
+          {
+            "value": "leadership",
+            "text": {
+              "german": "...die Notwendigkeit, dass Deutschland eine Führungsrolle in der europäischen Verteidigung übernimmt.",
+              "english": "...the necessity for Germany to take a leadership role in European defense."
+            }
+          },
+          {
+            "value": "eu_defense",
+            "text": {
+              "german": "...die Notwendigkeit, dass Europa militärisch unabhängiger sein soll.",
+              "english": "...the necessity for Europe to be more militarily independent."
+            }
+          }
+        ]
+      },
+      {
+        "field": "vignette_target_group",
+        "type": "radio",
+        "text": {
+          "german": "Zielgruppe",
+          "english": "Target Group"
+        },
+        "options": [
+          {
+            "value": "men",
+            "text": {
+              "german": "...alle jungen Männer...",
+              "english": "...all young men..."
+            }
+          },
+          {
+            "value": "all",
+            "text": {
+              "german": "...alle jungen Erwachsenen (unabhängig vom Geschlecht)...",
+              "english": "...all young adults (regardless of gender)..."
+            }
+          }
+        ]
+      },
+      {
+        "field": "vignette_duration",
+        "type": "radio",
+        "text": {
+          "german": "Dauer",
+          "english": "Duration"
+        },
+        "options": [
+          {
+            "value": "6months",
+            "text": {
+              "german": "6 Monate",
+              "english": "6 months"
+            }
+          },
+          {
+            "value": "9months",
+            "text": {
+              "german": "9 Monate",
+              "english": "9 months"
+            }
+          },
+          {
+            "value": "12months",
+            "text": {
+              "german": "12 Monate",
+              "english": "12 months"
+            }
+          }
+        ]
+      },
+      {
+        "field": "vignette_compensation",
+        "type": "radio",
+        "text": {
+          "german": "Kompensation",
+          "english": "Compensation"
+        },
+        "options": [
+          {
+            "value": "study",
+            "text": {
+              "german": "Wer den Wehrdienst absolviert hat, wird bei der Vergabe von zulassungsbeschränkten Studienplätzen (Numerus Clausus) bevorzugt behandelt.",
+              "english": "Those who have completed military service will be given preferential treatment in the allocation of limited study places (Numerus Clausus)."
+            }
+          },
+          {
+            "value": "alternative_service",
+            "text": {
+              "german": "Wer keinen Wehrdienst leisten möchte, wird stattdessen zu einer deutlich längeren Sozialarbeit (Ersatzdienst) verpflichtet.",
+              "english": "Those who do not want to perform military service will instead be obligated to much longer social work (alternative service)."
+            }
+          },
+          {
+            "value": "salary",
+            "text": {
+              "german": "Der Wehrdienst wird mit deutlich mehr als 2600 Euro pro Monat kompensiert.",
+              "english": "Military service is compensated with significantly more than 2600 euros per month."
+            }
+          }
+        ]
+      },
+      {
+        "field": "vignette_support",
+        "type": "scale",
+        "scale_min": 1,
+        "scale_max": 7,
+        "text": {
+          "german": "Inwieweit befürworten oder lehnen Sie die Einführung der Wehrpflicht unter den oben genannten Bedingungen ab?",
+          "english": "To what extent do you support or oppose the introduction of military service under the conditions mentioned above?"
+        },
+        "scale_labels": {
+          "min": {
+            "german": "Lehne voll und ganz ab",
+            "english": "Strongly oppose"
+          },
+          "max": {
+            "german": "Stimme voll und ganz zu",
+            "english": "Strongly support"
+          }
+        }
+      },
+      {
+        "field": "vignette_reasoning",
+        "type": "text",
+        "text": {
+          "german": "Sie können kurz Ihre Antwort begründen.",
+          "english": "You can briefly explain your answer."
+        },
+        "optional": true
+      }
+    ]
+  }
+}

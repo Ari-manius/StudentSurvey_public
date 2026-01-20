@@ -17,8 +17,9 @@
     <p class="german">Nun würden wir Sie gerne zum akademischen Hintergrund Ihrer Familie befragen.</p>
     <p class="english">Now we would like to ask you questions about your academical family background.</p>
 
+    <div class="mb-3 border pt-2 pb-2 px-2">
     {% for question in questions %}
-        <div class="mb-3">
+        <div class="mb-3 border pt-2 pb-2 px-2">
             <p class="german">{{ question.text.german|safe }}</p>
             <p class="english">{{ question.text.english|safe }}</p>
 
@@ -33,11 +34,13 @@
         </div>
 
     {% endfor %}
+    </div>
 
-    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
-        <span class="german"> Weiter </span>
-        <span class="english"> Next </span>
-    </button>
+    <div class="button-container">
+        {{ back_button }}
+        {{ next_button }}
+    </div>
+    
 </div>
 
 <script>
