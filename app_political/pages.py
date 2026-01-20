@@ -18,10 +18,12 @@ def load_questions():
     return data
 
 class Sonntagsfrage(Page): #5
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['Sonntagsfrage']['questions']
@@ -30,10 +32,12 @@ class Sonntagsfrage(Page): #5
     form_fields = ['sunday_party_vote', 'sonntagsfrage_page_load_time', 'sonntagsfrage_page_submit_time', 'sonntagsfrage_page_duration_seconds']
 
 class kleineSonntagsfrage(Page): # Für Landtagswahl
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['kleineSonntagsfrage']['questions']
@@ -42,10 +46,12 @@ class kleineSonntagsfrage(Page): # Für Landtagswahl
     form_fields = ['small_sunday_party_vote', 'kleine_sonntagsfrage_page_load_time', 'kleine_sonntagsfrage_page_submit_time', 'kleine_sonntagsfrage_page_duration_seconds']
 
 class ScaloParty(Page): #6
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['ScaloParty']['questions']
@@ -55,10 +61,12 @@ class ScaloParty(Page): #6
                    'scalo_party_page_load_time', 'scalo_party_page_submit_time', 'scalo_party_page_duration_seconds']
 
 class ScaloPerson(Page): #7
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['ScaloPerson']['questions']
@@ -69,10 +77,12 @@ class ScaloPerson(Page): #7
                    'scalo_person_page_load_time', 'scalo_person_page_submit_time', 'scalo_person_page_duration_seconds']
 
 class LeftRightParty(Page): #9
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['LeftRightParty']['questions']
@@ -82,10 +92,12 @@ class LeftRightParty(Page): #9
                    'leftright_party_page_load_time', 'leftright_party_page_submit_time', 'leftright_party_page_duration_seconds']
 
 class PoliticalQuestions(Page): #10
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['PoliticalQuestions']['questions']
@@ -96,10 +108,16 @@ class PoliticalQuestions(Page): #10
                    'political_questions_page_load_time', 'political_questions_page_submit_time', 'political_questions_page_duration_seconds']
 
 class Participation(Page):
+    allow_back_button = True
+    preserve_unsubmitted_inputs = True
+    def is_displayed(self):
+        # Only show to new participants (not returning)
+        return not self.participant.is_returning_participant
+
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['Participation']['questions']

@@ -65,15 +65,17 @@
         {% endfor %}
     </div>
 
+    <div class="mb-3 border pt-2 pb-2 px-2">
     {% for question in questions %}
         {% if question.section == "AI_prompt" %}
             {% if question.type == "formfield" %}
                 <p class="german">Stellen Sie sich vor, Sie müssen das folgende Quiz lösen und dürfen dafür KI-basierte Tools verwenden:</p>
                 <p class="english">Imagine you have to answer the following quiz question and can use AI-based tools for this:</p> 
-
-                <div class="mb-3 border pt-2 pb-2 px-2">
                     <p class="german"><i>"What is overcoverage in the data selection process? Give an example."</i></p>
                     <p class="english"><i>"What is overcoverage in the data selection process? Give an example."</i></p>
+
+                <div class="mb-3 border pt-2 pb-2 px-2">
+
                     <p class="german">{{ question.text.german }}</p>
                     <p class="english">{{ question.text.english }}</p>
 
@@ -83,6 +85,7 @@
             {% endif %}
         {% endif %}
     {% endfor %}
+    </div>
 
     {% for question in questions %}
         {% if question.section == "AI_use_other" %}
@@ -97,11 +100,12 @@
         {% endif %}
     {% endfor %}
 
-    <br>
+    <div class="button-container">
     <button class="otree-btn-next btn btn-primary next-button otree-next-button">
         <span class="german"> Weiter </span>
         <span class="english"> Next </span>
     </button>
+    </div>
 </div>
 
 <script>

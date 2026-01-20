@@ -16,7 +16,6 @@
     <input id="intro_page_duration_seconds" type="hidden" name="w_intro_page_duration_seconds" />
 
     <div class="mb-3 border pt-2 pb-2 px-2">
-    <div class="mb-3 border pt-2 pb-2 px-2">
     <p class="german"> Seit Januar 2026 gilt in Deutschland ein neues Wehrdienstmodell: Alle 18-jährigen Männer sind <b>verpflichtet</b>, einen digitalen Fragebogen zu ihrer Motivation und Fitness auszufüllen (für Frauen ist dies freiwillig). Auf dieser Basis lädt die Bundeswehr die am besten geeigneten Kandidaten zur <b>verpflichtenden Musterung</b> ein. Der eigentliche Wehrdienst bleibt jedoch <b>freiwillig</b> und wird mit einem Gehalt von mindestens 2.600 Euro brutto gefördert.</p>
     <p class="english"> Since January 2026, a new military service model has been in effect in Germany: All 18-year-old men are required to complete a digital questionnaire about their motivation and fitness (for women, this is voluntary). Based on this, the German Armed Forces will invite the most suitable candidates to a mandatory examination. However, military service itself remains <b>voluntary</b> and is subsidized with a gross salary of at least €2,600.</p>
     </div>
@@ -45,8 +44,8 @@
     </div>
 
     <div class="mb-3 border pt-2 pb-2 px-2">
-    <p class="german">Gibt es in Ihrer Umgebung (Familien, Verwandtschaft, Bekannte oder Freundeskreis) jemanden, der von dieser Regel betroffen ist, also Jahrgang 2008 oder jünger und männlich?</p>
-    <p class="english">Is there someone in your environment (family, relatives, acquaintances, or friends) who is affected by this rule, i.e., born in 2008 or later and male?</p>
+    <p class="german">Gibt es in Ihrer Umgebung (Familien, Verwandtschaft, Bekannte oder Freundeskreis) jemanden, der von dieser Regel betroffen ist, also Jahrgang 2008 oder jünger und männlich? (Mehrfachnennungen sind möglich)</p>
+    <p class="english">Is there someone in your environment (family, relatives, acquaintances, or friends) who is affected by this rule, i.e., born in 2008 or later and male? (Multiple Answers possible)</p>
 
     <div class="german"><input type="checkbox" name="w_affected_family" value="on"> Ja, in meiner Familie</div>
     <div class="english"><input type="checkbox" name="w_affected_family" value="on"> Yes, in my family</div>
@@ -65,11 +64,12 @@
     {{ formfield_errors 'w_affected_none' }}
     </div>
 
-    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
-        <span class="german"> Weiter </span>
-        <span class="english"> Next </span>
-    </button>
-</div>
+    <div class="button-container">
+        <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+            <span class="german"> Weiter </span>
+            <span class="english"> Next </span>
+        </button>
+    </div>
 </div>
 
 <script>

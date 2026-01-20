@@ -52,7 +52,7 @@ class Constants(BaseConstants):
     kompensation_options = {
         'study': {
             'de': 'Wer den Wehrdienst absolviert hat, wird bei der Vergabe von zulassungsbeschränkten Studienplätzen (Numerus Clausus) bevorzugt behandelt.',
-            'en': 'Those who have completed military service will be given preferential treatment in the allocation of restricted university places (Numerus Clausus).'
+            'en': 'Those who have completed military service will be given preferential treatment in admission to restricted university programs (Numerus Clausus).'
         },
         'alternative_service': {
             'de': 'Wer keinen Wehrdienst leisten möchte, wird stattdessen zu einer deutlich längeren Sozialarbeit (Ersatzdienst) verpflichtet.',

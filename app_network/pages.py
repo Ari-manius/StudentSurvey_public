@@ -33,8 +33,8 @@ class NetworkNamedPersons(Page):
 
     def vars_for_template(self):
         valid_codes = get_valid_codes()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'valid_codes': valid_codes,
@@ -71,8 +71,8 @@ class GroupAssessment(Page): #8
     allow_back_button = True
     preserve_unsubmitted_inputs = True
     def vars_for_template(self):
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {'lang': lang_code}
     form_model = Player
     form_fields = ['group_1', 'group_2', 'group_3', 'group_4', 'group_5', 'group_6', 'group_7', 'group_8', 'group_9', 'group_10', 'group_11',
@@ -86,8 +86,8 @@ class SpecialNetworks(Page): #8
     allow_back_button = True
     preserve_unsubmitted_inputs = True
     def vars_for_template(self):
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {'lang': lang_code}
     form_model = Player
     form_fields = [
@@ -155,8 +155,8 @@ class LeftrightAssessment(Page):
                    'linksrechts_42', 'linksrechts_43', 'linksrechts_44', 'linksrechts_45', 'linksrechts_46', 'linksrechts_47', 'linksrechts_48', 'linksrechts_49', 'linksrechts_50',
                    'leftright_assessment_page_load_time', 'leftright_assessment_page_submit_time', 'leftright_assessment_page_duration_seconds']
     def vars_for_template(self):
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {'lang': lang_code}
 
 page_sequence = [NetworkNamedPersons, SpecialNetworks, GroupAssessment, LeftrightAssessment] 

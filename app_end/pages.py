@@ -6,8 +6,8 @@ from . import *
 
 class NetworkNarrative(Page): #8
     def vars_for_template(self):
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {'lang': lang_code}
     form_model = Player
     form_fields = ["network_narrative"]
@@ -15,8 +15,8 @@ class NetworkNarrative(Page): #8
 class RandomNumber(Page): #16
     def vars_for_template(self):
         label = self.participant.label
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {'rnumber': safe_json(self.player.rnumber),
                 'student_code': label,
                 'lang': lang_code}
@@ -30,8 +30,8 @@ class RandomNumber(Page): #16
 
 class FirstEndPage(Page): #14
     def vars_for_template(self):
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {'lang': lang_code}
     form_model = Player
     form_fields = [
@@ -43,8 +43,8 @@ class FirstEndPage(Page): #14
 
 class End(Page): #15
     def vars_for_template(self):
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {'lang': lang_code}
     form_model = Player
     form_fields = [

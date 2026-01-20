@@ -25,8 +25,8 @@ class FreshersCamp(Page):
 
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['FreshersCamp']['questions']
@@ -46,8 +46,8 @@ class Class(Page): #13
                 network_player = p
                 break
 
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['Class']['questions'],
@@ -65,8 +65,8 @@ class Class(Page): #13
 class MotivatedStrategies(Page): #13
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['MotivatedStrategies']['questions']
@@ -96,8 +96,8 @@ class Study(Page):
 
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['Study']['questions']

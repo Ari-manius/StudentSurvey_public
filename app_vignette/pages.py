@@ -7,8 +7,8 @@ class WehrdienstIntro(Page):
     template_name = 'app_vignette/Intro.html'
 
     def vars_for_template(self):
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {'lang': lang_code}
 
     form_model = Player
@@ -29,8 +29,8 @@ class WehrdienstManipulation(Page):
     template_name = 'app_vignette/Manipulation.html'
 
     def vars_for_template(self):
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {'lang': lang_code}
 
     form_model = Player

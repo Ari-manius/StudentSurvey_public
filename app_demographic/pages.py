@@ -27,8 +27,8 @@ class GenderAge(Page): #3
 
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['GenderAge']['questions']
@@ -50,8 +50,8 @@ class LevelFamily(Page): #3
 
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['LevelFamily']['questions']
@@ -72,8 +72,8 @@ class Financial(Page):
     preserve_unsubmitted_inputs = True
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['Financial']['questions']
@@ -98,8 +98,8 @@ class Secondary(Page):
 
     def vars_for_template(self):
         questions_data = load_questions()
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['Secondary']['questions']

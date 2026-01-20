@@ -39,8 +39,8 @@ class Migration(Page):
                 network_player = p
                 break
 
-        language = self.participant.vars.get('language', 'en')
-        lang_code = 0 if language == 'de' else 1
+        language = self.participant.vars.get('language', '1')
+        lang_code = int(language)
         return {
             'lang': lang_code,
             'questions': questions_data['Migration']['questions'],
