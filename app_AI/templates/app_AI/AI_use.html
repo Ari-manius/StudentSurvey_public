@@ -19,7 +19,7 @@
 
     <div class="mb-3 bg-light border pt-2 pb-2 px-2">
         <div class="german"><p>Welche KI-basierten Tools nutzen für Ihr Studium? (Mehrfachnennungen sind möglich)</p></div>
-        <div class="english"><p>Which AI-based tools do you use for your studies? </p></div>
+        <div class="english"><p>Which AI-based tools do you use for your studies? (Multiple Answers possible)</p></div>
         {% for question in questions %}
             {% if question.section == "AI_tool" %}
                 {% if question.type == "checkbox" %}
@@ -34,8 +34,8 @@
     </div>
 
     <div class="mb-3 bg-light border pt-2 pb-2 px-2">
-        <div class="german"><p>Wofür nutzen Sie KI-basierten Tools in Ihrem Studium?</p></div>
-        <div class="english"><p>For what do you use AI-based tools in your studies?</p></div>
+        <div class="german"><p>Wofür nutzen Sie KI-basierten Tools in Ihrem Studium? (Mehrfachnennungen sind möglich)</p></div>
+        <div class="english"><p>For what do you use AI-based tools in your studies? (Multiple answers possible)</p></div>
         {% for question in questions %}
             {% if question.section == "AI_use" %}
                 {% if question.type == "checkbox" %}
