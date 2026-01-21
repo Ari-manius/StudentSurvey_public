@@ -58,7 +58,7 @@
           },
           {
             "value": "3",
-            "text": {"german": "Teils gut / teils schlecht", "english": "Part good / part bad"}
+            "text": {"german": "Teils gut / teils schlecht", "english": "Neither nor"}
           },
           {
             "value": "4", 
@@ -92,7 +92,7 @@
           },
           {
             "value": "3",
-            "text": {"german": "Teils gut / teils schlecht", "english": "Part good / part bad"}
+            "text": {"german": "Teils gut / teils schlecht", "english": "Neither nor"}
           },
           {
             "value": "4", 
@@ -113,7 +113,7 @@
         "type": "radio",
         "text": {
           "german": "Was glauben Sie, wie wird die wirtschaftliche Lage in Deutschland IN EINEM JAHR sein?",
-          "english": "How do you believe will the economic situation will be in Germany in ONE YEAR?"
+          "english": "How do you believe to be the economic situation in Germany in ONE YEAR?"
         },
         "options": [
           {
@@ -126,7 +126,7 @@
           },
           {
             "value": "3",
-            "text": {"german": "Teils gut / teils schlecht", "english": "Part good / part bad"}
+            "text": {"german": "Teils gut / teils schlecht", "english": "Neither nor"}
           },
           {
             "value": "4", 
@@ -147,7 +147,7 @@
         "type": "radio",
         "text": {
           "german": "Was glauben Sie, wie wird Ihre eigene wirtschaftliche Lage IN EINEM JAHR sein?",
-          "english": "How do you believe will be your own economic situation in a year?"
+          "english": "How do you believe to be your own economic situation in ONE YEAR?"
         },
         "options": [
           {
@@ -160,7 +160,7 @@
           },
           {
             "value": "3",
-            "text": {"german": "Teils gut / teils schlecht", "english": "Part good / part bad"}
+            "text": {"german": "Teils gut / teils schlecht", "english": "Neither nor"}
           },
           {
             "value": "4", 

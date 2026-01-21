@@ -35,7 +35,7 @@ class Player(BasePlayer):
     # Class
     tutorial = models.IntegerField(blank=True, max=8, min=0, label="")
     grade = models.StringField(blank=True)
-    time_class = models.IntegerField(blank=True, label="", min=0, max=168, initial=0)
+    time_class = models.IntegerField(blank=True, label="", min=0, max=168)
 
     # MSL
     motivation_intrinsic_goal_1 = models.IntegerField(blank=True, max=8, min=0, label="")

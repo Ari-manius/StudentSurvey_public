@@ -46,7 +46,7 @@ class Player(BasePlayer):
     financial_situation_general_current = models.IntegerField(blank=True, label="", min=0, max=10)
     financial_situation_personal_future = models.IntegerField(blank=True, label="", min=0, max=10)
     financial_situation_general_future = models.IntegerField(blank=True, label="", min=0, max=10)
-    time_work = models.IntegerField(blank=True, label="", min=0, max=168, initial=0)
+    time_work = models.IntegerField(blank=True, label="", min=0, max=168)
 
     # Timestamp tracking for GenderAge page
     gender_age_page_load_time = models.StringField(blank=True)

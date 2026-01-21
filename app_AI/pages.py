@@ -19,9 +19,9 @@ def load_questions():
     return data
 
 class AI_use(Page):
-    def is_displayed(self):
-        # Only show to new participants (not returning)
-        return not self.participant.is_returning_participant
+    # def is_displayed(self):
+    #     # Only show to new participants (not returning)
+    #     return not self.participant.is_returning_participant
 
     def vars_for_template(self):
         questions_data = load_questions()

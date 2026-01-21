@@ -112,7 +112,11 @@
           "german": "Wie viele Stunden pro Woche lernen Sie für diesen Kurs?",
           "english": "How many hours per week do you study for this course?"
         },
-        "placeholder": "Enter Hours (0-168)"
+        "placeholder": "Enter Hours (0-168)",
+        "error": {
+          "german": "Bitte geben Sie eine gültige Stundenzahl ein.",
+          "english": "Please enter a valid number of hours."
+        }
       },
       {
         "field": "tutorial",
@@ -165,13 +169,13 @@
           "english": "In a class like this, I prefer course material that feeds my curiosity, even if it is difficult to learn."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
@@ -183,13 +187,13 @@
           "english": "I want to do well in this class because it is important to show my ability to my family, friends, future employer, or others."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
@@ -201,13 +205,13 @@
           "english": "When I have the opportunity in this class, I choose course assignments that I can learn from even if they don't guarantee a good grade."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
@@ -219,13 +223,13 @@
           "english": "The most important thing for me right now is improving my overall grade point average, so my main concern in this class is getting a good grade."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
@@ -237,13 +241,13 @@
           "english": "The most satisfying thing for me in this course is trying to understand the content as thoroughly as possible."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
@@ -255,13 +259,13 @@
           "english": "If I can, I want to get better grades in this class than most of the other students."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
@@ -273,13 +277,13 @@
           "english": "I am studying for my degree course in order to have good career opportunities later."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
@@ -291,13 +295,13 @@
           "english": "In my studies I think of the consequences of failing."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
@@ -309,13 +313,13 @@
           "english": "I make sure I keep up with the weekly readings and assignments for this course."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
@@ -327,13 +331,13 @@
           "english": "When I can't understand the material in this course, I know who to ask for help."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       },
@@ -345,13 +349,13 @@
           "english": "I try to work with other students from this class to complete the course assignments."
         },
         "options": [
-          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Not at all true of me"}},
-          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Not true of me"}},
-          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Somewhat not true of me"}},
-          {"value": "4", "text": {"german": "Teils/teils", "english": "Neutral"}},
-          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Somewhat true of me"}},
-          {"value": "6", "text": {"german": "Trifft zu", "english": "True of me"}},
-          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Very true of me"}},
+          {"value": "1", "text": {"german": "Trifft gar nicht zu", "english": "Completely disagree"}},
+          {"value": "2", "text": {"german": "Trifft nicht zu", "english": "Disagree"}},
+          {"value": "3", "text": {"german": "Trifft eher nicht zu", "english": "Rather disagree"}},
+          {"value": "4", "text": {"german": "Teils/teils", "english": "Neither nor"}},
+          {"value": "5", "text": {"german": "Trifft eher zu", "english": "Rather agree"}},
+          {"value": "6", "text": {"german": "Trifft zu", "english": "Agree"}},
+          {"value": "7", "text": {"german": "Trifft völlig zu", "english": "Completely Agree"}},
           {"value": "0", "text": {"german": "Weiß nicht", "english": "Don't know"}}
         ]
       }

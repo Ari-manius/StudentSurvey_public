@@ -17,7 +17,7 @@
     <p class="german">Nun würden wir Sie gerne zum akademischen Hintergrund Ihrer Familie befragen.</p>
     <p class="english">Now we would like to ask you questions about your academical family background.</p>
 
-    <div class="mb-3 border pt-2 pb-2 px-2">
+    
     {% for question in questions %}
         <div class="mb-3 border pt-2 pb-2 px-2">
             <p class="german">{{ question.text.german|safe }}</p>
@@ -34,7 +34,7 @@
         </div>
 
     {% endfor %}
-    </div>
+    
 
     <div class="button-container">
         {{ back_button }}

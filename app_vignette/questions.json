@@ -8,7 +8,7 @@
         "scale_max": 7,
         "text": {
           "german": "Wie bewerten Sie diese aktuell geltende Regelung?",
-          "english": "How do you rate the current regulation?"
+          "english": "How do you rate the current version of the regulation?"
         },
         "scale_labels": {
           "min": {
@@ -26,7 +26,7 @@
         "type": "checkbox",
         "text": {
           "german": "Gibt es in Ihrer Umgebung (Familien, Verwandtschaft, Bekannte oder Freundeskreis) jemanden, der von dieser Regel betroffen ist, also Jahrgang 2008 oder jünger und männlich?",
-          "english": "Is there someone in your environment (family, relatives, acquaintances, or circle of friends) who is affected by this rule, i.e., born in 2008 or later and male?"
+          "english": "Is there someone among your environment (family, relatives, acquaintances, or circle of friends) who is affected by this rule, i.e., born in 2008 or later and male?"
         },
         "options": [
           {
