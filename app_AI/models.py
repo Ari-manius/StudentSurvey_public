@@ -41,7 +41,7 @@ class Player(BasePlayer):
     AI_tool_no = models.IntegerField(blank=True, max=1, min=0, label="")
     AI_tool_other = models.LongStringField(blank=True)
 
-    AI_subscription = models.IntegerField(blank=True, max=1, min=0, label="")
+    AI_subscription = models.IntegerField(blank=True, max=2, min=0, label="")
 
     AI_prompt = models.LongStringField(blank=True)
 

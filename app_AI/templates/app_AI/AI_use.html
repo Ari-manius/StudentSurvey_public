@@ -14,11 +14,12 @@
     <input id="ai_page_load_time" type="hidden" name="ai_page_load_time" />
     <input id="ai_page_submit_time" type="hidden" name="ai_page_submit_time" />
     <input id="ai_page_duration_seconds" type="hidden" name="ai_page_duration_seconds" />
+    
     <p class="german">Nun geht es weiter mit einigen Fragen zur Nutzung von KI-tools im Studium.</p>
     <p class="english">Now we continue with a few questions relating to the usage of AI-tools for studying.</p>
 
     <div class="mb-3 bg-light border pt-2 pb-2 px-2">
-        <div class="german"><p>Welche KI-basierten Tools nutzen für Ihr Studium? (Mehrfachnennungen sind möglich)</p></div>
+        <div class="german"><p>Welche KI-basierten Tools nutzen Sie für Ihr Studium? (Mehrfachnennungen sind möglich)</p></div>
         <div class="english"><p>Which AI-based tools do you use for your studies? (Multiple Answers possible)</p></div>
         {% for question in questions %}
             {% if question.section == "AI_tool" %}
@@ -26,15 +27,17 @@
                     <div class="german"><label><input type="checkbox" name="{{ question.field }}" value="1"> {{ question.text.german }}</label></div>
                     <div class="english"><label><input type="checkbox" name="{{ question.field }}" value="1"> {{ question.text.english }}</label></div>
                 {% elif question.type == "formfield" %}
-                    <div class="german"><label>{{ question.text.german }}: {{ form.AI_tool_other }}</label></div>
-                    <div class="english"><label>{{ question.text.english }}: {{ form.AI_tool_other }}</label></div>
+                    <p class="german">{{ question.text.german }}</p>
+                    <p class="english">{{ question.text.english }}</p>
+                    <div class="german">{{ form.AI_tool_other }}</div>
+                    <div class="english">{{ form.AI_tool_other }}</div>
                 {% endif %}
             {% endif %}
         {% endfor %}
     </div>
 
     <div class="mb-3 bg-light border pt-2 pb-2 px-2">
-        <div class="german"><p>Wofür nutzen Sie KI-basierten Tools in Ihrem Studium? (Mehrfachnennungen sind möglich)</p></div>
+        <div class="german"><p>Wofür nutzen Sie KI-basierte Tools in Ihrem Studium? (Mehrfachnennungen sind möglich)</p></div>
         <div class="english"><p>For what do you use AI-based tools in your studies? (Multiple answers possible)</p></div>
         {% for question in questions %}
             {% if question.section == "AI_use" %}
@@ -42,8 +45,10 @@
                     <div class="german"><label><input type="checkbox" name="{{ question.field }}" value="1"> {{ question.text.german }}</label></div>
                     <div class="english"><label><input type="checkbox" name="{{ question.field }}" value="1"> {{ question.text.english }}</label></div>
                 {% elif question.type == "formfield" %}
-                    <div class="german"><label>{{ question.text.german }}: {{ form.AI_use_other }}</label></div>
-                    <div class="english"><label>{{ question.text.english }}: {{ form.AI_use_other }}</label></div>
+                    <p class="german">{{ question.text.german }}</p>
+                    <p class="english">{{ question.text.english }}</p>
+                    <div class="german">{{ form.AI_use_other }}</div>
+                    <div class="english">{{ form.AI_use_other }}</div>
                 {% endif %}
             {% endif %}
         {% endfor %}

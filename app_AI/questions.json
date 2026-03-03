@@ -60,8 +60,8 @@
         "type": "formfield",
         "section": "AI_use",
         "text": {
-          "german": "Andere",
-          "english": "Other"
+          "german": "Andere:",
+          "english": "Other:"
         }
       },
       {
@@ -123,8 +123,8 @@
         "type": "formfield",
         "section": "AI_tool",
         "text": {
-          "german": "Andere",
-          "english": "Other"
+          "german": "Andere:",
+          "english": "Other:"
         }
       },
       {

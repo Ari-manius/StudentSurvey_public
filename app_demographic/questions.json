@@ -45,7 +45,7 @@
         "type": "radio",
         "text": {
           "german": "Wie beurteilen Sie ganz allgemein die heutige wirtschaftliche Lage in Deutschland?",
-          "english": "How do you judge the current general economic situation in Germany?"
+          "english": "How do you perceive the current general economic situation in Germany?"
         },
         "options": [
           {
@@ -78,8 +78,8 @@
         "field": "financial_situation_personal_current",
         "type": "radio",
         "text": {
-          "german": "Wie beurteilen Sie ganz allgemein die Ihre eigene wirtschaftliche Lage heute?",
-          "english": "How do you judge your own current economic situation?"
+          "german": "Wie beurteilen Sie ganz allgemein Ihre eigene wirtschaftliche Lage heute?",
+          "english": "How do you perceive your own current economic situation?"
         },
         "options": [
           {

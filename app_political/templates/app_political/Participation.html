@@ -39,8 +39,8 @@
             <div class="german"><input type="checkbox" name="{{ question.field }}" value="1"> {{ question.text.german }}</div>
             <div class="english"><input type="checkbox" name="{{ question.field }}" value="1"> {{ question.text.english }}</div>
         {% elif question.type == "formfield" %}
-            <div class="german"> Andere: {% form.social_networks_11 %}</div>
-            <div class="english"> Other: {% form.social_networks_11 %}</div>
+            <div class="german">Andere: {{ form.social_networks_11 }}</div>
+            <div class="english">Other: {{ form.social_networks_11 }}</div>
         {% endif %}
 
     {% endfor %}
